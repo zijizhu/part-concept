@@ -1,0 +1,312 @@
+curved beak
+dagger beak
+hooked beak
+needle beak
+hooked seabird beak
+spatulate beak
+all-purpose beak
+cone beak
+specialized beak
+blue wing
+brown wing
+iridescent wing
+purple wing
+rufous wing
+grey wing
+yellow wing
+olive wing
+green wing
+pink wing
+orange wing
+black wing
+white wing
+red wing
+buff wing
+blue upperparts
+brown upperparts
+iridescent upperparts
+purple upperparts
+rufous upperparts
+grey upperparts
+yellow upperparts
+olive upperparts
+green upperparts
+pink upperparts
+orange upperparts
+black upperparts
+white upperparts
+red upperparts
+buff upperparts
+blue underparts
+brown underparts
+iridescent underparts
+purple underparts
+rufous underparts
+grey underparts
+yellow underparts
+olive underparts
+green underparts
+pink underparts
+orange underparts
+black underparts
+white underparts
+red underparts
+buff underparts
+solid breast pattern
+spotted breast pattern
+striped breast pattern
+multi-colored breast pattern
+blue back
+brown back
+iridescent back
+purple back
+rufous back
+grey back
+yellow back
+olive back
+green back
+pink back
+orange back
+black back
+white back
+red back
+buff back
+forked tail
+rounded tail
+notched tail
+fan-d tail
+pointed tail
+squared tail
+blue upper tail
+brown upper tail
+iridescent upper tail
+purple upper tail
+rufous upper tail
+grey upper tail
+yellow upper tail
+olive upper tail
+green upper tail
+pink upper tail
+orange upper tail
+black upper tail
+white upper tail
+red upper tail
+buff upper tail
+spotted head pattern
+malar head pattern
+crested head pattern
+masked head pattern
+unique head pattern
+eyebrow head pattern
+eyering head pattern
+plain head pattern
+eyeline head pattern
+striped head pattern
+capped head pattern
+blue breast
+brown breast
+iridescent breast
+purple breast
+rufous breast
+grey breast
+yellow breast
+olive breast
+green breast
+pink breast
+orange breast
+black breast
+white breast
+red breast
+buff breast
+blue throat
+brown throat
+iridescent throat
+purple throat
+rufous throat
+grey throat
+yellow throat
+olive throat
+green throat
+pink throat
+orange throat
+black throat
+white throat
+red throat
+buff throat
+blue eye
+brown eye
+purple eye
+rufous eye
+grey eye
+yellow eye
+olive eye
+green eye
+pink eye
+orange eye
+black eye
+white eye
+red eye
+buff eye
+beak length about the same as head
+beak length longer than head
+beak length shorter than head
+blue forehead
+brown forehead
+iridescent forehead
+purple forehead
+rufous forehead
+grey forehead
+yellow forehead
+olive forehead
+green forehead
+pink forehead
+orange forehead
+black forehead
+white forehead
+red forehead
+buff forehead
+blue under tail
+brown under tail
+iridescent under tail
+purple under tail
+rufous under tail
+grey under tail
+yellow under tail
+olive under tail
+green under tail
+pink under tail
+orange under tail
+black under tail
+white under tail
+red under tail
+buff under tail
+blue nape
+brown nape
+iridescent nape
+purple nape
+rufous nape
+grey nape
+yellow nape
+olive nape
+green nape
+pink nape
+orange nape
+black nape
+white nape
+red nape
+buff nape
+blue belly
+brown belly
+iridescent belly
+purple belly
+rufous belly
+grey belly
+yellow belly
+olive belly
+green belly
+pink belly
+orange belly
+black belly
+white belly
+red belly
+buff belly
+rounded-wings wing
+pointed-wings wing
+broad-wings wing
+tapered-wings wing
+long-wings wing
+large size body
+small size body
+very large size body
+medium size body
+very small size body
+upright-perching water-like
+chicken-like-marsh
+long-legged-like
+duck-like
+owl-like
+gull-like
+hummingbird-like
+pigeon-like
+tree-clinging-like
+hawk-like
+sandpiper-like
+upland-ground-like
+swallow-like
+perching-like
+solid back pattern
+spotted back pattern
+striped back pattern
+multi-colored back pattern
+solid tail pattern
+spotted tail pattern
+striped tail pattern
+multi-colored tail pattern
+solid belly pattern
+spotted belly pattern
+striped belly pattern
+multi-colored belly pattern
+blue body
+brown body
+iridescent body
+purple body
+rufous body
+grey body
+yellow body
+olive body
+green body
+pink body
+orange body
+black body
+white body
+red body
+buff body
+blue leg
+brown leg
+iridescent leg
+purple leg
+rufous leg
+grey leg
+yellow leg
+olive leg
+green leg
+pink leg
+orange leg
+black leg
+white leg
+red leg
+buff leg
+blue beak
+brown beak
+iridescent beak
+purple beak
+rufous beak
+grey beak
+yellow beak
+olive beak
+green beak
+pink beak
+orange beak
+black beak
+white beak
+red beak
+buff beak
+blue crown
+brown crown
+iridescent crown
+purple crown
+rufous crown
+grey crown
+yellow crown
+olive crown
+green crown
+pink crown
+orange crown
+black crown
+white crown
+red crown
+buff crown
+solid wing pattern
+spotted wing pattern
+striped wing pattern
+multi-colored wing pattern

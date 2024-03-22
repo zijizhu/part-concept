@@ -1,0 +1,312 @@
+1 curved up or down bill shape
+2 dagger bill shape
+3 hooked bill shape
+4 needle bill shape
+5 hooked seabird bill shape
+6 spatulate bill shape
+7 all-purpose bill shape
+8 cone bill shape
+9 specialized bill shape
+10 blue wing color
+11 brown wing color
+12 iridescent wing color
+13 purple wing color
+14 rufous wing color
+15 grey wing color
+16 yellow wing color
+17 olive wing color
+18 green wing color
+19 pink wing color
+20 orange wing color
+21 black wing color
+22 white wing color
+23 red wing color
+24 buff wing color
+25 blue upperparts color
+26 brown upperparts color
+27 iridescent upperparts color
+28 purple upperparts color
+29 rufous upperparts color
+30 grey upperparts color
+31 yellow upperparts color
+32 olive upperparts color
+33 green upperparts color
+34 pink upperparts color
+35 orange upperparts color
+36 black upperparts color
+37 white upperparts color
+38 red upperparts color
+39 buff upperparts color
+40 blue underparts color
+41 brown underparts color
+42 iridescent underparts color
+43 purple underparts color
+44 rufous underparts color
+45 grey underparts color
+46 yellow underparts color
+47 olive underparts color
+48 green underparts color
+49 pink underparts color
+50 orange underparts color
+51 black underparts color
+52 white underparts color
+53 red underparts color
+54 buff underparts color
+55 solid breast pattern
+56 spotted breast pattern
+57 striped breast pattern
+58 multi-colored breast pattern
+59 blue back color
+60 brown back color
+61 iridescent back color
+62 purple back color
+63 rufous back color
+64 grey back color
+65 yellow back color
+66 olive back color
+67 green back color
+68 pink back color
+69 orange back color
+70 black back color
+71 white back color
+72 red back color
+73 buff back color
+74 forked tail shape
+75 rounded tail shape
+76 notched tail shape
+77 fan-shaped tail shape
+78 pointed tail shape
+79 squared tail shape
+80 blue upper tail color
+81 brown upper tail color
+82 iridescent upper tail color
+83 purple upper tail color
+84 rufous upper tail color
+85 grey upper tail color
+86 yellow upper tail color
+87 olive upper tail color
+88 green upper tail color
+89 pink upper tail color
+90 orange upper tail color
+91 black upper tail color
+92 white upper tail color
+93 red upper tail color
+94 buff upper tail color
+95 spotted head pattern
+96 malar head pattern
+97 crested head pattern
+98 masked head pattern
+99 unique pattern head pattern
+100 eyebrow head pattern
+101 eyering head pattern
+102 plain head pattern
+103 eyeline head pattern
+104 striped head pattern
+105 capped head pattern
+106 blue breast color
+107 brown breast color
+108 iridescent breast color
+109 purple breast color
+110 rufous breast color
+111 grey breast color
+112 yellow breast color
+113 olive breast color
+114 green breast color
+115 pink breast color
+116 orange breast color
+117 black breast color
+118 white breast color
+119 red breast color
+120 buff breast color
+121 blue throat color
+122 brown throat color
+123 iridescent throat color
+124 purple throat color
+125 rufous throat color
+126 grey throat color
+127 yellow throat color
+128 olive throat color
+129 green throat color
+130 pink throat color
+131 orange throat color
+132 black throat color
+133 white throat color
+134 red throat color
+135 buff throat color
+136 blue eye color
+137 brown eye color
+138 purple eye color
+139 rufous eye color
+140 grey eye color
+141 yellow eye color
+142 olive eye color
+143 green eye color
+144 pink eye color
+145 orange eye color
+146 black eye color
+147 white eye color
+148 red eye color
+149 buff eye color
+150 about the same as head bill length
+151 longer than head bill length
+152 shorter than head bill length
+153 blue forehead color
+154 brown forehead color
+155 iridescent forehead color
+156 purple forehead color
+157 rufous forehead color
+158 grey forehead color
+159 yellow forehead color
+160 olive forehead color
+161 green forehead color
+162 pink forehead color
+163 orange forehead color
+164 black forehead color
+165 white forehead color
+166 red forehead color
+167 buff forehead color
+168 blue under tail color
+169 brown under tail color
+170 iridescent under tail color
+171 purple under tail color
+172 rufous under tail color
+173 grey under tail color
+174 yellow under tail color
+175 olive under tail color
+176 green under tail color
+177 pink under tail color
+178 orange under tail color
+179 black under tail color
+180 white under tail color
+181 red under tail color
+182 buff under tail color
+183 blue nape color
+184 brown nape color
+185 iridescent nape color
+186 purple nape color
+187 rufous nape color
+188 grey nape color
+189 yellow nape color
+190 olive nape color
+191 green nape color
+192 pink nape color
+193 orange nape color
+194 black nape color
+195 white nape color
+196 red nape color
+197 buff nape color
+198 blue belly color
+199 brown belly color
+200 iridescent belly color
+201 purple belly color
+202 rufous belly color
+203 grey belly color
+204 yellow belly color
+205 olive belly color
+206 green belly color
+207 pink belly color
+208 orange belly color
+209 black belly color
+210 white belly color
+211 red belly color
+212 buff belly color
+213 rounded-wings wing shape
+214 pointed-wings wing shape
+215 broad-wings wing shape
+216 tapered-wings wing shape
+217 long-wings wing shape
+218 large 16 32 in size
+219 small 5 9 in size
+220 very large 32 72 in size
+221 medium 9 16 in size
+222 very small 3 5 in size
+223 upright-perching water-like shape
+224 chicken-like-marsh shape
+225 long-legged-like shape
+226 duck-like shape
+227 owl-like shape
+228 gull-like shape
+229 hummingbird-like shape
+230 pigeon-like shape
+231 tree-clinging-like shape
+232 hawk-like shape
+233 sandpiper-like shape
+234 upland-ground-like shape
+235 swallow-like shape
+236 perching-like shape
+237 solid back pattern
+238 spotted back pattern
+239 striped back pattern
+240 multi-colored back pattern
+241 solid tail pattern
+242 spotted tail pattern
+243 striped tail pattern
+244 multi-colored tail pattern
+245 solid belly pattern
+246 spotted belly pattern
+247 striped belly pattern
+248 multi-colored belly pattern
+249 blue primary color
+250 brown primary color
+251 iridescent primary color
+252 purple primary color
+253 rufous primary color
+254 grey primary color
+255 yellow primary color
+256 olive primary color
+257 green primary color
+258 pink primary color
+259 orange primary color
+260 black primary color
+261 white primary color
+262 red primary color
+263 buff primary color
+264 blue leg color
+265 brown leg color
+266 iridescent leg color
+267 purple leg color
+268 rufous leg color
+269 grey leg color
+270 yellow leg color
+271 olive leg color
+272 green leg color
+273 pink leg color
+274 orange leg color
+275 black leg color
+276 white leg color
+277 red leg color
+278 buff leg color
+279 blue bill color
+280 brown bill color
+281 iridescent bill color
+282 purple bill color
+283 rufous bill color
+284 grey bill color
+285 yellow bill color
+286 olive bill color
+287 green bill color
+288 pink bill color
+289 orange bill color
+290 black bill color
+291 white bill color
+292 red bill color
+293 buff bill color
+294 blue crown color
+295 brown crown color
+296 iridescent crown color
+297 purple crown color
+298 rufous crown color
+299 grey crown color
+300 yellow crown color
+301 olive crown color
+302 green crown color
+303 pink crown color
+304 orange crown color
+305 black crown color
+306 white crown color
+307 red crown color
+308 buff crown color
+309 solid wing pattern
+310 spotted wing pattern
+311 striped wing pattern
+312 multi-colored wing pattern

@@ -1,0 +1,312 @@
+1 curved beak 
+2 dagger beak 
+3 hooked beak 
+4 needle beak 
+5 hooked seabird beak 
+6 spatulate beak 
+7 all-purpose beak 
+8 cone beak 
+9 specialized beak 
+10 blue wing 
+11 brown wing 
+12 iridescent wing 
+13 purple wing 
+14 rufous wing 
+15 grey wing 
+16 yellow wing 
+17 olive wing 
+18 green wing 
+19 pink wing 
+20 orange wing 
+21 black wing 
+22 white wing 
+23 red wing 
+24 buff wing 
+25 blue upperparts 
+26 brown upperparts 
+27 iridescent upperparts 
+28 purple upperparts 
+29 rufous upperparts 
+30 grey upperparts 
+31 yellow upperparts 
+32 olive upperparts 
+33 green upperparts 
+34 pink upperparts 
+35 orange upperparts 
+36 black upperparts 
+37 white upperparts 
+38 red upperparts 
+39 buff upperparts 
+40 blue underparts 
+41 brown underparts 
+42 iridescent underparts 
+43 purple underparts 
+44 rufous underparts 
+45 grey underparts 
+46 yellow underparts 
+47 olive underparts 
+48 green underparts 
+49 pink underparts 
+50 orange underparts 
+51 black underparts 
+52 white underparts 
+53 red underparts 
+54 buff underparts 
+55 solid breast pattern
+56 spotted breast pattern
+57 striped breast pattern
+58 multi-colored breast pattern
+59 blue back 
+60 brown back 
+61 iridescent back 
+62 purple back 
+63 rufous back 
+64 grey back 
+65 yellow back 
+66 olive back 
+67 green back 
+68 pink back 
+69 orange back 
+70 black back 
+71 white back 
+72 red back 
+73 buff back 
+74 forked tail 
+75 rounded tail 
+76 notched tail 
+77 fan-d tail 
+78 pointed tail 
+79 squared tail 
+80 blue upper tail 
+81 brown upper tail 
+82 iridescent upper tail 
+83 purple upper tail 
+84 rufous upper tail 
+85 grey upper tail 
+86 yellow upper tail 
+87 olive upper tail 
+88 green upper tail 
+89 pink upper tail 
+90 orange upper tail 
+91 black upper tail 
+92 white upper tail 
+93 red upper tail 
+94 buff upper tail 
+95 spotted head pattern
+96 malar head pattern
+97 crested head pattern
+98 masked head pattern
+99 unique head pattern
+100 eyebrow head pattern
+101 eyering head pattern
+102 plain head pattern
+103 eyeline head pattern
+104 striped head pattern
+105 capped head pattern
+106 blue breast 
+107 brown breast 
+108 iridescent breast 
+109 purple breast 
+110 rufous breast 
+111 grey breast 
+112 yellow breast 
+113 olive breast 
+114 green breast 
+115 pink breast 
+116 orange breast 
+117 black breast 
+118 white breast 
+119 red breast 
+120 buff breast 
+121 blue throat 
+122 brown throat 
+123 iridescent throat 
+124 purple throat 
+125 rufous throat 
+126 grey throat 
+127 yellow throat 
+128 olive throat 
+129 green throat 
+130 pink throat 
+131 orange throat 
+132 black throat 
+133 white throat 
+134 red throat 
+135 buff throat 
+136 blue eye 
+137 brown eye 
+138 purple eye 
+139 rufous eye 
+140 grey eye 
+141 yellow eye 
+142 olive eye 
+143 green eye 
+144 pink eye 
+145 orange eye 
+146 black eye 
+147 white eye 
+148 red eye 
+149 buff eye 
+150 beak length about the same as head
+151 beak length longer than head
+152 beak length shorter than head
+153 blue forehead 
+154 brown forehead 
+155 iridescent forehead 
+156 purple forehead 
+157 rufous forehead 
+158 grey forehead 
+159 yellow forehead 
+160 olive forehead 
+161 green forehead 
+162 pink forehead 
+163 orange forehead 
+164 black forehead 
+165 white forehead 
+166 red forehead 
+167 buff forehead 
+168 blue under tail 
+169 brown under tail 
+170 iridescent under tail 
+171 purple under tail 
+172 rufous under tail 
+173 grey under tail 
+174 yellow under tail 
+175 olive under tail 
+176 green under tail 
+177 pink under tail 
+178 orange under tail 
+179 black under tail 
+180 white under tail 
+181 red under tail 
+182 buff under tail 
+183 blue nape 
+184 brown nape 
+185 iridescent nape 
+186 purple nape 
+187 rufous nape 
+188 grey nape 
+189 yellow nape 
+190 olive nape 
+191 green nape 
+192 pink nape 
+193 orange nape 
+194 black nape 
+195 white nape 
+196 red nape 
+197 buff nape 
+198 blue belly 
+199 brown belly 
+200 iridescent belly 
+201 purple belly 
+202 rufous belly 
+203 grey belly 
+204 yellow belly 
+205 olive belly 
+206 green belly 
+207 pink belly 
+208 orange belly 
+209 black belly 
+210 white belly 
+211 red belly 
+212 buff belly 
+213 rounded-wings wing 
+214 pointed-wings wing 
+215 broad-wings wing 
+216 tapered-wings wing 
+217 long-wings wing 
+218 large size body
+219 small size body
+220 very large size body
+221 medium size body
+222 very small size body
+223 upright-perching water-like 
+224 chicken-like-marsh 
+225 long-legged-like 
+226 duck-like 
+227 owl-like 
+228 gull-like 
+229 hummingbird-like 
+230 pigeon-like 
+231 tree-clinging-like 
+232 hawk-like 
+233 sandpiper-like 
+234 upland-ground-like 
+235 swallow-like
+236 perching-like
+237 solid back pattern
+238 spotted back pattern
+239 striped back pattern
+240 multi-colored back pattern
+241 solid tail pattern
+242 spotted tail pattern
+243 striped tail pattern
+244 multi-colored tail pattern
+245 solid belly pattern
+246 spotted belly pattern
+247 striped belly pattern
+248 multi-colored belly pattern
+249 blue body 
+250 brown body 
+251 iridescent body 
+252 purple body 
+253 rufous body 
+254 grey body 
+255 yellow body 
+256 olive body 
+257 green body 
+258 pink body 
+259 orange body 
+260 black body 
+261 white body 
+262 red body 
+263 buff body 
+264 blue leg 
+265 brown leg 
+266 iridescent leg 
+267 purple leg 
+268 rufous leg 
+269 grey leg 
+270 yellow leg 
+271 olive leg 
+272 green leg 
+273 pink leg 
+274 orange leg 
+275 black leg 
+276 white leg 
+277 red leg 
+278 buff leg 
+279 blue beak 
+280 brown beak 
+281 iridescent beak 
+282 purple beak 
+283 rufous beak 
+284 grey beak 
+285 yellow beak 
+286 olive beak 
+287 green beak 
+288 pink beak 
+289 orange beak 
+290 black beak 
+291 white beak 
+292 red beak 
+293 buff beak 
+294 blue crown 
+295 brown crown 
+296 iridescent crown 
+297 purple crown 
+298 rufous crown 
+299 grey crown 
+300 yellow crown 
+301 olive crown 
+302 green crown 
+303 pink crown 
+304 orange crown 
+305 black crown 
+306 white crown 
+307 red crown 
+308 buff crown 
+309 solid wing pattern
+310 spotted wing pattern
+311 striped wing pattern
+312 multi-colored wing pattern
