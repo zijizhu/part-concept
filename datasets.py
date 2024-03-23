@@ -19,6 +19,7 @@ DEFAULT_ATTR_INDICES = [1, 4, 6, 7, 10, 14, 15, 20, 21, 23, 25, 29, 30,
                         274, 277, 283, 289, 292, 293, 294, 298, 299, 304,
                         305, 308, 309, 310, 311]
 
+
 def get_transforms(split='train', image_size=448):
     assert split in ['train', 'val', 'test']
     if split in ['train', 'val']:
