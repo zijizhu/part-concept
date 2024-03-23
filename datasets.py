@@ -38,7 +38,12 @@ def get_transforms(split='train', image_size=448):
 
 
 class CUBDataset(Dataset):
-    def __init__(self, dataset_dir, split='train', use_attr='cbm', transforms=None) -> None:
+    def __init__(self,
+                 dataset_dir,
+                 split='train',
+                 use_attr='cbm',
+                 use_class_level_attr=True,
+                 transforms=None) -> None:
         super().__init__()
         self.split = split
         self.dataset_dir = dataset_dir
@@ -91,23 +96,30 @@ class CUBDataset(Dataset):
                         'test': test_img_ids}
 
         # Decides which set of attributes to use
-        assert use_attr in ['cbm', 'generate', 'all']
+        # Use the same process as described in original CBM paper
+        # To compute the ratio of samples per class having each attribute
+        # The final result depends on the randomly split training set
+        is_train_mask = attr_df['image_id'].isin(train_img_ids)
+        visible_mask = (attr_df['is_present'] == 1) | (attr_df['certainty_id'] != 1)
+        self.class_attr_ratios = pd.pivot_table(attr_df[is_train_mask & visible_mask],
+                                                values='is_present',
+                                                index=['class_id'],
+                                                columns=['attribute_id'],
+                                                aggfunc='mean')
+        
+        assert use_attr in ['cbm', 'generate', 'all']        
         if use_attr == 'cbm':
             attr_indices = DEFAULT_ATTR_INDICES
         elif use_attr == 'generate':
-            # Use the same process as described in original CBM paper
-            # It depends on the randomly split training set, so attributes might be different
-            is_train_mask = attr_df['image_id'].isin(train_img_ids)
-            visible_mask = (attr_df['is_present'] == 1) | (attr_df['certainty_id'] != 1)
-            class_attr_ratios = pd.pivot_table(attr_df[is_train_mask & visible_mask],
-                                               values='is_present',
-                                               index=['class_id'],
-                                               columns=['attribute_id'],
-                                               aggfunc='mean')
-            active_classes_per_attr = np.sum(class_attr_ratios >= 0.5, axis=0)
+            active_classes_per_attr = np.sum(self.class_attr_ratios >= 0.5, axis=0)
             attr_indices, = np.nonzero(active_classes_per_attr > 10) # np.nonzero returns a tuple of arrays
         else:
             attr_indices = attr_df['attribute_id'].unique()
+
+        if use_class_level_attr:
+            self.class_level_attrs = (self.class_attr_ratios >= 0.5).astype(int)[attr_indices]
+        else:
+            self.class_level_attrs = None
         
         use_attr_mask = attr_df['attribute_id'].isin(attr_indices)
         attr_df = attr_df[use_attr_mask]
@@ -126,7 +138,10 @@ class CUBDataset(Dataset):
         img_id = self.img_ids[self.split][idx]
 
         file_path, class_id, _ = self.main_df.iloc[img_id]
-        attributes = self.attr_df.loc[img_id, 'is_present'].to_numpy()
+        if self.class_level_attrs is not None:
+            attributes = self.class_level_attrs.loc[class_id].to_numpy()
+        else:
+            attributes = self.attr_df.loc[img_id, 'is_present'].to_numpy()
 
         image = Image.open(os.path.join(self.dataset_dir, 'CUB_200_2011', 'images', file_path))
         if self.transforms is not None:
@@ -137,5 +152,5 @@ class CUBDataset(Dataset):
     def get_instance_attr_names(self, img_id: torch.Tensor, attrs: torch.Tensor) -> pd.DataFrame:
         img_id, attrs = img_id.item(), attrs.bool().numpy()
         instance_attr_labels = self.attr_df.loc[img_id, 'attribute_id']
-        original_attr_idxs = instance_attr_labels.loc[attrs].to_numpy()
-        return self.df[original_attr_idxs]
+        original_attr_idxs = instance_attr_labels[attrs].to_numpy()
+        return self.attr_name_df.loc[original_attr_idxs]
