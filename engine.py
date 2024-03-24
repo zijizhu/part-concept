@@ -8,17 +8,19 @@ from torch.utils.tensorboard import SummaryWriter
 log = logging.getLogger(__name__)
 
 def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
-                writer: SummaryWriter, dataset_size: int, epoch: int):
+                writer: SummaryWriter, dataset_size: int, epoch: int,
+                device: torch.device):
     
     running_loss_dict = {'attribute': 0.0, 'label': 0.0,
                          'recon': 0.0, 'total': 0.0}
     running_corrects = 0
 
     for img_ids, imgs, labels, attrs in tqdm(dataloader):
+        imgs, labels, attrs = imgs.to(device), labels.to(device), attrs.to(device)
         batch_size = img_ids.size(0)
 
-        attr_preds, label_preds, recon_loss = model(imgs)
-
+        _, attr_preds, label_preds, recon_loss = model(imgs)
+        print(attr_preds.shape, attrs.shape)
         attr_loss = F.cross_entropy(attr_preds, attrs)
         label_loss = F.cross_entropy(label_preds, labels)
         total_loss = attr_loss + label_loss + recon_loss
@@ -53,7 +55,7 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
     for img_ids, imgs, labels, attrs in tqdm(dataloader):
         batch_size = img_ids.size(0)
 
-        attr_preds, label_preds, recon_loss = model(imgs)
+        _, attr_preds, label_preds, recon_loss = model(imgs)
 
         attr_loss = F.cross_entropy(attr_preds, attrs)
         label_loss = F.cross_entropy(label_preds, labels)
