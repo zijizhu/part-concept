@@ -46,12 +46,13 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
 
 
 def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
-               dataset_size: int, epoch: int):
+               dataset_size: int, epoch: int, device: torch.device):
     running_loss_dict = {'attribute': 0.0, 'label': 0.0,
                          'recon': 0.0, 'total': 0.0}
     running_corrects = 0
 
     for img_ids, imgs, labels, attrs in tqdm(dataloader):
+        imgs, labels, attrs = imgs.to(device), labels.to(device), attrs.to(device)
         batch_size = img_ids.size(0)
 
         _, attr_preds, label_preds, recon_loss = model(imgs)

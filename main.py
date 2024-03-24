@@ -103,6 +103,6 @@ if __name__ == '__main__':
         train_epoch(model=model, dataloader=dataloader_train, optimizer=optimizer,
                     writer=writer,dataset_size=len(dataset_train), epoch=epoch, device=device)
         test_epoch(model=model, dataloader=dataloader_test, writer=writer,
-                   dataset_size=len(dataset_test), epoch=epoch)
+                   dataset_size=len(dataset_test), epoch=epoch, device=device)
         torch.save({k: v.cpu() for k, v in model.state_dict().items()},
                    os.path.join(log_dir, 'checkpoint.pt'))
