@@ -23,7 +23,8 @@ class PartCEM(nn.Module):
         x_expanded = x.view(b, c, h*w).permute(0, 2, 1) # shape: [b, h*w, c]
         concepts_expanded = self.concepts[None, ...].expand(b, -1, -1) # shape: [b, num_concepts + 1, c]
         dists = torch.cdist(concepts_expanded, x_expanded, p=2) # shape: [b, num_concepts + 1, h*w]
-        dists = self.sig(1 - dists) # shape: [b, num_concepts + 1, h*w]
+        # dists = self.sig(1 - dists) # shape: [b, num_concepts + 1, h*w]
+        dists = F.softmax(-dists, dim=1) # shape: [b, num_concepts + 1, h*w]
 
         score_maps = dists.view(b, -1, h, w)
         concept_vecs = torch.einsum('bkn,bnc->bkc', dists[:, :-1, :], x_expanded) # shape: [b, num_concepts, c]
