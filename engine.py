@@ -45,6 +45,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
     log.info(f'EPOCH {epoch} Train Acc: {epoch_acc:.4f}')
 
 
+@torch.no_grad()
 def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
                dataset_size: int, epoch: int, device: torch.device):
     running_loss_dict = {'attribute': 0.0, 'label': 0.0,
