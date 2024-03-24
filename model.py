@@ -19,7 +19,9 @@ class PartCEM(nn.Module):
         x = F.interpolate(x, size=(h, w), mode='bilinear') # shape: [b, c, h, w], e.g. c=2048, h=w=14
         conv_weights = self.concepts[..., None, None] # shape: [num_concepts + 1, c, 1, 1]
 
-        score_maps = F.sigmoid(F.conv2d(x, conv_weights)) # shape: [b, num_concepts + 1, h, w]
+        x_norm = x / torch.linalg.vector_norm(x, ord=2, dim=1)
+        conv_weights = torch.linalg.vector_norm(conv_weights, ord=2, dim=1)
+        score_maps = F.sigmoid(F.conv2d(x_norm, conv_weights)) # shape: [b, num_concepts + 1, h, w]
         scores = F.sigmoid(score_maps[:, :-1, ...].sum((-1, -2))) # shape: [b, num_concepts]
 
         concepts_expanded = self.concepts[..., None, None].expand(-1, -1, h, w) # shape: [num_concepts + 1, c, h, w]
