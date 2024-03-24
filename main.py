@@ -111,3 +111,4 @@ if __name__ == '__main__':
                    dataset_size=len(dataset_test), epoch=epoch, device=device)
         torch.save({k: v.cpu() for k, v in model.state_dict().items()},
                    os.path.join(log_dir, 'checkpoint.pt'))
+        # scheduler.step()
