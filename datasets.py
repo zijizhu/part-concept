@@ -32,6 +32,7 @@ def get_transforms(image_size=448):
         ])
     test_transforms = T.Compose([
             T.Resize(size=image_size, antialias=True),
+            T.CenterCrop(size=image_size),
             T.ToTensor()
         ])
     return train_transforms, test_transforms

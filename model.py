@@ -28,5 +28,5 @@ class PartCEM(nn.Module):
         x = x.view(b, c, h*w).permute(0, 2, 1) # shape: [b, h*w, c]
         reconstructed = reconstructed.view(b, c, h*w).permute(0, 2, 1) # shape: [b, h*w, c]
 
-        recon_loss = torch.sum(torch.cdist(x, reconstructed, p=2)) # shape: [h*w, h*w]
-        return score_maps, scores, preds, recon_loss
+        recon_loss = torch.mean(torch.cdist(x, reconstructed, p=2)) # shape: [h*w, h*w] -> []
+        return score_maps, scores, preds, recon_loss * 0.1

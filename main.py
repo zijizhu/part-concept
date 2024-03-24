@@ -76,8 +76,23 @@ if __name__ == '__main__':
     
     model.to(device=device)
     print(summary(model))
+
+    high_lr_layers, med_lr_layers = ['concepts'], []
+
+    # First entry contains parameters with high lr, second with medium lr, third with low lr
+    param_dicts = [{'params': [], 'lr': args.lr * 100},
+                  {'params': [], 'lr': args.lr * 10},
+                  {'params' : [], 'lr': args.lr}]
+    for name, p in model.named_parameters():
+        layer_name = name.split('.')[0]
+        if layer_name in high_lr_layers:
+            param_dicts[0]['params'].append(p)
+        elif layer_name in med_lr_layers:
+            param_dicts[1]['params'].append(p)
+        else:
+            param_dicts[2]['params'].append(p)
     
-    optimizer = torch.optim.Adam(params=model.parameters())
+    optimizer = torch.optim.Adam(params=param_dicts)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 5, 0.5)
 
     if args.eval:
