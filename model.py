@@ -28,7 +28,7 @@ class PartCEM(nn.Module):
 
         score_maps = dists.view(b, -1, h, w)
         concept_vecs = torch.einsum('bkn,bnc->bkc', dists[:, :-1, :], x_expanded) # shape: [b, num_concepts, c]
-        concept_scores = self.concept_fc(concept_vecs).squeeze(-1) # shape: [b, num_concepts]
+        concept_scores = self.sig(self.concept_fc(concept_vecs).squeeze(-1)) # shape: [b, num_concepts]
         preds = self.label_fc(concept_scores @ self.concepts[:-1, :])
 
 
