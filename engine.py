@@ -20,7 +20,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         batch_size = img_ids.size(0)
 
         _, attr_preds, label_preds, recon_loss = model(imgs)
-        attr_loss = F.cross_entropy(attr_preds, attrs)
+        attr_loss = F.binary_cross_entropy(attr_preds, attrs)
         label_loss = F.cross_entropy(label_preds, labels)
         total_loss = attr_loss + label_loss + recon_loss
 
