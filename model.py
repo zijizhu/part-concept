@@ -19,8 +19,8 @@ class PartCEM(nn.Module):
         x = F.interpolate(x, size=(h, w), mode='bilinear') # shape: [b, c, h, w], e.g. c=2048, h=w=14
         conv_weights = self.concepts[..., None, None] # shape: [num_concepts + 1, c, 1, 1]
 
-        x_norm = x / torch.linalg.vector_norm(x, ord=2, dim=1)
-        conv_weights = torch.linalg.vector_norm(conv_weights, ord=2, dim=1)
+        x_norm = x / torch.linalg.vector_norm(x, ord=2, dim=1, keepdim=True)
+        conv_weights = torch.linalg.vector_norm(conv_weights, ord=2, dim=1, keepdim=True)
         score_maps = F.sigmoid(F.conv2d(x_norm, conv_weights)) # shape: [b, num_concepts + 1, h, w]
         scores = F.sigmoid(score_maps[:, :-1, ...].sum((-1, -2))) # shape: [b, num_concepts]
 
