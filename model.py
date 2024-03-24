@@ -10,7 +10,7 @@ class PartCEM(nn.Module):
         self.dim = self.backbone.fc.weight.shape[-1]
         self.concepts = nn.Parameter(torch.randn(num_concepts + 1, self.dim))
         # self.fc = nn.Linear(num_concepts, num_classes)
-        self.concept_fc = nn.Linear(28*28, num_concepts)
+        self.concept_fc = nn.Linear(28*28, 1)
         self.sig = nn.Sigmoid()
         self.fc = nn.Linear(self.dim, num_classes)
     
