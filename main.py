@@ -74,6 +74,7 @@ if __name__ == '__main__':
                     num_concepts=num_concepts,
                     num_classes=num_classes)
     
+    model.to(device=device)
     print(summary(model))
     
     optimizer = torch.optim.Adam(params=model.parameters())
@@ -88,4 +89,5 @@ if __name__ == '__main__':
                     writer=writer,dataset_size=len(dataset_train), epoch=epoch, device=device)
         test_epoch(model=model, dataloader=dataloader_test, writer=writer,
                    dataset_size=len(dataset_test), epoch=epoch)
-        torch.save(model, os.path.join(log_dir, 'checkpoint.pt'))
+        torch.save({k: v.cpu() for k, v in model.state_dict().items()},
+                   os.path.join(log_dir, 'checkpoint.pt'))
