@@ -21,7 +21,8 @@ class PartCEM(nn.Module):
 
         x_norm = x / torch.linalg.vector_norm(x, ord=2, dim=1, keepdim=True)
         conv_weights = conv_weights / torch.linalg.vector_norm(conv_weights, ord=2, dim=1, keepdim=True)
-        score_maps = F.sigmoid(F.conv2d(x_norm, conv_weights)) # shape: [b, num_concepts + 1, h, w]
+        # score_maps = F.sigmoid(F.conv2d(x_norm, conv_weights)) # shape: [b, num_concepts + 1, h, w]
+        score_maps = F.conv2d(x_norm, conv_weights) # shape: [b, num_concepts + 1, h, w]
         scores = F.sigmoid(score_maps[:, :-1, ...].sum((-1, -2))) # shape: [b, num_concepts]
 
         concepts_expanded = self.concepts[..., None, None].expand(-1, -1, h, w) # shape: [num_concepts + 1, c, h, w]
