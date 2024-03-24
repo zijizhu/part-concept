@@ -22,9 +22,11 @@ class PartCEM(nn.Module):
         conv_weights = self.concepts[..., None, None] # shape: [num_concepts + 1, c, 1, 1]
 
         x_norm = x / torch.linalg.vector_norm(x, ord=2, dim=1, keepdim=True)
-        conv_weights = conv_weights / torch.linalg.vector_norm(conv_weights, ord=2, dim=1, keepdim=True)
+        conv_weights_norm = conv_weights / torch.linalg.vector_norm(conv_weights, ord=2, dim=1, keepdim=True)
+        print(conv_weights_norm[0,0,:,:])
+        print(x_norm[0,0,:,:])
         # score_maps = F.sigmoid(F.conv2d(x_norm, conv_weights)) # shape: [b, num_concepts + 1, h, w]
-        score_maps = F.conv2d(x_norm, conv_weights) # shape: [b, num_concepts + 1, h, w]
+        score_maps = F.conv2d(x_norm, conv_weights_norm) # shape: [b, num_concepts + 1, h, w]
         # scores = F.sigmoid(score_maps[:, :-1, ...].sum((-1, -2))) # shape: [b, num_concepts]
         score_maps_flatten = score_maps[:, :-1, ...].view(b, -1, h*w)
         scores = self.sig(self.concept_fc(score_maps_flatten)).squeeze(-1)
