@@ -50,8 +50,7 @@ if __name__ == '__main__':
     writer.add_text('Epochs', str(args.epochs))
     writer.add_text('Seed', str(args.seed))
 
-    logging.basicConfig(filename=...,
-                        level=logging.INFO,
+    logging.basicConfig(level=logging.INFO,
                         filemode='w',
                         format='[%(asctime)s][%(name)s][%(levelname)s] - %(message)s', datefmt='%Y-%m-%d %H:%M:%S',
                         handlers=[
