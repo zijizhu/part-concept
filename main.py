@@ -12,7 +12,7 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 from lightning import seed_everything
 from datasets import build_datasets
-from model import PartCEM
+from models.part_cem import PartCEM
 from engine import train_epoch, test_epoch
 
 
