@@ -4,7 +4,7 @@ from torch import nn
 import torch.nn.functional as F
 
 
-class PartCEM(nn.Module):
+class PartCEMV1(nn.Module):
     def __init__(self, backbone='resnet50', num_concepts=112, num_classes=200) -> None:
         super(PartCEM, self).__init__()
         self.k = num_concepts
@@ -49,7 +49,7 @@ class CLIPartCEM(nn.Module):
     ...
 
 
-class PartCEMV0(nn.Module):
+class PartCEM(nn.Module):
     def __init__(self, backbone='resnet50', num_concepts=112, num_classes=200) -> None:
         super(PartCEM, self).__init__()
         self.backbone = timm.create_model(backbone, pretrained=True)
@@ -77,4 +77,4 @@ class PartCEMV0(nn.Module):
         concept_scores = self.sig(self.concept_fc(concept_vecs).squeeze(-1)) # shape: [b, num_concepts]
         preds = self.label_fc(concept_scores @ self.concepts[:-1, :])
 
-        return score_maps, concept_scores, preds, None
+        return score_maps, concept_scores, preds
