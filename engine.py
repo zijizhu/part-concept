@@ -1,3 +1,4 @@
+import copy
 import torch
 import logging
 from tqdm import tqdm
@@ -5,15 +6,20 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
+from models.loss import conc_loss, orth_loss, pres_loss
+
 log = logging.getLogger(__name__)
+
+loss_dict = {'label': 0.0,
+             'conc': 0.0,
+             'orth': 0.0,
+             'pres': 0.0}
 
 def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
                 writer: SummaryWriter, dataset_size: int, epoch: int,
                 device: torch.device):
 
-    running_loss_dict = {'attribute': 0.0,
-                         'label': 0.0,
-                         'total': 0.0}
+    running_loss_dict = copy.deepcopy(loss_dict)
     running_corrects = 0
 
     for img_ids, imgs, labels, attrs in tqdm(dataloader):
@@ -42,7 +48,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         log.info(f'EPOCH {epoch} Train {loss_name.capitalize()} Loss: {loss_val:.4f}')
 
     epoch_acc = running_corrects / dataset_size
-    writer.add_scalar(f'Loss/train/accuracy', epoch_acc, epoch)
+    writer.add_scalar(f'Accuracy/train', epoch_acc, epoch)
     log.info(f'EPOCH {epoch} Train Acc: {epoch_acc:.4f}')
 
 
@@ -78,5 +84,5 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
         log.info(f'EPOCH {epoch} Val {loss_name.capitalize()} Loss: {loss_val:.4f}')
 
     epoch_acc = running_corrects / dataset_size
-    writer.add_scalar(f'Loss/val/accuracy', epoch_acc, epoch)
+    writer.add_scalar(f'Accuracy/val', epoch_acc, epoch)
     log.info(f'EPOCH {epoch} Val Acc: {epoch_acc:.4f}')

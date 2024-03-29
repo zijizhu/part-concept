@@ -33,7 +33,7 @@ class PartCEM(nn.Module):
         parts_modulated_dropped = self.dropout(parts_modulated) # shape: [b,k,c]
         class_logits = self.label_fc(parts_modulated_dropped) # shape: [b,k,|y|]
 
-        return class_logits
+        return parts, maps, class_logits
     
 
 ###################
