@@ -4,9 +4,46 @@ from torch import nn
 import torch.nn.functional as F
 
 
+class PartCEM(nn.Module):
+    def __init__(self, backbone='resnet50', num_concepts=112, num_classes=200, dropout=0.3) -> None:
+        super(PartCEM, self).__init__()
+        self.k = num_concepts + 1
+        self.backbone = timm.create_model(backbone, pretrained=True)
+        self.dim = self.backbone.fc.weight.shape[-1]
+
+        self.landmarks = nn.Parameter(torch.randn(self.k, self.dim))
+        self.modulation = torch.nn.Parameter(torch.ones((1, self.k, self.dim)))
+
+        self.softmax2d = nn.Softmax2d()
+        self.dropout = nn.Dropout1d(p=0.1)
+        self.class_fc = nn.Linear(self.dim * self.k, num_classes)
+    
+    def forward(self, x):
+        x = self.backbone.forward_features(x)
+        b, c, h, w = x.shape
+
+        b, c, h, w = x.shape
+        x_flat = x.view(b, c, h*w).permute(0, 2, 1) # shape: [b,h*w,c]
+        maps = torch.cdist(x_flat, self.landmarks, p=2) # shape: [b,h*w,k]
+        maps = maps.permute(0, 2, 1).reshape(b, -1, h, w) # shape: [b,k,h,w]
+        maps = self.softmax2d(-maps) # shape: [b,k,h,w]
+
+        parts = torch.einsum('bkhw,bchw->bkchw', maps, x).mean((-1,-2)) # shape: [b,k,h,w], [b,c,h,w] -> [b,k,c]
+        parts_modulated = parts * self.modulation # shape: [b,k,c]
+        parts_modulated_dropped = self.dropout(parts_modulated) # shape: [b,k,c]
+        class_logits = self.label_fc(parts_modulated_dropped) # shape: [b,k,|y|]
+
+        return class_logits
+    
+
+###################
+# Older Variants
+###################
+    
+
 class PartCEMV1(nn.Module):
     def __init__(self, backbone='resnet50', num_concepts=112, num_classes=200) -> None:
-        super(PartCEM, self).__init__()
+        super(PartCEMV1, self).__init__()
         self.k = num_concepts
         self.backbone = timm.create_model(backbone, pretrained=True)
         self.dim = self.backbone.fc.weight.shape[-1]
@@ -45,13 +82,9 @@ class PartCEMV1(nn.Module):
         return cpt_score_maps, cpt_logits, label_logits
 
 
-class CLIPartCEM(nn.Module):
-    ...
-
-
-class PartCEM(nn.Module):
+class PartCEMV0(nn.Module):
     def __init__(self, backbone='resnet50', num_concepts=112, num_classes=200) -> None:
-        super(PartCEM, self).__init__()
+        super(PartCEMV0, self).__init__()
         self.backbone = timm.create_model(backbone, pretrained=True)
         self.dim = self.backbone.fc.weight.shape[-1]
         self.concepts = nn.Parameter(torch.randn(num_concepts + 1, self.dim))
