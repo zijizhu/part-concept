@@ -42,7 +42,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         )
 
         # Calculate total Loss
-        total_loss = torch.tensor(0.0)
+        total_loss = torch.tensor(0.0, device=device)
         for k, v in loss_dict.items():
             total_loss += loss_coefs[k] * v
 
