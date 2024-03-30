@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 
 loss_coefs = dict(
     label=2.0,
-    conc=1000.0,
+    conc=1.0,
     orth=1.0,
     pres=1.0
 )
@@ -36,7 +36,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)
         loss_dict = dict(
             label=F.cross_entropy(preds, labels),
-            # conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
+            conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
             orth=orth_loss(parts=parts, device=device),
             pres=pres_loss(maps=maps)
         )
