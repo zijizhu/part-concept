@@ -42,7 +42,7 @@ def build_datasets(dataset_dir: str,
                    attr_subset: str,
                    use_class_level_attr: bool,
                    image_size: int,
-                   val_size: float=0.2):
+                   val_size: float=0.1):
     file_path_df = pd.read_csv(os.path.join(dataset_dir, 'CUB_200_2011', 'images.txt'),
                                    sep=' ', header=None, names=['image_id', 'file_path'])
     img_class_df = pd.read_csv(os.path.join(dataset_dir, 'CUB_200_2011', 'image_class_labels.txt'),
