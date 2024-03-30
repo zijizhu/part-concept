@@ -5,17 +5,17 @@ import torch.nn.functional as F
 
 
 class PartCEM(nn.Module):
-    def __init__(self, backbone='resnet50', num_concepts=112, num_classes=200, dropout=0.3) -> None:
+    def __init__(self, backbone='resnet50', num_parts=7, num_classes=200, dropout=0.3) -> None:
         super(PartCEM, self).__init__()
-        self.k = num_concepts + 1
+        self.k = num_parts + 1
         self.backbone = timm.create_model(backbone, pretrained=True)
         self.dim = self.backbone.fc.weight.shape[-1]
 
-        self.landmarks = nn.Parameter(torch.randn(self.k, self.dim))
-        self.modulation = torch.nn.Parameter(torch.ones((1, self.k, self.dim)))
+        self.prototypes = nn.Parameter(torch.randn(self.k, self.dim))
+        self.modulations = torch.nn.Parameter(torch.ones((1, self.k, self.dim)))
 
         self.softmax2d = nn.Softmax2d()
-        self.dropout = nn.Dropout1d(p=0.1)
+        self.dropout = nn.Dropout1d(p=dropout)
         self.class_fc = nn.Linear(self.dim, num_classes)
     
     def forward(self, x):
@@ -24,12 +24,12 @@ class PartCEM(nn.Module):
 
         b, c, h, w = x.shape
         x_flat = x.view(b, c, h*w).permute(0, 2, 1) # shape: [b,h*w,c]
-        maps = torch.cdist(x_flat, self.landmarks, p=2) # shape: [b,h*w,k]
+        maps = torch.cdist(x_flat, self.prototypes, p=2) # shape: [b,h*w,k]
         maps = maps.permute(0, 2, 1).reshape(b, -1, h, w) # shape: [b,k,h,w]
         maps = self.softmax2d(-maps) # shape: [b,k,h,w]
 
         parts = torch.einsum('bkhw,bchw->bkchw', maps, x).mean((-1,-2)) # shape: [b,k,h,w], [b,c,h,w] -> [b,k,c]
-        parts_modulated = parts * self.modulation # shape: [b,k,c]
+        parts_modulated = parts * self.modulations # shape: [b,k,c]
         parts_modulated_dropped = self.dropout(parts_modulated) # shape: [b,k,c]
         class_logits = self.class_fc(parts_modulated_dropped) # shape: [b,k,|y|]
 

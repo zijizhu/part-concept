@@ -19,6 +19,7 @@ from engine import train_epoch, test_epoch
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='PartCEM')
     parser.add_argument('--dataset_dir', type=str, required=True)
+    parser.add_argument('--num_parts', type=int, default=7, required=True)
     parser.add_argument('--dataset', type=str, choices=['CUB'], required=True)
     parser.add_argument('--attr_subset', type=str, choices=['cbm', 'majority_10', 'all'], required=True)
     parser.add_argument('--use_class_level_attr', action='store_true', required=True)
@@ -76,13 +77,13 @@ if __name__ == '__main__':
     dataloader_test = DataLoader(dataset_test, batch_size=args.batch_size, shuffle=True, num_workers=4)
     
     model = PartCEM(backbone=args.backbone,
-                    num_concepts=8,
+                    num_parts=args.num_parts,
                     num_classes=num_classes)
     
     model.to(device=device)
     print(summary(model))
 
-    high_lr_layers, med_lr_layers = ['concepts'], []
+    high_lr_layers, med_lr_layers = ['modulations'], ['class_fc']
 
     # First entry contains parameters with high lr, second with medium lr, third with low lr
     param_dicts = [{'params': [], 'lr': args.lr * 100},
