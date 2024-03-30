@@ -16,7 +16,7 @@ class PartCEM(nn.Module):
 
         self.softmax2d = nn.Softmax2d()
         self.dropout = nn.Dropout1d(p=0.1)
-        self.class_fc = nn.Linear(self.dim * self.k, num_classes)
+        self.class_fc = nn.Linear(self.dim, num_classes)
     
     def forward(self, x):
         x = self.backbone.forward_features(x)
@@ -31,7 +31,7 @@ class PartCEM(nn.Module):
         parts = torch.einsum('bkhw,bchw->bkchw', maps, x).mean((-1,-2)) # shape: [b,k,h,w], [b,c,h,w] -> [b,k,c]
         parts_modulated = parts * self.modulation # shape: [b,k,c]
         parts_modulated_dropped = self.dropout(parts_modulated) # shape: [b,k,c]
-        class_logits = self.label_fc(parts_modulated_dropped) # shape: [b,k,|y|]
+        class_logits = self.class_fc(parts_modulated_dropped) # shape: [b,k,|y|]
 
         return parts, maps, class_logits
     

@@ -14,7 +14,7 @@ loss_coefs = dict(
     label=2.0,
     conc=1000.0,
     orth=1.0,
-    preds=1.0
+    pres=1.0
 )
 
 
@@ -22,7 +22,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
                 writer: SummaryWriter, dataset_size: int, epoch: int,
                 device: torch.device):
 
-    running_loss_dict = copy.deepcopy(loss_dict)
+    running_loss_dict = {k: 0.0 for k in loss_coefs}
     running_corrects = 0
 
     for img_ids, imgs, labels, attrs in tqdm(dataloader):
@@ -30,6 +30,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         batch_size = img_ids.size(0)
 
         parts, maps, preds = model(imgs)
+        preds = preds[:, 0:-1, :].mean(1)
 
         # Calculate all losses
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)

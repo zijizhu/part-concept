@@ -65,7 +65,7 @@ if __name__ == '__main__':
             use_class_level_attr=args.use_class_level_attr,
             image_size=args.image_size
         )
-        num_concepts, num_classes = len(attr_indices), 200
+        num_classes = 200
         torch.save({'use_attribute_indices': attr_indices, 'class_level_attributes': class_attrs_df},
                    f=os.path.join(log_dir, 'attributes.pkl'))
     else:
@@ -76,7 +76,7 @@ if __name__ == '__main__':
     dataloader_test = DataLoader(dataset_test, batch_size=args.batch_size, shuffle=True, num_workers=4)
     
     model = PartCEM(backbone=args.backbone,
-                    num_concepts=num_concepts,
+                    num_concepts=8,
                     num_classes=num_classes)
     
     model.to(device=device)

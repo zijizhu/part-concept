@@ -1,12 +1,13 @@
 import torch
 from torch import nn
-import torchvision.transforms.functional as F
+import torch.nn.functional as F
+import torchvision.transforms.functional as T
 
 
 def pres_loss(maps: torch.Tensor):
     maps = maps[..., 2:-2, 2:-2]
     maps = F.avg_pool2d(maps, 3, stride=1)
-    max_vals = F.max_pool2d(maps, 8) # shape: [b, k, 1, 1]
+    max_vals = F.max_pool2d(maps, maps.shape[-1]) # shape: [b, k, 1, 1]
     batch_pres, _ = max_vals.max(0) # shape: [k, 1, 1]
     return batch_pres.mean()
 
@@ -35,8 +36,8 @@ def conc_loss(centroid_x: torch.Tensor, centroid_y: torch.Tensor,
         The concentration loss
     """
     b, k, h, w = maps.shape
-    spatial_var_x = ((centroid_x[None, None, ...] - grid_x) / grid_x.shape[-1]) ** 2
-    spatial_var_y = ((centroid_y[None, None] - grid_y) / grid_y.shape[-2]) ** 2
+    spatial_var_x = ((centroid_x[..., None, None] - grid_x) / grid_x.shape[-1]) ** 2
+    spatial_var_y = ((centroid_y[..., None, None] - grid_y) / grid_y.shape[-2]) ** 2
     spatial_var_weighted = (spatial_var_x + spatial_var_y) * maps
     loss_conc = spatial_var_weighted[:, :-1, ...].mean()
     return loss_conc
@@ -59,8 +60,8 @@ def orth_loss(parts: torch.Tensor, device) -> torch.Tensor:
         The orthogonality loss
     """
     b, k, c = parts.shape
-    normed_feature = torch.nn.functional.normalize(parts, dim=1)
-    similarity = torch.matmul(normed_feature.permute(0, 2, 1), normed_feature)
+    parts_norm = F.normalize(parts, p=2, dim=-1)
+    similarity = torch.bmm(parts, parts_norm.transpose(1,2))
     similarity = torch.sub(similarity, torch.eye(k).to(device))
     loss_orth = torch.mean(torch.square(similarity))
     return loss_orth
@@ -123,12 +124,12 @@ def rigid_transform(img: torch.Tensor, angle: int, translate: list[int], scale: 
         Transformed image
     """
     shear = 0
-    bilinear = F.InterpolationMode.BILINEAR
+    bilinear = T.InterpolationMode.BILINEAR
     if not invert:
-        img = F.affine(img, angle, translate, scale, shear,
+        img = T.affine(img, angle, translate, scale, shear,
                              interpolation=bilinear)
     else:
         translate = [-t for t in translate]
-        img = F.affine(img, 0, translate, 1, shear)
-        img = F.affine(img, -angle, [0, 0], 1/scale, shear)
+        img = T.affine(img, 0, translate, 1, shear)
+        img = T.affine(img, -angle, [0, 0], 1/scale, shear)
     return img
