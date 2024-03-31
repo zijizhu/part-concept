@@ -33,25 +33,34 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         preds = preds[:, 0:-1, :].mean(1)
         # Calculate all losses
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)
-        loss_dict = dict(
-            label=F.cross_entropy(preds, labels, reduction='mean'),
-            conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
-            orth=orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device),
-            pres=torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean()
-        )
+        # loss_dict = dict(
+        #     label=F.cross_entropy(preds, labels, reduction='mean'),
+        #     conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
+        #     orth=orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device),
+        #     pres=torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean()
+        # )
+        label_loss = F.cross_entropy(preds, labels, reduction='mean')
+        conc_loss = conc_loss(cx, cy, grid_x, grid_y, maps=maps)
+        orth_loss = orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device)
+        pres_loss = 1 - (torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean())
+        total_loss = 2 * label_loss + 1000 * conc_loss + orth_loss + pres_loss
 
         # Calculate total Loss
-        total_loss = torch.tensor(0.0, device=device)
-        for k, v in loss_dict.items():
-            total_loss += loss_coefs[k] * v
+        # total_loss = torch.tensor(0.0, device=device)
+        # for k, v in loss_dict.items():
+        #     total_loss += loss_coefs[k] * v
 
         total_loss.backward()
         optimizer.step()
         optimizer.zero_grad()
         
         # Compute running losses and number of correct predictions
-        for k, v in loss_dict.items():
-            running_loss_dict[k] += loss_coefs[k] * v.item() * batch_size
+        # for k, v in loss_dict.items():
+        running_loss_dict['label'] += loss_coefs['label'] * label_loss.item() * batch_size
+        running_loss_dict['conc'] += loss_coefs['conc'] * conc_loss.item() * batch_size
+        running_loss_dict['orth'] += loss_coefs['orth'] * orth_loss.item() * batch_size
+        running_loss_dict['pres'] += loss_coefs['pres'] * pres_loss.item() * batch_size
+
         running_corrects += torch.sum(torch.argmax(preds.data, dim=-1) == labels.data).item()
     
     # Log running losses
@@ -59,7 +68,6 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         loss_val_avg = loss_val_epoch / dataset_size
         writer.add_scalar(f'Loss/train/{loss_name}', loss_val_avg, epoch)
         log.info(f'EPOCH {epoch} Train {loss_name.capitalize()} Loss: {loss_val_avg:.4f}')
-
     # Log accuracy
     epoch_acc = running_corrects / dataset_size
     writer.add_scalar(f'Accuracy/train', epoch_acc, epoch)
@@ -86,7 +94,7 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
             label=F.cross_entropy(preds, labels, reduction='mean'),
             conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
             orth=orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device),
-            pres=torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean()
+            pres=1 - (torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean())
         )
 
         # Calculate total Loss
