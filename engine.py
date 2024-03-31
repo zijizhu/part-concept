@@ -51,7 +51,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         
         # Compute running losses and number of correct predictions
         for k, v in loss_dict.items():
-            running_loss_dict[k] += v.item() * batch_size
+            running_loss_dict[k] += loss_coefs[k] * v.item() * batch_size
         running_corrects += torch.sum(torch.argmax(preds.data, dim=-1) == labels.data).item()
     
     # Log running losses
@@ -85,7 +85,7 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
         loss_dict = dict(
             label=F.cross_entropy(preds, labels, reduction='mean'),
             conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
-            orth=orth_loss(num_parts=parts.shape[1], landmark_features=parts.permute(0,2,1), device=device),
+            orth=orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device),
             pres=torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean()
         )
 
@@ -96,7 +96,7 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
         
         # Compute running losses and number of correct predictions
         for k, v in loss_dict.items():
-            running_loss_dict[k] += v.item() * batch_size
+            running_loss_dict[k] += loss_coefs[k] * v.item() * batch_size
         running_corrects += torch.sum(torch.argmax(preds.data, dim=-1) == labels.data).item()
     
     for loss_name, loss_val_epoch in running_loss_dict.items():
