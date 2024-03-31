@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 
 loss_coefs = dict(
     label=2.0,
-    conc=1.0,
+    conc=100.0,
     orth=1.0,
     pres=1.0
 )
@@ -31,7 +31,6 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
 
         parts, maps, preds = model(imgs)
         preds = preds[:, 0:-1, :].mean(1)
-
         # Calculate all losses
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)
         loss_dict = dict(

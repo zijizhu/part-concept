@@ -9,10 +9,11 @@ from torchinfo import summary
 from datetime import datetime
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
+from torchvision.models import resnet101, ResNet101_Weights
 from torch.utils.tensorboard import SummaryWriter
 from lightning import seed_everything
 from datasets import build_datasets
-from models.part_cem import PartCEM
+from models.part_cem import PartCEM, PartCEMTV
 from engine import train_epoch, test_epoch
 
 
@@ -76,14 +77,18 @@ if __name__ == '__main__':
     dataloader_val= DataLoader(dataset_val, batch_size=args.batch_size, shuffle=True, num_workers=4)
     dataloader_test = DataLoader(dataset_test, batch_size=args.batch_size, shuffle=True, num_workers=4)
     
-    model = PartCEM(backbone=args.backbone,
-                    num_parts=args.num_parts,
-                    num_classes=num_classes)
+    # model = PartCEM(backbone=args.backbone,
+    #                 num_parts=args.num_parts,
+    #                 num_classes=num_classes)
+    backbone = resnet101(ResNet101_Weights.DEFAULT)
+    model = PartCEMTV(backbone=backbone,
+                      num_parts=args.num_parts,
+                      num_classes=num_classes)
     
     model.to(device=device)
     print(summary(model))
 
-    high_lr_layers, med_lr_layers = ['modulations'], ['class_fc']
+    high_lr_layers, med_lr_layers = ['modulations', 'prototypes'], ['class_fc']
 
     # First entry contains parameters with high lr, second with medium lr, third with low lr
     param_dicts = [{'params': [], 'lr': args.lr * 100},
