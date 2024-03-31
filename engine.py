@@ -51,13 +51,12 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         
         # Compute running losses and number of correct predictions
         for k, v in loss_dict.items():
-            running_loss_dict[k] += v.detach().cpu() * batch_size
+            running_loss_dict[k] += v.item() * batch_size
         running_corrects += torch.sum(torch.argmax(preds.data, dim=-1) == labels.data).item()
     
     # Log running losses
-    for loss_name, loss_val in loss_dict.items():
-        running_loss_dict[loss_name] += loss_val / dataset_size
-        writer.add_scalar(f'Loss/train/{loss_name}', loss_val, epoch)
+    for loss_name, loss_val in running_loss_dict.items():
+        writer.add_scalar(f'Loss/train/{loss_name}', loss_val / dataset_size, epoch)
         log.info(f'EPOCH {epoch} Train {loss_name.capitalize()} Loss: {loss_val:.4f}')
 
     # Log accuracy
@@ -96,13 +95,13 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
         
         # Compute running losses and number of correct predictions
         for k, v in loss_dict.items():
-            running_loss_dict[k] += v * batch_size
+            running_loss_dict[k] += v.item() * batch_size
         running_corrects += torch.sum(torch.argmax(preds.data, dim=-1) == labels.data).item()
     
-    for loss_name, loss_val in loss_dict.items():
-        running_loss_dict[loss_name] += loss_val / dataset_size
-        writer.add_scalar(f'Loss/val/{loss_name}', loss_val, epoch)
-        log.info(f'EPOCH {epoch} Val {loss_name.capitalize()} Loss: {loss_val:.4f}')
+    for loss_name, loss_val in running_loss_dict.items():
+        avg_loss = loss_val / dataset_size
+        writer.add_scalar(f'Loss/train/{loss_name}', avg_loss, epoch)
+        log.info(f'EPOCH {epoch} Train {loss_name.capitalize()} Loss: {avg_loss:.4f}')
 
     epoch_acc = running_corrects / dataset_size
     writer.add_scalar(f'Accuracy/val', epoch_acc, epoch)
