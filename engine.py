@@ -34,10 +34,10 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         # Calculate all losses
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)
         loss_dict = dict(
-            label=F.cross_entropy(preds, labels),
+            label=F.cross_entropy(preds, labels, reduction='none').mean(),
             # conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
-            orth=orth_loss(parts=parts, device=device),
-            pres=pres_loss(maps=maps)
+            # orth=orth_loss(parts=parts, device=device),
+            # pres=pres_loss(maps=maps)
         )
 
         # Calculate total Loss
