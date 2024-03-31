@@ -36,7 +36,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         loss_dict = dict(
             label=F.cross_entropy(preds, labels, reduction='mean'),
             conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
-            orth=orth_loss(num_parts=parts.shape[1], landmark_features=parts.permute(0,2,1), device=device),
+            orth=orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device),
             pres=torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean()
         )
 
