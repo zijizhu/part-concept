@@ -26,8 +26,8 @@ if __name__ == '__main__':
 
     parser.add_argument('--seed', default=42, type=int)
     parser.add_argument('--epochs', default=50, type=int)
-    parser.add_argument('--lr', default=1e-3, type=float)
-    parser.add_argument('--num_parts', type=int, default=7)
+    parser.add_argument('--lr', default=1e-4, type=float)
+    parser.add_argument('--num_parts', type=int, default=8)
     parser.add_argument('--batch_size', default=16, type=int)
     parser.add_argument('--image_size', default=448, type=int)
     parser.add_argument('--backbone', default='resnet50', type=str)

@@ -24,6 +24,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
 
     running_loss_dict = {k: 0.0 for k in loss_coefs}
     running_corrects = 0
+    loss = 0.0
 
     for img_ids, imgs, labels, attrs in tqdm(dataloader):
         imgs, labels, attrs = imgs.to(device), labels.to(device), attrs.to(device)
@@ -33,32 +34,37 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         preds = preds[:, 0:-1, :].mean(1)
         # Calculate all losses
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)
-        loss_dict = dict(
-            label=F.cross_entropy(preds, labels, reduction='none').mean(),
-            # conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
-            # orth=orth_loss(parts=parts, device=device),
-            # pres=pres_loss(maps=maps)
-        )
+        label_loss = F.cross_entropy(preds, labels)
+        # loss_dict = dict(
+        #     label=F.cross_entropy(preds, labels),
+        #     # conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
+        #     # orth=orth_loss(parts=parts, device=device),
+        #     # pres=pres_loss(maps=maps)
+        # )
 
         # Calculate total Loss
-        total_loss = torch.tensor(0.0, device=device)
-        for k, v in loss_dict.items():
-            total_loss += loss_coefs[k] * v
+        # total_loss = torch.tensor(0.0, device=device)
+        # for k, v in loss_dict.items():
+        #     total_loss += loss_coefs[k] * v
 
-        total_loss.backward()
+        # total_loss.backward()
+        label_loss.backward()
         optimizer.step()
         optimizer.zero_grad()
         
         # Compute running losses and number of correct predictions
-        for k, v in loss_dict.items():
-            running_loss_dict[k] += v * batch_size
+        loss += label_loss
+        # for k, v in loss_dict.items():
+        #     running_loss_dict[k] += v * batch_size
         running_corrects += torch.sum(torch.argmax(preds.data, dim=-1) == labels.data).item()
     
     # Log running losses
-    for loss_name, loss_val in loss_dict.items():
-        running_loss_dict[loss_name] += loss_val / dataset_size
-        writer.add_scalar(f'Loss/train/{loss_name}', loss_val, epoch)
-        log.info(f'EPOCH {epoch} Train {loss_name.capitalize()} Loss: {loss_val:.4f}')
+    writer.add_scalar(f'Loss/train/loss', loss / dataset_size, epoch)
+    # log.info(f'EPOCH {epoch} Train {loss_name.capitalize()} Loss: {loss_val:.4f}')
+    # for loss_name, loss_val in loss_dict.items():
+    #     running_loss_dict[loss_name] += loss_val / dataset_size
+    #     writer.add_scalar(f'Loss/train/{loss_name}', loss_val, epoch)
+    #     log.info(f'EPOCH {epoch} Train {loss_name.capitalize()} Loss: {loss_val:.4f}')
 
     # Log accuracy
     epoch_acc = running_corrects / dataset_size
