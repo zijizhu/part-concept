@@ -79,7 +79,8 @@ if __name__ == '__main__':
     dataloader_val= DataLoader(dataset_val, batch_size=args.batch_size, shuffle=True, num_workers=4)
     dataloader_test = DataLoader(dataset_test, batch_size=args.batch_size, shuffle=True, num_workers=4)
     
-    clip_model, clip_preproess = clip.load('RN50', device=device)
+    clip_model, clip_preproess = clip.load('RN50', device=torch.device('cpu'))
+    clip_model.to(device=device)
     texts = ['back', 'beak', 'belly', 'breast', 'leg', 'tail', 'wing', 'throat', 'background']
     with torch.no_grad():
         texts_tokenized = clip.tokenize(texts)
