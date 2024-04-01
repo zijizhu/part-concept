@@ -118,7 +118,7 @@ class PartCEMClip(nn.Module):
         self.k = num_parts + 1
         self.backbone = backbone
         self.dim = 1024
-        self.prototypes = nn.Parameter(prototypes.unsqueeze(0)) # shape: [k, dim]
+        self.prototypes = nn.Parameter(prototypes.unsqueeze(0)) # shape: [1, k, dim]
         self.modulations = torch.nn.Parameter(torch.ones((1, self.k, self.dim)))
 
         self.softmax2d = nn.Softmax2d()
@@ -140,6 +140,7 @@ class PartCEMClip(nn.Module):
         maps = torch.einsum('bnc,bkc->bnk', x_flat_norm, proto_norm.expand(b, -1, -1)) # shape: [b,h*w,k]
         maps = maps.permute(0, 2, 1).reshape(b, -1, h, w) # shape: [b,k,h,w]
         maps = self.softmax2d(maps) # shape: [b,k,h,w]
+        print(maps)
 
         parts = torch.einsum('bkhw,bchw->bkchw', maps, x).mean((-1,-2)) # shape: [b,k,h,w], [b,c,h,w] -> [b,k,c]
         parts_modulated = parts * self.modulations # shape: [b,k,c]
