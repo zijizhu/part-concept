@@ -109,7 +109,7 @@ class CLIPSpatial(nn.Module):
         x = self.attnpool(x)  # [b*7*7, 1024]
         x = x.reshape(b, h, w, -1)  # [b, 7, 7, 1024]
         x = x.permute(0, 3, 1, 2)  # [b, 1024, 7, 7]
-        return x.to(torch.float32)
+        return x
 
 
 class PartCEMClip(nn.Module):
