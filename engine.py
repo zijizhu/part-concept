@@ -39,17 +39,8 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
             orth=orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device),
             pres=1 - (torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean())
         )
-        total_loss = sum(loss_coefs[k] * v for k, v in loss_dict.items())
-        # label_l = F.cross_entropy(preds, labels, reduction='mean')
-        # conc_l = conc_loss(cx, cy, grid_x, grid_y, maps=maps)
-        # orth_l = orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device)
-        # pres_l = 1 - (torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean())
-        # total_l = 2 * label_l + 1000 * conc_l + orth_l + pres_l
-
         # Calculate total Loss
-        # total_loss = torch.tensor(0.0, device=device)
-        # for k, v in loss_dict.items():
-        #     total_loss += loss_coefs[k] * v
+        total_loss = sum(loss_coefs[k] * v for k, v in loss_dict.items())
 
         total_loss.backward()
         optimizer.step()
@@ -58,11 +49,6 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
          # Compute running losses and number of correct predictions
         for k, v in loss_dict.items():
             running_loss_dict[k] += loss_coefs[k] * v.item() * batch_size
-        # running_corrects += torch.sum(torch.argmax(preds.data, dim=-1) == labels.data).item()
-        # running_loss_dict['label'] += loss_coefs['label'] * label_l.item() * batch_size
-        # running_loss_dict['conc'] += loss_coefs['conc'] * conc_l.item() * batch_size
-        # running_loss_dict['orth'] += loss_coefs['orth'] * orth_l.item() * batch_size
-        # running_loss_dict['pres'] += loss_coefs['pres'] * pres_l.item() * batch_size
 
         running_corrects += torch.sum(torch.argmax(preds.data, dim=-1) == labels.data).item()
     
@@ -99,12 +85,9 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
             orth=orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device),
             pres=1 - (torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean())
         )
-
         # Calculate total Loss
-        total_loss = torch.tensor(0.0, device=device)
-        for k, v in loss_dict.items():
-            total_loss += loss_coefs[k] * v
-        
+        total_loss = sum(loss_coefs[k] * v for k, v in loss_dict.items())
+
         # Compute running losses and number of correct predictions
         for k, v in loss_dict.items():
             running_loss_dict[k] += loss_coefs[k] * v.item() * batch_size
