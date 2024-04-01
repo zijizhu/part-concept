@@ -129,8 +129,8 @@ class PartCEMClip(nn.Module):
         # Pretrained ResNet part of the model
         x = self.backbone(x)
         print(x.isnan().any(), x.dtype)
-        # x = x.to(torch.float32)
-        # print(x.isnan().any(), x.dtype)
+        x = x.to(torch.float32)
+        print(x.isnan().any(), x.dtype)
 
         b, c, h, w = x.shape
         h, w = h*2, w*2
