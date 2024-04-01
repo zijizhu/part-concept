@@ -32,7 +32,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
 
         parts, maps, preds, cpt_preds = model(imgs)
         preds = preds[:, 0:-1, :].mean(1)
-        preds = preds[:, 0:-1, :].mean(1)
+        cpt_preds = cpt_preds[:, 0:-1, :].mean(1)
         # Calculate all losses
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)
         loss_dict = dict(
@@ -79,6 +79,7 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
 
         parts, maps, preds, cpt_preds = model(imgs)
         preds = preds[:, 0:-1, :].mean(1)
+        cpt_preds = cpt_preds[:, 0:-1, :].mean(1)
 
         # Calculate all losses
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)
