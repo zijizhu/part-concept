@@ -136,7 +136,7 @@ class PartCEMClip(nn.Module):
         x_flat = x.view(b, c, h*w).permute(0, 2, 1) # shape: [b,h*w,c]
         x_flat_norm = x_flat / F.normalize(x_flat, p=2, dim=-1) # shape: [b,h*w,c]
         proto_norm = self.prototypes / F.normalize(self.prototypes, p=2, dim=-1) # shape: [1,k,c]
-        print(x_flat_norm.shape, proto_norm.shape)
+
         maps = torch.einsum('bnc,bkc->bnk', x_flat_norm, proto_norm.expand(b, -1, -1)) # shape: [b,h*w,k]
         maps = maps.permute(0, 2, 1).reshape(b, -1, h, w) # shape: [b,k,h,w]
         maps = self.softmax2d(maps) # shape: [b,k,h,w]
