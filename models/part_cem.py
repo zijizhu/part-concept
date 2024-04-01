@@ -92,7 +92,7 @@ class PartCEMTV(nn.Module):
 
 class PartCEMTVCpt(nn.Module):
     def __init__(self, backbone: ResNet, num_parts=8, num_classes=200, num_concepts=112, dropout=0.1) -> None:
-        super(PartCEMTV, self).__init__()
+        super().__init__()
         self.num_landmarks = num_parts
         self.k = num_parts + 1
         self.conv1 = backbone.conv1
