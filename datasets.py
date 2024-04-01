@@ -27,7 +27,7 @@ def get_transforms(image_size=448):
             T.RandomHorizontalFlip(),
             T.ColorJitter(0.1),
             T.RandomAffine(degrees=90, translate=(0.2, 0.2), scale=(0.8, 1.2)),
-            # T.RandomCrop(image_size),
+            T.CenterCrop(image_size),
             T.ToTensor(),
             T.Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))
         ])
