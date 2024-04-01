@@ -13,7 +13,7 @@ from torchvision.models import resnet101, ResNet101_Weights
 from torch.utils.tensorboard import SummaryWriter
 from lightning import seed_everything
 from datasets import build_datasets
-from models.part_cem import PartCEM, PartCEMTV
+from models.part_cem import PartCEM, PartCEMTV, PartCEMTVCpt
 from engine import train_epoch, test_epoch
 
 
@@ -81,9 +81,12 @@ if __name__ == '__main__':
     #                 num_parts=args.num_parts,
     #                 num_classes=num_classes)
     backbone = resnet101(ResNet101_Weights.DEFAULT)
-    model = PartCEMTV(backbone=backbone,
-                      num_parts=args.num_parts,
-                      num_classes=num_classes)
+    # model = PartCEMTV(backbone=backbone,
+    #                   num_parts=args.num_parts,
+    #                   num_classes=num_classes)
+    model = PartCEMTVCpt(backbone=backbone,
+                         num_parts=args.num_parts,
+                         num_classes=num_classes)
     
     model.to(device=device)
     print(summary(model))
