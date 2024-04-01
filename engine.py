@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
-from models.loss import conc_loss, orth_loss, landmark_coordinates
+from models.loss import conc_loss, orth_loss, landmark_coordinates, pres_loss
 
 log = logging.getLogger(__name__)
 
@@ -36,8 +36,8 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         loss_dict = dict(
             label=F.cross_entropy(preds, labels, reduction='mean'),
             conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
-            orth=orth_loss(num_parts=parts.shape[1]-1, landmark_features=parts.permute(0,2,1), device=device),
-            pres=1 - (torch.nn.functional.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean())
+            orth=orth_loss(parts=parts.permute, device=device),
+            pres=pres_loss(maps)
         )
         # Calculate total Loss
         total_loss = sum(loss_coefs[k] * v for k, v in loss_dict.items())
