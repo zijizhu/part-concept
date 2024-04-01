@@ -128,7 +128,6 @@ class PartCEMClip(nn.Module):
     def forward(self, x):
         # Pretrained ResNet part of the model
         x = self.backbone(x)
-        print(x.isnan().any(), x.dtype)
 
         b, c, h, w = x.shape
         h, w = h*2, w*2
