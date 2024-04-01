@@ -29,13 +29,13 @@ def get_transforms(image_size=448):
             T.RandomAffine(degrees=90, translate=(0.2, 0.2), scale=(0.8, 1.2)),
             T.CenterCrop(image_size),
             T.ToTensor(),
-            T.Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))
+            # T.Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))
         ])
     test_transforms = T.Compose([
             T.Resize(size=image_size, antialias=True),
             T.CenterCrop(size=image_size),
             T.ToTensor(),
-            T.Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))
+            # T.Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))
         ])
     return train_transforms, test_transforms
 

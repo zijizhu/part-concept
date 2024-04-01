@@ -130,8 +130,8 @@ class PartCEMClip(nn.Module):
         x = self.backbone(x)
 
         b, c, h, w = x.shape
-        h, w = h*2, w*2
-        x = torch.nn.functional.interpolate(x, size=(h, w), mode='bilinear') # shape: [b, 2048, h, w], e.g. h=w=14
+        # h, w = h*2, w*2
+        # x = torch.nn.functional.interpolate(x, size=(h, w), mode='bilinear') # shape: [b, 2048, h, w], e.g. h=w=14
 
         # x_flat = x.view(b, c, h*w).permute(0, 2, 1) # shape: [b,h*w,c]
         # x_flat_norm = F.normalize(x_flat, p=2, dim=-1) # shape: [b,h*w,c]
