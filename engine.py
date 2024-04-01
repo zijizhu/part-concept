@@ -37,7 +37,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)
         loss_dict = dict(
             label=F.cross_entropy(preds, labels, reduction='mean'),
-            label=F.binary_cross_entropy_with_logits(cpt_preds, attrs),
+            concept=F.binary_cross_entropy_with_logits(cpt_preds, attrs),
             conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
             orth=orth_loss(parts=parts.permute(0,2,1), device=device),
             pres=1 - F.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean()
@@ -77,15 +77,16 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
         imgs, labels, attrs = imgs.to(device), labels.to(device), attrs.to(device)
         batch_size = img_ids.size(0)
 
-        parts, maps, preds = model(imgs)
+        parts, maps, preds, cpt_preds = model(imgs)
         preds = preds[:, 0:-1, :].mean(1)
 
         # Calculate all losses
         cx, cy, grid_x, grid_y = landmark_coordinates(maps=maps, device=device)
         loss_dict = dict(
             label=F.cross_entropy(preds, labels, reduction='mean'),
+            concept=F.binary_cross_entropy_with_logits(cpt_preds, attrs),
             conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
-            orth=orth_loss(parts=parts, device=device),
+            orth=orth_loss(parts=parts.permute(0,2,1), device=device),
             pres=1 - F.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean()
         )
 
