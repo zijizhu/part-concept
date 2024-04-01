@@ -140,7 +140,7 @@ class PartCEMClip(nn.Module):
         maps = torch.einsum('bnc,bkc->bnk', x_flat_norm, proto_norm.expand(b, -1, -1)) # shape: [b,h*w,k]
         maps = maps.permute(0, 2, 1).reshape(b, -1, h, w) # shape: [b,k,h,w]
         maps = self.softmax2d(maps) # shape: [b,k,h,w]
-        # print(maps)
+        print(maps)
 
         parts = torch.einsum('bkhw,bchw->bkchw', maps, x).mean((-1,-2)) # shape: [b,k,h,w], [b,c,h,w] -> [b,k,c]
         parts_modulated = parts * self.modulations # shape: [b,k,c]
