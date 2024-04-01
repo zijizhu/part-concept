@@ -42,7 +42,7 @@ if __name__ == '__main__':
     log_dir = os.path.join(f'{args.dataset}_runs', datetime.now().strftime('%Y-%m-%d_%H-%M'))
     Path(log_dir).mkdir(parents=True, exist_ok=True)
     with open(os.path.join(log_dir, 'hparams.json'), 'w+') as fp:
-        args.model = 'ParCEMClip'
+        args.model = 'ParCEMClip_RN50'
         args.texts = ['back', 'beak', 'belly', 'breast', 'leg', 'tail', 'wing', 'throat', 'background']
         json.dump(vars(args), fp=fp, indent=4)
 
