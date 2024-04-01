@@ -83,7 +83,7 @@ def test_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
             label=F.cross_entropy(preds, labels, reduction='mean'),
             conc=conc_loss(cx, cy, grid_x, grid_y, maps=maps),
             orth=orth_loss(parts=parts, device=device),
-            pres=pres_loss(maps)
+            pres=1 - F.avg_pool2d(maps[:, :, 2:-2, 2:-2], 3, stride=1).max(-1)[0].max(-1)[0].max(0)[0].mean()
         )
 
         # Compute running losses and number of correct predictions

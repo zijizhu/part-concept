@@ -83,7 +83,7 @@ if __name__ == '__main__':
     texts = ['back', 'beak', 'belly', 'breast', 'leg', 'tail', 'wing', 'throat', 'background']
     with torch.no_grad():
         texts_tokenized = clip.tokenize(texts)
-        texts_encoded = clip_model.encode_text(texts_tokenized)
+        texts_encoded = clip_model.encode_text(texts_tokenized.to(device))
     clip_spatial = CLIPSpatial(clip_model)
     model = PartCEMClip(backbone=clip_spatial,
                         prototypes=texts_encoded.to(torch.float32),
