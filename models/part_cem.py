@@ -133,13 +133,19 @@ class PartCEMClip(nn.Module):
         h, w = h*2, w*2
         x = torch.nn.functional.interpolate(x, size=(h, w), mode='bilinear') # shape: [b, 2048, h, w], e.g. h=w=14
 
-        x_flat = x.view(b, c, h*w).permute(0, 2, 1) # shape: [b,h*w,c]
-        x_flat_norm = F.normalize(x_flat, p=2, dim=-1) # shape: [b,h*w,c]
-        proto_norm = F.normalize(self.prototypes, p=2, dim=-1) # shape: [1,k,c]
+        # x_flat = x.view(b, c, h*w).permute(0, 2, 1) # shape: [b,h*w,c]
+        # x_flat_norm = F.normalize(x_flat, p=2, dim=-1) # shape: [b,h*w,c]
+        # proto_norm = F.normalize(self.prototypes, p=2, dim=-1) # shape: [1,k,c]
 
-        maps = torch.einsum('bnc,bkc->bnk', x_flat_norm, proto_norm.expand(b, -1, -1)) # shape: [b,h*w,k]
+        # maps = torch.einsum('bnc,bkc->bnk', x_flat_norm, proto_norm.expand(b, -1, -1)) # shape: [b,h*w,k]
+        # maps = maps.permute(0, 2, 1).reshape(b, -1, h, w) # shape: [b,k,h,w]
+        # maps = self.softmax2d(maps) # shape: [b,k,h,w]
+
+        x_flat = x.view(b, c, h*w).permute(0, 2, 1) # shape: [b,h*w,c]
+        maps = torch.cdist(x_flat, self.prototypes, p=2) # shape: [b,h*w,k]
         maps = maps.permute(0, 2, 1).reshape(b, -1, h, w) # shape: [b,k,h,w]
-        maps = self.softmax2d(maps) # shape: [b,k,h,w]
+        maps = self.softmax2d(-maps) # shape: [b,k,h,w]
+
 
         parts = torch.einsum('bkhw,bchw->bkchw', maps, x).mean((-1,-2)) # shape: [b,k,h,w], [b,c,h,w] -> [b,k,c]
         parts_modulated = parts * self.modulations # shape: [b,k,c]
