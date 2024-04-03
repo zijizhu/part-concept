@@ -4,6 +4,13 @@ import torch.nn.functional as F
 import torchvision.transforms.functional as T
 
 
+def pairwise_cosine_similarity(concept_logits: torch.Tensor, device: torch.device):
+    b, k, m = concept_logits.shape
+    logits_norm = F.normalize(concept_logits, p=2, dim=-1)
+    cos_dists = torch.bmm(logits_norm, logits_norm.transpose(1, 2)) # shape: [b,k,k]
+    return torch.sum(cos_dists - torch.eye(k, device=device))
+
+
 def conc_loss(centroid_x: torch.Tensor, centroid_y: torch.Tensor, grid_x: torch.Tensor, grid_y: torch.Tensor,
               maps: torch.Tensor) -> torch.Tensor:
     """

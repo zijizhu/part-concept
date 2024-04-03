@@ -79,13 +79,7 @@ if __name__ == '__main__':
     dataloader_val= DataLoader(dataset_val, batch_size=args.batch_size, shuffle=True, num_workers=4)
     dataloader_test = DataLoader(dataset_test, batch_size=args.batch_size, shuffle=True, num_workers=4)
     
-    # model = PartCEM(backbone=args.backbone,
-    #                 num_parts=args.num_parts,
-    #                 num_classes=num_classes)
     backbone = resnet101(ResNet101_Weights.DEFAULT)
-    # model = PartCEMTV(backbone=backbone,
-    #                   num_parts=args.num_parts,
-    #                   num_classes=num_classes)
     model = PartCEMTVCpt(backbone=backbone,
                          num_parts=args.num_parts,
                          num_classes=num_classes)
