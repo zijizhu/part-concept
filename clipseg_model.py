@@ -78,13 +78,6 @@ class CLIPSeg(nn.Module):
                 params.requires_grad = False
         self.train_text_encoding = self.clipseg_processor.tokenizer(self.train_class_texts, return_tensors="pt", padding="max_length")
         
-    @classmethod
-    def from_config(cls, cfg):
-        ret = {}
-        ret["train_dataset"] = cfg.DATASETS.TRAIN[0]
-        ret['test_dataset'] = cfg.DATASETS.TEST[0]
-        return ret
-    
     def preds_to_semantic_inds(self, preds, threshold):
         flat_preds = preds.reshape((preds.shape[0], -1))
         # Initialize a dummy "unlabeled" mask with the threshold
@@ -105,8 +98,10 @@ class CLIPSeg(nn.Module):
         logits = []
         input = self.clipseg_processor(images=images, return_tensors="pt").to(device)
         if self.training:
+            print('is training')
             text = self.train_text_encoding
         else:
+            print('no_training')
             text=  test_text
         input.update(text)
         input.update({'output_hidden_states': torch.tensor(True), 'output_attentions': torch.tensor(True)})
@@ -143,6 +138,9 @@ class CLIPSeg(nn.Module):
                     part_inds.append(i)
         no_part_ids = [i for i in range(len(self.test_class_texts)) if i not in part_inds]  
         preds = clipseg_preds.squeeze(0)
+        print('gt_objs:', gt_objs)
+        print('no_part_ids', no_part_ids)
+        print('preds.shape:', preds.shape)
         preds[no_part_ids] = 0.0
         results = [{"sem_seg": preds, "outputs": outputs}]
         return results
