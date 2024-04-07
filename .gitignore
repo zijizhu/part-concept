@@ -3,5 +3,5 @@ __pycache__
 CUB_runs
 *.jpg
 *.png
-images_extracted
-seg_outputs
+*.pt
+*.pth
