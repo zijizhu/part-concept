@@ -86,7 +86,7 @@ class CLIPSeg(nn.Module):
             else:
                 params.requires_grad = False
         # self.train_text_encoding = self.clipseg_processor.tokenizer(self.train_class_texts, return_tensors="pt", padding="max_length")
-        self.part_text_encoding =  self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length")
+        self.part_text_encoding =  self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
         
     def preds_to_semantic_inds(self, preds, threshold):
         flat_preds = preds.reshape((preds.shape[0], -1))
