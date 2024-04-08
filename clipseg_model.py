@@ -53,15 +53,15 @@ BASE_PARTS_NAMES = [
 
 obj_part_map = {PARTS_NAMES.index(c): i for i,c in enumerate(BASE_PARTS_NAMES)}
 
-bird_parts = ["bird's wing", "bird's tail", "bird's head", "bird's eye", "bird's beak", "bird's torso", "bird's neck", "bird's leg", "bird's foot",]
+bird_parts = ["bird's wing", "bird's tail", "bird's head", "bird's eye", "bird's beak", "bird's torso", "bird's neck", "bird's leg", "bird's foot"]
 
 class CLIPSeg(nn.Module):
     def __init__(self):
         super().__init__()
         self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
-        train_class_texts = BASE_PARTS_NAMES
+        train_class_texts = PARTS_NAMES
         self.train_class_texts = [c.replace('\'s', '') for c in train_class_texts]
-        self.train_obj_classes = OBJ_BASE_CLASS_NAMES
+        self.train_obj_classes = OBJ_CLASS_NAMES
 
         self.test_class_texts = PARTS_NAMES
         self.test_obj_classes = OBJ_CLASS_NAMES
@@ -100,13 +100,18 @@ class CLIPSeg(nn.Module):
         self, model, images: list[Image.Image] | torch.Tensor, device: torch.device
     ):
         image_inputs = self.clipseg_processor(images=images, return_tensors="pt").to(device)
+        # all_inputs = BatchEncoding(data=dict(
+        #     **image_inputs,
+        #     **self.part_text_encoding,
+        #     output_hidden_states=torch.tensor(True),
+        #     output_attentions=torch.tensor(True)
+        # ), tensor_type='pt')
         all_inputs = BatchEncoding(data=dict(
             **image_inputs,
-            **self.part_text_encoding,
+            **self.train_text_encoding,
             output_hidden_states=torch.tensor(True),
             output_attentions=torch.tensor(True)
         ), tensor_type='pt')
-
         outputs = model(**all_inputs)
         return outputs
     
@@ -132,26 +137,48 @@ class CLIPSeg(nn.Module):
     def forward(self, batched_inputs):
         if not self.training:
             return self.inference(batched_inputs)
-        # images = [Image.open(x["file_name"]).convert("RGB") for x in batched_inputs]
         images = [x["image"].to(self.device) for x in batched_inputs]
-        gts = [x["obj_part_sem_seg"].to(self.device) for x in batched_inputs]
-        outputs = self.clipseg_segmentation(self.clipseg_model, images, None, self.device) #[b,n,h,w]
-        outputs = outputs.logits
-        targets = torch.stack([nn.functional.interpolate(
-                gt.unsqueeze(0).unsqueeze(0).float(),
-                size=(outputs.shape[-2], outputs.shape[-1]),
-                mode="nearest") for gt in gts]).long().squeeze(1).squeeze(1) #[b,h,w]
+        dense_tgt_list = [x["obj_part_sem_seg"].to(self.device) for x in batched_inputs]
+        outputs = self.clipseg_segmentation(self.clipseg_model, images, self.device) # shape: [b,n,h,w]
+        logits = outputs.logits
+        b, n, h, w = logits.shape  # n = num_classes+1 (background)
 
-        num_classes = outputs.shape[1]
-        mask = targets != self.ignore_label #[b,h,w]
-        outputs = outputs.permute(0,2,3,1) #[b,h,w,n]
-        _targets = torch.zeros(outputs.shape, device=self.device)
-        class_weight = torch.ones(num_classes).cuda()
-        _targets[:,:,:,-1] = 1
+        # Interpolate all gt masks to the size of the model output
+        dense_tgt = torch.stack(
+            [F.interpolate(
+                tgt[None, None, ...].float(),
+                size=(h, w),
+                mode="nearest"
+            )
+             for tgt
+             in dense_tgt_list]
+        ).long()
+        dense_tgt = dense_tgt.long().squeeze((1,2))  # shape: [b,h,w]
+
+        # logits = logits.permute(0,2,3,1)  # shape: [b,h,w,n]
+        # one_hot_tgt = torch.zeros(logits.shape, device=self.device)
+        # one_hot_tgt[..., -1] = 1 # The last class is background
+
+        # class_weight = torch.ones(n).to(self.device)
+        # class_weight[-1] = 0.05
+
+        # fg_mask = dense_tgt != self.ignore_label  # foreground_mask, shape: [b,h,w]
+        # fg_one_hot_tgt = F.one_hot(dense_tgt[fg_mask], num_classes=n).float()  # {0,1}^[num_foreground_pixels, num_classes+1]
+
+        # one_hot_tgt[fg_mask] = fg_one_hot_tgt
+
+        # loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight)
+        # losses = {"loss_sem_seg" : loss}
+        # return losses
+        dense_tgt[dense_tgt == 255] = n - 1
+        print('n-1', n-1)
+
+        one_hot_tgt = F.one_hot(dense_tgt, num_classes=n).float()  # {0,1}^[b,h,w,n]
+        one_hot_tgt = one_hot_tgt.permute(0, 3, 1, 2)
+
+        class_weight = torch.ones(n).to(self.device)
         class_weight[-1] = 0.05
-        _onehot = F.one_hot(targets[mask], num_classes=num_classes).float()
-        _targets[mask] = _onehot
 
-        loss = F.binary_cross_entropy_with_logits(outputs, _targets, weight=class_weight)
+        loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight[:, None, None])
         losses = {"loss_sem_seg" : loss}
         return losses
