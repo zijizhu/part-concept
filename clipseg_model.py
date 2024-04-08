@@ -164,5 +164,5 @@ class CLIPSeg(nn.Module):
         class_weight[-1] = 0.05
 
         loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight[:, None, None])
-        losses = {"loss_sem_seg" : loss}
-        return losses
+        # losses = {"loss_sem_seg" : loss}
+        return loss

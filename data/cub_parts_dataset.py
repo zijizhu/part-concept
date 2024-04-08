@@ -39,7 +39,7 @@ class CUBPartsDataset(Dataset):
         gt_path = os.path.join(self.dataset_dir,
                                subset,
                                f'parts_{self.split}',
-                               fn)
+                               fn).replace('jpg', 'png')
         image = Image.open(image_path).convert('RGB')
         gt = Image.open(gt_path)
 
