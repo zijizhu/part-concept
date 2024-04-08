@@ -4,6 +4,7 @@ from torch import nn
 import torch.nn.functional as F
 from clipseg.processing_clipseg import CLIPSegProcessor
 from clipseg.modeling_clipseg import CLIPSegForImageSegmentation
+from transformers.tokenization_utils_base import BatchEncoding
 
 
 OBJ_CLASS_NAMES = [
@@ -52,6 +53,7 @@ BASE_PARTS_NAMES = [
 
 obj_part_map = {PARTS_NAMES.index(c): i for i,c in enumerate(BASE_PARTS_NAMES)}
 
+bird_parts = ["bird's wing", "bird's tail", "bird's head", "bird's eye", "bird's beak", "bird's torso", "bird's neck", "bird's leg", "bird's foot",]
 
 class CLIPSeg(nn.Module):
     def __init__(self):
@@ -63,8 +65,9 @@ class CLIPSeg(nn.Module):
 
         self.test_class_texts = PARTS_NAMES
         self.test_obj_classes = OBJ_CLASS_NAMES
+
+        self.part_texts = [p.replace('\'s', '') for p in bird_parts]
         
-        self.segmentation_background_threshold = 0.0
         self.clipseg_model = CLIPSegForImageSegmentation.from_pretrained(
             "CIDAS/clipseg-rd64-refined"
         )
@@ -77,6 +80,7 @@ class CLIPSeg(nn.Module):
             else:
                 params.requires_grad = False
         self.train_text_encoding = self.clipseg_processor.tokenizer(self.train_class_texts, return_tensors="pt", padding="max_length")
+        self.part_text_encoding =  self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length")
         
     def preds_to_semantic_inds(self, preds, threshold):
         flat_preds = preds.reshape((preds.shape[0], -1))
@@ -93,55 +97,35 @@ class CLIPSeg(nn.Module):
         return semantic_inds
     
     def clipseg_segmentation(
-        self, model, images, test_text, device
+        self, model, images: list[Image.Image] | torch.Tensor, device: torch.device
     ):
-        logits = []
-        input = self.clipseg_processor(images=images, return_tensors="pt").to(device)
-        if self.training:
-            print('is training')
-            text = self.train_text_encoding
-        else:
-            print('no_training')
-            text=  test_text
-        input.update(text)
-        input.update({'output_hidden_states': torch.tensor(True), 'output_attentions': torch.tensor(True)})
-        input = input.to(device)
-        outputs = model(**input)
-        # logits = outputs.logits
-        # return logits
+        image_inputs = self.clipseg_processor(images=images, return_tensors="pt").to(device)
+        all_inputs = BatchEncoding(data=dict(
+            **image_inputs,
+            **self.part_text_encoding,
+            output_hidden_states=torch.tensor(True),
+            output_attentions=torch.tensor(True)
+        ), tensor_type='pt')
+
+        outputs = model(**all_inputs)
         return outputs
     
     def inference(self, batched_inputs):
-        image = Image.open(batched_inputs[0]["file_name"])
-        image = image.convert("RGB")
+        image = Image.open(batched_inputs[0]["file_name"]).convert("RGB")
+        w, h = image.size
         with torch.no_grad():
             outputs = self.clipseg_segmentation(
                 self.clipseg_model,
                 [image],
-                self.clipseg_processor.tokenizer([part.replace('\'s', '') for part in self.test_class_texts], return_tensors="pt", padding="max_length"),
                 self.device,
             )
-            logits = outputs.logits
             upscaled_logits = nn.functional.interpolate(
-                            logits[:,:-1,:,:],
-                            size=(image.size[1], image.size[0]),
-                            mode="bilinear",
-                            )
+                outputs.logits[:,:-1,:,:],
+                size=(h, w),
+                mode="bilinear",
+            )
             clipseg_preds = torch.sigmoid(upscaled_logits)
-        gt_objs = [self.test_obj_classes[i] for i in torch.unique(batched_inputs[0]["sem_seg"]) if i != self.ignore_label]
-        part_category_names = []
-        part_inds = []
-        for obj in gt_objs:
-            for i,part in enumerate(self.test_class_texts):
-                if part.split('\'s')[0] == obj:
-                    part_category_names.append(part.replace('\'s', ''))
-                    part_inds.append(i)
-        no_part_ids = [i for i in range(len(self.test_class_texts)) if i not in part_inds]  
         preds = clipseg_preds.squeeze(0)
-        print('gt_objs:', gt_objs)
-        print('no_part_ids', no_part_ids)
-        print('preds.shape:', preds.shape)
-        preds[no_part_ids] = 0.0
         results = [{"sem_seg": preds, "outputs": outputs}]
         return results
     

@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from torchvision.models import resnet101, ResNet101_Weights
 from torch.utils.tensorboard import SummaryWriter
 from lightning import seed_everything
-from datasets import build_datasets
+from data.cub_dataset import build_datasets
 from models.part_cem import PartCEM, PartCEMTV, PartCEMTVCpt
 from engine import train_epoch, test_epoch
 

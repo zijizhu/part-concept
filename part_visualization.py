@@ -16,7 +16,7 @@ from torch.nn import BatchNorm2d, Softmax2d
 from torchvision.models.resnet import ResNet
 from torchvision.models.resnet import resnet50, resnet101
 
-from datasets import build_datasets
+from data.cub_dataset import build_datasets
 from models.part_cem import PartCEM, PartCEMTV, PartCEMTVCpt
 
 (dataset_train, dataset_val, dataset_test), attr_indices, class_attrs_df = build_datasets(
