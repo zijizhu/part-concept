@@ -53,18 +53,25 @@ BASE_PARTS_NAMES = [
 
 obj_part_map = {PARTS_NAMES.index(c): i for i,c in enumerate(BASE_PARTS_NAMES)}
 
-bird_parts = ["bird's wing", "bird's tail", "bird's head", "bird's eye", "bird's beak", "bird's torso", "bird's neck", "bird's leg", "bird's foot"]
+# bird_parts = ["bird's wing", "bird's tail", "bird's head", "bird's eye", "bird's beak", "bird's torso", "bird's neck", "bird's leg", "bird's foot"]
+bird_parts =  ["birds' head",
+               "bird's beak",
+               "bird's tail",
+               "bird's wing",
+               "bird's leg",
+               "bird's eye",
+               "bird's torso"]
 
 class CLIPSeg(nn.Module):
     def __init__(self):
         super().__init__()
         self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
-        train_class_texts = PARTS_NAMES
-        self.train_class_texts = [c.replace('\'s', '') for c in train_class_texts]
-        self.train_obj_classes = OBJ_CLASS_NAMES
+        # train_class_texts = PARTS_NAMES
+        # self.train_class_texts = [c.replace('\'s', '') for c in train_class_texts]
+        # self.train_obj_classes = OBJ_CLASS_NAMES
 
-        self.test_class_texts = PARTS_NAMES
-        self.test_obj_classes = OBJ_CLASS_NAMES
+        # self.test_class_texts = PARTS_NAMES
+        # self.test_obj_classes = OBJ_CLASS_NAMES
 
         self.part_texts = [p.replace('\'s', '') for p in bird_parts]
         
@@ -72,14 +79,13 @@ class CLIPSeg(nn.Module):
             "CIDAS/clipseg-rd64-refined"
         )
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.ignore_label = 255
         
         for name, params in self.clipseg_model.named_parameters():
             if 'clip.text_model.embeddings' in name or 'film' in name or 'visual_adapter' in name or 'decoder' in name: # VA+L+F+D
                 params.requires_grad = True
             else:
                 params.requires_grad = False
-        self.train_text_encoding = self.clipseg_processor.tokenizer(self.train_class_texts, return_tensors="pt", padding="max_length")
+        # self.train_text_encoding = self.clipseg_processor.tokenizer(self.train_class_texts, return_tensors="pt", padding="max_length")
         self.part_text_encoding =  self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length")
         
     def preds_to_semantic_inds(self, preds, threshold):
@@ -100,24 +106,18 @@ class CLIPSeg(nn.Module):
         self, model, images: list[Image.Image] | torch.Tensor, device: torch.device
     ):
         image_inputs = self.clipseg_processor(images=images, return_tensors="pt").to(device)
-        # all_inputs = BatchEncoding(data=dict(
-        #     **image_inputs,
-        #     **self.part_text_encoding,
-        #     output_hidden_states=torch.tensor(True),
-        #     output_attentions=torch.tensor(True)
-        # ), tensor_type='pt')
         all_inputs = BatchEncoding(data=dict(
             **image_inputs,
-            **self.train_text_encoding,
+            **self.part_text_encoding,
             output_hidden_states=torch.tensor(True),
             output_attentions=torch.tensor(True)
         ), tensor_type='pt')
         outputs = model(**all_inputs)
         return outputs
     
-    def inference(self, batched_inputs):
-        image = Image.open(batched_inputs[0]["file_name"]).convert("RGB")
-        w, h = image.size
+    def inference(self, image):
+        image = image[0]
+        c, h, w = image.shape
         with torch.no_grad():
             outputs = self.clipseg_segmentation(
                 self.clipseg_model,
@@ -134,11 +134,13 @@ class CLIPSeg(nn.Module):
         results = [{"sem_seg": preds, "outputs": outputs}]
         return results
     
-    def forward(self, batched_inputs):
+    def forward(self, batch):
+        im_paths, tgt_paths, images, targets = batch  # list[tensor]
         if not self.training:
-            return self.inference(batched_inputs)
-        images = [x["image"].to(self.device) for x in batched_inputs]
-        dense_tgt_list = [x["obj_part_sem_seg"].to(self.device) for x in batched_inputs]
+            return self.inference(images)
+        images = [im.to(self.device) for im in images]
+        tgt_list = [tgt.to(self.device) for tgt in targets]
+
         outputs = self.clipseg_segmentation(self.clipseg_model, images, self.device) # shape: [b,n,h,w]
         logits = outputs.logits
         b, n, h, w = logits.shape  # n = num_classes+1 (background)
@@ -151,27 +153,9 @@ class CLIPSeg(nn.Module):
                 mode="nearest"
             )
              for tgt
-             in dense_tgt_list]
+             in tgt_list]
         ).long()
         dense_tgt = dense_tgt.long().squeeze((1,2))  # shape: [b,h,w]
-
-        # logits = logits.permute(0,2,3,1)  # shape: [b,h,w,n]
-        # one_hot_tgt = torch.zeros(logits.shape, device=self.device)
-        # one_hot_tgt[..., -1] = 1 # The last class is background
-
-        # class_weight = torch.ones(n).to(self.device)
-        # class_weight[-1] = 0.05
-
-        # fg_mask = dense_tgt != self.ignore_label  # foreground_mask, shape: [b,h,w]
-        # fg_one_hot_tgt = F.one_hot(dense_tgt[fg_mask], num_classes=n).float()  # {0,1}^[num_foreground_pixels, num_classes+1]
-
-        # one_hot_tgt[fg_mask] = fg_one_hot_tgt
-
-        # loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight)
-        # losses = {"loss_sem_seg" : loss}
-        # return losses
-        dense_tgt[dense_tgt == 255] = n - 1
-        print('n-1', n-1)
 
         one_hot_tgt = F.one_hot(dense_tgt, num_classes=n).float()  # {0,1}^[b,h,w,n]
         one_hot_tgt = one_hot_tgt.permute(0, 3, 1, 2)
