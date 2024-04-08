@@ -40,6 +40,7 @@ if __name__ == '__main__':
 
     seed_everything(args.seed)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print('device:', device)
 
     log_dir = os.path.join(f'{args.dataset}_runs', datetime.now().strftime('%Y-%m-%d_%H-%M'))
     Path(log_dir).mkdir(parents=True, exist_ok=True)
