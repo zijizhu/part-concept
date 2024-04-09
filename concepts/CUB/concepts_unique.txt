@@ -1,0 +1,57 @@
+all-purpose beak
+black beak
+black eye
+black head
+black leg
+black tail
+black torso
+black wing
+blue head
+brown head
+brown tail
+brown torso
+brown wing
+buff beak
+buff head
+buff leg
+buff tail
+buff torso
+buff wing
+cone beak
+dagger beak
+duck-like torso
+eyebrow head
+grey beak
+grey head
+grey leg
+grey tail
+grey torso
+grey wing
+hooked seabird beak
+long beak
+medium size torso
+multi-colored tail
+multi-colored torso
+multi-colored wing
+notched tail
+perching-like torso
+plain head
+pointed wing
+rounded wing
+short beak
+small size torso
+solid tail
+solid torso
+solid wing
+spotted wing
+striped tail
+striped torso
+striped wing
+very small size torso
+white head
+white tail
+white torso
+white wing
+yellow head
+yellow torso
+yellow wing

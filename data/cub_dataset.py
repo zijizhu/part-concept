@@ -1,3 +1,4 @@
+import json
 import os
 import torch
 import numpy as np
@@ -6,7 +7,35 @@ from PIL import Image
 from typing import Optional
 import torchvision.transforms as T
 from torch.utils.data import Dataset
+import torchvision.transforms.functional as F
 from sklearn.model_selection import train_test_split
+
+# Replace text of 112 relvant concepts with the following dict
+replacement = {
+    'breast pattern': 'torso',
+    'belly pattern': 'torso',
+    'back pattern': 'torso',
+    'underparts': 'torso',
+    'upperparts': 'torso',
+    'breast': 'torso',
+    'belly': 'torso',
+    'back': 'torso',
+    'body': 'torso',
+    'forehead': 'head',
+    'throat': 'head',
+    'crown': 'head',
+    'nape': 'head',
+    'head pattern': 'head',
+    'under tail': 'tail',
+    'upper tail': 'tail',
+    'tail pattern': 'tail',
+    'wing pattern': 'wing',
+
+    'rounded-wings': 'rounded',
+    'pointed-wings': 'pointed',
+    'beak length about the same as head': 'long beak',
+    'beak length shorter than head': 'short beak'
+}
 
 DEFAULT_ATTR_INDICES = [1, 4, 6, 7, 10, 14, 15, 20, 21, 23, 25, 29, 30,
                         35, 36, 38, 40, 44, 45, 50, 51, 53, 54, 56, 57,
@@ -19,6 +48,31 @@ DEFAULT_ATTR_INDICES = [1, 4, 6, 7, 10, 14, 15, 20, 21, 23, 25, 29, 30,
                         242, 243, 244, 249, 253, 254, 259, 260, 262, 268,
                         274, 277, 283, 289, 292, 293, 294, 298, 299, 304,
                         305, 308, 309, 310, 311]
+
+bird_parts =  ["head",
+               "beak",
+               "tail",
+               "wing",
+               "leg",
+               "eye",
+               "torso"]
+
+with open('../concepts/CUB/concepts_v4.txt', 'r') as fp:
+    original_concepts = fp.read().splitlines()
+with open('../concepts/CUB/concepts_unique.txt', 'r') as fp:
+    unique_concepts = fp.read().splitlines()
+with open('../concepts/CUB/hierarchy.json') as fp:
+    hierarchy = json.load(fp=fp)
+
+original2unique = {}
+for i, original_cpt in enumerate(original_concepts):
+    original2unique[i] = unique_concepts.index(original_cpt)
+
+part_concept_association = np.zeros((len(bird_parts), len(unique_concepts)), dtype=int)
+for cpt_idx, cpt in enumerate(unique_concepts):
+    part = hierarchy[cpt]
+    part_idx = bird_parts.index(part)
+    part_concept_association[part_idx, cpt_idx] = 1
 
 
 def get_transforms(image_size=448):
@@ -43,7 +97,7 @@ def get_transforms(image_size=448):
 def build_datasets(dataset_dir: str,
                    attr_subset: str,
                    use_class_level_attr: bool,
-                   image_size: int,
+                   use_transforms=False,
                    val_size: float=0.1):
     file_path_df = pd.read_csv(os.path.join(dataset_dir, 'CUB_200_2011', 'images.txt'),
                                    sep=' ', header=None, names=['image_id', 'file_path'])
@@ -121,7 +175,10 @@ def build_datasets(dataset_dir: str,
     # attr_name_df = pd.read_csv(os.path.join(dataset_dir, 'attributes.txt'), sep=' ',
     #                            names=['attr_id', 'attr_name']).drop(columns=['attr_id'])
 
-    transforms_train, transforms_test = get_transforms(image_size)
+    if use_transforms:
+        transforms_train, transforms_test = get_transforms(448)
+    else:
+        transforms_train, transforms_test = None, None
 
     dataset_train = CUBDataset(dataset_dir=dataset_dir, info_df=main_df, attributes_df=attr_df,
                                split_image_ids=train_img_ids, class_attributes_df=class_attrs_df,
@@ -162,12 +219,24 @@ class CUBDataset(Dataset):
             attributes = self.class_attr_df.loc[class_id].to_numpy()
         else:
             attributes = self.attr_df.loc[img_id, 'is_present'].to_numpy()
+        
+        idxs, = np.where(attributes == 1)
+
+        for k, v in original2unique.items():
+            idxs[idxs == k] = v
+
+        mapped_attr_labels = np.zeros(len(unique_concepts), dtype=int)
+        mapped_attr_labels[idxs] = 1
+        mapped_attr_labels_expanded = np.stack([mapped_attr_labels] * len(bird_parts))
+        attr_labels_contrastive = mapped_attr_labels_expanded & part_concept_association
 
         image = Image.open(os.path.join(self.dataset_dir, 'CUB_200_2011', 'images', file_path)).convert('RGB')
         if self.transforms is not None:
             image = self.transforms(image)
+        else:
+            image = F.pil_to_tensor(image)
     
         return (torch.tensor(img_id),
                 image,
                 torch.tensor(class_id),
-                torch.tensor(attributes, dtype=torch.float32))
+                torch.tensor(attr_labels_contrastive, dtype=torch.long))

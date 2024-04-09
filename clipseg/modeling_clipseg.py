@@ -1173,7 +1173,7 @@ class CLIPSegDecoderLayer(nn.Module):
     """
 
     # Copied from transformers.models.clip.modeling_clip.CLIPEncoderLayer.__init__ with CLIP->CLIPSeg
-    def __init__(self, config: CLIPSegConfig):
+    def __init__(self, config: CLIPSegVisionConfig):
         super().__init__()
         self.embed_dim = config.hidden_size
         self.self_attn = CLIPSegAttention(config)
@@ -1226,6 +1226,7 @@ class CLIPSegDecoderLayer(nn.Module):
 class CLIPSegDecoder(CLIPSegPreTrainedModel):
     def __init__(self, config: CLIPSegConfig):
         super().__init__(config)
+        print(type(config), config.projection_dim)
 
         self.conditional_layer = config.conditional_layer
 
@@ -1278,6 +1279,7 @@ class CLIPSegDecoder(CLIPSegPreTrainedModel):
         all_attentions = () if output_attentions else None
 
         activations = hidden_states[::-1]
+        print('activation.shape', activations[0].shape)
 
         output = None
         for i, (activation, layer, reduce) in enumerate(zip(activations, self.layers, self.reduces)):
