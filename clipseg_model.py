@@ -115,13 +115,12 @@ class CLIPSeg(nn.Module):
         outputs = model(**all_inputs)
         return outputs
     
-    def inference(self, image):
-        image = image[0]
-        c, h, w = image.shape
+    def inference(self, images):
+        c, h, w = images[0].shape
         with torch.no_grad():
             outputs = self.clipseg_segmentation(
                 self.clipseg_model,
-                [image],
+                images,
                 self.device,
             )
             upscaled_logits = nn.functional.interpolate(
@@ -129,10 +128,8 @@ class CLIPSeg(nn.Module):
                 size=(h, w),
                 mode="bilinear",
             )
-            clipseg_preds = torch.sigmoid(upscaled_logits)
-        preds = clipseg_preds.squeeze(0)
-        results = [{"sem_seg": preds, "outputs": outputs}]
-        return results
+        logits = torch.sigmoid(upscaled_logits).squeeze(0)
+        return logits, outputs
     
     def forward(self, batch):
         im_paths, tgt_paths, images, targets = batch  # list[tensor]

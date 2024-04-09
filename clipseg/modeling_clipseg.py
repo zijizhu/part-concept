@@ -1268,8 +1268,8 @@ class CLIPSegDecoder(CLIPSegPreTrainedModel):
 
     def forward(
         self,
-        hidden_states: Tuple[torch.Tensor],
-        conditional_embeddings: torch.Tensor,
+        hidden_states: Tuple[torch.Tensor],  # tuple[Tensor], each of shape: [bs*num_cond_emb, num_patches+1, vit_hidden_size=768]
+        conditional_embeddings: torch.Tensor,  # shape: [bs*num_cond_embs, hidden_size]
         output_attentions: Optional[bool] = None,
         output_hidden_states: Optional[bool] = None,
         return_dict: Optional[bool] = True,
@@ -1281,6 +1281,7 @@ class CLIPSegDecoder(CLIPSegPreTrainedModel):
 
         output = None
         for i, (activation, layer, reduce) in enumerate(zip(activations, self.layers, self.reduces)):
+            # output has shape: [bs*num_cond_emb, num_tokens, reduce_dim] throughout the loop
             if output is not None:
                 output = reduce(activation) + output
             else:
@@ -1304,15 +1305,13 @@ class CLIPSegDecoder(CLIPSegPreTrainedModel):
             if output_attentions:
                 all_attentions += (layer_outputs[1],)
 
-        output = output[:, 1:, :].permute(0, 2, 1)  # remove cls token and reshape to [batch_size, reduce_dim, seq_len]
+        output = output[:, 1:, :].permute(0, 2, 1)  # remove cls token and reshape to [bs*num_cond_embs, reduce_dim, num_patches]
 
         size = int(math.sqrt(output.shape[2]))
 
-        batch_size = conditional_embeddings.shape[0]
-        output = output.view(batch_size, output.shape[1], size, size)
-
-        logits = self.transposed_convolution(output).squeeze()
-
+        batch_size = conditional_embeddings.shape[0] # actually bs*num_cond_embs
+        output = output.view(batch_size, output.shape[1], size, size)  # shape: [bs*num_cond_embs, reduce_dim, h, w]
+        logits = self.transposed_convolution(output).squeeze()  # shape: [bs*num_cond_embs, h_upscaled, w_upscaled]
         if not return_dict:
             return tuple(v for v in [logits, all_hidden_states, all_attentions] if v is not None)
 
@@ -1489,7 +1488,7 @@ class CLIPSegForImageSegmentation(CLIPSegPreTrainedModel):
                 attention_mask=attention_mask,
                 position_ids=position_ids,
                 conditional_pixel_values=conditional_pixel_values,
-            )
+            )  # shape: [num_cond_embs, hidden_size]
         else:
             if conditional_embeddings.shape[0] != pixel_values.shape[0]:
                 raise ValueError(
@@ -1501,10 +1500,11 @@ class CLIPSegForImageSegmentation(CLIPSegPreTrainedModel):
                     " `config.projection_dim`."
                 )
         # step 3: forward both the pooled output and the activations through the lightweight decoder to predict masks
-        bs, h, w = activations[0].shape[0], activations[0].shape[1], activations[0].shape[2]
+        bs, num_tokens, hidden_size = activations[0].shape  # shape: [bs, num_patches+1, clip_vit_dim]
+        # turn activations into shape: [bs*num_cond_emb, num_patches+1, vit_hidden_size]
         for i in range(len(activations)):
-            activations[i] = activations[i].unsqueeze(1).repeat(1,len(conditional_embeddings),1,1).reshape(-1,h,w)
-        conditional_embeddings = conditional_embeddings.unsqueeze(0).repeat(bs,1,1).reshape(-1, 512)
+            activations[i] = activations[i].unsqueeze(1).repeat(1,len(conditional_embeddings),1,1).reshape(-1, num_tokens, hidden_size)
+        conditional_embeddings = conditional_embeddings.unsqueeze(0).repeat(bs,1,1).reshape(-1, 512)  # shape: [bs*num_cond_embs, hidden_size]
         
         decoder_outputs = self.decoder(
             activations,
@@ -1513,8 +1513,8 @@ class CLIPSegForImageSegmentation(CLIPSegPreTrainedModel):
             output_hidden_states=output_hidden_states,
             return_dict=return_dict,
         )
-        logits = decoder_outputs.logits if return_dict else decoder_outputs[0]
-        logits = logits.reshape(bs, -1, logits.shape[-2], logits.shape[-1])
+        logits = decoder_outputs.logits if return_dict else decoder_outputs[0]  # shape: [bs*num_cond_embs, h_upscaled, w_upscaled]
+        logits = logits.reshape(bs, -1, logits.shape[-2], logits.shape[-1])  # shape: [bs, num_cond_embs, h_upscaled, w_upscaled]
         loss = None
         if labels is not None:
             # move labels to the correct device to enable PP
