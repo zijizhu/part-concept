@@ -62,6 +62,9 @@ bird_parts =  ["birds' head",
                "bird's eye",
                "bird's torso"]
 
+with open('concepts/CUB/concepts_unique.txt', 'r') as fp:
+    unique_concepts = fp.read().splitlines()
+
 class CLIPSeg(nn.Module):
     def __init__(self):
         super().__init__()
@@ -74,6 +77,10 @@ class CLIPSeg(nn.Module):
         # self.test_obj_classes = OBJ_CLASS_NAMES
 
         self.part_texts = [p.replace('\'s', '') for p in bird_parts]
+        self.concept_texts = []
+        for cpt in unique_concepts:
+            idx = cpt.index(' ')
+            self.concept_texts.append(cpt[:idx] + ' bird' + cpt[idx:])
         
         self.clipseg_model = CLIPSegForImageSegmentation.from_pretrained(
             "CIDAS/clipseg-rd64-refined"
@@ -87,6 +94,7 @@ class CLIPSeg(nn.Module):
                 params.requires_grad = False
         # self.train_text_encoding = self.clipseg_processor.tokenizer(self.train_class_texts, return_tensors="pt", padding="max_length")
         self.part_text_encoding =  self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
+        self.concept_text_encoding = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
         
     def preds_to_semantic_inds(self, preds, threshold):
         flat_preds = preds.reshape((preds.shape[0], -1))
@@ -103,12 +111,12 @@ class CLIPSeg(nn.Module):
         return semantic_inds
     
     def clipseg_segmentation(
-        self, model, images: list[Image.Image] | torch.Tensor, device: torch.device
+        self, model, images: list[Image.Image] | torch.Tensor, text_encoding, device: torch.device
     ):
         image_inputs = self.clipseg_processor(images=images, return_tensors="pt").to(device)
         all_inputs = BatchEncoding(data=dict(
             **image_inputs,
-            **self.part_text_encoding,
+            **text_encoding,
             output_hidden_states=torch.tensor(True),
             output_attentions=torch.tensor(True)
         ), tensor_type='pt')
@@ -121,6 +129,7 @@ class CLIPSeg(nn.Module):
             outputs = self.clipseg_segmentation(
                 self.clipseg_model,
                 images,
+                self.part_text_encoding,
                 self.device,
             )
             upscaled_logits = nn.functional.interpolate(
@@ -163,3 +172,14 @@ class CLIPSeg(nn.Module):
         loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight[:, None, None])
         # losses = {"loss_sem_seg" : loss}
         return loss
+
+    # def forward(self, batch):
+    #     # im_paths, tgt_paths, images, targets = batch  # list[tensor]
+    #     images = batch
+    #     # if not self.training:
+    #     #     return self.inference(images)
+    #     images = [im.to(self.device) for im in images]
+    #     # tgt_list = [tgt.to(self.device) for tgt in targets]
+    #     part_outputs = self.clipseg_segmentation(self.clipseg_model, images, self.part_text_encoding, self.device) # shape: [b,n,h,w]
+    #     concept_outputs = self.clipseg_segmentation(self.clipseg_model, images, self.concept_text_encoding, self.device) # shape: [b,n,h,w]
+    #     print(concept_outputs.decoder_output.hidden_states[-1].shape)

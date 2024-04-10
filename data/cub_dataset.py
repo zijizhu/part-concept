@@ -57,11 +57,11 @@ bird_parts =  ["head",
                "eye",
                "torso"]
 
-with open('../concepts/CUB/concepts_v4.txt', 'r') as fp:
+with open('concepts/CUB/concepts_v4.txt', 'r') as fp:
     original_concepts = fp.read().splitlines()
-with open('../concepts/CUB/concepts_unique.txt', 'r') as fp:
+with open('concepts/CUB/concepts_unique.txt', 'r') as fp:
     unique_concepts = fp.read().splitlines()
-with open('../concepts/CUB/hierarchy.json') as fp:
+with open('concepts/CUB/hierarchy.json') as fp:
     hierarchy = json.load(fp=fp)
 
 original2unique = {}
@@ -240,3 +240,12 @@ class CUBDataset(Dataset):
                 image,
                 torch.tensor(class_id),
                 torch.tensor(attr_labels_contrastive, dtype=torch.long))
+
+def collate_fn(batch):
+    img_ids, images, class_ids, attr_labels = [], [], [], []
+    for im_id, im, cls_id, attr_tgts in batch:
+        img_ids.append(im_id)
+        images.append(im)
+        class_ids.append(cls_id)
+        attr_labels.append(attr_tgts)
+    return torch.stack(img_ids), images, torch.stack(class_ids), torch.cat(attr_labels)
