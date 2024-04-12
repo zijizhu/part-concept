@@ -87,12 +87,12 @@ class CLIPSeg(nn.Module):
             else:
                 params.requires_grad = False
         self.part_text_encoding =  self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
-        self.concept_text_encoding = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
+        self.concept_text_encoding = self.clipseg_processor.tokenizer(self.concept_texts, return_tensors="pt", padding="max_length").to(self.device)
 
         self.to(self.device)
         
     def forward_features(
-        self, model, images: list[Image.Image] | torch.Tensor, text_encoding, device: torch.device
+        self, model, images: torch.Tensor, text_encoding, device: torch.device
     ):
         image_inputs = self.clipseg_processor(images=images, return_tensors="pt").to(device)
         all_inputs = BatchEncoding(data=dict(
@@ -104,10 +104,10 @@ class CLIPSeg(nn.Module):
         outputs = model(**all_inputs)
         return outputs
     
-    def inference(self, images):
-        c, h, w = images[0].shape
+    def inference(self, images: torch.Tensor):
+        bs, c, h, w = images.shape
         with torch.no_grad():
-            outputs = self.clipseg_segmentation(
+            outputs = self.forward_features(
                 self.clipseg_model,
                 images,
                 self.part_text_encoding,
@@ -121,15 +121,9 @@ class CLIPSeg(nn.Module):
         logits = torch.sigmoid(upscaled_logits).squeeze(0)
         return logits, outputs
     
-    def segmentation_loss(self, batch):
-        im_paths, tgt_paths, images, targets = batch  # list[tensor]
-        if not self.training:
-            return self.inference(images)
-        images = [im.to(self.device) for im in images]
-        tgt_list = [tgt.to(self.device) for tgt in targets]
-
-        outputs = self.forward_features(self.clipseg_model, images, self.device) # shape: [b,n,h,w]
-        logits = outputs.logits
+    def segmentation_loss(self, part_outputs, tgt_list):
+        '''tgt_list should include a channel for background'''
+        logits = part_outputs.logits
         b, n, h, w = logits.shape  # n = num_classes+1 (background)
 
         # Interpolate all gt masks to the size of the model output
@@ -153,20 +147,26 @@ class CLIPSeg(nn.Module):
         loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight[:, None, None])
         return loss
 
-    def forward(self, batch):
-        # im_paths, tgt_paths, images, targets = batch  # list[tensor]
-        images = batch
-        # if not self.training:
-        #     return self.inference(images)
+    def forward(self, images: list[torch.Tensor], targets: torch.Tensor):
         images = [im.to(self.device) for im in images]
-        # tgt_list = [tgt.to(self.device) for tgt in targets]
+
+        if not self.training:
+            return self.inference(images=images)
+
+        bs, num_parts, num_concepts = targets.shape
+
         part_outputs = self.forward_features(self.clipseg_model, images, self.part_text_encoding, self.device) # shape: [b,n,h,w]
-        part_features = part_outputs.decoder_output.hidden_states[-1]  # shape: [b*(num_parts+1), num_tokens, hidden_size=768] (not projected)
-        part_cls = part_features[:, 0, :]
+        part_features = part_outputs.decoder_output.hidden_states[-1]  # shape: [b*(num_parts+1), num_tokens, reduce_dim]
+        part_cls = part_features[:, 0, :].view(bs, num_parts+1, -1)[:, :-1, :] # shape: [bs, num_parts, reduce_dim]
+
         concept_outputs = self.forward_features(self.clipseg_model, images, self.concept_text_encoding, self.device) # shape: [b,n,h,w]
-        concept_features = concept_outputs.decoder_output.hidden_states[-1]  # shape: [b*num_concepts, num_tokens, hidden_size=768] (not projected)
-        concept_cls = concept_features[:, 0, :]
-        print(part_features.shape, concept_features.shape)
-        print(part_cls.shape, concept_cls.shape)
-        return None
+        concept_features = concept_outputs.decoder_output.hidden_states[-1]  # shape: [b*(num_concepts+1), num_tokens, reduce_dim]
+        concept_cls = concept_features[:, 0, :].view(bs, num_concepts+1, -1)[:, :-1, :] # shape: [bs, num_concepts, reduce_dim]
+        # Calculate cosine similarity
+        part_cls_norm = F.normalize(part_cls, p=2, dim=-1)
+        concept_cls_norm = F.normalize(concept_cls, p=2, dim=-1)
+        cos_sim = torch.bmm(part_cls_norm, concept_cls_norm.permute(0, 2, 1))  # shape: [bs, num_parts, bs*num_concepts], range: [0, 1]
+        
+        loss = F.binary_cross_entropy_with_logits(cos_sim, targets)
+        return loss
 

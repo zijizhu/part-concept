@@ -1279,7 +1279,6 @@ class CLIPSegDecoder(CLIPSegPreTrainedModel):
         all_attentions = () if output_attentions else None
 
         activations = hidden_states[::-1]
-        print('activation.shape', activations[0].shape)
 
         output = None
         for i, (activation, layer, reduce) in enumerate(zip(activations, self.layers, self.reduces)):
@@ -1392,7 +1391,7 @@ class CLIPSegForImageSegmentation(CLIPSegPreTrainedModel):
             )
             conditional_embeddings = self.text_adapter(conditional_embeddings) * 0.0 + conditional_embeddings * 1.0
             # conditional_embeddings = self.tunable_linear.weight[:conditional_embeddings.size(0), :] + conditional_embeddings
-            conditional_embeddings = torch.cat([conditional_embeddings, self.non_object_embedding], dim=0)
+            conditional_embeddings = torch.cat([conditional_embeddings, self.non_object_embedding], dim=0)  # non_obj_emg is at index -1
             # if len(input_ids) != batch_size:
             #     conditional_embeddings = conditional_embeddings.unsqueeze(0).repeat(batch_size,1,1)
             

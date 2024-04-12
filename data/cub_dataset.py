@@ -239,7 +239,7 @@ class CUBDataset(Dataset):
         return (torch.tensor(img_id),
                 image,
                 torch.tensor(class_id),
-                torch.tensor(attr_labels_contrastive, dtype=torch.long))
+                torch.tensor(attr_labels_contrastive, dtype=torch.float32))
 
 def collate_fn(batch):
     img_ids, images, class_ids, attr_labels = [], [], [], []
@@ -248,4 +248,4 @@ def collate_fn(batch):
         images.append(im)
         class_ids.append(cls_id)
         attr_labels.append(attr_tgts)
-    return torch.stack(img_ids), images, torch.stack(class_ids), torch.cat(attr_labels)
+    return torch.stack(img_ids), images, torch.stack(class_ids), torch.stack(attr_labels)
