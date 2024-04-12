@@ -69,12 +69,6 @@ class CLIPSeg(nn.Module):
     def __init__(self):
         super().__init__()
         self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
-        # train_class_texts = PARTS_NAMES
-        # self.train_class_texts = [c.replace('\'s', '') for c in train_class_texts]
-        # self.train_obj_classes = OBJ_CLASS_NAMES
-
-        # self.test_class_texts = PARTS_NAMES
-        # self.test_obj_classes = OBJ_CLASS_NAMES
 
         self.part_texts = [p.replace('\'s', '') for p in bird_parts]
         self.concept_texts = []
@@ -92,25 +86,12 @@ class CLIPSeg(nn.Module):
                 params.requires_grad = True
             else:
                 params.requires_grad = False
-        # self.train_text_encoding = self.clipseg_processor.tokenizer(self.train_class_texts, return_tensors="pt", padding="max_length")
         self.part_text_encoding =  self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
         self.concept_text_encoding = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
-        
-    def preds_to_semantic_inds(self, preds, threshold):
-        flat_preds = preds.reshape((preds.shape[0], -1))
-        # Initialize a dummy "unlabeled" mask with the threshold
-        flat_preds_with_treshold = torch.full(
-            (preds.shape[0] + 1, flat_preds.shape[-1]), threshold
-        )
-        flat_preds_with_treshold[1 : preds.shape[0] + 1, :] = flat_preds
 
-        # Get the top mask index for each pixel
-        semantic_inds = torch.topk(flat_preds_with_treshold, 1, dim=0).indices.reshape(
-            (preds.shape[-2], preds.shape[-1])
-        )
-        return semantic_inds
-    
-    def clipseg_segmentation(
+        self.to(self.device)
+        
+    def forward_features(
         self, model, images: list[Image.Image] | torch.Tensor, text_encoding, device: torch.device
     ):
         image_inputs = self.clipseg_processor(images=images, return_tensors="pt").to(device)
@@ -140,26 +121,26 @@ class CLIPSeg(nn.Module):
         logits = torch.sigmoid(upscaled_logits).squeeze(0)
         return logits, outputs
     
-    def forward(self, batch):
+    def segmentation_loss(self, batch):
         im_paths, tgt_paths, images, targets = batch  # list[tensor]
         if not self.training:
             return self.inference(images)
         images = [im.to(self.device) for im in images]
         tgt_list = [tgt.to(self.device) for tgt in targets]
 
-        outputs = self.clipseg_segmentation(self.clipseg_model, images, self.device) # shape: [b,n,h,w]
+        outputs = self.forward_features(self.clipseg_model, images, self.device) # shape: [b,n,h,w]
         logits = outputs.logits
         b, n, h, w = logits.shape  # n = num_classes+1 (background)
 
         # Interpolate all gt masks to the size of the model output
         dense_tgt = torch.stack(
-            [F.interpolate(
-                tgt[None, None, ...].float(),
-                size=(h, w),
-                mode="nearest"
-            )
-             for tgt
-             in tgt_list]
+          [F.interpolate(
+              tgt[None, None, ...].float(),
+              size=(h, w),
+              mode="nearest"
+          )
+           for tgt
+           in tgt_list]
         ).long()
         dense_tgt = dense_tgt.long().squeeze((1,2))  # shape: [b,h,w]
 
@@ -170,16 +151,22 @@ class CLIPSeg(nn.Module):
         class_weight[-1] = 0.05
 
         loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight[:, None, None])
-        # losses = {"loss_sem_seg" : loss}
         return loss
 
-    # def forward(self, batch):
-    #     # im_paths, tgt_paths, images, targets = batch  # list[tensor]
-    #     images = batch
-    #     # if not self.training:
-    #     #     return self.inference(images)
-    #     images = [im.to(self.device) for im in images]
-    #     # tgt_list = [tgt.to(self.device) for tgt in targets]
-    #     part_outputs = self.clipseg_segmentation(self.clipseg_model, images, self.part_text_encoding, self.device) # shape: [b,n,h,w]
-    #     concept_outputs = self.clipseg_segmentation(self.clipseg_model, images, self.concept_text_encoding, self.device) # shape: [b,n,h,w]
-    #     print(concept_outputs.decoder_output.hidden_states[-1].shape)
+    def forward(self, batch):
+        # im_paths, tgt_paths, images, targets = batch  # list[tensor]
+        images = batch
+        # if not self.training:
+        #     return self.inference(images)
+        images = [im.to(self.device) for im in images]
+        # tgt_list = [tgt.to(self.device) for tgt in targets]
+        part_outputs = self.forward_features(self.clipseg_model, images, self.part_text_encoding, self.device) # shape: [b,n,h,w]
+        part_features = part_outputs.decoder_output.hidden_states[-1]  # shape: [b*(num_parts+1), num_tokens, hidden_size=768] (not projected)
+        part_cls = part_features[:, 0, :]
+        concept_outputs = self.forward_features(self.clipseg_model, images, self.concept_text_encoding, self.device) # shape: [b,n,h,w]
+        concept_features = concept_outputs.decoder_output.hidden_states[-1]  # shape: [b*num_concepts, num_tokens, hidden_size=768] (not projected)
+        concept_cls = concept_features[:, 0, :]
+        print(part_features.shape, concept_features.shape)
+        print(part_cls.shape, concept_cls.shape)
+        return None
+

@@ -1302,7 +1302,7 @@ class CLIPSegDecoder(CLIPSegPreTrainedModel):
             output = layer_outputs[0]
 
             if output_hidden_states:
-                all_hidden_states += (output,)
+                all_hidden_states += (output,)  # hidden states are not projected to reduce_dim when extracted
 
             if output_attentions:
                 all_attentions += (layer_outputs[1],)
@@ -1502,8 +1502,9 @@ class CLIPSegForImageSegmentation(CLIPSegPreTrainedModel):
                     " `config.projection_dim`."
                 )
         # step 3: forward both the pooled output and the activations through the lightweight decoder to predict masks
-        bs, num_tokens, hidden_size = activations[0].shape  # shape: [bs, num_patches+1, clip_vit_dim]
-        # turn activations into shape: [bs*num_cond_emb, num_patches+1, vit_hidden_size]
+        bs, num_tokens, hidden_size = activations[0].shape  # shape: [bs, num_patches+1, vit_hidden_size=768]
+        # turn activations into shape: [bs*num_cond_emb, num_patches+1, vit_hidden_size=768]
+        # Note that [i:i+num_cond_emb, ...] should have the same value for i in bs, which is the same as repeat_interleave(..., dim=0)
         for i in range(len(activations)):
             activations[i] = activations[i].unsqueeze(1).repeat(1,len(conditional_embeddings),1,1).reshape(-1, num_tokens, hidden_size)
         conditional_embeddings = conditional_embeddings.unsqueeze(0).repeat(bs,1,1).reshape(-1, 512)  # shape: [bs*num_cond_embs, hidden_size]

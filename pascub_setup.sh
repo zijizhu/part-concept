@@ -1,7 +1,9 @@
 set -x
 
-mkdir -r datasets/PASCUB && cd datasets/PASCUB
-wget -q --show-progress -O CUB_Parts-20240406T083133Z-001.zip "https://www.dropbox.com/scl/fi/noqqh7cihclz0fkjvmcm1/CUB_Parts-20240406T083133Z-001.zip\?rlkey\=za0c4q0mcfb96dhtj8lm2o91l\&dl\=0"
-wget -q --show-progress -O PASCAL_Parts-20240406T082914Z-001.zip "https://www.dropbox.com/scl/fi/vl1vfowqqhat54w3raukb/PASCAL_Parts-20240406T082914Z-001.zip?rlkey=baicucaawg3xqzmms7e8lsnbe&dl=0"
-unzip CUB_Parts-20240406T083133Z-001.zip
-unzip PASCAL_Parts-20240406T082914Z-001.zip
+mkdir -p datasets/PASCUB && cd datasets/PASCUB
+
+wget -O CUB_Parts.zip -q --show-progress "https://www.dropbox.com/scl/fi/5n6lsmc2h7762upofymve/CUB_Parts-20240406T083133Z-001.zip?rlkey=9am0qfda1kvcyh0cdh8yldwug&dl=0"
+wget -O PASCAL_Parts.zip -q --show-progress "https://www.dropbox.com/scl/fi/vl1vfowqqhat54w3raukb/PASCAL_Parts-20240406T082914Z-001.zip?rlkey=baicucaawg3xqzmms7e8lsnbe&dl=0"
+
+unzip CUB_Parts.zip
+unzip PASCAL_Parts.zip
