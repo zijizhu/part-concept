@@ -161,7 +161,6 @@ class CLIPSeg(nn.Module):
         features = outputs.decoder_output.hidden_states[-1]  # shape: [bs*(num_parts+num_concepts+1), num_tokens, reduce_dim]
         cls_tokens = features[:, 0, :].view(bs, num_parts+num_concepts+1, -1)[:, :-1, :] # shape: [bs, num_parts+num_concepts, reduce_dim]
         part_cls, concept_cls = cls_tokens[:, :num_parts, :], cls_tokens[:, num_parts:, :]
-        print(part_cls.shape, concept_cls.shape)
 
         # part_outputs = self.forward_features(self.clipseg_model, image_inputs, self.part_text_encoding, self.device) # shape: [b,n,h,w]
         # part_features = part_outputs.decoder_output.hidden_states[-1]  # shape: [b*(num_parts+1), num_tokens, reduce_dim]
