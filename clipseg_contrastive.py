@@ -15,6 +15,7 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 from clipseg_model import CLIPSeg
+# from clipseg.processing_clipseg import CLIPSegProcessor
 from data.cub_dataset import build_datasets, collate_fn
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -28,7 +29,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
     model.train()
     for batch in tqdm(dataloader):
         im_ids, imgs, class_gts, contrastive_gts = batch
-        imgs, contrastive_gts = [im.to(device) for im in imgs], contrastive_gts.to(device)
+        contrastive_gts = contrastive_gts.to(device)
         loss = model(imgs, contrastive_gts)
 
         loss.backward()
@@ -80,12 +81,15 @@ if __name__ == '__main__':
                         ])
     logger = logging.getLogger(__name__)
     
+
+
+    # image_preprocessor= CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
     if args.dataset == 'CUB':
         (dataset_train, dataset_val, dataset_test), attr_indices, class_attrs_df = build_datasets(
             dataset_dir=os.path.join(args.dataset_dir, args.dataset),
             attr_subset='cbm',
             use_class_level_attr=True,
-            use_transforms=False
+            transforms=None
         )
     else:
         raise NotImplementedError

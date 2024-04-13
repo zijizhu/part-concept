@@ -148,8 +148,6 @@ class CLIPSeg(nn.Module):
         return loss
 
     def forward(self, images: list[torch.Tensor], targets: torch.Tensor):
-        images = [im.to(self.device) for im in images]
-
         if not self.training:
             return self.inference(images=images)
 

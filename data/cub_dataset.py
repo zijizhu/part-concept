@@ -97,7 +97,7 @@ def get_transforms(image_size=448):
 def build_datasets(dataset_dir: str,
                    attr_subset: str,
                    use_class_level_attr: bool,
-                   use_transforms=False,
+                   transforms=None,
                    val_size: float=0.1):
     file_path_df = pd.read_csv(os.path.join(dataset_dir, 'CUB_200_2011', 'images.txt'),
                                    sep=' ', header=None, names=['image_id', 'file_path'])
@@ -175,20 +175,20 @@ def build_datasets(dataset_dir: str,
     # attr_name_df = pd.read_csv(os.path.join(dataset_dir, 'attributes.txt'), sep=' ',
     #                            names=['attr_id', 'attr_name']).drop(columns=['attr_id'])
 
-    if use_transforms:
-        transforms_train, transforms_test = get_transforms(448)
-    else:
-        transforms_train, transforms_test = None, None
+    # if use_transforms:
+    #     transforms_train, transforms_test = get_transforms(448)
+    # else:
+    #     transforms_train, transforms_test = None, None
 
     dataset_train = CUBDataset(dataset_dir=dataset_dir, info_df=main_df, attributes_df=attr_df,
                                split_image_ids=train_img_ids, class_attributes_df=class_attrs_df,
-                               transforms=transforms_train)
+                               transforms=transforms)
     dataset_val = CUBDataset(dataset_dir=dataset_dir, info_df=main_df, attributes_df=attr_df,
                              split_image_ids=val_img_ids, class_attributes_df=class_attrs_df,
-                             transforms=transforms_test)
+                             transforms=transforms)
     dataset_test = CUBDataset(dataset_dir=dataset_dir, info_df=main_df, attributes_df=attr_df,
                               split_image_ids=test_img_ids, class_attributes_df=class_attrs_df,
-                              transforms=transforms_test)
+                              transforms=transforms)
     return (dataset_train, dataset_val, dataset_test), attr_indices, class_attrs_df
 
 
