@@ -10,15 +10,15 @@ from tqdm import tqdm
 from pathlib import Path
 from torchinfo import summary
 from datetime import datetime
-import torch.nn.functional as F
-from torch.utils.data import DataLoader
-from torchvision.models import resnet101, ResNet101_Weights
-from torch.utils.tensorboard import SummaryWriter
 from lightning import seed_everything
-from data.cub_dataset import build_datasets, collate_fn
+from torch.utils.data import DataLoader
+from torch.utils.tensorboard import SummaryWriter
+
 from clipseg_model import CLIPSeg
+from data.cub_dataset import build_datasets, collate_fn
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 
 def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
                 writer: SummaryWriter, dataset_size: int, epoch: int,
@@ -35,25 +35,17 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
         optimizer.step()
         optimizer.zero_grad()
         running_loss += loss.item() * len(im_ids)
-
-        # TODO: calculate eval metrics
     
     # Log running losses
-
     loss_avg = running_loss / dataset_size
     writer.add_scalar(f'Loss/train/loss', loss_avg, epoch)
     logger.info(f'EPOCH {epoch} Train Loss: {loss_avg:.4f}')
     
-    # TODO: log metrics
-    # epoch_acc = running_corrects / dataset_size
-    # writer.add_scalar(f'Accuracy/train', epoch_acc, epoch)
-    # logger.info(f'EPOCH {epoch} Train Acc: {epoch_acc:.4f}')
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='PartCEM')
     parser.add_argument('--dataset_dir', type=str, required=True)
-    parser.add_argument('--dataset', type=str, choices=['PASCUB'], required=True)
+    parser.add_argument('--dataset', type=str, choices=['CUB'], required=True)
 
     parser.add_argument('--seed', default=42, type=int)
     parser.add_argument('--epochs', default=20, type=int)
@@ -88,20 +80,22 @@ if __name__ == '__main__':
                         ])
     logger = logging.getLogger(__name__)
     
-    if args.dataset == 'PASCUB':
-        dataset_train = CUBPartsDataset(dataset_dir=os.path.join(args.dataset_dir, args.dataset), split='train')
+    if args.dataset == 'CUB':
+        (dataset_train, dataset_val, dataset_test), attr_indices, class_attrs_df = build_datasets(
+            dataset_dir=os.path.join(args.dataset_dir, args.dataset),
+            attr_subset='cbm',
+            use_class_level_attr=True,
+            use_transforms=False
+        )
     else:
         raise NotImplementedError
     
     dataloader_train = DataLoader(dataset_train, collate_fn=collate_fn, batch_size=args.batch_size, shuffle=True, num_workers=4)
-    # dataloader_val= DataLoader(dataset_val, batch_size=args.batch_size, shuffle=True, num_workers=4)
-    # dataloader_test = DataLoader(dataset_test, batch_size=args.batch_size, shuffle=True, num_workers=4)
     
     model = CLIPSeg()
-    state_dict = torch.load('checkpoints/clipseg_ft_VA_L_F_D_voc.pth', map_location='cpu')
-    model.load_state_dict(state_dict['model'])
+    state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
+    model.load_state_dict(state_dict)
     
-    model.to(device=device)
     print(summary(model))
     
     optimizer = torch.optim.AdamW(params=model.parameters(), lr=args.lr)
@@ -116,10 +110,6 @@ if __name__ == '__main__':
     for epoch in range(args.epochs):
         train_epoch(model=model, dataloader=dataloader_train, optimizer=optimizer,
                     writer=writer,dataset_size=len(dataset_train), epoch=epoch, device=device, logger=logger)
-        # test_epoch(model=model, dataloader=dataloader_test, writer=writer,
-        #            dataset_size=len(dataset_test), epoch=epoch, device=device)
         torch.save({k: v.cpu() for k, v in model.state_dict().items()},
                    os.path.join(log_dir, 'checkpoint.pt'))
         scheduler.step()
-
-
