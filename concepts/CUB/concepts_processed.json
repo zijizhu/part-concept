@@ -1,0 +1,6711 @@
+{
+    "Black footed Albatross": {
+        "head": [
+            "large head",
+            "white around the base of the bill",
+            "dark plumage"
+        ],
+        "beak": [
+            "large beak",
+            "hooked tip",
+            "narrow"
+        ],
+        "tail": [
+            "short tail",
+            "dark tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "long narrow wings",
+            "dark color"
+        ],
+        "eye": [
+            "dark eye",
+            "small relative to head size"
+        ],
+        "leg": [
+            "flesh-colored",
+            "long"
+        ],
+        "torso": [
+            "dark sooty body",
+            "slight variation in shade from upperparts to underparts"
+        ]
+    },
+    "Laysan Albatross": {
+        "head": [
+            "white and black",
+            "rounded head shape"
+        ],
+        "beak": [
+            "large beak",
+            "hooked tip"
+        ],
+        "tail": [
+            "short tail",
+            "white tail"
+        ],
+        "wing": [
+            "long narrow wings",
+            "black",
+            "white wing bars"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "flesh-colored"
+        ],
+        "torso": [
+            "white underparts",
+            "white underparts"
+        ]
+    },
+    "Sooty Albatross": {
+        "head": [
+            "white around the eyes",
+            "dark gray overall"
+        ],
+        "beak": [
+            "long beak",
+            "hooked tip",
+            "grayish-black"
+        ],
+        "tail": [
+            "short",
+            "wedge-shaped"
+        ],
+        "wing": [
+            "long",
+            "narrow",
+            "dark with a silver underside"
+        ],
+        "eye": [
+            "distinctive white crescent behind the eye"
+        ],
+        "leg": [
+            "pale blue"
+        ],
+        "torso": [
+            "dark gray",
+            "slightly paler on the underside"
+        ]
+    },
+    "Groove billed Ani": {
+        "head": [
+            "black plumage",
+            "slightly crested"
+        ],
+        "beak": [
+            "long beak",
+            "curved beak",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "graduated tail"
+        ],
+        "wing": [
+            "short",
+            "rounded wings"
+        ],
+        "eye": [
+            "pale eye"
+        ],
+        "leg": [
+            "strong",
+            "black"
+        ],
+        "torso": [
+            "black torso",
+            "compact body"
+        ]
+    },
+    "Crested Auklet": {
+        "head": [
+            "dark colored head",
+            "distinctive crest at the top of the head",
+            "rounded head"
+        ],
+        "beak": [
+            "short beak",
+            "orange to yellow beak coloration",
+            "curved beak"
+        ],
+        "tail": [
+            "short tail",
+            "dark tail"
+        ],
+        "wing": [
+            "short wings",
+            "rounded wings",
+            "dark colored"
+        ],
+        "eye": [
+            "white eye ring",
+            "small eye"
+        ],
+        "leg": [
+            "gray"
+        ],
+        "torso": [
+            "compact body",
+            "dark torso",
+            "white underparts"
+        ]
+    },
+    "Least Auklet": {
+        "head": [
+            "small head",
+            "white and black",
+            "dark-colored"
+        ],
+        "beak": [
+            "short beak",
+            "blunt",
+            "orange to yellowish"
+        ],
+        "tail": [
+            "short",
+            "square tail",
+            "dark tail"
+        ],
+        "wing": [
+            "short",
+            "rounded wings",
+            "dark"
+        ],
+        "eye": [
+            "white eye ring",
+            "dark eye-ring"
+        ],
+        "leg": [
+            "pale blue",
+            "short"
+        ],
+        "torso": [
+            "compact body",
+            "dark upperparts",
+            "white underparts"
+        ]
+    },
+    "Parakeet Auklet": {
+        "head": [
+            "white and black",
+            "dark gray overall"
+        ],
+        "beak": [
+            "bright orange",
+            "short beak",
+            "curved beak"
+        ],
+        "tail": [
+            "short",
+            "dark tail"
+        ],
+        "wing": [
+            "dark",
+            "rounded wings",
+            "short"
+        ],
+        "eye": [
+            "white eye ring"
+        ],
+        "leg": [
+            "pale blue"
+        ],
+        "torso": [
+            "dark gray",
+            "compact body"
+        ]
+    },
+    "Rhinoceros Auklet": {
+        "head": [
+            "dark gray head",
+            "white and black"
+        ],
+        "beak": [
+            "horn-like extension on the upper beak",
+            "black beak",
+            "deep and laterally compressed beak"
+        ],
+        "tail": [
+            "short tail",
+            "dark tail"
+        ],
+        "wing": [
+            "dark wings",
+            "pointed wings"
+        ],
+        "eye": [
+            "white eye ring"
+        ],
+        "leg": [
+            "pale blue"
+        ],
+        "torso": [
+            "dark gray torso",
+            "white underparts"
+        ]
+    },
+    "Brewer Blackbird": {
+        "head": [
+            "iridescent black with purplish or greenish sheen",
+            "rounded head"
+        ],
+        "beak": [
+            "pointed beak",
+            "black beak",
+            "straight beak"
+        ],
+        "tail": [
+            "medium length tail",
+            "slightly forked tail",
+            "black tail"
+        ],
+        "wing": [
+            "black"
+        ],
+        "eye": [
+            "bright yellow"
+        ],
+        "leg": [
+            "black",
+            "flesh-colored"
+        ],
+        "torso": [
+            "black torso",
+            "compact body"
+        ]
+    },
+    "Red winged Blackbird": {
+        "head": [
+            "black cap",
+            "rounded head"
+        ],
+        "beak": [
+            "pointed beak",
+            "pointed beak",
+            "curved beak"
+        ],
+        "tail": [
+            "long tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "red and yellow shoulder patches",
+            "black"
+        ],
+        "eye": [
+            "black eye",
+            "dark brown eye"
+        ],
+        "leg": [
+            "black",
+            "slender leg"
+        ],
+        "torso": [
+            "black torso",
+            "black torso"
+        ]
+    },
+    "Rusty Blackbird": {
+        "head": [
+            "rusty-edged head feathers in non-breeding season",
+            "glossy black in breeding males",
+            "duller black with slight rusty edges in females and juveniles"
+        ],
+        "beak": [
+            "medium-length beak",
+            "straight beak"
+        ],
+        "tail": [
+            "medium-length tail",
+            "black tail"
+        ],
+        "wing": [
+            "black",
+            "may show slight rustiness in non-breeding season",
+            "relatively long wings"
+        ],
+        "eye": [
+            "pale yellow eye in adults",
+            "dark eye-ring in juveniles",
+            "distinctive against dark face"
+        ],
+        "leg": [
+            "black",
+            "sturdy legs"
+        ],
+        "torso": [
+            "black back",
+            "rusty feather edges in non-breeding season",
+            "compact body"
+        ]
+    },
+    "Yellow headed Blackbird": {
+        "head": [
+            "bright yellow head",
+            "black chin and throat in males"
+        ],
+        "beak": [
+            "pointed beak",
+            "curved beak"
+        ],
+        "tail": [
+            "short tail",
+            "tail is notched"
+        ],
+        "wing": [
+            "black",
+            "white wing patches visible in flight"
+        ],
+        "eye": [
+            "white eyes in males",
+            "dark eye"
+        ],
+        "leg": [
+            "black"
+        ],
+        "torso": [
+            "black torso",
+            "yellow breast in females",
+            "brownish-black body in females"
+        ]
+    },
+    "Bobolink": {
+        "head": [
+            "black crown and back of the head",
+            "buffy or brown crown in females",
+            "striped pattern in females"
+        ],
+        "beak": [
+            "cone-shaped beak",
+            "pale pink to gray"
+        ],
+        "tail": [
+            "long tail",
+            "white tail"
+        ],
+        "wing": [
+            "black",
+            "white wing bars",
+            "brown wings"
+        ],
+        "eye": [
+            "dark brown eye"
+        ],
+        "leg": [
+            "gray"
+        ],
+        "torso": [
+            "black back",
+            "buffy or rusty brown in females and non-breeding males",
+            "distinct white rump patch in males"
+        ]
+    },
+    "Indigo Bunting": {
+        "head": [
+            "bright blue in males, brown in females",
+            "rounded",
+            "proportional to body"
+        ],
+        "beak": [
+            "silver-gray",
+            "cone-shaped beak",
+            "small"
+        ],
+        "tail": [
+            "blue in males, brown in females",
+            "short and square",
+            "medium"
+        ],
+        "wing": [
+            "blue in males, brown in females with some blue",
+            "typical for sparrows",
+            "medium"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "grayish",
+            "thin black",
+            "medium"
+        ],
+        "torso": [
+            "bright blue in males, brown in females",
+            "compact body",
+            "small to medium"
+        ]
+    },
+    "Lazuli Bunting": {
+        "head": [
+            "bright blue on males",
+            "rusty orange on females",
+            "white and black"
+        ],
+        "beak": [
+            "small",
+            "cone-shaped beak",
+            "silver-gray"
+        ],
+        "tail": [
+            "not very long",
+            "narrow",
+            "black tail"
+        ],
+        "wing": [
+            "two wing bars",
+            "blue wings",
+            "brown wings"
+        ],
+        "eye": [
+            "dark brown eye",
+            "small eye",
+            "conspicuous against bright head color on males"
+        ],
+        "leg": [
+            "blue-gray",
+            "short"
+        ],
+        "torso": [
+            "bright blue upperparts and rusty underparts on males",
+            "brownish with streaks on females",
+            "compact body"
+        ]
+    },
+    "Painted Bunting": {
+        "head": [
+            "blue and black crest",
+            "dark blue crown"
+        ],
+        "beak": [
+            "short beak",
+            "cone-shaped beak",
+            "pale beak"
+        ],
+        "tail": [
+            "red undertail",
+            "dark tail"
+        ],
+        "wing": [
+            "green wings",
+            "dark blue shoulders"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "gray"
+        ],
+        "torso": [
+            "red underparts",
+            "green back",
+            "brightly colored torso"
+        ]
+    },
+    "Cardinal": {
+        "head": [
+            "crest on top",
+            "black facial markings",
+            "grey mask on face (female)"
+        ],
+        "beak": [
+            "short beak",
+            "thick",
+            "cone-shaped beak"
+        ],
+        "tail": [
+            "long tail",
+            "notched"
+        ],
+        "wing": [
+            "red (male)",
+            "brown wings",
+            "slightly less vibrant than torso"
+        ],
+        "eye": [
+            "black"
+        ],
+        "leg": [
+            "black",
+            "short",
+            "strong"
+        ],
+        "torso": [
+            "bright red (male)",
+            "brownish-red (female)",
+            "compact body"
+        ]
+    },
+    "Spotted Catbird": {
+        "head": [
+            "green head",
+            "small black spots on crown"
+        ],
+        "beak": [
+            "long beak",
+            "curved beak",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "green tail"
+        ],
+        "wing": [
+            "green wings",
+            "black"
+        ],
+        "eye": [
+            "dark eye",
+            "surrounded by a thin eye-ring"
+        ],
+        "leg": [
+            "gray",
+            "strong legs"
+        ],
+        "torso": [
+            "bright green torso",
+            "black torso"
+        ]
+    },
+    "Gray Catbird": {
+        "head": [
+            "gray head",
+            "black cap",
+            "small head size"
+        ],
+        "beak": [
+            "black beak",
+            "straight"
+        ],
+        "tail": [
+            "long tail",
+            "dark tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "gray wings",
+            "rounded wings"
+        ],
+        "eye": [
+            "black",
+            "prominent eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "slender"
+        ],
+        "torso": [
+            "gray upperparts",
+            "uniform color",
+            "compact body"
+        ]
+    },
+    "Yellow breasted Chat": {
+        "head": [
+            "olive green",
+            "white and black",
+            "large head size"
+        ],
+        "beak": [
+            "black beak",
+            "thick",
+            "curved beak"
+        ],
+        "tail": [
+            "green tail",
+            "long tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "green wings",
+            "white wing bars",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye",
+            "large eye size"
+        ],
+        "leg": [
+            "flesh-colored",
+            "long legs"
+        ],
+        "torso": [
+            "bright yellow",
+            "white underparts",
+            "thick torso"
+        ]
+    },
+    "Eastern Towhee": {
+        "head": [
+            "black cap",
+            "brown head",
+            "white and black"
+        ],
+        "beak": [
+            "short beak",
+            "conical shape"
+        ],
+        "tail": [
+            "long tail",
+            "barred tail",
+            "notched tail"
+        ],
+        "wing": [
+            "black",
+            "brown wings",
+            "strong and broad wing structure"
+        ],
+        "eye": [
+            "red eye",
+            "distinct eye-ring",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "strong legs",
+            "long legs for ground foraging"
+        ],
+        "torso": [
+            "black chest",
+            "brown chest",
+            "white underparts"
+        ]
+    },
+    "Chuck will Widow": {
+        "head": [
+            "flat",
+            "brown head"
+        ],
+        "beak": [
+            "short beak",
+            "broad and flat beak",
+            "hooked tip"
+        ],
+        "tail": [
+            "long tail",
+            "rounded tail",
+            "brown tail"
+        ],
+        "wing": [
+            "long",
+            "pointed wings",
+            "brown wings"
+        ],
+        "eye": [
+            "large eye",
+            "dark eye"
+        ],
+        "leg": [
+            "short",
+            "weak"
+        ],
+        "torso": [
+            "compact body",
+            "brown with mottled pattern",
+            "camouflaged"
+        ]
+    },
+    "Brandt Cormorant": {
+        "head": [
+            "small head",
+            "black with a blue-green sheen"
+        ],
+        "beak": [
+            "long beak",
+            "hooked tip"
+        ],
+        "tail": [
+            "long tail"
+        ],
+        "wing": [
+            "dark feathers",
+            "large, broad wings"
+        ],
+        "eye": [
+            "bright blue eyes"
+        ],
+        "leg": [
+            "black"
+        ],
+        "torso": [
+            "black with a blue-green sheen"
+        ]
+    },
+    "Red faced Cormorant": {
+        "head": [
+            "dark plumage",
+            "slight crest during breeding season",
+            "red head"
+        ],
+        "beak": [
+            "long beak",
+            "hooked tip"
+        ],
+        "tail": [
+            "long tail",
+            "narrow"
+        ],
+        "wing": [
+            "dark",
+            "rounded wings",
+            "rounded wings"
+        ],
+        "eye": [
+            "greenish",
+            "small eye",
+            "expressive eyes"
+        ],
+        "leg": [
+            "black",
+            "strong"
+        ],
+        "torso": [
+            "compact body",
+            "dark brown to black",
+            "compact body"
+        ]
+    },
+    "Pelagic Cormorant": {
+        "head": [
+            "small head",
+            "dark plumage",
+            "slender neck"
+        ],
+        "beak": [
+            "long beak",
+            "hooked tip"
+        ],
+        "tail": [
+            "long tail",
+            "narrow"
+        ],
+        "wing": [
+            "dark wings",
+            "relatively short",
+            "pointed wings"
+        ],
+        "eye": [
+            "bright green eye",
+            "small eye"
+        ],
+        "leg": [
+            "short legs",
+            "black"
+        ],
+        "torso": [
+            "compact body",
+            "black torso",
+            "underparts slightly lighter"
+        ]
+    },
+    "Bronzed Cowbird": {
+        "head": [
+            "iridescent black with hints of bronze or green",
+            "slightly peaked forehead"
+        ],
+        "beak": [
+            "stout beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "graduated tail",
+            "black tail"
+        ],
+        "wing": [
+            "iridescent black",
+            "short to medium in length"
+        ],
+        "eye": [
+            "red eye",
+            "darker in females"
+        ],
+        "leg": [
+            "black"
+        ],
+        "torso": [
+            "black torso",
+            "compact body"
+        ]
+    },
+    "Shiny Cowbird": {
+        "head": [
+            "iridescent dark blue-black",
+            "round head"
+        ],
+        "beak": [
+            "short beak",
+            "thick",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "graduated tail"
+        ],
+        "wing": [
+            "iridescent dark blue-black",
+            "short wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "black",
+            "short"
+        ],
+        "torso": [
+            "iridescent dark blue-black",
+            "compact body"
+        ]
+    },
+    "Brown Creeper": {
+        "head": [
+            "small head",
+            "brown streaked with white"
+        ],
+        "beak": [
+            "curved beak",
+            "long beak",
+            "slender beak"
+        ],
+        "tail": [
+            "long tail",
+            "stiff tail feathers",
+            "brown tail"
+        ],
+        "wing": [
+            "brown wings",
+            "barred or checkered pattern"
+        ],
+        "eye": [
+            "white eye ring",
+            "dark eye"
+        ],
+        "leg": [
+            "short leg",
+            "flesh-colored"
+        ],
+        "torso": [
+            "brown torso",
+            "white underparts",
+            "speckled brown and white"
+        ]
+    },
+    "American Crow": {
+        "head": [
+            "black cap",
+            "rounded shape",
+            "black feathers with a slight sheen"
+        ],
+        "beak": [
+            "strong black beak",
+            "moderately long and thick",
+            "curved beak"
+        ],
+        "tail": [
+            "rounded tail",
+            "medium length",
+            "black tail"
+        ],
+        "wing": [
+            "long black wings",
+            "rounded wings",
+            "black"
+        ],
+        "eye": [
+            "dark brown eye",
+            "eyes appear black from a distance",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "relatively long",
+            "strong and sturdy"
+        ],
+        "torso": [
+            "compact body",
+            "black back",
+            "black torso"
+        ]
+    },
+    "Fish Crow": {
+        "head": [
+            "black cap",
+            "smaller than the American Crow"
+        ],
+        "beak": [
+            "black beak",
+            "somewhat stout",
+            "curved beak"
+        ],
+        "tail": [
+            "black tail",
+            "rounded tail",
+            "shorter than American Crow's tail"
+        ],
+        "wing": [
+            "black",
+            "wings appear more rounded",
+            "slightly shorter wingspan compared to the American Crow"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "black",
+            "relatively short"
+        ],
+        "torso": [
+            "black torso",
+            "compact body"
+        ]
+    },
+    "Black billed Cuckoo": {
+        "head": [
+            "gray head",
+            "reddish eye ring"
+        ],
+        "beak": [
+            "black beak",
+            "curved beak"
+        ],
+        "tail": [
+            "long tail",
+            "black tail"
+        ],
+        "wing": [
+            "rounded wings",
+            "brown wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "gray"
+        ],
+        "torso": [
+            "white underparts",
+            "brownish on upper parts"
+        ]
+    },
+    "Mangrove Cuckoo": {
+        "head": [
+            "brownish gray head",
+            "slightly crest",
+            "black facial markings"
+        ],
+        "beak": [
+            "curved beak",
+            "long beak",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "barred tail",
+            "graduated tail"
+        ],
+        "wing": [
+            "rufous wing",
+            "short wing",
+            "rounded wings"
+        ],
+        "eye": [
+            "red eye",
+            "bright eye",
+            "small eye"
+        ],
+        "leg": [
+            "gray",
+            "short leg",
+            "strong leg"
+        ],
+        "torso": [
+            "yellowish-brown torso",
+            "soft-fluffy underneath",
+            "pale buff breast"
+        ]
+    },
+    "Yellow billed Cuckoo": {
+        "head": [
+            "brownish or grayish",
+            "white and black",
+            "slightly pointed at the back"
+        ],
+        "beak": [
+            "curved beak",
+            "yellow beak",
+            "black upper beak with a pale lower beak"
+        ],
+        "tail": [
+            "long tail",
+            "black tail",
+            "graduated tail"
+        ],
+        "wing": [
+            "brown wings",
+            "primary feathers have rufous patches",
+            "rounded wings"
+        ],
+        "eye": [
+            "red eye",
+            "surrounded by yellow eye-ring"
+        ],
+        "leg": [
+            "short legs",
+            "gray"
+        ],
+        "torso": [
+            "compact body",
+            "white underparts",
+            "gray upperparts"
+        ]
+    },
+    "Gray crowned Rosy Finch": {
+        "head": [
+            "gray head",
+            "gray head",
+            "black forehead in some subspecies"
+        ],
+        "beak": [
+            "short beak",
+            "cone-shaped beak",
+            "pale to yellowish"
+        ],
+        "tail": [
+            "dark tail",
+            "short",
+            "notched"
+        ],
+        "wing": [
+            "dark wings",
+            "white wing bars",
+            "brown wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "short",
+            "sturdy"
+        ],
+        "torso": [
+            "pinkish-brown",
+            "darker on back",
+            "lighter on belly"
+        ]
+    },
+    "Purple Finch": {
+        "head": [
+            "rosy-red head and throat (male)",
+            "brownish (female)",
+            "rounded head"
+        ],
+        "beak": [
+            "cone-shaped beak",
+            "short beak",
+            "pinkish base"
+        ],
+        "tail": [
+            "notched",
+            "short and notched",
+            "dark tail"
+        ],
+        "wing": [
+            "brown wings with two white bars (male and female)"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "brown"
+        ],
+        "torso": [
+            "rosy-red extending over the chest and back (male)",
+            "brownish with heavily streaked underparts (female)"
+        ]
+    },
+    "Northern Flicker": {
+        "head": [
+            "gray head",
+            "red head",
+            "black malar mark (mustache in males)"
+        ],
+        "beak": [
+            "curved beak",
+            "long beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "tapered",
+            "yellow or red shafts depending on the subspecies"
+        ],
+        "wing": [
+            "black",
+            "strong, straight, pointed",
+            "yellow or red shafts visible in flight depending on the subspecies"
+        ],
+        "eye": [
+            "dark eye",
+            "large eye",
+            "small eye"
+        ],
+        "leg": [
+            "short",
+            "gray",
+            "strong"
+        ],
+        "torso": [
+            "brownish with black bars on the back",
+            "spotted or barred underparts",
+            "white underparts"
+        ]
+    },
+    "Acadian Flycatcher": {
+        "head": [
+            "gray head",
+            "distinct white eye ring",
+            "broad and flat head"
+        ],
+        "beak": [
+            "broad and flat beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "moderately long",
+            "square tail",
+            "dark tail"
+        ],
+        "wing": [
+            "green wings",
+            "wings are relatively short",
+            "may show two faint wing bars"
+        ],
+        "eye": [
+            "dark eye",
+            "surrounded by a white eye ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "slender"
+        ],
+        "torso": [
+            "greenish on the upperparts",
+            "white underparts",
+            "compact body"
+        ]
+    },
+    "Great Crested Flycatcher": {
+        "head": [
+            "large head",
+            "rusty-brown throat",
+            "gray head"
+        ],
+        "beak": [
+            "long beak",
+            "broad and flat beak",
+            "hooked tip"
+        ],
+        "tail": [
+            "long tail",
+            "rusty-red tail",
+            "broad tail"
+        ],
+        "wing": [
+            "brown wings",
+            "rufous on the primary feathers",
+            "white wing bars"
+        ],
+        "eye": [
+            "dark eye",
+            "surrounded by white eye-ring"
+        ],
+        "leg": [
+            "short leg",
+            "gray"
+        ],
+        "torso": [
+            "olive or brownish upperparts",
+            "yellowish underparts",
+            "compact body"
+        ]
+    },
+    "Least Flycatcher": {
+        "head": [
+            "green head",
+            "white and black",
+            "white and black"
+        ],
+        "beak": [
+            "small",
+            "narrow",
+            "pointed beak"
+        ],
+        "tail": [
+            "short",
+            "notched",
+            "dark tail"
+        ],
+        "wing": [
+            "dark wings",
+            "two white wing bars",
+            "short wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "black",
+            "short legs"
+        ],
+        "torso": [
+            "olive or brownish upperparts",
+            "white underparts",
+            "buffy wash on sides"
+        ]
+    },
+    "Olive sided Flycatcher": {
+        "head": [
+            "dark crown",
+            "pale throat",
+            "white and black"
+        ],
+        "beak": [
+            "stout",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "dark tail",
+            "slightly notched"
+        ],
+        "wing": [
+            "dark",
+            "white tertial edges",
+            "long"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "short",
+            "flesh-colored",
+            "stout"
+        ],
+        "torso": [
+            "vest-like dark sides",
+            "white underparts",
+            "olive or brownish upperparts"
+        ]
+    },
+    "Scissor tailed Flycatcher": {
+        "head": [
+            "gray head",
+            "white and black"
+        ],
+        "beak": [
+            "long beak",
+            "narrow beak",
+            "gray beak"
+        ],
+        "tail": [
+            "long tail",
+            "forked tail",
+            "forked tail"
+        ],
+        "wing": [
+            "dark wing",
+            "long wing",
+            "pointed wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "short leg",
+            "black"
+        ],
+        "torso": [
+            "light underparts",
+            "gray upperparts"
+        ]
+    },
+    "Vermilion Flycatcher": {
+        "head": [
+            "black cap",
+            "gray head",
+            "small head size"
+        ],
+        "beak": [
+            "short beak",
+            "black beak",
+            "curved beak"
+        ],
+        "tail": [
+            "black tail",
+            "notched tail",
+            "medium-length tail"
+        ],
+        "wing": [
+            "black",
+            "gray wings",
+            "medium-length wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "short legs"
+        ],
+        "torso": [
+            "bright vermilion red torso for males",
+            "pale pink torso for females",
+            "compact body"
+        ]
+    },
+    "Yellow bellied Flycatcher": {
+        "head": [
+            "green head",
+            "white and black",
+            "flat head"
+        ],
+        "beak": [
+            "broad and flat beak",
+            "short beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "notched tail",
+            "dark tail"
+        ],
+        "wing": [
+            "dark wings",
+            "two white wing bars"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short legs"
+        ],
+        "torso": [
+            "yellow belly",
+            "olive or brownish upperparts",
+            "white underparts"
+        ]
+    },
+    "Frigatebird": {
+        "head": [
+            "black cap",
+            "long hooked beak"
+        ],
+        "beak": [
+            "long beak",
+            "hooked",
+            "grey to light color"
+        ],
+        "tail": [
+            "long tail",
+            "forked tail",
+            "black tail"
+        ],
+        "wing": [
+            "long",
+            "pointed wings",
+            "black"
+        ],
+        "eye": [
+            "black",
+            "surrounded by red skin in males"
+        ],
+        "leg": [
+            "short",
+            "black"
+        ],
+        "torso": [
+            "black torso",
+            "white underparts",
+            "red throat pouch in males"
+        ]
+    },
+    "Northern Fulmar": {
+        "head": [
+            "rounded head",
+            "gray head"
+        ],
+        "beak": [
+            "short beak",
+            "hooked tip",
+            "bright yellow with red tip"
+        ],
+        "tail": [
+            "short tail",
+            "square tail",
+            "white tail"
+        ],
+        "wing": [
+            "long, narrow wings",
+            "gray wings",
+            "pointed wings"
+        ],
+        "eye": [
+            "dark eye",
+            "surrounded by a thin ring of bare skin"
+        ],
+        "leg": [
+            "short legs",
+            "flesh-colored"
+        ],
+        "torso": [
+            "compact body",
+            "compact body",
+            "compact body"
+        ]
+    },
+    "Gadwall": {
+        "head": [
+            "dark brown head",
+            "slightly peaked at the rear"
+        ],
+        "beak": [
+            "black beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "black tail",
+            "white tail"
+        ],
+        "wing": [
+            "black with white",
+            "prominent in flight"
+        ],
+        "eye": [
+            "yellow eye"
+        ],
+        "leg": [
+            "orange"
+        ],
+        "torso": [
+            "gray upperparts",
+            "finely patterned",
+            "paler belly"
+        ]
+    },
+    "American Goldfinch": {
+        "head": [
+            "Bright yellow in males during breeding season",
+            "Olive or dull yellow in females and non-breeding males",
+            "Black cap in breeding males"
+        ],
+        "beak": [
+            "Small",
+            "Conical",
+            "Pinkish to orange in color"
+        ],
+        "tail": [
+            "Notched",
+            "White edges in some seasons",
+            "Black in color"
+        ],
+        "wing": [
+            "Black wings with white bars",
+            "Long and pointed",
+            "Prominent wing bars in all plumages"
+        ],
+        "eye": [
+            "Dark brown",
+            "Small",
+            "Round"
+        ],
+        "leg": [
+            "Short",
+            "Flesh-colored or pinkish",
+            "Thin"
+        ],
+        "torso": [
+            "Bright yellow in breeding males",
+            "Olive or dull yellow in females and non-breeding males",
+            "Smooth and sleek appearance"
+        ]
+    },
+    "European Goldfinch": {
+        "head": [
+            "red head",
+            "white around the bill",
+            "black crown and back of the head"
+        ],
+        "beak": [
+            "small and pointed",
+            "pale pinkish"
+        ],
+        "tail": [
+            "barred tail",
+            "notched"
+        ],
+        "wing": [
+            "black",
+            "black with white",
+            "white spots on tips"
+        ],
+        "eye": [
+            "dark brown eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short"
+        ],
+        "torso": [
+            "white underparts",
+            "brownish back and flanks",
+            "black and white striped"
+        ]
+    },
+    "Boat tailed Grackle": {
+        "head": [
+            "iridescent blue-black head",
+            "flat crown"
+        ],
+        "beak": [
+            "long beak",
+            "strong",
+            "pointed beak"
+        ],
+        "tail": [
+            "long keel-shaped",
+            "forked tail"
+        ],
+        "wing": [
+            "iridescent blue-black wing"
+        ],
+        "eye": [
+            "pale eye"
+        ],
+        "leg": [
+            "black"
+        ],
+        "torso": [
+            "black torso",
+            "compact body"
+        ]
+    },
+    "Eared Grebe": {
+        "head": [
+            "black cap",
+            "red irises",
+            "feathery tufts near ears in breeding season"
+        ],
+        "beak": [
+            "thin beak",
+            "straight beak",
+            "black beak"
+        ],
+        "tail": [
+            "short tail",
+            "almost nonexistent in appearance"
+        ],
+        "wing": [
+            "dark wings",
+            "rounded wings"
+        ],
+        "eye": [
+            "bright red eye"
+        ],
+        "leg": [
+            "black"
+        ],
+        "torso": [
+            "black chest",
+            "white underparts",
+            "dark back"
+        ]
+    },
+    "Horned Grebe": {
+        "head": [
+            "black cap",
+            "reddish-brown tufts",
+            "rounded head shape"
+        ],
+        "beak": [
+            "short beak",
+            "pointed beak",
+            "straight and slender"
+        ],
+        "tail": [
+            "very short"
+        ],
+        "wing": [
+            "dark-colored",
+            "white markings in flight",
+            "rounded wings"
+        ],
+        "eye": [
+            "red eye",
+            "bright eye"
+        ],
+        "leg": [
+            "black"
+        ],
+        "torso": [
+            "black or dark upperparts",
+            "rusty neck and breast in breeding plumage",
+            "white underparts"
+        ]
+    },
+    "Pied billed Grebe": {
+        "head": [
+            "brown head",
+            "small head",
+            "rounded head"
+        ],
+        "beak": [
+            "short beak",
+            "thick beak",
+            "white bill with a black band"
+        ],
+        "tail": [
+            "short tail"
+        ],
+        "wing": [
+            "brown wings",
+            "rounded wings",
+            "rounded wings"
+        ],
+        "eye": [
+            "white eye ring",
+            "red eye",
+            "bright eye"
+        ],
+        "leg": [
+            "short legs"
+        ],
+        "torso": [
+            "brownish body",
+            "compact body",
+            "fluffy appearance"
+        ]
+    },
+    "Western Grebe": {
+        "head": [
+            "black cap",
+            "white and black",
+            "elongated"
+        ],
+        "beak": [
+            "bright yellow",
+            "slender",
+            "straight",
+            "pointed beak"
+        ],
+        "tail": [
+            "not very visible",
+            "dark tail"
+        ],
+        "wing": [
+            "dark",
+            "white stripes on primaries during flight",
+            "long and narrow"
+        ],
+        "eye": [
+            "red eye",
+            "intense"
+        ],
+        "leg": [
+            "blackish",
+            "set back on body"
+        ],
+        "torso": [
+            "dark back",
+            "white underparts",
+            "elongated",
+            "streamlined"
+        ]
+    },
+    "Blue Grosbeak": {
+        "head": [
+            "blue and black crest",
+            "black facial markings",
+            "rounded head"
+        ],
+        "beak": [
+            "large beak",
+            "silver-gray beak",
+            "thick beak"
+        ],
+        "tail": [
+            "black tail",
+            "medium-length tail",
+            "slightly notched tail"
+        ],
+        "wing": [
+            "brown wings",
+            "two wing bars",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "short legs"
+        ],
+        "torso": [
+            "bright blue torso",
+            "slightly darker blue on back",
+            "lighter blue on the underparts"
+        ]
+    },
+    "Evening Grosbeak": {
+        "head": [
+            "black cap",
+            "yellow forehead",
+            "yellow supercilium"
+        ],
+        "beak": [
+            "large beak",
+            "white beak",
+            "conical shape"
+        ],
+        "tail": [
+            "black tail",
+            "short tail",
+            "notched tail"
+        ],
+        "wing": [
+            "black",
+            "white patches on wings",
+            "large wing"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "short leg",
+            "flesh-colored"
+        ],
+        "torso": [
+            "yellow belly",
+            "white underparts",
+            "brown back"
+        ]
+    },
+    "Pine Grosbeak": {
+        "head": [
+            "rounded head",
+            "rosy-pink in males, grayish in females",
+            "small black eyes"
+        ],
+        "beak": [
+            "thick beak",
+            "conical shape",
+            "pale pink to grayish"
+        ],
+        "tail": [
+            "short and forked",
+            "dark tail",
+            "notched"
+        ],
+        "wing": [
+            "two white wingbars",
+            "grayish with pink or rosy flush in males",
+            "darker flight feathers"
+        ],
+        "eye": [
+            "small eye",
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "sturdy",
+            "black",
+            "short"
+        ],
+        "torso": [
+            "compact body",
+            "rosy-pink in males, more subdued in females",
+            "lighter belly"
+        ]
+    },
+    "Rose breasted Grosbeak": {
+        "head": [
+            "black cap",
+            "white and black",
+            "broad and flat head"
+        ],
+        "beak": [
+            "large beak",
+            "pale pinkish beak in color",
+            "thick beak"
+        ],
+        "tail": [
+            "long tail",
+            "black tail",
+            "forked tail"
+        ],
+        "wing": [
+            "black",
+            "white wing bars",
+            "large and broad wings"
+        ],
+        "eye": [
+            "black eye",
+            "prominent eye",
+            "small eye"
+        ],
+        "leg": [
+            "gray",
+            "strong legs",
+            "short legs"
+        ],
+        "torso": [
+            "white underparts",
+            "rose-red patch on the chest",
+            "black back"
+        ]
+    },
+    "Pigeon Guillemot": {
+        "head": [
+            "black",
+            "rounded"
+        ],
+        "beak": [
+            "black beak",
+            "thin"
+        ],
+        "tail": [
+            "black tail",
+            "medium length",
+            "slightly rounded"
+        ],
+        "wing": [
+            "black with white patch",
+            "rounded wings",
+            "medium"
+        ],
+        "eye": [
+            "bright red",
+            "prominent eye"
+        ],
+        "leg": [
+            "bright red"
+        ],
+        "torso": [
+            "black",
+            "plump",
+            "medium"
+        ]
+    },
+    "California Gull": {
+        "head": [
+            "white and black",
+            "dull yellow eyes",
+            "small black ring around the eye"
+        ],
+        "beak": [
+            "medium-length beak",
+            "yellow beak",
+            "red and black spot on the lower beak"
+        ],
+        "tail": [
+            "white tail",
+            "black tail"
+        ],
+        "wing": [
+            "gray wings",
+            "black"
+        ],
+        "eye": [
+            "small eye",
+            "pale eye"
+        ],
+        "leg": [
+            "greenish-yellow"
+        ],
+        "torso": [
+            "white underparts",
+            "gray upperparts"
+        ]
+    },
+    "Glaucous winged Gull": {
+        "head": [
+            "white and black",
+            "rounded head",
+            "pale head with light streaking in non-breeding season"
+        ],
+        "beak": [
+            "thick beak",
+            "bright yellow with red tip",
+            "hooked tip"
+        ],
+        "tail": [
+            "white tail",
+            "rounded tail",
+            "tail with little or no black"
+        ],
+        "wing": [
+            "gray wings",
+            "white tipped wings",
+            "wings with a slight pinkish hue in certain lights"
+        ],
+        "eye": [
+            "pale eye",
+            "orbital ring often pale"
+        ],
+        "leg": [
+            "flesh-colored"
+        ],
+        "torso": [
+            "white underparts",
+            "gray upperparts",
+            "compact body"
+        ]
+    },
+    "Heermann Gull": {
+        "head": [
+            "white and black",
+            "gray head",
+            "smooth rounded head"
+        ],
+        "beak": [
+            "long beak",
+            "reddish-orange beak with a black tip",
+            "hooked tip"
+        ],
+        "tail": [
+            "white tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "gray wings",
+            "white trailing edge on wings",
+            "dark primaries with little to no white"
+        ],
+        "eye": [
+            "red eye",
+            "pale eye"
+        ],
+        "leg": [
+            "red",
+            "flesh-colored"
+        ],
+        "torso": [
+            "gray upperparts",
+            "compact body",
+            "uniform gray color in breeding season"
+        ]
+    },
+    "Herring Gull": {
+        "head": [
+            "white and black",
+            "light gray head in non-breeding season",
+            "rounded head"
+        ],
+        "beak": [
+            "long beak",
+            "beak with red spot on lower mandible",
+            "strong beak"
+        ],
+        "tail": [
+            "white tail",
+            "tail with black band",
+            "rounded tail"
+        ],
+        "wing": [
+            "gray wings",
+            "black",
+            "long wings"
+        ],
+        "eye": [
+            "pale eye",
+            "distinct eye-ring",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "long legs"
+        ],
+        "torso": [
+            "white underparts",
+            "gray upperparts",
+            "compact body"
+        ]
+    },
+    "Ivory Gull": {
+        "head": [
+            "white and black",
+            "small rounded head"
+        ],
+        "beak": [
+            "blue beak",
+            "thin beak",
+            "yellow beak"
+        ],
+        "tail": [
+            "short tail",
+            "white tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "white wings",
+            "black"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "short legs"
+        ],
+        "torso": [
+            "pure white torso",
+            "compact body"
+        ]
+    },
+    "Ring billed Gull": {
+        "head": [
+            "white and black",
+            "streaked brown in non-breeding season",
+            "black cap"
+        ],
+        "beak": [
+            "yellow beak",
+            "curved beak"
+        ],
+        "tail": [
+            "white tail",
+            "medium length"
+        ],
+        "wing": [
+            "gray wings",
+            "white underneath",
+            "black"
+        ],
+        "eye": [
+            "pale eye",
+            "small eye"
+        ],
+        "leg": [
+            "yellow"
+        ],
+        "torso": [
+            "white underparts",
+            "gray upperparts"
+        ]
+    },
+    "Slaty backed Gull": {
+        "head": [
+            "white and black",
+            "streaked with gray in non-breeding season"
+        ],
+        "beak": [
+            "heavy beak",
+            "bright yellow with red tip"
+        ],
+        "tail": [
+            "white tail"
+        ],
+        "wing": [
+            "gray wings",
+            "white leading edge",
+            "black"
+        ],
+        "eye": [
+            "pale eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored"
+        ],
+        "torso": [
+            "white underparts",
+            "gray upperparts"
+        ]
+    },
+    "Western Gull": {
+        "head": [
+            "white and black",
+            "rounded head shape"
+        ],
+        "beak": [
+            "long beak",
+            "heavy beak",
+            "bright yellow with red tip"
+        ],
+        "tail": [
+            "white tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "gray wings",
+            "black"
+        ],
+        "eye": [
+            "pale eye",
+            "pupil black"
+        ],
+        "leg": [
+            "flesh-colored"
+        ],
+        "torso": [
+            "white underparts",
+            "gray upperparts"
+        ]
+    },
+    "Anna Hummingbird": {
+        "head": [
+            "green head",
+            "males have iridescent pinkish-red throat",
+            "rounded shape"
+        ],
+        "beak": [
+            "straight and slender",
+            "long beak"
+        ],
+        "tail": [
+            "males have a dark, forked tail",
+            "rounded tail",
+            "green tail"
+        ],
+        "wing": [
+            "long narrow wings",
+            "wings beat in a blur",
+            "dark color"
+        ],
+        "eye": [
+            "small eye"
+        ],
+        "leg": [
+            "very short legs",
+            "gray"
+        ],
+        "torso": [
+            "iridescent green back and sides",
+            "white underparts",
+            "compact body"
+        ]
+    },
+    "Ruby throated Hummingbird": {
+        "head": [
+            "small head",
+            "iridescent green color on sides",
+            "white and black"
+        ],
+        "beak": [
+            "long beak",
+            "straight beak",
+            "thin beak"
+        ],
+        "tail": [
+            "forked tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "long wings",
+            "narrow wings",
+            "wings longer than body"
+        ],
+        "eye": [
+            "small eye"
+        ],
+        "leg": [
+            "very short legs"
+        ],
+        "torso": [
+            "iridescent ruby red throat in males",
+            "grayish white underparts",
+            "greenish upperparts"
+        ]
+    },
+    "Rufous Hummingbird": {
+        "head": [
+            "iridescent orange",
+            "reddish-brown",
+            "small",
+            "rounded"
+        ],
+        "beak": [
+            "black beak",
+            "long beak",
+            "straight",
+            "pointed beak"
+        ],
+        "tail": [
+            "orange",
+            "reddish",
+            "black tipped",
+            "forked tail",
+            "medium"
+        ],
+        "wing": [
+            "dark",
+            "long relative to body size",
+            "narrow"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "very short",
+            "thin black"
+        ],
+        "torso": [
+            "bright orange",
+            "reddish",
+            "compact body",
+            "streamlined"
+        ]
+    },
+    "Green Violetear": {
+        "head": [
+            "bright green plumage",
+            "violet-blue cheek patch",
+            "white and black"
+        ],
+        "beak": [
+            "straight and slender",
+            "long beak"
+        ],
+        "tail": [
+            "notched",
+            "green tail",
+            "medium length"
+        ],
+        "wing": [
+            "green wings",
+            "pointed wings",
+            "slightly curved"
+        ],
+        "eye": [
+            "dark brown eye",
+            "small eye"
+        ],
+        "leg": [
+            "short",
+            "gray"
+        ],
+        "torso": [
+            "metallic green on the upperparts",
+            "brighter green on the underparts",
+            "slight blue-green hue on the chest in certain lighting"
+        ]
+    },
+    "Long tailed Jaeger": {
+        "head": [
+            "dark cap",
+            "white and black"
+        ],
+        "beak": [
+            "black beak",
+            "thin beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "pointed tail feathers",
+            "tail longer in males"
+        ],
+        "wing": [
+            "pointed wings",
+            "dark wing with white flashes",
+            "long wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "short legs",
+            "black"
+        ],
+        "torso": [
+            "greyish white underparts",
+            "dark upper parts",
+            "compact body"
+        ]
+    },
+    "Pomarine Jaeger": {
+        "head": [
+            "dark cap",
+            "pale face",
+            "rounded head"
+        ],
+        "beak": [
+            "hooked tip",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "twisted streamers",
+            "white tail"
+        ],
+        "wing": [
+            "long pointed wings",
+            "dark wing",
+            "white flashes in wing"
+        ],
+        "eye": [
+            "dark eye",
+            "expressive eyes"
+        ],
+        "leg": [
+            "short legs",
+            "black"
+        ],
+        "torso": [
+            "compact body",
+            "brownish or gray upperparts",
+            "white underparts"
+        ]
+    },
+    "Blue Jay": {
+        "head": [
+            "blue and black crest",
+            "white and black",
+            "black chin and throat in males"
+        ],
+        "beak": [
+            "black beak",
+            "sturdy",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "blue and black banded",
+            "white tail"
+        ],
+        "wing": [
+            "blue wings",
+            "rounded wings"
+        ],
+        "eye": [
+            "pale eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "strong"
+        ],
+        "torso": [
+            "blue upperparts",
+            "white underparts",
+            "black necklace"
+        ]
+    },
+    "Florida Jay": {
+        "head": [
+            "blue and black crest",
+            "white and black",
+            "black facial markings"
+        ],
+        "beak": [
+            "stout beak",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "blue tail"
+        ],
+        "wing": [
+            "blue wings",
+            "white patches on wings",
+            "black"
+        ],
+        "eye": [
+            "pale eye"
+        ],
+        "leg": [
+            "black"
+        ],
+        "torso": [
+            "blue upperparts",
+            "grayish underparts"
+        ]
+    },
+    "Green Jay": {
+        "head": [
+            "blue and black crest",
+            "green head",
+            "black throat patch"
+        ],
+        "beak": [
+            "stout beak",
+            "black beak",
+            "curved beak"
+        ],
+        "tail": [
+            "long tail",
+            "yellow outer tail feathers",
+            "blue and black banded tail"
+        ],
+        "wing": [
+            "green wings",
+            "blue wings",
+            "black"
+        ],
+        "eye": [
+            "pale eye",
+            "yellow eye",
+            "bright eye"
+        ],
+        "leg": [
+            "black",
+            "strong legs",
+            "short legs"
+        ],
+        "torso": [
+            "green back",
+            "bright green underparts",
+            "blue upperparts"
+        ]
+    },
+    "Dark eyed Junco": {
+        "head": [
+            "dark gray head",
+            "hooded appearance"
+        ],
+        "beak": [
+            "short beak",
+            "pinkish beak",
+            "cone-shaped beak"
+        ],
+        "tail": [
+            "white tail",
+            "rounded tail",
+            "dark tail"
+        ],
+        "wing": [
+            "gray wings",
+            "white wing bars"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "gray upperparts",
+            "white underparts",
+            "dark upperparts"
+        ]
+    },
+    "Tropical Kingbird": {
+        "head": [
+            "light gray",
+            "slightly crested appearance"
+        ],
+        "beak": [
+            "long beak",
+            "strong",
+            "hooked tip"
+        ],
+        "tail": [
+            "long tail",
+            "forked tail",
+            "dark tail"
+        ],
+        "wing": [
+            "dark",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "short",
+            "flesh-colored"
+        ],
+        "torso": [
+            "yellowish underparts",
+            "grayish upperparts"
+        ]
+    },
+    "Gray Kingbird": {
+        "head": [
+            "dark gray head",
+            "white and black",
+            "black facial markings"
+        ],
+        "beak": [
+            "long beak",
+            "sturdy beak",
+            "hooked tip"
+        ],
+        "tail": [
+            "long tail",
+            "square tail",
+            "black tail"
+        ],
+        "wing": [
+            "gray wings",
+            "no significant wing bars"
+        ],
+        "eye": [
+            "black eye",
+            "expressive eyes"
+        ],
+        "leg": [
+            "black",
+            "short legs"
+        ],
+        "torso": [
+            "gray upperparts",
+            "lighter underparts"
+        ]
+    },
+    "Belted Kingfisher": {
+        "head": [
+            "large head",
+            "shaggy crest",
+            "blue-gray crown and back"
+        ],
+        "beak": [
+            "long beak",
+            "pointed beak",
+            "straight beak"
+        ],
+        "tail": [
+            "medium length tail",
+            "square tail",
+            "blue-gray tail"
+        ],
+        "wing": [
+            "blue-gray wings",
+            "rounded wings",
+            "white spotting on wings"
+        ],
+        "eye": [
+            "white eye ring",
+            "dark eye"
+        ],
+        "leg": [
+            "short legs",
+            "black"
+        ],
+        "torso": [
+            "white underparts",
+            "blue upperparts",
+            "white underparts"
+        ]
+    },
+    "Green Kingfisher": {
+        "head": [
+            "white and black",
+            "dark green crown"
+        ],
+        "beak": [
+            "long beak",
+            "pointed beak",
+            "black upper beak with a pale lower beak"
+        ],
+        "tail": [
+            "short tail",
+            "dark tail"
+        ],
+        "wing": [
+            "dark green wings",
+            "short wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "short legs",
+            "red"
+        ],
+        "torso": [
+            "underside white with a greenish breast band",
+            "dark green upperparts"
+        ]
+    },
+    "Pied Kingfisher": {
+        "head": [
+            "black and white striped",
+            "large white patch on the cheek",
+            "crest on the head"
+        ],
+        "beak": [
+            "long beak",
+            "stout",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "white tail",
+            "forked tail"
+        ],
+        "wing": [
+            "black with white",
+            "short",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "short",
+            "black",
+            "stout"
+        ],
+        "torso": [
+            "white underparts",
+            "black and white barred",
+            "compact body"
+        ]
+    },
+    "Ringed Kingfisher": {
+        "head": [
+            "large crest",
+            "blue-gray color with white markings",
+            "white collar around neck"
+        ],
+        "beak": [
+            "long and sturdy",
+            "straight shape",
+            "black with some orange at the base"
+        ],
+        "tail": [
+            "long tail",
+            "blue-gray with white bands",
+            "broad"
+        ],
+        "wing": [
+            "broad and rounded",
+            "blue-gray color",
+            "white spots or bars"
+        ],
+        "eye": [
+            "dark eye",
+            "small relative to head size"
+        ],
+        "leg": [
+            "short",
+            "sturdy",
+            "red or orange in color"
+        ],
+        "torso": [
+            "robust and large",
+            "upperparts blue-gray",
+            "chest white with a distinctive blue-gray band"
+        ]
+    },
+    "White breasted Kingfisher": {
+        "head": [
+            "large head",
+            "blue and brown head"
+        ],
+        "beak": [
+            "long beak",
+            "bright red beak"
+        ],
+        "tail": [
+            "medium length tail",
+            "blue tail"
+        ],
+        "wing": [
+            "blue wings"
+        ],
+        "eye": [
+            "dark brown eye"
+        ],
+        "leg": [
+            "red"
+        ],
+        "torso": [
+            "white underparts",
+            "blue upperparts"
+        ]
+    },
+    "Red legged Kittiwake": {
+        "head": [
+            "white and black",
+            "black crown and back of the head"
+        ],
+        "beak": [
+            "short yellow beak",
+            "black tip on beak"
+        ],
+        "tail": [
+            "short tail",
+            "forked tail"
+        ],
+        "wing": [
+            "gray wings",
+            "black"
+        ],
+        "eye": [
+            "small eye"
+        ],
+        "leg": [
+            "bright red"
+        ],
+        "torso": [
+            "white underparts",
+            "white underparts"
+        ]
+    },
+    "Horned Lark": {
+        "head": [
+            "brownish or grayish head",
+            "black facial markings",
+            "distinctive black 'horns'"
+        ],
+        "beak": [
+            "short beak",
+            "curved beak",
+            "pale yellow to horn-colored beak"
+        ],
+        "tail": [
+            "black tail with white outer feathers",
+            "short tail"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars",
+            "long wings compared to body"
+        ],
+        "eye": [
+            "dark eye",
+            "white eye ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "relatively long legs"
+        ],
+        "torso": [
+            "white underparts",
+            "streaked breast and back",
+            "white underparts"
+        ]
+    },
+    "Pacific Loon": {
+        "head": [
+            "black cap",
+            "rounded back of head"
+        ],
+        "beak": [
+            "long beak",
+            "straight",
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "short",
+            "pointed"
+        ],
+        "wing": [
+            "long",
+            "pointed wings",
+            "dark"
+        ],
+        "eye": [
+            "red eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "short"
+        ],
+        "torso": [
+            "dark above",
+            "white underparts",
+            "checkered black-and-white pattern on back in summer"
+        ]
+    },
+    "Mallard": {
+        "head": [
+            "green head",
+            "brown head",
+            "white and black"
+        ],
+        "beak": [
+            "yellow beak",
+            "orange and brown beak in females",
+            "broad and flat beak"
+        ],
+        "tail": [
+            "black tail",
+            "brown tail",
+            "white tail"
+        ],
+        "wing": [
+            "blue wings",
+            "strong and broad wing",
+            "grey wing feathers in females"
+        ],
+        "eye": [
+            "brown eyes",
+            "expressive eyes"
+        ],
+        "leg": [
+            "orange"
+        ],
+        "torso": [
+            "grey body in males",
+            "brown-speckled body in females",
+            "compact body"
+        ]
+    },
+    "Western Meadowlark": {
+        "head": [
+            "white stripes",
+            "black malar stripes",
+            "brownish crown",
+            "rounded"
+        ],
+        "beak": [
+            "long beak",
+            "pointed beak",
+            "curved beak",
+            "long and pointed"
+        ],
+        "tail": [
+            "white outer feathers",
+            "brownish center",
+            "short and square"
+        ],
+        "wing": [
+            "brown wings",
+            "black spots",
+            "white edges",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark brown eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored"
+        ],
+        "torso": [
+            "bright yellow with black V-shaped band",
+            "brownish on the sides",
+            "plump"
+        ]
+    },
+    "Hooded Merganser": {
+        "head": [
+            "large white crest with black borders",
+            "black cap",
+            "crest can be expanded or contracted"
+        ],
+        "beak": [
+            "thin beak",
+            "hooked tip"
+        ],
+        "tail": [
+            "long tail",
+            "dark tail"
+        ],
+        "wing": [
+            "black",
+            "striking white patch on black wing when folded"
+        ],
+        "eye": [
+            "bright yellow",
+            "distinctive"
+        ],
+        "leg": [
+            "relatively short",
+            "black"
+        ],
+        "torso": [
+            "blackish back",
+            "white underparts",
+            "compact body"
+        ]
+    },
+    "Red breasted Merganser": {
+        "head": [
+            "dark green head",
+            "crested appearance"
+        ],
+        "beak": [
+            "thin beak",
+            "reddish-orange beak",
+            "hooked tip"
+        ],
+        "tail": [
+            "long tail"
+        ],
+        "wing": [
+            "white wing patches",
+            "dark wing"
+        ],
+        "eye": [
+            "red eye"
+        ],
+        "leg": [
+            "orange"
+        ],
+        "torso": [
+            "white underparts",
+            "dark back"
+        ]
+    },
+    "Mockingbird": {
+        "head": [
+            "gray",
+            "rounded",
+            "proportionate to body"
+        ],
+        "beak": [
+            "black beak",
+            "slender",
+            "medium"
+        ],
+        "tail": [
+            "gray with white outer feathers",
+            "long tail",
+            "often seen fanned"
+        ],
+        "wing": [
+            "gray with white patches",
+            "rounded wings",
+            "visible when flying"
+        ],
+        "eye": [
+            "yellow or yellowish-brown",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "black or dark gray",
+            "medium",
+            "slender"
+        ],
+        "torso": [
+            "gray",
+            "medium",
+            "compact body"
+        ]
+    },
+    "Nighthawk": {
+        "head": [
+            "flat head",
+            "mottled gray and black"
+        ],
+        "beak": [
+            "very short",
+            "hooked tip",
+            "broad and flat beak"
+        ],
+        "tail": [
+            "long tail",
+            "slightly forked",
+            "white band near the tip in males"
+        ],
+        "wing": [
+            "long",
+            "pointed wings",
+            "with a distinctive white patch near the wingtips"
+        ],
+        "eye": [
+            "large eye",
+            "dark eye"
+        ],
+        "leg": [
+            "short",
+            "weak"
+        ],
+        "torso": [
+            "elongated",
+            "mottled gray and black",
+            "camouflaged pattern"
+        ]
+    },
+    "Clark Nutcracker": {
+        "head": [
+            "gray head",
+            "black facial markings",
+            "white and black"
+        ],
+        "beak": [
+            "long beak",
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "short tail",
+            "black tail",
+            "square tail"
+        ],
+        "wing": [
+            "black with white",
+            "large wings",
+            "pointed wings"
+        ],
+        "eye": [
+            "black eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "short legs"
+        ],
+        "torso": [
+            "grey torso",
+            "compact body",
+            "white underparts"
+        ]
+    },
+    "White breasted Nuthatch": {
+        "head": [
+            "black cap",
+            "white and black",
+            "blue-gray crown and back"
+        ],
+        "beak": [
+            "long beak",
+            "straight",
+            "pointed beak"
+        ],
+        "tail": [
+            "short",
+            "notched",
+            "black tail"
+        ],
+        "wing": [
+            "white wing bars",
+            "blue-gray wings"
+        ],
+        "eye": [
+            "black",
+            "bright eye"
+        ],
+        "leg": [
+            "short",
+            "strong"
+        ],
+        "torso": [
+            "white underparts",
+            "slight rufous or brownish on flanks"
+        ]
+    },
+    "Baltimore Oriole": {
+        "head": [
+            "black hood"
+        ],
+        "beak": [
+            "pointed beak",
+            "pointed beak",
+            "curved beak"
+        ],
+        "tail": [
+            "black tail",
+            "orange edges"
+        ],
+        "wing": [
+            "black",
+            "white wing bar",
+            "orange shoulder patch"
+        ],
+        "eye": [
+            "black"
+        ],
+        "leg": [
+            "gray",
+            "black"
+        ],
+        "torso": [
+            "bright orange underparts",
+            "black back"
+        ]
+    },
+    "Hooded Oriole": {
+        "head": [
+            "bright orange face",
+            "black chin and throat in males",
+            "white and black"
+        ],
+        "beak": [
+            "long beak",
+            "curved beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "barred tail"
+        ],
+        "wing": [
+            "black"
+        ],
+        "eye": [
+            "dark brown eye"
+        ],
+        "leg": [
+            "gray",
+            "long legs"
+        ],
+        "torso": [
+            "bright orange underparts",
+            "olive or brownish upperparts"
+        ]
+    },
+    "Orchard Oriole": {
+        "head": [
+            "black cap",
+            "pointed shape",
+            "greenish-yellow head",
+            "rounded shape"
+        ],
+        "beak": [
+            "pointed beak",
+            "curved beak",
+            "sharp tip"
+        ],
+        "tail": [
+            "square tail",
+            "black tail",
+            "white edges on tail feathers"
+        ],
+        "wing": [
+            "black",
+            "white wing bars",
+            "dark wing",
+            "two white bars"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "gray",
+            "slim"
+        ],
+        "torso": [
+            "chestnut body",
+            "compact body",
+            "olive-green torso",
+            "compact body"
+        ]
+    },
+    "Scott Oriole": {
+        "head": [
+            "black hood",
+            "sharp and straight facial line between the black and yellow/orange"
+        ],
+        "beak": [
+            "long beak",
+            "curved beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "black tail",
+            "some white on outer feathers"
+        ],
+        "wing": [
+            "black",
+            "white wing bars or patches"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "gray"
+        ],
+        "torso": [
+            "bright yellow or orange-yellow underparts",
+            "darker on back and upperparts"
+        ]
+    },
+    "Ovenbird": {
+        "head": [
+            "green head",
+            "white and black",
+            "orange or buff stripe down the center"
+        ],
+        "beak": [
+            "pointed beak",
+            "slender beak",
+            "pinkish to flesh-colored lower mandible"
+        ],
+        "tail": [
+            "green tail",
+            "short tail"
+        ],
+        "wing": [
+            "green wings",
+            "white wing bars"
+        ],
+        "eye": [
+            "large eye",
+            "white eye ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short legs"
+        ],
+        "torso": [
+            "white underparts",
+            "boldly spotted and streaked with black",
+            "olive or brownish upperparts"
+        ]
+    },
+    "Brown Pelican": {
+        "head": [
+            "white and black",
+            "brown head"
+        ],
+        "beak": [
+            "long beak",
+            "large pouch for catching fish"
+        ],
+        "tail": [
+            "short tail",
+            "dark tail"
+        ],
+        "wing": [
+            "large wings",
+            "brown wings",
+            "broad with black tips"
+        ],
+        "eye": [
+            "pale eye"
+        ],
+        "leg": [
+            "short legs"
+        ],
+        "torso": [
+            "compact body",
+            "brown on back and white on belly",
+            "compact body"
+        ]
+    },
+    "White Pelican": {
+        "head": [
+            "large head",
+            "white with a yellowish wash"
+        ],
+        "beak": [
+            "long beak",
+            "large pouch for catching fish",
+            "orange"
+        ],
+        "tail": [
+            "short",
+            "white tail"
+        ],
+        "wing": [
+            "very large wingspan",
+            "black with white"
+        ],
+        "eye": [
+            "pale eye",
+            "yellow eye"
+        ],
+        "leg": [
+            "short legs",
+            "orange"
+        ],
+        "torso": [
+            "compact body",
+            "white underparts"
+        ]
+    },
+    "Western Wood Pewee": {
+        "head": [
+            "gray head",
+            "peaked crown appearance"
+        ],
+        "beak": [
+            "slender beak",
+            "black beak",
+            "slightly downcurved at tip"
+        ],
+        "tail": [
+            "long tail",
+            "slightly notched tail"
+        ],
+        "wing": [
+            "dark wings",
+            "two wing bars",
+            "pale wing-bars on dark wings"
+        ],
+        "eye": [
+            "dark eye",
+            "distinct eye-ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "slender leg"
+        ],
+        "torso": [
+            "olive or brownish upperparts",
+            "white underparts",
+            "smudgy vest"
+        ]
+    },
+    "Sayornis": {
+        "head": [
+            "gray head",
+            "rounded head shape"
+        ],
+        "beak": [
+            "narrow beak",
+            "straight beak",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "square tail",
+            "dark tail"
+        ],
+        "wing": [
+            "dark wings",
+            "pointed wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "short legs",
+            "black"
+        ],
+        "torso": [
+            "gray upperparts",
+            "white underparts",
+            "compact body"
+        ]
+    },
+    "American Pipit": {
+        "head": [
+            "brown head",
+            "pale supercilium (eyebrow stripe)"
+        ],
+        "beak": [
+            "thin beak",
+            "black beak"
+        ],
+        "tail": [
+            "short tail",
+            "dark tail"
+        ],
+        "wing": [
+            "brown wings",
+            "dull wing bars"
+        ],
+        "eye": [
+            "dark eye",
+            "white eye ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "long legs"
+        ],
+        "torso": [
+            "buffy or whitish underparts",
+            "streaked breast and flanks"
+        ]
+    },
+    "Whip poor Will": {
+        "head": [
+            "large and flat",
+            "mottled brown and gray"
+        ],
+        "beak": [
+            "short beak",
+            "broad and flat beak"
+        ],
+        "tail": [
+            "long tail",
+            "rounded tail",
+            "brown tail"
+        ],
+        "wing": [
+            "long",
+            "rounded wings",
+            "mottled brown and gray"
+        ],
+        "eye": [
+            "large eye",
+            "dark eye"
+        ],
+        "leg": [
+            "short",
+            "weak"
+        ],
+        "torso": [
+            "compact body",
+            "mottled brown and black",
+            "camouflaged pattern"
+        ]
+    },
+    "Horned Puffin": {
+        "head": [
+            "large white patch on face",
+            "black crown and back of the head"
+        ],
+        "beak": [
+            "large beak",
+            "bright yellow with red tip",
+            "deeply grooved"
+        ],
+        "tail": [
+            "short",
+            "dark tail"
+        ],
+        "wing": [
+            "black",
+            "pointed wings",
+            "white underparts"
+        ],
+        "eye": [
+            "bright orange",
+            "surrounded by black"
+        ],
+        "leg": [
+            "orange"
+        ],
+        "torso": [
+            "black upperparts",
+            "white underparts",
+            "compact body"
+        ]
+    },
+    "Common Raven": {
+        "head": [
+            "large head",
+            "black plumage",
+            "feathered throat"
+        ],
+        "beak": [
+            "thick beak",
+            "black beak",
+            "curved beak"
+        ],
+        "tail": [
+            "wedge-shaped tail",
+            "long tail",
+            "black tail"
+        ],
+        "wing": [
+            "long wings",
+            "black",
+            "pointed wings"
+        ],
+        "eye": [
+            "dark brown eye"
+        ],
+        "leg": [
+            "black",
+            "strong legs"
+        ],
+        "torso": [
+            "black torso",
+            "black torso",
+            "compact body"
+        ]
+    },
+    "White necked Raven": {
+        "head": [
+            "black",
+            "white patch on the back of the neck"
+        ],
+        "beak": [
+            "black beak",
+            "large and thick",
+            "curved"
+        ],
+        "tail": [
+            "diamond-shaped",
+            "black tail",
+            "relatively long"
+        ],
+        "wing": [
+            "black",
+            "broad with long primaries"
+        ],
+        "eye": [
+            "dark brown eye"
+        ],
+        "leg": [
+            "black",
+            "strong and long"
+        ],
+        "torso": [
+            "black",
+            "robust",
+            "large"
+        ]
+    },
+    "American Redstart": {
+        "head": [
+            "black cap",
+            "gray head",
+            "orange patches on sides for males"
+        ],
+        "beak": [
+            "small and thin beak",
+            "black beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "black tail",
+            "rounded tail",
+            "notched tail"
+        ],
+        "wing": [
+            "dark wings with orange or yellow patches for males",
+            "gray wings",
+            "pointed wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "thin black",
+            "short to medium length legs"
+        ],
+        "torso": [
+            "black torso",
+            "olive or brownish upperparts",
+            "orange or yellow patches on sides for males, and yellow for females"
+        ]
+    },
+    "Geococcyx": {
+        "head": [
+            "crown of feathers that can be raised",
+            "dark color with slight blue or green sheen"
+        ],
+        "beak": [
+            "long beak",
+            "curved beak",
+            "strong"
+        ],
+        "tail": [
+            "long tail",
+            "broad",
+            "white tail"
+        ],
+        "wing": [
+            "short",
+            "rounded wings",
+            "brown wings"
+        ],
+        "eye": [
+            "bright yellow",
+            "large eye",
+            "surrounded by a bare bluish skin"
+        ],
+        "leg": [
+            "long",
+            "strong",
+            "blue-gray"
+        ],
+        "torso": [
+            "compact body",
+            "brownish or olive above",
+            "white underparts"
+        ]
+    },
+    "Loggerhead Shrike": {
+        "head": [
+            "gray head",
+            "black facial markings"
+        ],
+        "beak": [
+            "hooked tip",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "white tail"
+        ],
+        "wing": [
+            "black with white",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "black"
+        ],
+        "torso": [
+            "gray upperparts",
+            "white underparts"
+        ]
+    },
+    "Great Grey Shrike": {
+        "head": [
+            "large and broad with a black mask",
+            "gray head",
+            "flat head profile"
+        ],
+        "beak": [
+            "hooked tip",
+            "black beak",
+            "strong and thick"
+        ],
+        "tail": [
+            "long tail",
+            "barred tail",
+            "notched at the center"
+        ],
+        "wing": [
+            "black",
+            "white patches visible during flight",
+            "gray wings"
+        ],
+        "eye": [
+            "dark eye",
+            "prominent eye",
+            "surrounded by black mask"
+        ],
+        "leg": [
+            "black",
+            "strong"
+        ],
+        "torso": [
+            "gray upperparts",
+            "white underparts",
+            "gray upperparts"
+        ]
+    },
+    "Baird Sparrow": {
+        "head": [
+            "brown head",
+            "pale supercilium (eyebrow stripe)",
+            "central crown stripe"
+        ],
+        "beak": [
+            "cone-shaped beak",
+            "lower mandible yellowish",
+            "black upper beak with a pale lower beak"
+        ],
+        "tail": [
+            "long tail",
+            "notched at the end",
+            "dull brown"
+        ],
+        "wing": [
+            "brown wings",
+            "rusty shoulder patch",
+            "white wing bars"
+        ],
+        "eye": [
+            "dark brown eye",
+            "surrounded by light ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "relatively thin legs"
+        ],
+        "torso": [
+            "streaked underparts",
+            "buffy breast",
+            "white underparts"
+        ]
+    },
+    "Black throated Sparrow": {
+        "head": [
+            "black chin and throat in males",
+            "white and black",
+            "gray head"
+        ],
+        "beak": [
+            "short beak",
+            "cone-shaped beak",
+            "dark"
+        ],
+        "tail": [
+            "long tail",
+            "rounded tail",
+            "gray with white edges"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "slender",
+            "flesh-colored",
+            "short"
+        ],
+        "torso": [
+            "gray upperparts",
+            "white underparts",
+            "black chest"
+        ]
+    },
+    "Brewer Sparrow": {
+        "head": [
+            "gray head",
+            "thin white eye-ring",
+            "pale supercilium (eyebrow stripe)"
+        ],
+        "beak": [
+            "small",
+            "cone-shaped beak",
+            "grayish"
+        ],
+        "tail": [
+            "long tail",
+            "narrow",
+            "notched"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars",
+            "pointed wings"
+        ],
+        "eye": [
+            "dark brown eye"
+        ],
+        "leg": [
+            "brown",
+            "slender"
+        ],
+        "torso": [
+            "grayish-brown",
+            "streaks on breast and flanks",
+            "white underparts"
+        ]
+    },
+    "Chipping Sparrow": {
+        "head": [
+            "rusty cap",
+            "white and black",
+            "black eye line"
+        ],
+        "beak": [
+            "small",
+            "cone-shaped beak",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "notched",
+            "dark tail"
+        ],
+        "wing": [
+            "brown wings",
+            "two white wing bars"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "slender"
+        ],
+        "torso": [
+            "grayish underparts",
+            "brown streaked back"
+        ]
+    },
+    "Clay colored Sparrow": {
+        "head": [
+            "pale brown crown",
+            "gray head",
+            "black eye line"
+        ],
+        "beak": [
+            "short beak",
+            "conical shape",
+            "pale"
+        ],
+        "tail": [
+            "long tail",
+            "notched",
+            "brown tail"
+        ],
+        "wing": [
+            "brown wings",
+            "rufous patch",
+            "clear patterns"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "grayish underparts",
+            "buffy breast",
+            "brown streaked back"
+        ]
+    },
+    "House Sparrow": {
+        "head": [
+            "gray head",
+            "black chin and throat in males",
+            "white and black"
+        ],
+        "beak": [
+            "short beak",
+            "stout",
+            "cone-shaped beak"
+        ],
+        "tail": [
+            "short",
+            "square tail",
+            "brown tail"
+        ],
+        "wing": [
+            "brown wings",
+            "with black streaks",
+            "white wing bars"
+        ],
+        "eye": [
+            "dark brown eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short",
+            "strong"
+        ],
+        "torso": [
+            "gray upperparts",
+            "brown with darker streaks",
+            "buff underparts (in females and juveniles)"
+        ]
+    },
+    "Field Sparrow": {
+        "head": [
+            "gray head",
+            "rusty crown",
+            "white and black"
+        ],
+        "beak": [
+            "pink beak",
+            "conical shape"
+        ],
+        "tail": [
+            "long tail",
+            "notched"
+        ],
+        "wing": [
+            "brown wings",
+            "rusty wing bars"
+        ],
+        "eye": [
+            "dark eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "flesh-colored"
+        ],
+        "torso": [
+            "buffy breast",
+            "grayish underparts",
+            "rusty back"
+        ]
+    },
+    "Fox Sparrow": {
+        "head": [
+            "red head",
+            "gray head",
+            "striped crown"
+        ],
+        "beak": [
+            "thick beak",
+            "cone-shaped beak",
+            "yellow beak"
+        ],
+        "tail": [
+            "long tail",
+            "reddish tail",
+            "notched tail"
+        ],
+        "wing": [
+            "reddish wings",
+            "dark bars on wings",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye",
+            "white eye ring",
+            "thin eye stripes"
+        ],
+        "leg": [
+            "flesh-colored",
+            "sturdy legs",
+            "short legs"
+        ],
+        "torso": [
+            "heavily spotted chest",
+            "reddish brown torso",
+            "grayish underparts"
+        ]
+    },
+    "Grasshopper Sparrow": {
+        "head": [
+            "flat crown",
+            "pale supercilium (eyebrow stripe)",
+            "brownish stripe on the crown"
+        ],
+        "beak": [
+            "short beak",
+            "conical shape",
+            "pale pink to yellowish lower mandible"
+        ],
+        "tail": [
+            "short tail",
+            "narrow at the base",
+            "usually notched"
+        ],
+        "wing": [
+            "brown wings",
+            "rusty wingbars",
+            "lack of strong wing patterns"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short legs",
+            "strong legs for hopping"
+        ],
+        "torso": [
+            "buffy or yellowish underparts",
+            "fine breast streaks",
+            "white underparts"
+        ]
+    },
+    "Harris Sparrow": {
+        "head": [
+            "black crown and back of the head",
+            "gray head",
+            "pink bill"
+        ],
+        "beak": [
+            "pink",
+            "small",
+            "cone-shaped beak"
+        ],
+        "tail": [
+            "long tail",
+            "rounded tail",
+            "brown tail"
+        ],
+        "wing": [
+            "brown wings",
+            "black",
+            "white wing bars"
+        ],
+        "eye": [
+            "dark brown eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "strong"
+        ],
+        "torso": [
+            "streaked brown and black upper parts",
+            "white underparts",
+            "white underparts"
+        ]
+    },
+    "Henslow Sparrow": {
+        "head": [
+            "olive brown",
+            "black stripes",
+            "pale central crown stripe"
+        ],
+        "beak": [
+            "short beak",
+            "cone-shaped beak",
+            "pinkish"
+        ],
+        "tail": [
+            "short",
+            "notched",
+            "brown tail"
+        ],
+        "wing": [
+            "brown wings",
+            "olive",
+            "dark streaks"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short",
+            "slender"
+        ],
+        "torso": [
+            "streaked",
+            "olive or brownish upperparts",
+            "buffy underparts"
+        ]
+    },
+    "Le Conte Sparrow": {
+        "head": [
+            "buffy orange face",
+            "gray head",
+            "fine streaks on crown"
+        ],
+        "beak": [
+            "short beak",
+            "pinkish beak"
+        ],
+        "tail": [
+            "short tail",
+            "notched tail"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars"
+        ],
+        "eye": [
+            "pale eye",
+            "dark eye line"
+        ],
+        "leg": [
+            "flesh-colored"
+        ],
+        "torso": [
+            "streaked breast and sides",
+            "buffy breast"
+        ]
+    },
+    "Lincoln Sparrow": {
+        "head": [
+            "gray head",
+            "buff or gray supercilium (eyebrow stripe)",
+            "white and black"
+        ],
+        "beak": [
+            "slender",
+            "pointed beak",
+            "grayish or horn-colored"
+        ],
+        "tail": [
+            "narrow",
+            "relatively short",
+            "notched"
+        ],
+        "wing": [
+            "brown wings",
+            "buffy wing bars",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye",
+            "surrounded by eyering that is usually buff or whitish",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "slender"
+        ],
+        "torso": [
+            "buffy or gray underparts with fine, dark streaking",
+            "buffy breast",
+            "crisp, well-defined flank streaks"
+        ]
+    },
+    "Nelson Sharp tailed Sparrow": {
+        "head": [
+            "gray head",
+            "brown head",
+            "white and black"
+        ],
+        "beak": [
+            "short beak",
+            "cone-shaped beak",
+            "grayish"
+        ],
+        "tail": [
+            "sharp-pointed",
+            "short",
+            "notched"
+        ],
+        "wing": [
+            "brown wings",
+            "with faint streaks",
+            "white wing bars"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short",
+            "strong"
+        ],
+        "torso": [
+            "streaked with brown and gray",
+            "buffy breast",
+            "white underparts"
+        ]
+    },
+    "Savannah Sparrow": {
+        "head": [
+            "brownish or greyish crown with central stripe",
+            "thin, whitish supercilium (eyebrow stripe)",
+            "mottled brown and grey"
+        ],
+        "beak": [
+            "cone-shaped beak",
+            "pinkish or yellowish lower mandible",
+            "greyish upper mandible"
+        ],
+        "tail": [
+            "short",
+            "notched",
+            "brown tail"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars",
+            "feathers edged with whitish or buffy"
+        ],
+        "eye": [
+            "dark eye",
+            "light eyering or lores",
+            "eyestripe present"
+        ],
+        "leg": [
+            "flesh-colored",
+            "slender"
+        ],
+        "torso": [
+            "streaked breast and sides",
+            "white underparts",
+            "buffy or whitish supercilium extending to the breast sides"
+        ]
+    },
+    "Seaside Sparrow": {
+        "head": [
+            "gray head",
+            "black eye line",
+            "white and black"
+        ],
+        "beak": [
+            "stout beak",
+            "conical shape"
+        ],
+        "tail": [
+            "short tail",
+            "notched tail",
+            "dark tail"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye",
+            "white eye ring",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "gray",
+            "strong legs"
+        ],
+        "torso": [
+            "streaked underparts",
+            "gray upperparts",
+            "white underparts"
+        ]
+    },
+    "Song Sparrow": {
+        "head": [
+            "brown head",
+            "gray face with brown streak",
+            "white and black",
+            "rounded head"
+        ],
+        "beak": [
+            "grey",
+            "black beak",
+            "cone-shaped beak",
+            "short beak"
+        ],
+        "tail": [
+            "brown tail",
+            "dark streaks",
+            "long tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "brown wings",
+            "black",
+            "white",
+            "streaks and spots"
+        ],
+        "eye": [
+            "dark brown eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "brown",
+            "thin black"
+        ],
+        "torso": [
+            "brown",
+            "white underparts",
+            "streaked with brown and black",
+            "thick malar stripe",
+            "central breast spot"
+        ]
+    },
+    "Tree Sparrow": {
+        "head": [
+            "chestnut brown crown",
+            "gray head",
+            "black spot on the ear coverts"
+        ],
+        "beak": [
+            "small",
+            "stout",
+            "black in winter and yellowish in summer"
+        ],
+        "tail": [
+            "short",
+            "square tail",
+            "brown tail"
+        ],
+        "wing": [
+            "brown wings",
+            "streaked with black",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark brown eye",
+            "surrounded by a thin, light ring"
+        ],
+        "leg": [
+            "brown",
+            "sturdy",
+            "short"
+        ],
+        "torso": [
+            "brown chest",
+            "white underparts",
+            "white underparts"
+        ]
+    },
+    "Vesper Sparrow": {
+        "head": [
+            "striped crown",
+            "white and black",
+            "pale supercilium (eyebrow)"
+        ],
+        "beak": [
+            "small",
+            "cone-shaped beak",
+            "pinkish lower mandible"
+        ],
+        "tail": [
+            "white tail",
+            "short",
+            "notched"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars",
+            "bold streaks"
+        ],
+        "eye": [
+            "dark eye",
+            "prominent eye",
+            "surrounded by white eye-ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "streaked with brown and black",
+            "buffy breast",
+            "white underparts"
+        ]
+    },
+    "White crowned Sparrow": {
+        "head": [
+            "white and black",
+            "white and black",
+            "gray head"
+        ],
+        "beak": [
+            "short beak",
+            "conical shape",
+            "pale pink or yellowish"
+        ],
+        "tail": [
+            "long tail",
+            "rounded tail",
+            "usually dark with white corners"
+        ],
+        "wing": [
+            "brown wings",
+            "with noticeable white wing bars",
+            "streaked"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "slender"
+        ],
+        "torso": [
+            "gray breast and belly",
+            "streaked brown back",
+            "white underparts"
+        ]
+    },
+    "White throated Sparrow": {
+        "head": [
+            "white and black",
+            "black and white striped",
+            "yellow lore between eye and beak"
+        ],
+        "beak": [
+            "short beak",
+            "cone-shaped beak",
+            "grey to pinkish"
+        ],
+        "tail": [
+            "long tail",
+            "rounded tail",
+            "brownish-gray"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars",
+            "feathers edged with white"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "strong"
+        ],
+        "torso": [
+            "grey or brownish",
+            "white underparts",
+            "streaked with brown on sides and back"
+        ]
+    },
+    "Cape Glossy Starling": {
+        "head": [
+            "iridescent blue and green",
+            "short head",
+            "rounded head"
+        ],
+        "beak": [
+            "long beak",
+            "black beak",
+            "straight beak"
+        ],
+        "tail": [
+            "long tail",
+            "iridescent tail",
+            "narrow tail"
+        ],
+        "wing": [
+            "short wings",
+            "rounded wings",
+            "iridescent blue-green wings"
+        ],
+        "eye": [
+            "bright yellow",
+            "large eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "short legs",
+            "thin black"
+        ],
+        "torso": [
+            "iridescent blue-green torso",
+            "compact body",
+            "short torso"
+        ]
+    },
+    "Bank Swallow": {
+        "head": [
+            "brown head",
+            "white and black",
+            "distinct dark band across the chest"
+        ],
+        "beak": [
+            "small",
+            "narrow",
+            "pointed beak"
+        ],
+        "tail": [
+            "notched",
+            "short",
+            "dark tail"
+        ],
+        "wing": [
+            "brown wings",
+            "long",
+            "pointed wings"
+        ],
+        "eye": [
+            "dark brown eye"
+        ],
+        "leg": [
+            "very short",
+            "flesh-colored"
+        ],
+        "torso": [
+            "white underparts",
+            "brown upperparts"
+        ]
+    },
+    "Barn Swallow": {
+        "head": [
+            "blue and black crest",
+            "shiny head"
+        ],
+        "beak": [
+            "short beak",
+            "narrow beak"
+        ],
+        "tail": [
+            "long tail",
+            "streamlined tail"
+        ],
+        "wing": [
+            "long pointed wings",
+            "dark wings"
+        ],
+        "eye": [
+            "small eye"
+        ],
+        "leg": [
+            "short leg"
+        ],
+        "torso": [
+            "orange underparts",
+            "rusty throat"
+        ]
+    },
+    "Cliff Swallow": {
+        "head": [
+            "blue-black cap",
+            "white and black",
+            "rounded head"
+        ],
+        "beak": [
+            "short beak",
+            "black beak",
+            "broad and flat beak"
+        ],
+        "tail": [
+            "forked tail",
+            "short tail",
+            "dark tail"
+        ],
+        "wing": [
+            "long pointed wings",
+            "dark color wings",
+            "rounded wings"
+        ],
+        "eye": [
+            "small dark eyes"
+        ],
+        "leg": [
+            "short legs",
+            "flesh-colored",
+            "not very visible"
+        ],
+        "torso": [
+            "orange-buff rump and underparts",
+            "blue-black throat and upperparts",
+            "squared off at the back"
+        ]
+    },
+    "Tree Swallow": {
+        "head": [
+            "iridescent blue-green",
+            "small head"
+        ],
+        "beak": [
+            "short beak",
+            "black beak",
+            "short beak"
+        ],
+        "tail": [
+            "forked tail",
+            "dark tail",
+            "long tail"
+        ],
+        "wing": [
+            "long pointed wings",
+            "dark color wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "short legs",
+            "black"
+        ],
+        "torso": [
+            "white underparts",
+            "iridescent upperparts",
+            "compact body"
+        ]
+    },
+    "Scarlet Tanager": {
+        "head": [
+            "bright red",
+            "rounded"
+        ],
+        "beak": [
+            "pale, ivory",
+            "medium",
+            "pointed beak"
+        ],
+        "tail": [
+            "black tail",
+            "medium",
+            "square tail"
+        ],
+        "wing": [
+            "black",
+            "medium length",
+            "plain"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "gray",
+            "medium"
+        ],
+        "torso": [
+            "bright red",
+            "slender, robust"
+        ]
+    },
+    "Summer Tanager": {
+        "head": [
+            "uniformly colored head",
+            "red head",
+            "green head"
+        ],
+        "beak": [
+            "stout beak",
+            "pale horn-colored beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "medium length tail",
+            "uniformly colored tail",
+            "not very distinct from body color"
+        ],
+        "wing": [
+            "darker wings in males",
+            "lighter, olive-yellow wings in females",
+            "relatively short wings"
+        ],
+        "eye": [
+            "dark brown eye",
+            "not very distinct eye color"
+        ],
+        "leg": [
+            "gray",
+            "flesh-colored"
+        ],
+        "torso": [
+            "bright red torso in males",
+            "olive-yellow torso in females",
+            "uniform color across the torso"
+        ]
+    },
+    "Artic Tern": {
+        "head": [
+            "black cap",
+            "rounded head shape"
+        ],
+        "beak": [
+            "bright red beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "forked tail",
+            "white tail"
+        ],
+        "wing": [
+            "long, narrow wings",
+            "gray wings",
+            "black"
+        ],
+        "eye": [
+            "small eye"
+        ],
+        "leg": [
+            "bright red"
+        ],
+        "torso": [
+            "gray upperparts",
+            "white underparts"
+        ]
+    },
+    "Black Tern": {
+        "head": [
+            "black cap",
+            "small head",
+            "rounded head"
+        ],
+        "beak": [
+            "short beak",
+            "slender beak",
+            "black beak"
+        ],
+        "tail": [
+            "forked tail",
+            "dark tail",
+            "long tail"
+        ],
+        "wing": [
+            "dark wings",
+            "pointed wings",
+            "long wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "short legs",
+            "red",
+            "slender legs"
+        ],
+        "torso": [
+            "grey torso (in non-breeding season)",
+            "black torso",
+            "compact body"
+        ]
+    },
+    "Caspian Tern": {
+        "head": [
+            "black cap",
+            "white and black",
+            "rounded head"
+        ],
+        "beak": [
+            "large beak",
+            "pointed beak",
+            "curved beak"
+        ],
+        "tail": [
+            "forked tail",
+            "white tail",
+            "long tail"
+        ],
+        "wing": [
+            "rounded wings",
+            "gray wings",
+            "pointed wings"
+        ],
+        "eye": [
+            "black eyes",
+            "small eye",
+            "expressive eyes"
+        ],
+        "leg": [
+            "black",
+            "short legs"
+        ],
+        "torso": [
+            "white underparts",
+            "compact body",
+            "white underparts"
+        ]
+    },
+    "Common Tern": {
+        "head": [
+            "black cap",
+            "small head",
+            "black crown and back of the head"
+        ],
+        "beak": [
+            "red beak with black tip",
+            "long beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "white tail",
+            "streamlined tail"
+        ],
+        "wing": [
+            "gray wings",
+            "long narrow wings",
+            "pointed wings"
+        ],
+        "eye": [
+            "small eye",
+            "small eye",
+            "black eye surrounded by white"
+        ],
+        "leg": [
+            "bright red",
+            "thin black"
+        ],
+        "torso": [
+            "white underparts",
+            "compact body",
+            "gray upperparts"
+        ]
+    },
+    "Elegant Tern": {
+        "head": [
+            "black cap",
+            "long, slender neck"
+        ],
+        "beak": [
+            "long beak",
+            "orange-yellow beak",
+            "slightly upcurved tip"
+        ],
+        "tail": [
+            "forked tail",
+            "white tail"
+        ],
+        "wing": [
+            "pointed wings",
+            "gray wings",
+            "pointed wings"
+        ],
+        "eye": [
+            "black eyes",
+            "small eye"
+        ],
+        "leg": [
+            "relatively short legs",
+            "black"
+        ],
+        "torso": [
+            "white underparts",
+            "compact body"
+        ]
+    },
+    "Forsters Tern": {
+        "head": [
+            "black cap",
+            "white and black"
+        ],
+        "beak": [
+            "long beak",
+            "black tip on beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "forked tail",
+            "white tail",
+            "long tail"
+        ],
+        "wing": [
+            "long",
+            "narrow",
+            "gray wings"
+        ],
+        "eye": [
+            "black",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "long",
+            "thin black",
+            "orange"
+        ],
+        "torso": [
+            "white underparts",
+            "compact body",
+            "compact body"
+        ]
+    },
+    "Least Tern": {
+        "head": [
+            "white and black",
+            "black cap",
+            "small and rounded"
+        ],
+        "beak": [
+            "yellow beak",
+            "pointed beak",
+            "black tip on beak"
+        ],
+        "tail": [
+            "forked tail",
+            "white tail",
+            "long tail"
+        ],
+        "wing": [
+            "gray wings",
+            "pointed wings",
+            "black"
+        ],
+        "eye": [
+            "small eye",
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "orange",
+            "short",
+            "slender"
+        ],
+        "torso": [
+            "white underparts",
+            "gray upperparts",
+            "compact body"
+        ]
+    },
+    "Green tailed Towhee": {
+        "head": [
+            "gray head",
+            "white and black",
+            "rusty cap"
+        ],
+        "beak": [
+            "black beak",
+            "short beak",
+            "cone-shaped beak"
+        ],
+        "tail": [
+            "long tail",
+            "green tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "rufous wings",
+            "green wings"
+        ],
+        "eye": [
+            "dark eye",
+            "red eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short legs"
+        ],
+        "torso": [
+            "olive or brownish upperparts",
+            "white underparts",
+            "gray upperparts"
+        ]
+    },
+    "Brown Thrasher": {
+        "head": [
+            "brown head",
+            "streaked with dark lines"
+        ],
+        "beak": [
+            "curved beak",
+            "curved beak"
+        ],
+        "tail": [
+            "long tail",
+            "rusty-red undertail"
+        ],
+        "wing": [
+            "brown wings",
+            "two white wing bars"
+        ],
+        "eye": [
+            "yellow eye",
+            "bright yellow iris"
+        ],
+        "leg": [
+            "long legs",
+            "flesh-colored"
+        ],
+        "torso": [
+            "reddish-brown torso",
+            "heavily streaked with dark spots"
+        ]
+    },
+    "Sage Thrasher": {
+        "head": [
+            "gray head",
+            "streaked",
+            "small head"
+        ],
+        "beak": [
+            "slender beak",
+            "straight beak",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "notched tail",
+            "brown tail"
+        ],
+        "wing": [
+            "brown wings",
+            "white tips on primary feathers",
+            "rounded wings"
+        ],
+        "eye": [
+            "yellow eye",
+            "prominent eye",
+            "dark eye-ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "slender leg",
+            "long leg"
+        ],
+        "torso": [
+            "gray upperparts",
+            "white underparts",
+            "heavily spotted and streaked with dark marks"
+        ]
+    },
+    "Black capped Vireo": {
+        "head": [
+            "black cap",
+            "white and black",
+            "greyish white cheeks"
+        ],
+        "beak": [
+            "slender beak",
+            "hooked tip",
+            "darker on the upper mandible"
+        ],
+        "tail": [
+            "fairly short",
+            "not very distinctively colored",
+            "rounded tail"
+        ],
+        "wing": [
+            "dark wings with white bars",
+            "slightly longer than tail",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye",
+            "surrounded by white eye-ring",
+            "prominent eye"
+        ],
+        "leg": [
+            "gray",
+            "thin black"
+        ],
+        "torso": [
+            "olive or brownish upperparts",
+            "white underparts",
+            "compact body"
+        ]
+    },
+    "Blue headed Vireo": {
+        "head": [
+            "blue-gray crown and back",
+            "white and black",
+            "distinct white spectacles"
+        ],
+        "beak": [
+            "slender beak",
+            "hooked tip",
+            "black upper beak with a pale lower beak"
+        ],
+        "tail": [
+            "medium length",
+            "not very distinct, mostly grey or olive",
+            "slightly rounded"
+        ],
+        "wing": [
+            "dark wings",
+            "white or faint wing bars",
+            "green wings"
+        ],
+        "eye": [
+            "dark eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "gray",
+            "relatively short",
+            "sturdy for perching"
+        ],
+        "torso": [
+            "olive or brownish upperparts",
+            "white underparts",
+            "compact body"
+        ]
+    },
+    "Philadelphia Vireo": {
+        "head": [
+            "grayish to olive-green crown",
+            "white and black",
+            "pale throat"
+        ],
+        "beak": [
+            "thin",
+            "hooked tip",
+            "black upper beak with a pale lower beak"
+        ],
+        "tail": [
+            "short",
+            "square tail",
+            "dark tail"
+        ],
+        "wing": [
+            "green wings",
+            "white wing bars",
+            "dark primary feathers"
+        ],
+        "eye": [
+            "dark brown eye",
+            "white eye ring",
+            "distinct eye-ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black",
+            "short"
+        ],
+        "torso": [
+            "yellowish underparts",
+            "olive or brownish upperparts",
+            "brighter yellow on the flanks and undertail"
+        ]
+    },
+    "Red eyed Vireo": {
+        "head": [
+            "green head",
+            "white and black",
+            "black eye line"
+        ],
+        "beak": [
+            "slender beak",
+            "hooked tip",
+            "black upper beak with a pale lower beak"
+        ],
+        "tail": [
+            "square tail",
+            "olive or gray"
+        ],
+        "wing": [
+            "green wings",
+            "white wing bars",
+            "relatively short wings"
+        ],
+        "eye": [
+            "distinctive red eye",
+            "surrounded by white eyering"
+        ],
+        "leg": [
+            "flesh-colored"
+        ],
+        "torso": [
+            "white underparts",
+            "olive or brownish upperparts"
+        ]
+    },
+    "Warbling Vireo": {
+        "head": [
+            "light grayish crown",
+            "white and black",
+            "subtle eye ring"
+        ],
+        "beak": [
+            "slender",
+            "hooked tip",
+            "darker on the upper mandible"
+        ],
+        "tail": [
+            "medium length",
+            "notched",
+            "dark tail"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars",
+            "feathers edged with pale yellow or white"
+        ],
+        "eye": [
+            "dark eye",
+            "surrounded by a faint eyering",
+            "slightly paler than head color"
+        ],
+        "leg": [
+            "gray",
+            "slender and unremarkable"
+        ],
+        "torso": [
+            "underparts white with a wash of yellow",
+            "light olive green on sides and flanks",
+            "white underparts"
+        ]
+    },
+    "White eyed Vireo": {
+        "head": [
+            "white and black",
+            "gray head",
+            "green head"
+        ],
+        "beak": [
+            "stout beak",
+            "slightly hooked",
+            "black upper beak with a pale lower beak"
+        ],
+        "tail": [
+            "short",
+            "square tail",
+            "light with dark edges"
+        ],
+        "wing": [
+            "green wings",
+            "white wing bars",
+            "short"
+        ],
+        "eye": [
+            "white eye ring",
+            "prominent eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black",
+            "short"
+        ],
+        "torso": [
+            "yellowish underparts",
+            "olive or brownish upperparts",
+            "white underparts"
+        ]
+    },
+    "Yellow throated Vireo": {
+        "head": [
+            "white and black",
+            "gray head",
+            "green head"
+        ],
+        "beak": [
+            "stout beak",
+            "slightly hooked",
+            "black upper beak with a pale lower beak"
+        ],
+        "tail": [
+            "short tail",
+            "slightly notched",
+            "dark tail"
+        ],
+        "wing": [
+            "two white wing bars",
+            "green wings",
+            "feather edges slightly lighter"
+        ],
+        "eye": [
+            "red eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "blue-gray"
+        ],
+        "torso": [
+            "bright yellow",
+            "olive or brownish upperparts",
+            "white underparts"
+        ]
+    },
+    "Bay breasted Warbler": {
+        "head": [
+            "chestnut crown",
+            "grey sides"
+        ],
+        "beak": [
+            "short beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "dark tail",
+            "notched tail"
+        ],
+        "wing": [
+            "black",
+            "two white wing bars"
+        ],
+        "eye": [
+            "dark eye",
+            "white eye ring"
+        ],
+        "leg": [
+            "black"
+        ],
+        "torso": [
+            "chestnut flanks",
+            "white underparts",
+            "greenish upperparts"
+        ]
+    },
+    "Black and white Warbler": {
+        "head": [
+            "black and white striped"
+        ],
+        "beak": [
+            "thin beak",
+            "curved beak"
+        ],
+        "tail": [
+            "barred tail",
+            "medium length"
+        ],
+        "wing": [
+            "black with white",
+            "long wings"
+        ],
+        "eye": [
+            "black eye"
+        ],
+        "leg": [
+            "black",
+            "thin black"
+        ],
+        "torso": [
+            "stripped pattern",
+            "black and white stripes"
+        ]
+    },
+    "Black throated Blue Warbler": {
+        "head": [
+            "black facial markings",
+            "white and black",
+            "duller coloration in females, often olive-brown"
+        ],
+        "beak": [
+            "small and slender",
+            "pointed beak"
+        ],
+        "tail": [
+            "relatively short",
+            "square tail",
+            "white spots visible on the outer tail feathers, especially in males"
+        ],
+        "wing": [
+            "dark with white patch or bar on the wings in males",
+            "females have more subdued wing markings",
+            "moderate length wings"
+        ],
+        "eye": [
+            "dark brown eye",
+            "small eye",
+            "not surrounded by any distinct color pattern in females"
+        ],
+        "leg": [
+            "thin black"
+        ],
+        "torso": [
+            "vibrant blue color and a black throat in males",
+            "females have a more olive or yellow-brown color",
+            "compact body"
+        ]
+    },
+    "Blue winged Warbler": {
+        "head": [
+            "black eye line",
+            "yellow forehead",
+            "white and black"
+        ],
+        "beak": [
+            "short beak",
+            "pointed beak",
+            "thin beak"
+        ],
+        "tail": [
+            "short tail",
+            "square tail",
+            "black tail"
+        ],
+        "wing": [
+            "blue-gray wings",
+            "two white wing bars",
+            "small wing"
+        ],
+        "eye": [
+            "black eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "black",
+            "thin black"
+        ],
+        "torso": [
+            "bright yellow",
+            "olive or brownish upperparts",
+            "white underparts"
+        ]
+    },
+    "Canada Warbler": {
+        "head": [
+            "gray head",
+            "yellow eye ring",
+            "black necklace on males"
+        ],
+        "beak": [
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "short tail",
+            "rounded tail",
+            "white tail"
+        ],
+        "wing": [
+            "dark wings",
+            "two white wing bars",
+            "short wings"
+        ],
+        "eye": [
+            "black eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "small legs"
+        ],
+        "torso": [
+            "yellow underparts",
+            "gray upperparts",
+            "necklace of short black streaks on chest (males)"
+        ]
+    },
+    "Cape May Warbler": {
+        "head": [
+            "streaked with dark lines",
+            "yellow supercilium (eyebrow stripe)",
+            "chestnut cheek patch"
+        ],
+        "beak": [
+            "slender",
+            "pointed beak",
+            "curved beak"
+        ],
+        "tail": [
+            "dark tail",
+            "medium length",
+            "fairly narrow"
+        ],
+        "wing": [
+            "dark",
+            "two white wing bars",
+            "pointed wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "thin black"
+        ],
+        "torso": [
+            "yellow breast with distinctive black streaks",
+            "olive or brownish upperparts",
+            "white underparts"
+        ]
+    },
+    "Cerulean Warbler": {
+        "head": [
+            "blue and black crest",
+            "white and black",
+            "black eye line"
+        ],
+        "beak": [
+            "slender beak",
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "short tail",
+            "tail with white spots"
+        ],
+        "wing": [
+            "two white wing bars",
+            "sky-blue wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "black",
+            "short leg"
+        ],
+        "torso": [
+            "blue upperparts",
+            "white underparts"
+        ]
+    },
+    "Chestnut sided Warbler": {
+        "head": [
+            "white and black",
+            "black malar streaks (cheek patches)",
+            "green head"
+        ],
+        "beak": [
+            "small",
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "white tail",
+            "medium length",
+            "slightly forked"
+        ],
+        "wing": [
+            "two white wing bars",
+            "blackish primary feathers",
+            "green wings"
+        ],
+        "eye": [
+            "dark eye",
+            "surrounded by white or light eyering",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "slender",
+            "short to medium length"
+        ],
+        "torso": [
+            "bright yellow",
+            "white underparts",
+            "distinctive chestnut streaked flanks"
+        ]
+    },
+    "Golden winged Warbler": {
+        "head": [
+            "black chin and throat in males",
+            "yellow crown patch"
+        ],
+        "beak": [
+            "small",
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "short",
+            "square tail",
+            "black tail"
+        ],
+        "wing": [
+            "black",
+            "yellow wing bar"
+        ],
+        "eye": [
+            "black",
+            "small eye"
+        ],
+        "leg": [
+            "blue-gray",
+            "short"
+        ],
+        "torso": [
+            "gray upperparts",
+            "white underparts"
+        ]
+    },
+    "Hooded Warbler": {
+        "head": [
+            "bright yellow face",
+            "green head",
+            "black hood and throat in males"
+        ],
+        "beak": [
+            "thin beak",
+            "black beak"
+        ],
+        "tail": [
+            "large white spots on tail",
+            "short to medium tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "green wings",
+            "small white patches on wings",
+            "relatively short wings"
+        ],
+        "eye": [
+            "large eye",
+            "prominent eye",
+            "expressive eyes"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "bright yellow",
+            "olive or brownish upperparts",
+            "sharp contrast between the hood and chest in males"
+        ]
+    },
+    "Kentucky Warbler": {
+        "head": [
+            "green head",
+            "black eye line",
+            "bright yellow supercilium"
+        ],
+        "beak": [
+            "pointed beak",
+            "thin beak",
+            "curved beak"
+        ],
+        "tail": [
+            "short tail",
+            "green tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "green wings",
+            "two pale wing bars",
+            "short wings"
+        ],
+        "eye": [
+            "black eye",
+            "large eye",
+            "bright eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short leg",
+            "thin black"
+        ],
+        "torso": [
+            "bright yellow",
+            "olive or brownish upperparts",
+            "no streaking on chest"
+        ]
+    },
+    "Magnolia Warbler": {
+        "head": [
+            "yellow with black mask",
+            "white and black"
+        ],
+        "beak": [
+            "short beak",
+            "thin beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "barred tail",
+            "tail with white bands"
+        ],
+        "wing": [
+            "dark wings",
+            "two white wing bars"
+        ],
+        "eye": [
+            "black",
+            "prominent eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "yellow breast with black streaks",
+            "white underparts",
+            "gray upperparts"
+        ]
+    },
+    "Mourning Warbler": {
+        "head": [
+            "green head",
+            "gray head"
+        ],
+        "beak": [
+            "short beak",
+            "pointed beak",
+            "thin beak"
+        ],
+        "tail": [
+            "short tail",
+            "green tail"
+        ],
+        "wing": [
+            "green wings",
+            "short wings"
+        ],
+        "eye": [
+            "white eye ring",
+            "dark eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "yellow underparts",
+            "olive or brownish upperparts"
+        ]
+    },
+    "Myrtle Warbler": {
+        "head": [
+            "white and black",
+            "black facial markings",
+            "blue-gray crown and back"
+        ],
+        "beak": [
+            "thin",
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "dark tail",
+            "square tail"
+        ],
+        "wing": [
+            "two white wing bars",
+            "dark with white patches",
+            "blue wings"
+        ],
+        "eye": [
+            "dark brown eye",
+            "small eye",
+            "distinct"
+        ],
+        "leg": [
+            "black",
+            "thin black",
+            "short to medium length"
+        ],
+        "torso": [
+            "white underparts",
+            "yellow patches (flanks and rump)",
+            "blue upperparts"
+        ]
+    },
+    "Nashville Warbler": {
+        "head": [
+            "gray head",
+            "white and black",
+            "green head"
+        ],
+        "beak": [
+            "short beak",
+            "slender beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "short tail",
+            "green tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "gray wings",
+            "white wing bars",
+            "green wings"
+        ],
+        "eye": [
+            "black eye",
+            "distinct eye-ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "short leg"
+        ],
+        "torso": [
+            "yellow underparts",
+            "olive or brownish upperparts",
+            "bright yellow"
+        ]
+    },
+    "Orange crowned Warbler": {
+        "head": [
+            "olive or yellow-greenish",
+            "faint eyelines",
+            "hidden orange crown patch"
+        ],
+        "beak": [
+            "pointed beak",
+            "pointed beak",
+            "small"
+        ],
+        "tail": [
+            "notched",
+            "dull olive or yellowish"
+        ],
+        "wing": [
+            "dusky",
+            "two wing bars",
+            "olive or yellowish",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "olive-green above",
+            "yellowish underparts",
+            "dull yellow or yellow-greenish breast and belly"
+        ]
+    },
+    "Palm Warbler": {
+        "head": [
+            "brownish cap",
+            "yellow or olive stripe above the eye",
+            "supercilium"
+        ],
+        "beak": [
+            "thin beak",
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "thin tail",
+            "dark tail"
+        ],
+        "wing": [
+            "green wings",
+            "two wing bars",
+            "dark flight feathers"
+        ],
+        "eye": [
+            "dark eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "yellowish underparts",
+            "olive or brownish upperparts",
+            "streaked breast and sides"
+        ]
+    },
+    "Pine Warbler": {
+        "head": [
+            "green head"
+        ],
+        "beak": [
+            "short beak",
+            "stout beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "dark tail",
+            "notched tail"
+        ],
+        "wing": [
+            "green wings",
+            "two white wing bars"
+        ],
+        "eye": [
+            "dark eye",
+            "white eye ring"
+        ],
+        "leg": [
+            "blue-gray"
+        ],
+        "torso": [
+            "yellowish underparts",
+            "olive or brownish upperparts"
+        ]
+    },
+    "Prairie Warbler": {
+        "head": [
+            "bright yellow with black semicircular marks on the sides",
+            "olive green nape"
+        ],
+        "beak": [
+            "thin beak",
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "green tail",
+            "light use of white on the outer tail feathers",
+            "relatively short tail"
+        ],
+        "wing": [
+            "olive green with faint wing bars",
+            "two yellow wing bars"
+        ],
+        "eye": [
+            "black eye",
+            "distinctive black line through the eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "bright yellow",
+            "streaked sides with black"
+        ]
+    },
+    "Prothonotary Warbler": {
+        "head": [
+            "bright yellow",
+            "olive green patch on back of head",
+            "rounded"
+        ],
+        "beak": [
+            "black beak",
+            "dark gray",
+            "pointed beak",
+            "slender"
+        ],
+        "tail": [
+            "blue-gray",
+            "white undertail coverts",
+            "short",
+            "square tail"
+        ],
+        "wing": [
+            "blue wings",
+            "white or yellowish wing bars",
+            "average size",
+            "rounded wings"
+        ],
+        "eye": [
+            "black",
+            "small eye"
+        ],
+        "leg": [
+            "blue-gray",
+            "slender"
+        ],
+        "torso": [
+            "vivid yellow body",
+            "olive or brownish upperparts",
+            "compact body"
+        ]
+    },
+    "Swainson Warbler": {
+        "head": [
+            "olive brown crown",
+            "plain face",
+            "white and black"
+        ],
+        "beak": [
+            "long beak",
+            "black upper beak with a pale lower beak"
+        ],
+        "tail": [
+            "short tail",
+            "rounded tail"
+        ],
+        "wing": [
+            "brown wings",
+            "little to no wing bars"
+        ],
+        "eye": [
+            "dark brown eye",
+            "distinct eye-ring"
+        ],
+        "leg": [
+            "flesh-colored"
+        ],
+        "torso": [
+            "olive or brownish upperparts",
+            "white underparts",
+            "heavy dark streaks on breast and sides"
+        ]
+    },
+    "Tennessee Warbler": {
+        "head": [
+            "green head",
+            "white and black",
+            "gray head"
+        ],
+        "beak": [
+            "thin pointed beak",
+            "black beak",
+            "short beak"
+        ],
+        "tail": [
+            "short tail",
+            "green tail",
+            "notched tail"
+        ],
+        "wing": [
+            "two white wing bars",
+            "green wings",
+            "short wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "yellowish underparts",
+            "olive or brownish upperparts",
+            "white underparts"
+        ]
+    },
+    "Wilson Warbler": {
+        "head": [
+            "black cap",
+            "green head"
+        ],
+        "beak": [
+            "short beak",
+            "thin beak",
+            "black beak"
+        ],
+        "tail": [
+            "short tail",
+            "rounded tail",
+            "green tail"
+        ],
+        "wing": [
+            "dark wings",
+            "small wings",
+            "green wings"
+        ],
+        "eye": [
+            "black eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "yellow underparts",
+            "olive or brownish upperparts",
+            "compact body"
+        ]
+    },
+    "Worm eating Warbler": {
+        "head": [
+            "brownish head",
+            "buffy brown stripes on crown and through eyes"
+        ],
+        "beak": [
+            "pointed beak",
+            "slender beak",
+            "black beak"
+        ],
+        "tail": [
+            "long tail",
+            "dark tail"
+        ],
+        "wing": [
+            "green wings",
+            "wings show two light bars"
+        ],
+        "eye": [
+            "black eye",
+            "small eye",
+            "surrounded by faint eyering"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "olive or brownish upperparts",
+            "buffy white below",
+            "uniformly colored chest"
+        ]
+    },
+    "Yellow Warbler": {
+        "head": [
+            "bright yellow",
+            "small head",
+            "green head"
+        ],
+        "beak": [
+            "thin beak",
+            "pointed beak",
+            "dark"
+        ],
+        "tail": [
+            "short",
+            "rounded tail",
+            "dark tail"
+        ],
+        "wing": [
+            "dark wings",
+            "small white or yellow wing patches",
+            "narrow"
+        ],
+        "eye": [
+            "black",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black",
+            "short"
+        ],
+        "torso": [
+            "bright yellow",
+            "sometimes with reddish streaks on males",
+            "bright yellow"
+        ]
+    },
+    "Northern Waterthrush": {
+        "head": [
+            "streaked crown",
+            "buffy eyebrow stripe",
+            "dark brown color"
+        ],
+        "beak": [
+            "pointed beak",
+            "curved beak",
+            "long beak"
+        ],
+        "tail": [
+            "pumps tail up and down",
+            "dark tail"
+        ],
+        "wing": [
+            "brown wings",
+            "white wing bars",
+            "short and rounded"
+        ],
+        "eye": [
+            "white eye ring",
+            "dark eye",
+            "distinct eye-ring"
+        ],
+        "leg": [
+            "flesh-colored",
+            "long legs"
+        ],
+        "torso": [
+            "heavily streaked with dark brown",
+            "buffy or whitish underparts",
+            "compact body"
+        ]
+    },
+    "Louisiana Waterthrush": {
+        "head": [
+            "white and black",
+            "brownish streaks",
+            "green head"
+        ],
+        "beak": [
+            "pointed beak",
+            "curved beak",
+            "pinkish lower mandible"
+        ],
+        "tail": [
+            "not very long",
+            "green tail"
+        ],
+        "wing": [
+            "brown wings",
+            "rounded wings",
+            "short wing bars"
+        ],
+        "eye": [
+            "dark brown eye",
+            "prominent eye",
+            "large eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "long",
+            "strong"
+        ],
+        "torso": [
+            "white underparts",
+            "olive or brownish upperparts",
+            "compact body"
+        ]
+    },
+    "Bohemian Waxwing": {
+        "head": [
+            "brown head",
+            "black facial markings",
+            "crest on top of head"
+        ],
+        "beak": [
+            "short beak",
+            "pointed beak",
+            "black beak"
+        ],
+        "tail": [
+            "yellow-tipped tail",
+            "short",
+            "square tail"
+        ],
+        "wing": [
+            "white and yellow wing markings",
+            "red wax-like tips on secondary feathers",
+            "black"
+        ],
+        "eye": [
+            "black",
+            "surrounded by black mask"
+        ],
+        "leg": [
+            "short",
+            "black"
+        ],
+        "torso": [
+            "grayish-brown",
+            "soft, sleek plumage",
+            "white underparts"
+        ]
+    },
+    "Cedar Waxwing": {
+        "head": [
+            "brown head",
+            "black facial markings",
+            "smoothly rounded head"
+        ],
+        "beak": [
+            "short beak",
+            "black beak",
+            "thin beak"
+        ],
+        "tail": [
+            "yellow-tipped tail",
+            "short tail",
+            "square tail"
+        ],
+        "wing": [
+            "red wax-like wing tips",
+            "pale brown wings",
+            "secondary feathers often tipped with red"
+        ],
+        "eye": [
+            "black eye",
+            "white eye ring"
+        ],
+        "leg": [
+            "short legs",
+            "black"
+        ],
+        "torso": [
+            "brown chest",
+            "soft yellow belly",
+            "grayish underparts"
+        ]
+    },
+    "American Three toed Woodpecker": {
+        "head": [
+            "white and black",
+            "black cap",
+            "yellow patch (males only)"
+        ],
+        "beak": [
+            "long beak",
+            "straight",
+            "chisel-like"
+        ],
+        "tail": [
+            "black tail",
+            "barred tail"
+        ],
+        "wing": [
+            "black with white",
+            "barred or checkered pattern",
+            "rounded wings"
+        ],
+        "eye": [
+            "black",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "short",
+            "gray"
+        ],
+        "torso": [
+            "white underparts",
+            "black and white barred",
+            "flanks streaked with black"
+        ]
+    },
+    "Pileated Woodpecker": {
+        "head": [
+            "red head",
+            "black face and neck",
+            "white and black"
+        ],
+        "beak": [
+            "long beak",
+            "chisel-like",
+            "black beak"
+        ],
+        "tail": [
+            "black tail",
+            "long tail",
+            "pointed tips"
+        ],
+        "wing": [
+            "black",
+            "white underwing",
+            "large wingspan"
+        ],
+        "eye": [
+            "yellow eye",
+            "small eye",
+            "small eye"
+        ],
+        "leg": [
+            "gray",
+            "strong",
+            "short"
+        ],
+        "torso": [
+            "black back",
+            "white underparts",
+            "compact body"
+        ]
+    },
+    "Red bellied Woodpecker": {
+        "head": [
+            "white with black stripes",
+            "red head",
+            "broad, white stripe above the eye"
+        ],
+        "beak": [
+            "long beak",
+            "chisel-like",
+            "grayish"
+        ],
+        "tail": [
+            "barred tail"
+        ],
+        "wing": [
+            "barred or checkered pattern",
+            "large, broad wings"
+        ],
+        "eye": [
+            "pale eye",
+            "dark eye line"
+        ],
+        "leg": [
+            "gray",
+            "strong"
+        ],
+        "torso": [
+            "white underparts",
+            "faint red belly patch",
+            "white underparts"
+        ]
+    },
+    "Red cockaded Woodpecker": {
+        "head": [
+            "white and black",
+            "black crown and back of the head",
+            "small red streak on males"
+        ],
+        "beak": [
+            "straight beak",
+            "black beak",
+            "chisel-shaped beak"
+        ],
+        "tail": [
+            "black tail",
+            "stiff tail feathers",
+            "barred tail"
+        ],
+        "wing": [
+            "barred or checkered pattern",
+            "rounded wings"
+        ],
+        "eye": [
+            "black eye"
+        ],
+        "leg": [
+            "gray",
+            "strong legs",
+            "short legs"
+        ],
+        "torso": [
+            "white underparts",
+            "black and white barred",
+            "compact body"
+        ]
+    },
+    "Red headed Woodpecker": {
+        "head": [
+            "red head",
+            "bright red",
+            "white and black"
+        ],
+        "beak": [
+            "strong beak",
+            "black beak",
+            "straight beak"
+        ],
+        "tail": [
+            "white tail",
+            "black tail",
+            "square tail"
+        ],
+        "wing": [
+            "black",
+            "large white patches on wings",
+            "stiff wings for pecking"
+        ],
+        "eye": [
+            "black eye",
+            "expressive eyes",
+            "small eye"
+        ],
+        "leg": [
+            "strong legs",
+            "gray",
+            "short legs"
+        ],
+        "torso": [
+            "white underparts",
+            "black back",
+            "compact body"
+        ]
+    },
+    "Downy Woodpecker": {
+        "head": [
+            "white with black stripes",
+            "red head",
+            "small head size"
+        ],
+        "beak": [
+            "straight and sharp beak",
+            "short beak",
+            "black beak"
+        ],
+        "tail": [
+            "barred tail",
+            "stiff tail feathers"
+        ],
+        "wing": [
+            "black with white",
+            "barred or checkered pattern",
+            "small to medium wing size"
+        ],
+        "eye": [
+            "small eye"
+        ],
+        "leg": [
+            "short legs",
+            "gray"
+        ],
+        "torso": [
+            "white underparts",
+            "black and white on the back and wings",
+            "compact body"
+        ]
+    },
+    "Bewick Wren": {
+        "head": [
+            "white and black",
+            "brown head",
+            "white and black"
+        ],
+        "beak": [
+            "long beak",
+            "curved beak"
+        ],
+        "tail": [
+            "long tail",
+            "barred tail"
+        ],
+        "wing": [
+            "brown wings",
+            "barred or checkered pattern"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "thin black"
+        ],
+        "torso": [
+            "gray upperparts",
+            "white underparts",
+            "lightly spotted or barred sides"
+        ]
+    },
+    "Cactus Wren": {
+        "head": [
+            "brown streaked with white",
+            "white and black",
+            "larger head compared to body size"
+        ],
+        "beak": [
+            "long beak",
+            "curved beak"
+        ],
+        "tail": [
+            "long tail",
+            "barred tail",
+            "broad at base, tapered at end"
+        ],
+        "wing": [
+            "brown wings",
+            "rounded wings",
+            "long wings relative to body"
+        ],
+        "eye": [
+            "dark brown eye",
+            "prominent eye",
+            "expressive eyes"
+        ],
+        "leg": [
+            "strong legs",
+            "pale pink to gray color"
+        ],
+        "torso": [
+            "spotted breast and belly",
+            "brown and white underparts",
+            "compact body"
+        ]
+    },
+    "Carolina Wren": {
+        "head": [
+            "white and black",
+            "rusty brown crown",
+            "rounded head shape"
+        ],
+        "beak": [
+            "curved beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "long tail",
+            "upright or cocked position",
+            "barred tail"
+        ],
+        "wing": [
+            "rusty brown",
+            "barred or checkered pattern"
+        ],
+        "eye": [
+            "prominent eye",
+            "dark brown eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "strong legs"
+        ],
+        "torso": [
+            "rusty or reddish-brown",
+            "compact body",
+            "finely barred belly and flanks"
+        ]
+    },
+    "House Wren": {
+        "head": [
+            "plain brown head",
+            "small head size"
+        ],
+        "beak": [
+            "thin beak",
+            "curved beak",
+            "long beak"
+        ],
+        "tail": [
+            "barred tail",
+            "short tail"
+        ],
+        "wing": [
+            "brown wings",
+            "barred or checkered pattern"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "brown",
+            "long legs for its size"
+        ],
+        "torso": [
+            "brownish torso",
+            "lightly spotted or streaked belly"
+        ]
+    },
+    "Marsh Wren": {
+        "head": [
+            "brown head",
+            "white and black",
+            "striped with black and white"
+        ],
+        "beak": [
+            "long beak",
+            "curved beak",
+            "thin beak"
+        ],
+        "tail": [
+            "short tail",
+            "barred tail"
+        ],
+        "wing": [
+            "brown wings",
+            "barred or checkered pattern",
+            "short wings"
+        ],
+        "eye": [
+            "dark eye",
+            "small eye"
+        ],
+        "leg": [
+            "long legs",
+            "brown",
+            "thin black"
+        ],
+        "torso": [
+            "brown chest",
+            "fluffy chest",
+            "striped with black and white on back and sides"
+        ]
+    },
+    "Rock Wren": {
+        "head": [
+            "brown head",
+            "white and black",
+            "rounded head shape"
+        ],
+        "beak": [
+            "long beak",
+            "slender",
+            "curved beak"
+        ],
+        "tail": [
+            "barred tail",
+            "long tail"
+        ],
+        "wing": [
+            "brown wings",
+            "rounded wings"
+        ],
+        "eye": [
+            "dark brown eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "strong",
+            "relatively long"
+        ],
+        "torso": [
+            "gray upperparts",
+            "heavily speckled breast and flanks",
+            "brown upperparts with some barring"
+        ]
+    },
+    "Winter Wren": {
+        "head": [
+            "brown head",
+            "small round head"
+        ],
+        "beak": [
+            "thin beak",
+            "curved beak",
+            "darker than body"
+        ],
+        "tail": [
+            "barred tail",
+            "very short"
+        ],
+        "wing": [
+            "short wings",
+            "brown wings"
+        ],
+        "eye": [
+            "dark eye",
+            "prominent eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "slender"
+        ],
+        "torso": [
+            "rich brown",
+            "black and white barred"
+        ]
+    },
+    "Common Yellowthroat": {
+        "head": [
+            "olive-brown",
+            "bright yellow throat and upper breast in males",
+            "distinct black face mask in males",
+            "small head"
+        ],
+        "beak": [
+            "slender",
+            "pointed beak",
+            "blackish"
+        ],
+        "tail": [
+            "medium length",
+            "rounded tail",
+            "green tail"
+        ],
+        "wing": [
+            "olive-brown",
+            "dull without distinct marks"
+        ],
+        "eye": [
+            "dark eye"
+        ],
+        "leg": [
+            "flesh-colored",
+            "small"
+        ],
+        "torso": [
+            "olive or brownish upperparts",
+            "yellow underparts in males",
+            "duller yellow in females"
+        ]
+    }
+}

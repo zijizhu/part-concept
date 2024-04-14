@@ -6,3 +6,4 @@ CUB_runs
 *.pt
 *.pth
 PASCUB_runs
+*pkl

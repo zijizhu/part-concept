@@ -1,0 +1,32 @@
+{
+    "class": "American Goldfinch",
+    "concepts": {
+        "head": [
+            "yellow crown",
+            "black forehead"
+        ],
+        "beak": [
+            "short beak",
+            "orange beak",
+            "conical beak",
+            "pointed beak"
+        ],
+        "tail": [
+            "black and white tail",
+            "notched tail"
+        ],
+        "wing": [
+            "black with white wing"
+        ],
+        "eye": [
+            "black"
+        ],
+        "leg": [
+            "pale pinkish leg"
+        ],
+        "torso": [
+            "yellow torso",
+            "yellow back"
+        ]
+    }
+}
