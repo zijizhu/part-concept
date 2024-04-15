@@ -62,11 +62,11 @@ bird_parts =  ["birds' head",
                "bird's eye",
                "bird's torso"]
 
-with open('concepts/CUB/concepts_unique.txt', 'r') as fp:
-    unique_concepts = fp.read().splitlines()
+# with open('concepts/CUB/concepts_unique.txt', 'r') as fp:
+#     unique_concepts = fp.read().splitlines()
 
 class CLIPSeg(nn.Module):
-    def __init__(self):
+    def __init__(self, part_texts, concept_texts):
         super().__init__()
         self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
 
