@@ -28,7 +28,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
     model.train()
     for batch in tqdm(dataloader):
         images, concept_matrix, weight_matrix = batch
-        contrastive_gts = contrastive_gts.to(device)
+        concept_matrix, weight_matrix=concept_matrix.to(device), weight_matrix.to(device)
         loss = model(images, concept_matrix, weight_matrix)
 
         loss.backward()
