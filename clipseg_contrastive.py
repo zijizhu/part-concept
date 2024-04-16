@@ -85,7 +85,7 @@ if __name__ == '__main__':
         dataset_train = CUBDatasetV2(os.path.join(args.dataset_dir, 'CUB'),
                                      os.path.join('concepts', 'CUB', 'concepts_processed.json'),
                                      os.path.join('concepts', 'CUB', 'parts.txt'))
-        dataloader_train = DataLoader(dataset=dataset_train, collate_fn=collate_fn, batch_size=16, shuffle=True)
+        dataloader_train = DataLoader(dataset=dataset_train, collate_fn=collate_fn, batch_size=args.batch_size, shuffle=True)
     else:
         raise NotImplementedError
      
