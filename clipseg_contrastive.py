@@ -15,8 +15,7 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 from clipseg_model import CLIPSeg
-# from clipseg.processing_clipseg import CLIPSegProcessor
-from data.cub_dataset import build_datasets, collate_fn
+from data.cub_dataset_v2 import CUBDatasetV2, collate_fn
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -28,14 +27,14 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
     running_loss = 0
     model.train()
     for batch in tqdm(dataloader):
-        im_ids, imgs, class_gts, contrastive_gts = batch
+        images, concept_matrix, weight_matrix = batch
         contrastive_gts = contrastive_gts.to(device)
-        loss = model(imgs, contrastive_gts)
+        loss = model(images, concept_matrix, weight_matrix)
 
         loss.backward()
         optimizer.step()
         optimizer.zero_grad()
-        running_loss += loss.item() * len(im_ids)
+        running_loss += loss.item() * len(images)
     
     # Log running losses
     loss_avg = running_loss / dataset_size
@@ -81,22 +80,17 @@ if __name__ == '__main__':
                         ])
     logger = logging.getLogger(__name__)
     
-
-
     # image_preprocessor= CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
     if args.dataset == 'CUB':
-        (dataset_train, dataset_val, dataset_test), attr_indices, class_attrs_df = build_datasets(
-            dataset_dir=os.path.join(args.dataset_dir, args.dataset),
-            attr_subset='cbm',
-            use_class_level_attr=True,
-            transforms=None
-        )
+        dataset_train = CUBDatasetV2(os.path.join(args.dataset_dir, 'CUB'),
+                                     os.path.join('concepts', 'CUB', 'concepts_processed.json'),
+                                     os.path.join('concepts', 'CUB', 'parts.txt'))
+        dataloader_train = DataLoader(dataset=dataset_train, collate_fn=collate_fn, batch_size=16, shuffle=True)
     else:
         raise NotImplementedError
-    
-    dataloader_train = DataLoader(dataset_train, collate_fn=collate_fn, batch_size=args.batch_size, shuffle=True, num_workers=4)
-    
-    model = CLIPSeg()
+     
+    part_texts = ['bird ' + part for part in dataset_train.all_parts]
+    model= CLIPSeg(part_texts=part_texts, concept_texts=dataset_train.all_concepts)
     state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
     model.load_state_dict(state_dict)
     

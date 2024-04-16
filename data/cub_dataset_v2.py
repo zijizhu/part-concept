@@ -79,16 +79,16 @@ class CUBDatasetV2(Dataset):
         self.concept_matrix = np.zeros((len(concepts_processed), len(concept_sets_sorted), num_concepts))
 
         with open(parts_path, 'r') as fp:
-            all_parts = fp.read().splitlines()
+            self.all_parts = fp.read().splitlines()
 
         for class_idx, class_name in enumerate(self.class_names):
             class_concepts = concepts_processed[class_name]
-            for part_idx, part_name in enumerate(all_parts):
+            for part_idx, part_name in enumerate(self.all_parts):
                 cpt_indices = [self.all_concepts.index(cpt) for cpt in class_concepts[part_name]]
                 self.concept_matrix[class_idx, part_idx, cpt_indices] = 1
 
-        self.weight_matrix = np.ones((len(all_parts), num_concepts))
-        for part_idx, part_name in enumerate(all_parts):
+        self.weight_matrix = np.ones((len(self.all_parts), num_concepts))
+        for part_idx, part_name in enumerate(self.all_parts):
             part_concepts = concept_sets_sorted[part_name]
             cpt_indices = [self.all_concepts.index(cpt) for cpt in part_concepts]
             self.weight_matrix[part_idx, cpt_indices] = 50
@@ -105,3 +105,8 @@ class CUBDatasetV2(Dataset):
         image = Image.open(os.path.join(self.dataset_dir, 'CUB_200_2011', 'images', file_path)).convert('RGB')
         part_cpt_mat = self.concept_matrix[class_id]
         return F.pil_to_tensor(image), torch.tensor(part_cpt_mat, dtype=torch.float32), torch.tensor(self.weight_matrix, dtype=torch.float32)
+
+
+def collate_fn(batch):
+    image_list, cpt_mat_list, weight_mat_list = list(zip(*batch))
+    return image_list, torch.stack(cpt_mat_list), torch.stack(weight_mat_list)
