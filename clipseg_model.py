@@ -1,4 +1,3 @@
-from PIL import Image
 import torch
 from torch import nn
 import torch.nn.functional as F
@@ -8,12 +7,11 @@ from transformers.tokenization_utils_base import BatchEncoding
 
 
 class CLIPSeg(nn.Module):
-    def __init__(self, part_texts, concept_texts):
+    def __init__(self, part_texts, state_dict):
         super().__init__()
         self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
 
         self.part_texts = part_texts
-        self.concept_texts = concept_texts
         
         self.clipseg_model = CLIPSegForImageSegmentation.from_pretrained(
             "CIDAS/clipseg-rd64-refined"
@@ -21,14 +19,20 @@ class CLIPSeg(nn.Module):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         
         for name, params in self.clipseg_model.named_parameters():
-            if 'clip.text_model.embeddings' in name or 'film' in name or 'visual_adapter' in name or 'decoder' in name: # VA+L+F+D
+            # if 'clip.text_model.embeddings' in name or 'film' in name or 'visual_adapter' in name or 'decoder' in name: # VA+L+F+D
+            #     params.requires_grad = True
+            if 'film' in name or 'visual_adapter' in name or 'decoder' in name: # VA+L+F+D
                 params.requires_grad = True
             else:
                 params.requires_grad = False
-        # self.part_text_encoding =  self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
-       # self.concept_text_encoding = self.clipseg_processor.tokenizer(self.concept_texts, return_tensors="pt", padding="max_length").to(self.device)
 
-        self.text_encoding = self.clipseg_processor.tokenizer(self.part_texts + self.concept_texts, return_tensors="pt", padding="max_length").to(self.device)
+        self.text_encoding = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
+
+        self.load_state_dict(state_dict)
+
+        # Two stage experiment
+        self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 64, 5))
+        self.fc = nn.Linear(len(self.part_texts) * 5, 200)
 
         self.to(self.device)
         
@@ -87,33 +91,21 @@ class CLIPSeg(nn.Module):
         loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight[:, None, None])
         return loss
 
-    def forward(self, images: list[torch.Tensor], targets: torch.Tensor, weights: torch.Tensor):
+    def forward(self, images: list[torch.Tensor], targets: torch.Tensor):
         if not self.training:
             return self.inference(images=images)
         targets = targets.to(self.device)
+        bs, = targets.shape
         image_inputs = self.clipseg_processor(images=images, return_tensors="pt").to(self.device)
-        bs, num_parts, num_concepts = targets.shape
-
-        # all_text_encoding = torch.cat([self.text_encoding, self.concept_text_encoding])
 
         outputs = self.forward_features(self.clipseg_model, image_inputs, self.text_encoding) # shape: [b,n,h,w]
-        features = outputs.decoder_output.hidden_states[-1]  # shape: [bs*(num_parts+num_concepts+1), num_tokens, reduce_dim]
-        cls_tokens = features[:, 0, :].view(bs, num_parts+num_concepts+1, -1)[:, :-1, :] # shape: [bs, num_parts+num_concepts, reduce_dim]
-        part_cls, concept_cls = cls_tokens[:, :num_parts, :], cls_tokens[:, num_parts:, :]
+        features = outputs.decoder_output.hidden_states[-1]  # shape: [bs*(num_parts+1), num_tokens, reduce_dim]
+        cls_tokens = features[:, 0, :].view(bs, len(self.part_texts) + 1, -1)[:, :-1, :] # shape: [bs, num_parts, reduce_dim]
 
-        # part_outputs = self.forward_features(self.clipseg_model, image_inputs, self.part_text_encoding, self.device) # shape: [b,n,h,w]
-        # part_features = part_outputs.decoder_output.hidden_states[-1]  # shape: [b*(num_parts+1), num_tokens, reduce_dim]
-        # part_cls = part_features[:, 0, :].view(bs, num_parts+1, -1)[:, :-1, :] # shape: [bs, num_parts, reduce_dim]
-
-        # concept_outputs = self.forward_features(self.clipseg_model, images, self.concept_text_encoding, self.device) # shape: [b,n,h,w]
-        # concept_features = concept_outputs.decoder_output.hidden_states[-1]  # shape: [b*(num_concepts+1), num_tokens, reduce_dim]
-        # concept_cls = concept_features[:, 0, :].view(bs, num_concepts+1, -1)[:, :-1, :] # shape: [bs, num_concepts, reduce_dim]
-
-        # Calculate cosine similarity
-        part_cls_norm = F.normalize(part_cls, p=2, dim=-1)
-        concept_cls_norm = F.normalize(concept_cls, p=2, dim=-1)
-        cos_sim = torch.bmm(part_cls_norm, concept_cls_norm.permute(0, 2, 1))  # shape: [bs, num_parts, bs*num_concepts], range: [0, 1]
+        cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
+        concept_logits = torch.bmm(cls_tokens, self.prototypes).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, 5]
+        concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * 5)  # shape: [bs, num_parts*5]
+        class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
         
-        loss = F.binary_cross_entropy_with_logits(cos_sim, targets, weight=weights)
-        return loss
-
+        loss = F.cross_entropy(class_logits, targets)
+        return loss, class_logits

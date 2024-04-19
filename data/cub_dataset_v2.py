@@ -110,3 +110,45 @@ class CUBDatasetV2(Dataset):
 def collate_fn(batch):
     image_list, cpt_mat_list, weight_mat_list = list(zip(*batch))
     return image_list, torch.stack(cpt_mat_list), torch.stack(weight_mat_list)
+
+
+class CUBDatasetSimple(Dataset):
+    def __init__(self, dataset_dir: str, split='train') -> None:
+        super().__init__()
+        self.split = split
+        self.dataset_dir = dataset_dir
+        file_path_df = pd.read_csv(os.path.join(dataset_dir, 'CUB_200_2011', 'images.txt'),
+                                    sep=' ', header=None, names=['image_id', 'file_path'])
+        img_class_df = pd.read_csv(os.path.join(dataset_dir, 'CUB_200_2011', 'image_class_labels.txt'),
+                                    sep=' ', header=None, names=['image_id', 'class_id'])
+        train_test_split_df = pd.read_csv(os.path.join(dataset_dir, 'CUB_200_2011', 'train_test_split.txt'),
+                                            sep=' ', header=None, names=['image_id', 'is_train'])
+
+        main_df = (file_path_df
+                   .merge(img_class_df, on='image_id')
+                   .merge(train_test_split_df, on='image_id'))
+        
+        main_df['image_id'] -= 1
+        main_df['class_id'] -= 1
+        
+        train_mask = main_df['is_train'] == 1
+        val_mask = ~train_mask
+        train_img_ids= main_df.loc[train_mask, 'image_id'].unique()
+        val_img_ids = main_df.loc[val_mask, 'image_id'].unique()
+
+        self.main_df = main_df.set_index('image_id')
+        self.img_ids = {
+            'train': train_img_ids,
+            'val': val_img_ids
+        }
+
+    def __len__(self):
+        return len(self.img_ids[self.split])
+
+    def __getitem__(self,idx):
+        img_id = self.img_ids[self.split][idx]
+
+        file_path, class_id, _ = self.main_df.iloc[img_id]
+
+        image = Image.open(os.path.join(self.dataset_dir, 'CUB_200_2011', 'images', file_path)).convert('RGB')
+        return F.pil_to_tensor(image), torch.tensor(class_id, dtype=torch.long)
