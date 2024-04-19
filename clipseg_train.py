@@ -21,12 +21,13 @@ from data.cub_dataset_v2 import CUBDatasetSimple
 
 def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
                 writer: SummaryWriter, dataset_size: int, epoch: int,
-                logger: logging.Logger):
+                device: torch.device, logger: logging.Logger):
     running_loss = 0
     running_corrects = 0
 
     for batch in tqdm(dataloader):
         images, targets = batch
+        targets = targets.to(device)
         loss, logits = model(images, targets)
 
         loss.backward()
@@ -114,7 +115,7 @@ if __name__ == '__main__':
     logger.info('Start training...')
     for epoch in range(args.epochs):
         train_epoch(model=model, dataloader=dataloader_train, optimizer=optimizer,
-                    writer=writer, dataset_size=len(dataset_train), epoch=epoch, logger=logger)
+                    writer=writer, dataset_size=len(dataset_train),device=device, epoch=epoch, logger=logger)
         torch.save({k: v.cpu() for k, v in model.state_dict().items()},
                    os.path.join(log_dir, 'checkpoint.pt'))
         scheduler.step()
