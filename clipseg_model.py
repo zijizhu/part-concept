@@ -31,12 +31,12 @@ class CLIPSeg(nn.Module):
         self.load_state_dict(state_dict)
 
         # Two stage experiment
-        self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, 10))
+        self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, 50))
         self.proj = nn.Sequential(
             nn.Linear(512, 64, bias=False),
             nn.ReLU(inplace=True),
         )
-        self.fc = nn.Linear(len(self.part_texts) * 10, 200)
+        self.fc = nn.Linear(len(self.part_texts) * 50, 200)
 
         self.to(self.device)
         
@@ -109,7 +109,7 @@ class CLIPSeg(nn.Module):
         cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
         prototypes_projected = self.proj(self.prototypes.permute(0, 2, 1)).permute(0, 2, 1)
         concept_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, 5]
-        concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * 10)  # shape: [bs, num_parts*5]
+        concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * 50)  # shape: [bs, num_parts*5]
         class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
         
         loss = F.cross_entropy(class_logits, targets)
