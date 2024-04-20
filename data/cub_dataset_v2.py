@@ -145,7 +145,7 @@ class CUBDatasetSimple(Dataset):
     def __len__(self):
         return len(self.img_ids[self.split])
 
-    def __getitem__(self,idx):
+    def __getitem__(self, idx):
         img_id = self.img_ids[self.split][idx]
 
         file_path, class_id, _ = self.main_df.iloc[img_id]

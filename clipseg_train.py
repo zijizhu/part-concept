@@ -113,7 +113,6 @@ if __name__ == '__main__':
         dataloader_val = DataLoader(dataset=dataset_val, collate_fn=collate_fn, batch_size=args.batch_size, shuffle=True)
     else:
         raise NotImplementedError
-    
 
     with open('concepts/CUB/parts.txt') as fp:
         part_texts = ['bird ' + word for word in fp.read().splitlines()]
@@ -137,7 +136,7 @@ if __name__ == '__main__':
         train_epoch(model=model, dataloader=dataloader_train, optimizer=optimizer,
                     writer=writer, dataset_size=len(dataset_train),
                     device=device, epoch=epoch, logger=logger)
-        val_epoch(model=model, dataloader=dataset_val, writer=writer, dataset_size=len(dataset_val),
+        val_epoch(model=model, dataloader=dataloader_val, writer=writer, dataset_size=len(dataset_val),
                   device=device, epoch=epoch, logger=logger)
         torch.save({k: v.cpu() for k, v in model.state_dict().items()},
                    os.path.join(log_dir, 'checkpoint.pt'))
