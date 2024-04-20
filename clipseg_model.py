@@ -31,12 +31,12 @@ class CLIPSeg(nn.Module):
         self.load_state_dict(state_dict)
 
         # Two stage experiment
-        self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, 5))
+        self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, 10))
         self.proj = nn.Sequential(
             nn.Linear(512, 64, bias=False),
             nn.ReLU(inplace=True),
         )
-        self.fc = nn.Linear(len(self.part_texts) * 5, 200)
+        self.fc = nn.Linear(len(self.part_texts) * 10, 200)
 
         self.to(self.device)
         
