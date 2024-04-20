@@ -17,7 +17,6 @@ from torch.utils.tensorboard import SummaryWriter
 from clipseg_model import CLIPSeg
 from data.cub_dataset_v2 import CUBDatasetSimple
 
-# os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
                 writer: SummaryWriter, dataset_size: int, epoch: int,
@@ -45,7 +44,26 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
     writer.add_scalar(f'Acc/train', epoch_acc, epoch)
     logger.info(f'EPOCH {epoch} Train Loss: {loss_avg:.4f}')
     logger.info(f'EPOCH {epoch} Train Aac: {epoch_acc:.4f}')
-    
+
+
+@torch.no_grad() 
+def val_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
+              dataset_size: int, epoch: int, device: torch.device, logger: logging.Logger):
+    running_corrects = 0
+
+    for batch in tqdm(dataloader):
+        images, targets = batch
+        targets = targets.to(device)
+        loss, logits = model(images, targets)
+
+        running_corrects += torch.sum(torch.argmax(logits.data, dim=-1) == targets.data).item()
+
+    # Log running losses
+    epoch_acc = running_corrects / dataset_size
+
+    writer.add_scalar(f'Acc/val', epoch_acc, epoch)
+    logger.info(f'EPOCH {epoch} Val Aac: {epoch_acc:.4f}')
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='PartCEM')
@@ -90,7 +108,9 @@ if __name__ == '__main__':
 
     if args.dataset == 'CUB':
         dataset_train = CUBDatasetSimple(os.path.join(args.dataset_dir, 'CUB'), split='train')
+        dataset_val = CUBDatasetSimple(os.path.join(args.dataset_dir, 'CUB'), split='val')
         dataloader_train = DataLoader(dataset=dataset_train, collate_fn=collate_fn, batch_size=args.batch_size, shuffle=True)
+        dataloader_val = DataLoader(dataset=dataset_val, collate_fn=collate_fn, batch_size=args.batch_size, shuffle=True)
     else:
         raise NotImplementedError
     
@@ -115,7 +135,10 @@ if __name__ == '__main__':
     logger.info('Start training...')
     for epoch in range(args.epochs):
         train_epoch(model=model, dataloader=dataloader_train, optimizer=optimizer,
-                    writer=writer, dataset_size=len(dataset_train),device=device, epoch=epoch, logger=logger)
+                    writer=writer, dataset_size=len(dataset_train),
+                    device=device, epoch=epoch, logger=logger)
+        val_epoch(model=model, dataloader=dataset_val, writer=writer, dataset_size=len(dataset_val),
+                  device=device, epoch=epoch, logger=logger)
         torch.save({k: v.cpu() for k, v in model.state_dict().items()},
                    os.path.join(log_dir, 'checkpoint.pt'))
         scheduler.step()
