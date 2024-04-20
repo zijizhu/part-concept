@@ -104,7 +104,8 @@ class CLIPSeg(nn.Module):
         cls_tokens = features[:, 0, :].view(bs, len(self.part_texts) + 1, -1)[:, :-1, :] # shape: [bs, num_parts, reduce_dim]
 
         cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
-        concept_logits = torch.bmm(cls_tokens, self.prototypes).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, 5]
+        prototypes_projected = self.proj(self.prototypes)
+        concept_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, 5]
         concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * 5)  # shape: [bs, num_parts*5]
         class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
         
