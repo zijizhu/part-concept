@@ -2,7 +2,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 from clipseg.processing_clipseg import CLIPSegProcessor
-from clipseg.modeling_clipseg import CLIPSegForImageSegmentation, Adapter
+from clipseg.modeling_clipseg import CLIPSegForImageSegmentation
 from transformers.tokenization_utils_base import BatchEncoding
 
 
@@ -32,7 +32,10 @@ class CLIPSeg(nn.Module):
 
         # Two stage experiment
         self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, 5))
-        self.proj = Adapter(512, reduction=4)  # 2 layer, 512 -> 64
+        self.proj = nn.Sequential(
+            nn.Linear(512, 64, bias=False),
+            nn.ReLU(inplace=True),
+        )
         self.fc = nn.Linear(len(self.part_texts) * 5, 200)
 
         self.to(self.device)
