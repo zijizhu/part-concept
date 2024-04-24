@@ -7,7 +7,7 @@ from transformers.tokenization_utils_base import BatchEncoding
 
 
 class CLIPSeg(nn.Module):
-    def __init__(self, part_texts, state_dict):
+    def __init__(self, part_texts, ft_layers, state_dict):
         super().__init__()
         self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
 
@@ -19,12 +19,13 @@ class CLIPSeg(nn.Module):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         
         for name, params in self.clipseg_model.named_parameters():
-            # if 'clip.text_model.embeddings' in name or 'film' in name or 'visual_adapter' in name or 'decoder' in name: # VA+L+F+D
-            #     params.requires_grad = True
-            if 'film' in name or 'visual_adapter' in name or 'decoder' in name: # VA+L+F+D
+            # possible layers: 'clip.text_model.embeddings' 'film' 'visual_adapter' 'decoder' ie. VA, L, F, D
+            if any(l in name for l in ft_layers):
                 params.requires_grad = True
             else:
                 params.requires_grad = False
+
+            params.requires_grad = False
 
         self.text_encoding = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
 

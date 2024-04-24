@@ -69,6 +69,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='PartCEM')
     parser.add_argument('--dataset_dir', type=str, required=True)
     parser.add_argument('--dataset', type=str, choices=['CUB'], required=True)
+    parser.add_argument('--layers', type=str, nargs='+', choices=['va', 'f', 'l', 'd'])
 
     parser.add_argument('--seed', default=42, type=int)
     parser.add_argument('--epochs', default=30, type=int)
@@ -81,6 +82,14 @@ if __name__ == '__main__':
     seed_everything(args.seed)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+    ft_layer_dict = dict(
+        va='visual_adapter',
+        l='clip.text_model.embeddings',
+        f='film',
+        d='decoder'
+    )
+    ft_layers = [ft_layer_dict[l] for l in args.layers]
+
     log_dir = os.path.join(f'{args.dataset}_runs', datetime.now().strftime('%Y-%m-%d_%H-%M'))
     Path(log_dir).mkdir(parents=True, exist_ok=True)
     with open(os.path.join(log_dir, 'hparams.json'), 'w+') as fp:
@@ -90,6 +99,7 @@ if __name__ == '__main__':
     writer.add_text('Dataset', args.dataset)
     writer.add_text('Device', str(device))
     writer.add_text('Learning rate', str(args.lr))
+    writer.add_text('Fine-tune Layers', ', '.join(ft_layers))
     writer.add_text('Batch size', str(args.batch_size))
     writer.add_text('Epochs', str(args.epochs))
     writer.add_text('Seed', str(args.seed))
@@ -118,8 +128,8 @@ if __name__ == '__main__':
         part_texts = ['bird ' + word for word in fp.read().splitlines()]
     
     state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
-     
-    model = CLIPSeg(part_texts=part_texts, state_dict=state_dict)
+
+    model = CLIPSeg(part_texts=part_texts, ft_layers=ft_layers, state_dict=state_dict)
     
     print(summary(model))
  
