@@ -12,13 +12,13 @@ from torchinfo import summary
 from datetime import datetime
 from lightning import seed_everything
 from torch.utils.data import DataLoader
-from torch.utils.tensorboard import SummaryWriter
+from torch.utils.tensorboard.writer import SummaryWriter
 
 from clipseg_model import CLIPSeg
 from data.cub_dataset_v2 import CUBDatasetSimple
 
 
-def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim,
+def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim.Optimizer,
                 writer: SummaryWriter, dataset_size: int, epoch: int,
                 device: torch.device, logger: logging.Logger):
     running_loss = 0
