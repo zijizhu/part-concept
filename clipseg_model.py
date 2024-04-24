@@ -25,8 +25,6 @@ class CLIPSeg(nn.Module):
             else:
                 params.requires_grad = False
 
-            params.requires_grad = False
-
         self.text_encoding = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
 
         self.load_state_dict(state_dict)
