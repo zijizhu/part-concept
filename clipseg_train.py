@@ -129,7 +129,7 @@ if __name__ == '__main__':
     
     state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
 
-    model = CLIPSeg(part_texts=part_texts, ft_layers=ft_layers, state_dict=state_dict)
+    model = CLIPSeg(part_texts=part_texts, ft_layers=ft_layers, k=100, state_dict=state_dict)
     
     print(summary(model))
  
