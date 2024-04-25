@@ -132,10 +132,15 @@ if __name__ == '__main__':
     model = CLIPSeg(part_texts=part_texts, ft_layers=ft_layers, k=100, state_dict=state_dict)
     
     print(summary(model))
- 
+
+    # Classification using prototypes
+    # optimizer = torch.optim.AdamW([{'params': model.clipseg_model.parameters()},
+    #                                {'params': model.prototypes, 'lr': args.lr * 10},
+    #                                {'params': model.proj.parameters(), 'lr': args.lr * 10},
+    #                                {'params': model.fc.parameters(), 'lr': args.lr * 10}], lr=args.lr)
+
+    # Classification using fc
     optimizer = torch.optim.AdamW([{'params': model.clipseg_model.parameters()},
-                                   {'params': model.prototypes, 'lr': args.lr * 10},
-                                   {'params': model.proj.parameters(), 'lr': args.lr * 10},
                                    {'params': model.fc.parameters(), 'lr': args.lr * 10}], lr=args.lr)
 
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 5, 0.5)
