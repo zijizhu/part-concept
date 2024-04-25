@@ -122,3 +122,4 @@ class CLIPSeg(nn.Module):
         cls_tokens_flatten = cls_tokens.reshape(bs, -1)
         class_logits = self.fc(cls_tokens_flatten)
         loss = F.cross_entropy(class_logits, targets)
+        return loss, class_logits
