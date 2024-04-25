@@ -32,13 +32,13 @@ class CLIPSeg(nn.Module):
         self.load_state_dict(state_dict)
 
         # Two stage experiment
-        self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, self.k))
-        self.proj = nn.Sequential(
-            nn.Linear(512, 64, bias=False),
-            nn.ReLU(inplace=True),
-        )
-        self.fc = nn.Linear(len(self.part_texts) * self.k, 200)
-        # self.fc = nn.Linear(len(self.part_texts) * 64, 200)
+        # self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, self.k))
+        # self.proj = nn.Sequential(
+        #     nn.Linear(512, 64, bias=False),
+        #     nn.ReLU(inplace=True),
+        # )
+        # self.fc = nn.Linear(len(self.part_texts) * self.k, 200)
+        self.fc = nn.Linear(len(self.part_texts) * 64, 200)
 
         self.to(self.device)
         
@@ -109,16 +109,16 @@ class CLIPSeg(nn.Module):
         cls_tokens = features[:, 0, :].view(bs, len(self.part_texts) + 1, -1)[:, :-1, :] # shape: [bs, num_parts, reduce_dim]
 
         # Classification using prototype vectors
-        cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
-        prototypes_projected = self.proj(self.prototypes.permute(0, 2, 1)).permute(0, 2, 1)
-        concept_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, 5]
-        concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*5]
-        class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
+        # cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
+        # prototypes_projected = self.proj(self.prototypes.permute(0, 2, 1)).permute(0, 2, 1)
+        # concept_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, 5]
+        # concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*5]
+        # class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
         
-        loss = F.cross_entropy(class_logits, targets)
-        return loss, class_logits
+        # loss = F.cross_entropy(class_logits, targets)
+        # return loss, class_logits
 
         # Classification using cls tokens directly
-        # cls_tokens_flatten = cls_tokens.view(bs, -1)
-        # class_logits = self.fc(cls_tokens_flatten)
-        # loss = F.cross_entropy(class_logits, targets)
+        cls_tokens_flatten = cls_tokens.view(bs, -1)
+        class_logits = self.fc(cls_tokens_flatten)
+        loss = F.cross_entropy(class_logits, targets)
