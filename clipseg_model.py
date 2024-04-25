@@ -119,6 +119,6 @@ class CLIPSeg(nn.Module):
         # return loss, class_logits
 
         # Classification using cls tokens directly
-        cls_tokens_flatten = cls_tokens.view(bs, -1)
+        cls_tokens_flatten = cls_tokens.reshape(bs, -1)
         class_logits = self.fc(cls_tokens_flatten)
         loss = F.cross_entropy(class_logits, targets)
