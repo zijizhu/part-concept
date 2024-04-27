@@ -4,18 +4,53 @@ import os
 import sys
 import json
 import torch
+import spacy
 import logging
 import argparse
 from tqdm import tqdm
 from pathlib import Path
 from torchinfo import summary
 from datetime import datetime
+from collections import defaultdict
 from lightning import seed_everything
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard.writer import SummaryWriter
 
 from clipseg_model import CLIPSeg
 from data.cub_dataset_v2 import CUBDatasetSimple
+
+
+def load_concepts():
+    nlp = spacy.load("en_core_web_sm")
+    def attach_part_name(concepts: list[str], part_name: str):
+        concepts_processed = []
+        for cpt in concepts:
+            doc = nlp(cpt)
+            if not any('NOUN' == word.pos_ for word in doc):
+                cpt = cpt + ' ' + part_name
+            # if 'than' in cpt or 'male' in cpt:  # Note that this would cause Purple Finch to have 0 concept for torso and American GoldFinch to have 0 concept for head
+            #     continue 
+            concepts_processed.append(cpt)
+        return concepts_processed
+
+    concept_sets = defaultdict(set)
+    with open('concepts/CUB/concepts_processed.json', 'rb') as fp:
+        concepts_processed = json.load(fp=fp)
+
+    # Add a noun to purely adjective concepts
+    for class_name, concept_dict in concepts_processed.items():
+        for part_name, concepts in concept_dict.items():
+            concepts_with_part_name = attach_part_name(concepts, part_name)
+            concept_dict[part_name] = concepts_with_part_name
+            concept_sets[part_name].update(concepts_with_part_name)
+
+    concept_sets_sorted = {k: sorted(list(v)) for k, v in concept_sets.items()}
+    all_concepts = set()
+    for v in concept_sets_sorted.values():
+        all_concepts.update(v)
+
+    all_concepts = list(all_concepts)
+    return all_concepts
 
 
 def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim.Optimizer,
@@ -137,10 +172,12 @@ if __name__ == '__main__':
 
     with open('concepts/CUB/parts.txt') as fp:
         part_texts = ['bird ' + word for word in fp.read().splitlines()]
+
+    all_concepts = load_concepts()
     
     state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
 
-    model = CLIPSeg(part_texts=part_texts, ft_layers=ft_layers, k=100, state_dict=state_dict)
+    model = CLIPSeg(part_texts=part_texts, concept_texts=all_concepts, ft_layers=ft_layers, k=100, state_dict=state_dict)
     
     print(summary(model))
 

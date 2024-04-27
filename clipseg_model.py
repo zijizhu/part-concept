@@ -9,7 +9,7 @@ from transformers.tokenization_utils_base import BatchEncoding
 
 
 class CLIPSeg(nn.Module):
-    def __init__(self, part_texts, ft_layers, state_dict, k=100):
+    def __init__(self, part_texts, concept_texts, ft_layers, state_dict, k=100):
         super().__init__()
         self.k = k
         self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
@@ -40,9 +40,12 @@ class CLIPSeg(nn.Module):
             nn.ReLU(inplace=True),
         )
         self.fc = nn.Linear(len(self.part_texts) * self.k, 200)
-        # self.fc = nn.Linear(len(self.part_texts) * 64, 200)
 
         self.to(self.device)
+
+        with torch.no_grad():
+            concepts_token = self.clipseg_processor.tokenizer(concept_texts, return_tensors='pt', padding='max_length')
+            self.concept_embeddings = self.clipseg_model.get_conditional_embeddings(**concepts_token.to(self.device))
         
     def forward_features(
         self, model, image_inputs: torch.Tensor, text_encoding,
