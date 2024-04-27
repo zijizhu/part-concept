@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
+from scipy.optimize import linear_sum_assignment
 from torchmetrics.functional import pairwise_cosine_similarity
 
 from clipseg.processing_clipseg import CLIPSegProcessor
@@ -9,17 +10,16 @@ from transformers.tokenization_utils_base import BatchEncoding
 
 
 class CLIPSeg(nn.Module):
-    def __init__(self, part_texts, concept_texts, ft_layers, state_dict, k=100):
+    def __init__(self, part_texts, concepts_dict, meta_category_text, ft_layers, state_dict, k=50):
         super().__init__()
         self.k = k
-        self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
-        self.part_texts = part_texts
+        self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
         
         self.clipseg_model = CLIPSegForImageSegmentation.from_pretrained(
             "CIDAS/clipseg-rd64-refined"
         )
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
         
         for name, params in self.clipseg_model.named_parameters():
             # possible layers: 'clip.text_model.embeddings' 'film' 'visual_adapter' 'decoder' ie. VA, L, F, D
@@ -29,30 +29,37 @@ class CLIPSeg(nn.Module):
             else:
                 params.requires_grad = False
 
-        self.text_encoding = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
-
         self.load_state_dict(state_dict)
 
-        # Two stage experiment
-        self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, self.k))
+        # Extra Parameters
+        self.prototypes = nn.Parameter(torch.randn(len(part_texts), 512, self.k))
         self.proj = nn.Sequential(
             nn.Linear(512, 64, bias=False),
             nn.ReLU(inplace=True),
         )
-        self.fc = nn.Linear(len(self.part_texts) * self.k, 200)
+        self.fc = nn.Linear(len(part_texts) * self.k, 200)
 
         self.to(self.device)
 
+        self.part_texts = []
+        self.concept_embedding_dict = dict() 
         with torch.no_grad():
-            concepts_token = self.clipseg_processor.tokenizer(concept_texts, return_tensors='pt', padding='max_length')
-            self.concept_embeddings = self.clipseg_model.get_conditional_embeddings(**concepts_token.to(self.device))
+            for p in part_texts:
+                part_name = f'{meta_category_text} {p}'
+                concepts_token = self.clipseg_processor.tokenizer(concepts_dict[p], return_tensors='pt', padding='max_length')
+                part_concept_embeddings = self.clipseg_model.get_conditional_embeddings(**concepts_token.to(self.device))
+                self.concept_embedding_dict[part_name] = part_concept_embeddings
+                self.part_texts.append(part_name)
+        self.all_concept_embeddings = torch.cat([emb for emb in self.concept_embedding_dict.values()])
+
+        self.part_text_tokens = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
         
     def forward_features(
-        self, model, image_inputs: torch.Tensor, text_encoding,
+        self, model, image_inputs: torch.Tensor, text_tokens,
     ):
         all_inputs = BatchEncoding(data=dict(
             **image_inputs,
-            **text_encoding,
+            **text_tokens,
             output_hidden_states=torch.tensor(True),
             output_attentions=torch.tensor(True)
         ), tensor_type='pt')
@@ -109,7 +116,7 @@ class CLIPSeg(nn.Module):
         bs, = targets.shape
         image_inputs = self.clipseg_processor(images=images, return_tensors="pt").to(self.device)
 
-        outputs = self.forward_features(self.clipseg_model, image_inputs, self.text_encoding) # shape: [b,n,h,w]
+        outputs = self.forward_features(self.clipseg_model, image_inputs, self.part_text_tokens) # shape: [b,n,h,w]
         features = outputs.decoder_output.hidden_states[-1]  # shape: [bs*(num_parts+1), num_tokens, reduce_dim]
         cls_tokens = features[:, 0, :].view(bs, len(self.part_texts) + 1, -1)[:, :-1, :] # shape: [bs, num_parts, reduce_dim]
 
@@ -124,7 +131,19 @@ class CLIPSeg(nn.Module):
 
         # Calculate regularization loss
         prototypes_flat = self.prototypes.permute(0, 2, 1).reshape(len(self.part_texts) * self.k, 512)
-        similarities = pairwise_cosine_similarity(prototypes_flat, self.concept_embeddings)
+        similarities = pairwise_cosine_similarity(prototypes_flat, self.all_concept_embeddings)
         semantic_loss = 1 - torch.mean(similarities)
 
         return ce_loss, semantic_loss, class_logits
+
+
+    @torch.no_grad() 
+    def concept_search(self):
+        selected_cpt_embedding_list = []
+        for part_name, part_prototypes in zip(self.part_texts, self.prototypes.unbind(dim=0)):
+            cpt_embeddings = self.concept_embedding_dict[part_name]
+            affinities = pairwise_cosine_similarity(part_prototypes, cpt_embeddings).cpu().numpy()
+            _, cpt_idxs = linear_sum_assignment(affinities)
+            selected_cpt_embedding_list.append(cpt_embeddings[cpt_idxs])
+        self.register_buffer()
+

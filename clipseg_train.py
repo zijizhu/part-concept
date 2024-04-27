@@ -49,9 +49,7 @@ def load_concepts():
     for v in concept_sets_sorted.values():
         all_concepts.update(v)
 
-    all_concepts = list(all_concepts)
-    return all_concepts
-
+    return concept_sets_sorted
 
 def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim.Optimizer,
                 writer: SummaryWriter, dataset_size: int, epoch: int,
@@ -118,7 +116,7 @@ if __name__ == '__main__':
     parser.add_argument('--layers', type=str, nargs='+', choices=['va', 'f', 'l', 'd'])
 
     parser.add_argument('--seed', default=42, type=int)
-    parser.add_argument('--epochs', default=30, type=int)
+    parser.add_argument('--epochs', default=15, type=int)
     parser.add_argument('--lr', default=2e-4, type=float)
     parser.add_argument('--batch_size', default=16, type=int)
 
@@ -173,11 +171,11 @@ if __name__ == '__main__':
     with open('concepts/CUB/parts.txt') as fp:
         part_texts = ['bird ' + word for word in fp.read().splitlines()]
 
-    all_concepts = load_concepts()
+    concept_sets = load_concepts()
     
     state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
 
-    model = CLIPSeg(part_texts=part_texts, concept_texts=all_concepts, ft_layers=ft_layers, k=100, state_dict=state_dict)
+    model = CLIPSeg(part_texts=part_texts, concepts_dict=concept_sets, ft_layers=ft_layers, k=100, state_dict=state_dict)
     
     print(summary(model))
 
