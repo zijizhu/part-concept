@@ -102,7 +102,7 @@ class CLIPSeg(nn.Module):
         loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight[:, None, None])
         return loss
 
-    def forward(self, images: list[torch.Tensor], targets: torch.Tensor, concept_encodings: torch.Tensor):
+    def forward(self, images: list[torch.Tensor], targets: torch.Tensor):
         if not self.training:
             return self.inference(images=images)
         targets = targets.to(self.device)
@@ -124,7 +124,7 @@ class CLIPSeg(nn.Module):
 
         # Calculate regularization loss
         prototypes_flat = self.prototypes.permute(0, 2, 1).reshape(len(self.part_texts) * self.k, 512)
-        similarities = pairwise_cosine_similarity(prototypes_flat, concept_encodings)
+        similarities = pairwise_cosine_similarity(prototypes_flat, self.concept_embeddings)
         semantic_loss = 1 - torch.mean(similarities)
 
         return ce_loss, semantic_loss, class_logits
