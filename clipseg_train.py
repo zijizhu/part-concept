@@ -21,28 +21,39 @@ from data.cub_dataset_v2 import CUBDatasetSimple
 def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim.Optimizer,
                 writer: SummaryWriter, dataset_size: int, epoch: int,
                 device: torch.device, logger: logging.Logger):
-    running_loss = 0
+    running_ce_loss = 0
+    running_sem_loss = 0
+    running_total_loss = 0
     running_corrects = 0
 
     for batch in tqdm(dataloader):
         images, targets = batch
         targets = targets.to(device)
-        loss, logits = model(images, targets)
+        ce_loss, sem_loss,  logits = model(images, targets)
 
-        loss.backward()
+        total_loss = ce_loss, sem_loss
+        total_loss.backward()
         optimizer.step()
         optimizer.zero_grad()
 
-        running_loss += loss.item() * len(images)
+        running_ce_loss += ce_loss.item() * len(images)
+        running_sem_loss += sem_loss.item() * len(images)
+        running_total_loss += total_loss.item() * len(images)
         running_corrects += torch.sum(torch.argmax(logits.data, dim=-1) == targets.data).item()
 
     # Log running losses
-    loss_avg = running_loss / dataset_size
+    ce_loss_avg = running_ce_loss / dataset_size
+    sem_loss_avg = running_sem_loss / dataset_size
+    total_loss_avg = running_total_loss / dataset_size
     epoch_acc = running_corrects / dataset_size
 
-    writer.add_scalar(f'Loss/train', loss_avg, epoch)
+    writer.add_scalar(f'Loss/train/ce', ce_loss_avg, epoch)
+    writer.add_scalar(f'Loss/train/sem', sem_loss_avg, epoch)
+    writer.add_scalar(f'Loss/train/total', total_loss_avg, epoch)
     writer.add_scalar(f'Acc/train', epoch_acc, epoch)
-    logger.info(f'EPOCH {epoch} Train Loss: {loss_avg:.4f}')
+    logger.info(f'EPOCH {epoch} CE Train Loss: {ce_loss_avg:.4f}')
+    logger.info(f'EPOCH {epoch} Sem Train Loss: {sem_loss_avg:.4f}')
+    logger.info(f'EPOCH {epoch} Total Train Loss: {total_loss_avg:.4f}')
     logger.info(f'EPOCH {epoch} Train Aac: {epoch_acc:.4f}')
 
 
@@ -54,7 +65,7 @@ def val_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
     for batch in tqdm(dataloader):
         images, targets = batch
         targets = targets.to(device)
-        loss, logits = model(images, targets)
+        ce_loss, sem_loss,  logits = model(images, targets)
 
         running_corrects += torch.sum(torch.argmax(logits.data, dim=-1) == targets.data).item()
 
@@ -134,13 +145,9 @@ if __name__ == '__main__':
     print(summary(model))
 
     # Classification using prototypes
-    # optimizer = torch.optim.AdamW([{'params': model.clipseg_model.parameters()},
-    #                                {'params': model.prototypes, 'lr': args.lr * 10},
-    #                                {'params': model.proj.parameters(), 'lr': args.lr * 10},
-    #                                {'params': model.fc.parameters(), 'lr': args.lr * 10}], lr=args.lr)
-
-    # Classification using fc
     optimizer = torch.optim.AdamW([{'params': model.clipseg_model.parameters()},
+                                   {'params': model.prototypes, 'lr': args.lr * 10},
+                                   {'params': model.proj.parameters(), 'lr': args.lr * 10},
                                    {'params': model.fc.parameters(), 'lr': args.lr * 10}], lr=args.lr)
 
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 5, 0.5)
@@ -157,3 +164,5 @@ if __name__ == '__main__':
         torch.save({k: v.cpu() for k, v in model.state_dict().items()},
                    os.path.join(log_dir, 'checkpoint.pt'))
         scheduler.step()
+    
+    # Rreplace weights by concept encodings

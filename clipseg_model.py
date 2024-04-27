@@ -1,13 +1,15 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
+from torchmetrics.functional import pairwise_cosine_similarity
+
 from clipseg.processing_clipseg import CLIPSegProcessor
 from clipseg.modeling_clipseg import CLIPSegForImageSegmentation
 from transformers.tokenization_utils_base import BatchEncoding
 
 
 class CLIPSeg(nn.Module):
-    def __init__(self, part_texts, ft_layers, k, state_dict):
+    def __init__(self, part_texts, ft_layers, state_dict, k=100):
         super().__init__()
         self.k = k
         self.clipseg_processor = CLIPSegProcessor.from_pretrained("CIDAS/clipseg-rd64-refined")
@@ -32,13 +34,13 @@ class CLIPSeg(nn.Module):
         self.load_state_dict(state_dict)
 
         # Two stage experiment
-        # self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, self.k))
-        # self.proj = nn.Sequential(
-        #     nn.Linear(512, 64, bias=False),
-        #     nn.ReLU(inplace=True),
-        # )
-        # self.fc = nn.Linear(len(self.part_texts) * self.k, 200)
-        self.fc = nn.Linear(len(self.part_texts) * 64, 200)
+        self.prototypes = nn.Parameter(torch.randn(len(self.part_texts), 512, self.k))
+        self.proj = nn.Sequential(
+            nn.Linear(512, 64, bias=False),
+            nn.ReLU(inplace=True),
+        )
+        self.fc = nn.Linear(len(self.part_texts) * self.k, 200)
+        # self.fc = nn.Linear(len(self.part_texts) * 64, 200)
 
         self.to(self.device)
         
@@ -97,7 +99,7 @@ class CLIPSeg(nn.Module):
         loss = F.binary_cross_entropy_with_logits(logits, one_hot_tgt, weight=class_weight[:, None, None])
         return loss
 
-    def forward(self, images: list[torch.Tensor], targets: torch.Tensor):
+    def forward(self, images: list[torch.Tensor], targets: torch.Tensor, concept_encodings: torch.Tensor):
         if not self.training:
             return self.inference(images=images)
         targets = targets.to(self.device)
@@ -109,17 +111,17 @@ class CLIPSeg(nn.Module):
         cls_tokens = features[:, 0, :].view(bs, len(self.part_texts) + 1, -1)[:, :-1, :] # shape: [bs, num_parts, reduce_dim]
 
         # Classification using prototype vectors
-        # cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
-        # prototypes_projected = self.proj(self.prototypes.permute(0, 2, 1)).permute(0, 2, 1)
-        # concept_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, 5]
-        # concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*5]
-        # class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
+        cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
+        prototypes_projected = self.proj(self.prototypes.permute(0, 2, 1)).permute(0, 2, 1)
+        concept_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, 5]
+        concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*5]
+        class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
         
-        # loss = F.cross_entropy(class_logits, targets)
-        # return loss, class_logits
+        ce_loss = F.cross_entropy(class_logits, targets)
 
-        # Classification using cls tokens directly
-        cls_tokens_flatten = cls_tokens.reshape(bs, -1)
-        class_logits = self.fc(cls_tokens_flatten)
-        loss = F.cross_entropy(class_logits, targets)
-        return loss, class_logits
+        # Calculate regularization loss
+        prototypes_flat = self.prototypes.permute(0, 2, 1).reshape(len(self.part_texts) * self.k, 512)
+        similarities = pairwise_cosine_similarity(prototypes_flat, concept_encodings)
+        semantic_loss = 1 - torch.mean(similarities)
+
+        return ce_loss, semantic_loss, class_logits
