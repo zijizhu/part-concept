@@ -66,7 +66,7 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim.Optimizer,
         targets = targets.to(device)
         ce_loss, sem_loss, logits = model(images, targets)
 
-        total_loss = ce_loss + sem_loss
+        total_loss = ce_loss + 2 * sem_loss
         total_loss.backward()
         optimizer.step()
         optimizer.zero_grad()
@@ -183,7 +183,7 @@ if __name__ == '__main__':
 
     # Classification using prototypes
     optimizer = torch.optim.AdamW([{'params': model.clipseg_model.parameters()},
-                                   {'params': model.prototypes, 'lr': args.lr * 10},
+                                   {'params': model.prototypes, 'lr': args.lr * 100},
                                    {'params': model.proj.parameters(), 'lr': args.lr * 10},
                                    {'params': model.fc.parameters(), 'lr': args.lr * 10}], lr=args.lr)
 
