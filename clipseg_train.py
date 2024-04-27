@@ -64,9 +64,9 @@ def train_epoch(model, dataloader: DataLoader, optimizer: torch.optim.Optimizer,
     for batch in tqdm(dataloader):
         images, targets = batch
         targets = targets.to(device)
-        ce_loss, sem_loss,  logits = model(images, targets)
+        ce_loss, sem_loss, logits = model(images, targets)
 
-        total_loss = ce_loss, sem_loss
+        total_loss = ce_loss + sem_loss
         total_loss.backward()
         optimizer.step()
         optimizer.zero_grad()
