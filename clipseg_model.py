@@ -24,7 +24,6 @@ class CLIPSeg(nn.Module):
         for name, params in self.clipseg_model.named_parameters():
             # possible layers: 'clip.text_model.embeddings' 'film' 'visual_adapter' 'decoder' ie. VA, L, F, D
             if any(l in name for l in ft_layers):
-            # if 'film' in name or 'visual_adapter' in name or 'decoder' in name:
                 params.requires_grad = True
             else:
                 params.requires_grad = False
@@ -119,31 +118,39 @@ class CLIPSeg(nn.Module):
         outputs = self.forward_features(self.clipseg_model, image_inputs, self.part_text_tokens) # shape: [b,n,h,w]
         features = outputs.decoder_output.hidden_states[-1]  # shape: [bs*(num_parts+1), num_tokens, reduce_dim]
         cls_tokens = features[:, 0, :].view(bs, len(self.part_texts) + 1, -1)[:, :-1, :] # shape: [bs, num_parts, reduce_dim]
-
-        # Classification using prototype vectors
         cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
-        prototypes_projected = self.proj(self.prototypes.permute(0, 2, 1)).permute(0, 2, 1)
-        concept_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, 5]
-        concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*5]
-        class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
+
+        # Stage 2 forward:
+        if hasattr(self, 'selected_concept_embeddings'):
+            concepts_projected = self.proj(self.selected_concept_embeddings).permute(0, 2, 1) # shape: [num_parts, reduce_dim, k]
+            concept_logits = torch.bmm(cls_tokens, concepts_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, k]
+            concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*k]
+            class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
+            
+            ce_loss = F.cross_entropy(class_logits, targets)
+            return ce_loss, class_logits
+        # Stage 1 forward
+        else:
+            prototypes_projected = self.proj(self.prototypes.permute(0, 2, 1)).permute(0, 2, 1)
+            prototype_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, k]
+            prototype_logits_flatten = prototype_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*k]
+            class_logits = self.fc(prototype_logits_flatten)  # shape: [bs, num_classes]
         
-        ce_loss = F.cross_entropy(class_logits, targets)
+            ce_loss = F.cross_entropy(class_logits, targets)
 
-        # Calculate regularization loss
-        prototypes_flat = self.prototypes.permute(0, 2, 1).reshape(len(self.part_texts) * self.k, 512)
-        similarities = pairwise_cosine_similarity(prototypes_flat, self.all_concept_embeddings)
-        semantic_loss = 1 - torch.mean(similarities)
+            # Calculate regularization loss
+            prototypes_flat = self.prototypes.permute(0, 2, 1).reshape(len(self.part_texts) * self.k, 512)
+            similarities = pairwise_cosine_similarity(prototypes_flat, self.all_concept_embeddings)
+            prototype_loss = 1 - torch.mean(similarities)
 
-        return ce_loss, semantic_loss, class_logits
-
+            return ce_loss, prototype_loss, class_logits
 
     @torch.no_grad() 
-    def concept_search(self):
+    def search_concepts(self):
         selected_cpt_embedding_list = []
-        for part_name, part_prototypes in zip(self.part_texts, self.prototypes.unbind(dim=0)):
+        for part_name, part_prototypes in zip(self.part_texts, self.prototypes.permute(0, 2, 1).unbind(dim=0)):
             cpt_embeddings = self.concept_embedding_dict[part_name]
             affinities = pairwise_cosine_similarity(part_prototypes, cpt_embeddings).cpu().numpy()
             _, cpt_idxs = linear_sum_assignment(affinities)
             selected_cpt_embedding_list.append(cpt_embeddings[cpt_idxs])
-        self.register_buffer()
-
+        self.register_buffer('selected_concept_embeddings', torch.stack(selected_cpt_embedding_list))
