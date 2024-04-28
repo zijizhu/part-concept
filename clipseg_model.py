@@ -10,7 +10,7 @@ from transformers.tokenization_utils_base import BatchEncoding
 
 
 class CLIPSeg(nn.Module):
-    def __init__(self, part_texts, concepts_dict, meta_category_text, ft_layers, state_dict, k=50):
+    def __init__(self, part_texts, concepts_dict, meta_category_text, state_dict, ft_layers=[], k=50):
         super().__init__()
         self.k = k
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -52,6 +52,8 @@ class CLIPSeg(nn.Module):
         self.all_concept_embeddings = torch.cat([emb for emb in self.concept_embedding_dict.values()])
 
         self.part_text_tokens = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
+
+        self.register_buffer('selected_concept_embeddings', torch.empty((len(self.part_texts), self.k, 512)))
         
     def forward_features(
         self, model, image_inputs: torch.Tensor, text_tokens,
@@ -64,23 +66,25 @@ class CLIPSeg(nn.Module):
         ), tensor_type='pt')
         outputs = model(**all_inputs)
         return outputs
-    
+
+    @torch.no_grad()
     def inference(self, images: torch.Tensor):
-        bs, c, h, w = images.shape
-        with torch.no_grad():
-            outputs = self.forward_features(
-                self.clipseg_model,
-                images,
-                self.part_text_encoding,
-                self.device,
-            )
-            upscaled_logits = nn.functional.interpolate(
-                outputs.logits[:,:-1,:,:],
-                size=(h, w),
-                mode="bilinear",
-            )
-        logits = torch.sigmoid(upscaled_logits).squeeze(0)
-        return logits, outputs
+        image_inputs = self.clipseg_processor(images=images, return_tensors="pt").to(self.device)
+        bs, c, h, w = image_inputs['pixel_values'].shape
+
+        outputs = self.forward_features(
+            self.clipseg_model,
+            image_inputs,
+            self.part_text_tokens
+        )
+        upscaled_logits = nn.functional.interpolate(
+            outputs.logits[:,:-1,:,:],
+            size=(h, w),
+            mode="bilinear",
+        )
+
+        logits = torch.sigmoid(upscaled_logits)
+        return logits
     
     def segmentation_loss(self, part_outputs, tgt_list):
         '''tgt_list should include a channel for background'''
@@ -120,17 +124,8 @@ class CLIPSeg(nn.Module):
         cls_tokens = features[:, 0, :].view(bs, len(self.part_texts) + 1, -1)[:, :-1, :] # shape: [bs, num_parts, reduce_dim]
         cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
 
-        # Stage 2 forward:
-        if hasattr(self, 'selected_concept_embeddings'):
-            concepts_projected = self.proj(self.selected_concept_embeddings).permute(0, 2, 1) # shape: [num_parts, reduce_dim, k]
-            concept_logits = torch.bmm(cls_tokens, concepts_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, k]
-            concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*k]
-            class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
-            
-            ce_loss = F.cross_entropy(class_logits, targets)
-            return ce_loss, class_logits
-        # Stage 1 forward
-        else:
+        # Stage 1 forward:
+        if self.selected_concept_embeddings.numel() == 0:
             prototypes_projected = self.proj(self.prototypes.permute(0, 2, 1)).permute(0, 2, 1)
             prototype_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, k]
             prototype_logits_flatten = prototype_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*k]
@@ -144,13 +139,26 @@ class CLIPSeg(nn.Module):
             prototype_loss = 1 - torch.mean(similarities)
 
             return ce_loss, prototype_loss, class_logits
+        # Stage 2 forward
+        else:
+            concepts_projected = self.proj(self.selected_concept_embeddings).permute(0, 2, 1) # shape: [num_parts, reduce_dim, k]
+            concept_logits = torch.bmm(cls_tokens, concepts_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, k]
+            concept_logits_flatten = concept_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*k]
+            class_logits = self.fc(concept_logits_flatten)  # shape: [bs, num_classes]
+            
+            ce_loss = F.cross_entropy(class_logits, targets)
+            return ce_loss, class_logits
 
     @torch.no_grad() 
     def search_concepts(self):
-        selected_cpt_embedding_list = []
+        weight_cpt_affinities, selected_cpt_idx_list, selected_cpt_embedding_list = [], [], []
         for part_name, part_prototypes in zip(self.part_texts, self.prototypes.permute(0, 2, 1).unbind(dim=0)):
             cpt_embeddings = self.concept_embedding_dict[part_name]
             affinities = pairwise_cosine_similarity(part_prototypes, cpt_embeddings).cpu().numpy()
+            affinities = F.softmax(affinities)
             _, cpt_idxs = linear_sum_assignment(affinities)
+            weight_cpt_affinities.append(affinities)
+            selected_cpt_idx_list.append(cpt_idxs)
             selected_cpt_embedding_list.append(cpt_embeddings[cpt_idxs])
+        # self.register_buffer('weight_cpt_affinities', torch.stack(weight_cpt_affinities))
         self.register_buffer('selected_concept_embeddings', torch.stack(selected_cpt_embedding_list))

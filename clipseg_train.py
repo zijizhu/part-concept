@@ -199,15 +199,17 @@ if __name__ == '__main__':
         dataset_val = CUBDatasetSimple(os.path.join(args.dataset_dir, 'CUB'), split='val')
         dataloader_train = DataLoader(dataset=dataset_train, collate_fn=collate_fn, batch_size=args.batch_size, shuffle=True)
         dataloader_val = DataLoader(dataset=dataset_val, collate_fn=collate_fn, batch_size=args.batch_size, shuffle=True)
-    else:
+
+        with open('concepts/CUB/parts.txt') as fp:
+            part_texts = fp.read().splitlines()
+        concept_sets = load_concepts()
+        state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
+    elif args.dataset == 'CARS':
+        state_dict = torch.load('checkpoints/clipseg_ft_VA_L_F_D_voc.pth', map_location='cpu')
+        state_dict = state_dict['model']
+        part_texts = []
+        meta_category_text=[]
         raise NotImplementedError
-
-    with open('concepts/CUB/parts.txt') as fp:
-        part_texts = fp.read().splitlines()
-
-    concept_sets = load_concepts()
-    
-    state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
 
     model = CLIPSeg(
         part_texts=part_texts,
@@ -239,6 +241,9 @@ if __name__ == '__main__':
         torch.save({k: v.cpu() for k, v in model.state_dict().items()},
                    os.path.join(log_dir, 'checkpoint_stage1.pt'))
         scheduler.step()
+    
+    if args.no_search:
+        exit(0)
     
     logger.info('Search concepts based on prototypes...')
     model.search_concepts()
