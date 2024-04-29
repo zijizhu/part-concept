@@ -174,6 +174,7 @@ if __name__ == '__main__':
     parser.add_argument('--lr', default=2e-4, type=float)
     parser.add_argument('--batch_size', default=16, type=int)
 
+    parser.add_argument('--no_search', action='store_true')
     args = parser.parse_args()
     print(args)
 
