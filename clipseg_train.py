@@ -255,7 +255,7 @@ if __name__ == '__main__':
         part_texts=part_texts,
         concepts_dict=concept_sets,
         ft_layers=ft_layers,
-        meta_category_text='bird',
+        meta_category_text=meta_category_text,
         k=50,
         state_dict=state_dict
     )
