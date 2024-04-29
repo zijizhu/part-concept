@@ -78,9 +78,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='PartCEM')
     parser.add_argument('--dataset_dir', type=str, required=True)
     parser.add_argument('--dataset', type=str, choices=['CUB', 'CARS'], required=True)
+    parser.add_argument('--out_dir', type=str, required=True)
 
     parser.add_argument('--seed', default=42, type=int)
-    parser.add_argument('--batch_size', default=16, type=int)
+    parser.add_argument('--batch_size', default=8, type=int)
 
     args = parser.parse_args()
     print(args)
@@ -138,6 +139,7 @@ if __name__ == '__main__':
         images, targets = batch
         targets = targets.to(device)
         logits = model(images, targets)
+        logits = logits.cpu().numpy()
         results.append(logits)
 
-    np.save(args.out_path, np.concatenate(results, axis=0))
+    np.save(os.path.join(args.out_dir, f'{args.dataset.lower()}_seg_logits'), np.concatenate(results, axis=0))
