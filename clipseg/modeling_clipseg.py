@@ -1226,7 +1226,6 @@ class CLIPSegDecoderLayer(nn.Module):
 class CLIPSegDecoder(CLIPSegPreTrainedModel):
     def __init__(self, config: CLIPSegConfig):
         super().__init__(config)
-        print(type(config), config.projection_dim)
 
         self.conditional_layer = config.conditional_layer
 

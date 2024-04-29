@@ -152,15 +152,15 @@ class CLIPSeg(nn.Module):
 
     @torch.no_grad() 
     def search_concepts(self):
-        weight_cpt_affinities, selected_cpt_idx_list, selected_cpt_embedding_list = [], [], []
+        weight_cpt_affinities, selected_cpt_idx_list, selected_cpt_embedding_list = dict(), dict(), []
         for part_name, part_prototypes in zip(self.part_texts, self.prototypes.permute(0, 2, 1).unbind(dim=0)):
             cpt_embeddings = self.concept_embedding_dict[part_name]
             affinities = pairwise_cosine_similarity(part_prototypes, cpt_embeddings)
-            affinities = F.softmax(affinities).cpu().numpy()
+            affinities = F.softmax(affinities, dim=-1).cpu().numpy()
             _, cpt_idxs = linear_sum_assignment(affinities)
-            weight_cpt_affinities.append(affinities)
-            selected_cpt_idx_list.append(cpt_idxs)
+            weight_cpt_affinities[part_name] =affinities
+            selected_cpt_idx_list[part_name] = cpt_idxs
             selected_cpt_embedding_list.append(cpt_embeddings[cpt_idxs])
         self.register_buffer('selected_concept_embeddings', torch.stack(selected_cpt_embedding_list))
-        return np.stack(selected_cpt_idx_list), np.stack(weight_cpt_affinities)
+        return selected_cpt_idx_list, weight_cpt_affinities
 

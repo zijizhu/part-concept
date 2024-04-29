@@ -287,8 +287,8 @@ if __name__ == '__main__':
     
     logger.info('Search concepts based on prototypes...')
     selected_idxs, affinities = model.search_concepts()
-    np.savez(os.path.join(log_dir, 'concept_selection'),
-             selected_idxs=selected_idxs, affinities=affinities)
+    np.savez(os.path.join(log_dir, 'selcted_concept_idxs'), **selected_idxs)
+    np.savez(os.path.join(log_dir, 'weight_concept_affinities'), **affinities)
 
     logger.info('Start training stage 2...')
     optimizer = torch.optim.AdamW([{'params': model.clipseg_model.parameters()},
