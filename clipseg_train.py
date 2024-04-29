@@ -166,7 +166,7 @@ def val_epoch(model, dataloader: DataLoader, writer: SummaryWriter,
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='PartCEM')
     parser.add_argument('--dataset_dir', type=str, required=True)
-    parser.add_argument('--dataset', type=str, choices=['CUB'], required=True)
+    parser.add_argument('--dataset', type=str, choices=['CUB', 'CARS'], required=True)
     parser.add_argument('--layers', type=str, nargs='+', choices=['va', 'f', 'l', 'd'])
 
     parser.add_argument('--seed', default=42, type=int)
@@ -210,11 +210,11 @@ if __name__ == '__main__':
                         ])
     logger = logging.getLogger(__name__)
     
-    def collate_fn(batch):
-        image_list, label_list = list(zip(*batch))
-        return image_list, torch.stack(label_list)
-
     if args.dataset == 'CUB':
+        def collate_fn(batch):
+            image_list, label_list = list(zip(*batch))
+            return image_list, torch.stack(label_list)
+
         dataset_train = CUBDatasetSimple(os.path.join(args.dataset_dir, 'CUB'), split='train')
         dataset_val = CUBDatasetSimple(os.path.join(args.dataset_dir, 'CUB'), split='val')
         dataloader_train = DataLoader(dataset=dataset_train, collate_fn=collate_fn, batch_size=args.batch_size, shuffle=True)
@@ -227,6 +227,10 @@ if __name__ == '__main__':
         state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
 
     elif args.dataset == 'CARS':
+        def collate_fn(batch):
+            image_list, label_list = list(zip(*batch))
+            return image_list, torch.tensor(label_list)
+
         dataset_train = StanfordCars(root=os.path.join(args.dataset_dir, 'CARS'), split='train', download=True)
         dataset_val = StanfordCars(root=os.path.join(args.dataset_dir, 'CARS'), split='test', download=True)
         dataloader_train = DataLoader(dataset=dataset_train, batch_size=args.batch_size, shuffle=True, collate_fn=collate_fn)

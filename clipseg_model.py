@@ -53,7 +53,7 @@ class CLIPSeg(nn.Module):
 
         self.part_text_tokens = self.clipseg_processor.tokenizer(self.part_texts, return_tensors="pt", padding="max_length").to(self.device)
 
-        self.register_buffer('selected_concept_embeddings', torch.empty((len(self.part_texts), self.k, 512)))
+        self.register_buffer('selected_concept_embeddings', torch.zeros((len(self.part_texts), self.k, 512)))
         
     def forward_features(
         self, model, image_inputs: torch.Tensor, text_tokens,
@@ -125,7 +125,7 @@ class CLIPSeg(nn.Module):
         cls_tokens = cls_tokens.permute(1, 0, 2)  # shape: [num_parts, bs, reduce_dim]
 
         # Stage 1 forward:
-        if self.selected_concept_embeddings.numel() == 0:
+        if torch.sum(self.selected_concept_embeddings) == 0:
             prototypes_projected = self.proj(self.prototypes.permute(0, 2, 1)).permute(0, 2, 1)
             prototype_logits = torch.bmm(cls_tokens, prototypes_projected).permute(1, 0, 2).contiguous()  # shape: [bs, num_parts, k]
             prototype_logits_flatten = prototype_logits.view(bs, len(self.part_texts) * self.k)  # shape: [bs, num_parts*k]

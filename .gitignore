@@ -7,3 +7,4 @@ CUB_runs
 *.pth
 PASCUB_runs
 *pkl
+CARS_runs
