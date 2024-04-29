@@ -14,13 +14,33 @@ from datetime import datetime
 from collections import defaultdict
 from lightning import seed_everything
 from torch.utils.data import DataLoader
+from torchvision.datasets import StanfordCars
 from torch.utils.tensorboard.writer import SummaryWriter
 
 from clipseg_model import CLIPSeg
 from data.cub_dataset_v2 import CUBDatasetSimple
 
 
-def load_concepts():
+
+def load_concepts_cars():
+    concept_sets = defaultdict(set)
+    with open('concepts/CARS/concepts_processed.json', 'rb') as fp:
+        concepts_processed = json.load(fp=fp)
+
+    # Add a noun to purely adjective concepts
+    for class_name, concept_dict in concepts_processed.items():
+        for part_name, concepts in concept_dict.items():
+            concept_sets[part_name].update(concepts)
+
+    concept_sets_sorted = {k: sorted(list(v)) for k, v in concept_sets.items()}
+    all_concepts = set()
+    for v in concept_sets_sorted.values():
+        all_concepts.update(v)
+
+    return concept_sets_sorted
+
+
+def load_concepts_cub():
     nlp = spacy.load("en_core_web_sm")
     def attach_part_name(concepts: list[str], part_name: str):
         concepts_processed = []
@@ -202,13 +222,23 @@ if __name__ == '__main__':
 
         with open('concepts/CUB/parts.txt') as fp:
             part_texts = fp.read().splitlines()
-        concept_sets = load_concepts()
+        concept_sets = load_concepts_cub()
+        meta_category_text = 'bird'
         state_dict = torch.load('checkpoints/clipseg_pascub_ft.pt')
+
     elif args.dataset == 'CARS':
+        dataset_train = StanfordCars(root=os.path.join(args.dataset_dir, 'CARS'), split='train', download=True)
+        dataset_val = StanfordCars(root=os.path.join(args.dataset_dir, 'CARS'), split='test', download=True)
+        dataloader_train = DataLoader(dataset=dataset_train, batch_size=args.batch_size, shuffle=True, collate_fn=collate_fn)
+        dataloader_val = DataLoader(dataset=dataset_val, batch_size=args.batch_size, shuffle=True, collate_fn=collate_fn)
+
+        with open('concepts/CARS/parts.txt') as fp:
+            part_texts = fp.read().splitlines()
+        concept_sets = load_concepts_cars()
+        meta_category_text = 'car'
         state_dict = torch.load('checkpoints/clipseg_ft_VA_L_F_D_voc.pth', map_location='cpu')
         state_dict = state_dict['model']
-        part_texts = []
-        meta_category_text=[]
+    else:
         raise NotImplementedError
 
     model = CLIPSeg(

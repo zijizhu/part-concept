@@ -1,0 +1,3383 @@
+{
+    "AM General Hummer SUV 2000": {
+        "front": [
+            "Wide, flat hood with a boxy design",
+            "Rectangular grille flanked by round headlights",
+            "Raised hood with visible air intake slots"
+        ],
+        "side": [
+            "High ground clearance noticeable beneath the body",
+            "Flat, slab-sided body panels",
+            "Massive, off-road tires with prominent wheel arches"
+        ],
+        "back": [
+            "Large, flat rear door with a full-size spare wheel mounted",
+            "Squared-off rear end design",
+            "Rectangular tail lights placed high on the body"
+        ]
+    },
+    "Acura RL Sedan 2012": {
+        "front": [
+            "Distinctive Acura chrome-bezel grille",
+            "Sharp, jeweled LED headlights",
+            "Sculpted hood with character lines"
+        ],
+        "side": [
+            "Streamlined profile with a sloping roofline",
+            "Chrome window trim accentuates the luxury aspect",
+            "Visible character line extending from the front wheel arch to the taillights"
+        ],
+        "back": [
+            "LED taillights with a unique, angular design",
+            "Dual exhaust outlets integrated into the rear bumper",
+            "Prominent Acura logo centered on the trunk lid"
+        ]
+    },
+    "Acura TL Sedan 2012": {
+        "front": [
+            "distinctive Acura beak-like front grille",
+            "sharp, jewel-eye LED headlights",
+            "aggressive bumper design with integrated fog lights"
+        ],
+        "side": [
+            "sleek, aerodynamic body lines",
+            "chrome window trim",
+            "alloy wheels with a unique multi-spoke design"
+        ],
+        "back": [
+            "bold LED taillights that extend horizontally across the rear",
+            "prominent rear bumper with dual exhaust outlets",
+            "Acura badge centrally located on the trunk"
+        ]
+    },
+    "Acura TL Type-S 2008": {
+        "front": [
+            "distinctive silver shield-like grille with a large Acura emblem in the center",
+            "sharp, angular HID (High-Intensity Discharge) headlights",
+            "aggressive lower front fascia with integrated fog lights"
+        ],
+        "side": [
+            "aerodynamic side skirts that hint at its performance capabilities",
+            "large, multi-spoke alloy wheels filling the wheel arches",
+            "chrome accents around windows and on door handles for a premium look"
+        ],
+        "back": [
+            "dual exhaust outlets integrated into the rear bumper",
+            "sleek LED taillights that stretch horizontally across the rear",
+            "Type-S badge prominently displayed on the trunk lid, indicating its special status"
+        ]
+    },
+    "Acura TSX Sedan 2012": {
+        "front": [
+            "beak-like front chrome grille design, integral with the Acura badge",
+            "sharp, angular Xenon High-Intensity Discharge (HID) headlights",
+            "prominent lower front fascia with integrated fog lights"
+        ],
+        "side": [
+            "sleek, aerodynamic profile with a slight upward curve towards the rear",
+            "chrome window trim accentuating the luxurious look",
+            "18-inch alloy wheels with a 5-spoke design"
+        ],
+        "back": [
+            "distinctive, horizontal LED taillights that extend onto the trunk lid",
+            "dual exhaust outlets integrated into the lower rear bumper",
+            "trunk features a subtle lip spoiler, enhancing the sporty appearance"
+        ]
+    },
+    "Acura Integra Type R 2001": {
+        "front": [
+            "low, wide front bumper with integrated fog lights",
+            "distinctive, thin headlights that angle upwards towards the edges",
+            "red Acura emblem centered in the black, mesh sports grille"
+        ],
+        "side": [
+            "sharp, aerodynamic body lines",
+            "16-inch, five-spoke alloy wheels",
+            "distinct lower body side skirts"
+        ],
+        "back": [
+            "large, adjustable rear spoiler mounted on the hatch",
+            "clear-lens taillights that are rectangular and slightly wrap around the sides",
+            "Acura emblem and \u2018Integra Type R\u2019 badge centrally located on the hatch"
+        ]
+    },
+    "Acura ZDX Hatchback 2012": {
+        "front": [
+            "sharp, angular headlight design",
+            "distinctive, oversized Acura grille with a chrome bar and logo",
+            "aggressive bumper with integrated fog lights"
+        ],
+        "side": [
+            "high, sloping roofline that blends into the tailgate for a coupe-like silhouette",
+            "bold character line that starts from the front fender, arches over the doors, and swoops down towards the rear",
+            "large, pronounced wheel arches housing alloy wheels"
+        ],
+        "back": [
+            "steeply raked rear window that merges seamlessly into the hatchback",
+            "prominent rear bumper with integrated exhaust tips",
+            "unique tail light design that wraps around from the side to the back, creating a continuous line"
+        ]
+    },
+    "Aston Martin V8 Vantage Convertible 2012": {
+        "front": [
+            "iconic Aston Martin front grille with horizontal bars",
+            "sleek, almond-shaped headlights that taper towards the center",
+            "low, wide stance with pronounced front fender"
+        ],
+        "side": [
+            "short rear overhang and long hood characteristic of sports cars",
+            "distinct side vent with chrome accents",
+            "soft-top convertible roof that smoothly integrates with body lines"
+        ],
+        "back": [
+            "taillights that stretch horizontally across the back, with a clear separation in the center",
+            "twin exhaust pipes, one on each side, prominently displayed",
+            "compact rear with a subtle lip spoiler on the trunk"
+        ]
+    },
+    "Aston Martin V8 Vantage Coupe 2012": {
+        "front": [
+            "iconic front grille that is wide and low, with a distinctive metallic finish",
+            "sleek, LED headlights that sweep upwards and backwards",
+            "Aston Martin badge prominently placed above the grille"
+        ],
+        "side": [
+            "low, aerodynamic profile with a sloping roofline that seamlessly blends into the rear",
+            "large, sculpted side vents just behind the front wheels",
+            "signature swan-wing doors that open upwards and outwards, slightly"
+        ],
+        "back": [
+            "twin exhaust pipes positioned on either side of the rear, integrated into the diffuser",
+            "slim, LED taillights that stretch horizontally across the back",
+            "distinct rear spoiler subtly integrated into the trunk lid"
+        ]
+    },
+    "Aston Martin Virage Convertible 2012": {
+        "front": [
+            "Iconic Aston Martin grille with a horizontally slatted design",
+            "Sleek, narrow headlights that taper towards the outer sides",
+            "Distinctive hood with two subtle creases extending towards the windshield"
+        ],
+        "side": [
+            "Elegant, slightly upward sloping side profile",
+            "Side vents just behind the front wheels with the integrated Aston Martin badge",
+            "Compact, fabric convertible top that flows smoothly into the rear body"
+        ],
+        "back": [
+            "Unique LED taillights that follow the contour of the rear end",
+            "Dual exhaust outlets integrated into the rear diffuser",
+            "Compact rear deck with a subtle integrated spoiler"
+        ]
+    },
+    "Aston Martin Virage Coupe 2012": {
+        "front": [
+            "Slim, wide grille with iconic Aston Martin shape",
+            "Pair of large, swept-back headlights",
+            "Sleek, low-profile bonnet with subtle bulges"
+        ],
+        "side": [
+            "Elegant, flowing roofline that tapers down smoothly to the rear",
+            "Signature side strake that vents from the front wheel arch",
+            "Distinctively sculpted side sills and low stance"
+        ],
+        "back": [
+            "LED taillights that stretch across the rear, creating a narrow, horizontal line",
+            "Dual exhaust pipes integrated into a diffuser",
+            "Compact rear boot with a prominently curved spoiler"
+        ]
+    },
+    "Audi RS 4 Convertible 2008": {
+        "front": [
+            "wide and flat single-frame grille with a matte aluminum-look finish",
+            "large air intakes on either side of the grille for the engine and brakes",
+            "bi-xenon headlights that have a distinct curve at the upper edge, creating a fierce appearance"
+        ],
+        "side": [
+            "flared wheel arches that accommodate the wider track and larger wheels",
+            "distinctive RS 4 badge on the front fender just behind the wheel",
+            "fabric convertible roof that neatly folds behind the rear seats, maintaining a sleek profile even with the top down"
+        ],
+        "back": [
+            "oval exhaust pipes, one on each side, that signal the car's high performance",
+            "a subtle lip spoiler on the trunk lid that enhances aerodynamics without compromising the car's elegant lines",
+            "LED taillights that are narrower and stretch further into the trunk lid, giving a modern, aggressive look"
+        ]
+    },
+    "Audi A5 Coupe 2012": {
+        "front": [
+            "wide, hexagonal Singleframe grille",
+            "sharp LED headlights with distinctive daytime running light signatures",
+            "sporty front bumper with integrated air intakes"
+        ],
+        "side": [
+            "long, flowing roofline typical of coupes",
+            "frameless windows",
+            "pronounced wheel arches accommodating large wheels"
+        ],
+        "back": [
+            "slim, horizontal LED tail lights",
+            "dual exhaust outlets integrated into the lower bumper",
+            "subtle rear spoiler integrated into the trunk lid"
+        ]
+    },
+    "Audi TTS Coupe 2012": {
+        "front": [
+            "Wide, low-profile hexagonal grille with matte silver frame",
+            "Sharp, angular LED headlights",
+            "Sporty front bumper with integrated air intakes"
+        ],
+        "side": [
+            "Sleek, aerodynamic profile with a low roofline",
+            "Distinctive side sills that enhance the sporty look",
+            "Signature silver mirror caps"
+        ],
+        "back": [
+            "Prominent rear spoiler that is subtly integrated into the trunk lid",
+            "Oval exhaust pipes on each side of the rear bumper",
+            "Narrow, horizontal LED tail lights that emphasize the car's width"
+        ]
+    },
+    "Audi R8 Coupe 2012": {
+        "front": [
+            "wide and low hexagonal grille with chrome accents",
+            "LED headlights that have a distinctive sharp, angular shape",
+            "Audi\u2019s four-ring logo placed prominently on the hood above the grille"
+        ],
+        "side": [
+            "blade-shaped side air intake behind the doors, often in a contrasting color",
+            "low and aerodynamic profile with a visibly curved roofline",
+            "large alloy wheels with performance-oriented design"
+        ],
+        "back": [
+            "oval-shaped LED tail lights that are horizontally aligned",
+            "dual exhaust pipes integrated into the lower rear bumper on each side",
+            "transparent engine cover showcasing the mid-mounted engine"
+        ]
+    },
+    "Audi V8 Sedan 1994": {
+        "front": [
+            "rectangular, flush headlights that integrate into the grille area",
+            "broad and flat front grille with the four Audi rings centered prominently",
+            "body-colored bumper with integrated fog lights at the edges"
+        ],
+        "side": [
+            "straight and clean body lines with chrome trim around the windows",
+            "distinctive alloy wheels with a classic design",
+            "slight bulge at the lower door to give a sculpted appearance"
+        ],
+        "back": [
+            "large, rectangular tail lights that extend into the trunk lid",
+            "chrome strip connecting the tail lights across the trunk",
+            "dual exhaust pipes subtly integrated into the lower bumper"
+        ]
+    },
+    "Audi 100 Sedan 1994": {
+        "front": [
+            "Sleek, angular headlights that blend into the lines of the radiator grille",
+            "Prominent Audi logo positioned centrally on the grille",
+            "Rectangular grille design with distinct vertical bars"
+        ],
+        "side": [
+            "Defined character line running from the headlights to the taillights",
+            "Slight arch over the wheels adding a muscular silhouette",
+            "Streamlined, flat roof profile leading to a short rear deck"
+        ],
+        "back": [
+            "Horizontal, slim tail lights that extend into the trunk lid",
+            "Audi badge centrally located on the trunk",
+            "Clean and simple rear bumper design with integrated exhaust tips"
+        ]
+    },
+    "Audi 100 Wagon 1994": {
+        "front": [
+            "Large, slanted rectangular headlights",
+            "Narrow grille with Audi's four-ring emblem",
+            "Rounded hood with a gentle slope towards the windshield"
+        ],
+        "side": [
+            "Long, straight roofline extending to the rear, defining the wagon silhouette",
+            "Slightly flared wheel arches",
+            "Character line running from the headlights to the taillights just above the door handles"
+        ],
+        "back": [
+            "Large rear window with a distinctive, almost flat, vertical tailgate",
+            "Rectangular, vertically oriented taillights flanking the tailgate",
+            "Discrete rear bumper with integrated exhaust outlets"
+        ]
+    },
+    "Audi TT Hatchback 2011": {
+        "front": [
+            "dominant, horizontally-oriented Audi single-frame grille",
+            "large, curved headlights that seamlessly blend into the car's contours",
+            "rounded front bumper with integrated fog lights"
+        ],
+        "side": [
+            "sleek silhouette with a tapered roofline towards the back",
+            "short overhangs and sculpted sides with prominent wheel arches",
+            "distinctive line that flows from the headlights to the taillights, emphasizing its sporty stance"
+        ],
+        "back": [
+            "rounded rear with a small, automatically deploying spoiler",
+            "oval exhaust pipes integrated into the lower bumper",
+            "compact, wraparound taillights with LED technology"
+        ]
+    },
+    "Audi S6 Sedan 2011": {
+        "front": [
+            "bold, chrome-outlined Audi Singleframe grille",
+            "aggressive LED headlight design with distinctive daytime running lights",
+            "powerful and slightly lower bumper with integrated air intakes"
+        ],
+        "side": [
+            "sleek, aerodynamic profile with a gently sloping roofline",
+            "distinctive S6 side sills that accentuate the sporty stance",
+            "large alloy wheels specific to the S6 model, featuring a unique design"
+        ],
+        "back": [
+            "LED tail lights with a clear, distinctive light signature",
+            "sporty rear bumper with integrated diffuser",
+            "quad exhaust pipes, signaling the high-performance nature of the S6",
+            "subtle S6 badging on the trunk lid"
+        ]
+    },
+    "Audi S5 Convertible 2012": {
+        "front": [
+            "Horizontal chrome-outlined grille with Audi's four-ring logo",
+            "LED daytime running lights that follow a distinctive wave pattern",
+            "Large air intakes positioned on either side of the grille"
+        ],
+        "side": [
+            "Frameless doors that contribute to a sleek, uninterrupted line with the roof down",
+            "Long, sloping hood line that extends into a compact, muscular rear",
+            "Silver-colored side mirror caps, distinct to S line models"
+        ],
+        "back": [
+            "LED taillights with a signature design that complements the daytime running lights",
+            "Dual exhaust outlets integrated into a diffuser for a sporty look",
+            "S5 badge prominently displayed on the trunk"
+        ]
+    },
+    "Audi S5 Coupe 2012": {
+        "front": [
+            "signature Audi single-frame grille with a chrome finish",
+            "sharp LED daytime running lights",
+            "aggressive front bumper with large air intakes"
+        ],
+        "side": [
+            "two-door coupe profile with a sleek, sloping roofline",
+            "distinctive body lines that run across the length of the car",
+            "prominent wheel arches housing large alloy wheels"
+        ],
+        "back": [
+            "LED tail lights with a distinctive light pattern",
+            "quad exhaust pipes integrated into the lower bumper",
+            "compact rear window flanked by a subtle integrated spoiler"
+        ]
+    },
+    "Audi S4 Sedan 2012": {
+        "front": [
+            "aggressive front fascia with a distinctive Audi single-frame grille",
+            "LED daytime running lights integrated into the headlight design",
+            "S4-specific front bumper with larger air intakes"
+        ],
+        "side": [
+            "body-colored side mirror housings with LED turn signal indicators",
+            "distinctive S4 badging on the front fender",
+            "sporty alloy wheels unique to the S4 model"
+        ],
+        "back": [
+            "quad exhaust outlets integrated into a sporty rear diffuser",
+            "LED taillights with a specific design for the S4",
+            "S4 badging on the trunk lid"
+        ]
+    },
+    "Audi S4 Sedan 2007": {
+        "front": [
+            "Aggressive front bumper with large air inlets",
+            "Xenon headlights with LED daytime running lights",
+            "S4 badge on the grille, indicating the sport model"
+        ],
+        "side": [
+            "Aluminum-look mirror housings",
+            "S4-specific side skirts",
+            "18-inch S-designed alloy wheels"
+        ],
+        "back": [
+            "Quad exhaust outlets",
+            "Rear lip spoiler on the trunk lid",
+            "S4 badging on the trunk"
+        ]
+    },
+    "Audi TT RS Coupe 2012": {
+        "front": [
+            "Large, hexagonal grille with a glossy black honeycomb design",
+            "Sharp, angled LED headlights",
+            "RS-specific front bumper with larger air intakes"
+        ],
+        "side": [
+            "Sleek, aerodynamic profile with a low roofline",
+            "Large, ventilated brake discs visible through alloy wheels",
+            "Silver-colored side mirror caps"
+        ],
+        "back": [
+            "Oval exhaust pipes on each side of the rear diffuser",
+            "Fixed rear spoiler atop the trunk lid",
+            "Distinctive, vertically oriented LED tail lights"
+        ]
+    },
+    "BMW ActiveHybrid 5 Sedan 2012": {
+        "front": [
+            "iconic BMW kidney grille flanked by dual circular headlights",
+            "distinctive LED daytime running lights incorporated within the headlamps",
+            "sporty front bumper with integrated fog lights and air intakes"
+        ],
+        "side": [
+            "streamlined silhouette with a subtly sloped roofline towards the rear, conveying a coupe-like appearance",
+            "characteristic BMW Hofmeister kink at the rear end of the window line",
+            "pronounced side contour lines starting from the front wheel arches and fading towards the rear"
+        ],
+        "back": [
+            "L-shaped LED tail lights unique to BMW models",
+            "prominent horizontal chrome trim connecting the two tail lights, highlighting the width of the car",
+            "dual exhaust pipes symmetrically placed on either side of the rear bumper"
+        ]
+    },
+    "BMW 1 Series Convertible 2012": {
+        "front": [
+            "signature BMW kidney grille",
+            "dual round headlights with a halo ring design",
+            "front bumper with integrated fog lights"
+        ],
+        "side": [
+            "long hood with a short rear deck, typical of convertibles",
+            "distinctive side crease that starts from the rear of the front wheel arch and goes up slightly to the rear",
+            "fabric convertible top that folds down"
+        ],
+        "back": [
+            "L-shaped rear light clusters",
+            "dual exhaust pipes, one on either side of the rear bumper",
+            "compact rear boot lid with an integrated third brake light"
+        ]
+    },
+    "BMW 1 Series Coupe 2012": {
+        "front": [
+            "kidney-shaped grille typical of BMW models",
+            "sleek, elongated headlights flanking the grille",
+            "rounded front bumper with integrated fog lights"
+        ],
+        "side": [
+            "long doors characteristic of a coupe body style",
+            "signature Hofmeister kink at the lower rear part of the side windows",
+            "distinctive, slightly rising shoulder line from the front wheel to the rear"
+        ],
+        "back": [
+            "compact, muscular rear end design",
+            "L-shaped tail lights that extend into the car\u2019s sides",
+            "dual exhaust pipes positioned symmetrically on either side of the lower bumper"
+        ]
+    },
+    "BMW 3 Series Sedan 2012": {
+        "front": [
+            "signature BMW kidney grille with chrome accents",
+            "dual circular headlights flanking the grille, with distinct LED accent lights creating a 'corona' effect",
+            "prominent front bumper with large air intakes"
+        ],
+        "side": [
+            "dynamic side profile with a pronounced shoulder line running from the front fender to the rear lights",
+            "frameless windows for a sleek appearance",
+            "slightly flared wheel arches housing alloy wheels"
+        ],
+        "back": [
+            "L-shaped tail lights that extend into the car's sides",
+            "dual exhaust pipes symmetrically placed on both sides of the lower rear bumper",
+            "subtle rear spoiler integrated into the trunk lid"
+        ]
+    },
+    "BMW 3 Series Wagon 2012": {
+        "front": [
+            "iconic BMW kidney grille",
+            "dual circular headlights on either side of the grille",
+            "prominent front bumper with integrated fog lights",
+            "aerodynamic and slightly sculpted hood"
+        ],
+        "side": [
+            "longitudinal crease line running from the front fender to the rear taillights",
+            "distinct side mirrors often in a contrasting color",
+            "sloped roofline that merges seamlessly with the rear hatch",
+            "frameless windows for the front and rear doors"
+        ],
+        "back": [
+            "L-shaped LED taillights",
+            "dual-exhaust system integrated into the lower part of the bumper",
+            "rear window wiper centrally located on the top of the rear window",
+            "BMW emblem prominently displayed above the license plate area"
+        ]
+    },
+    "BMW 6 Series Convertible 2007": {
+        "front": [
+            "distinct dual kidney-shaped grille",
+            "sharp, angular headlights that slightly lean towards the grille",
+            "large front air intakes with integrated fog lights"
+        ],
+        "side": [
+            "long, sloping hood line that transitions into a raked windshield",
+            "short rear deck, characteristic of grand touring convertibles",
+            "frameless doors and a seamless, flowing design from the front fender to the rear"
+        ],
+        "back": [
+            "L-shaped rear lights that wrap around the corners of the car",
+            "integrated spoiler lip on the trunk lid",
+            "dual exhaust pipes, symmetrically placed on either side of the rear bumper"
+        ]
+    },
+    "BMW X5 SUV 2007": {
+        "front": [
+            "iconic BMW kidney grille, larger in scale to emphasize its SUV status",
+            "dual round headlights on each side, flanked by distinctive halo daytime running lights",
+            "large front air intakes positioned below the grille for a sporty appearance"
+        ],
+        "side": [
+            "pronounced wheel arches housing large alloy wheels",
+            "dynamic side lines that start from the front fender and sweep upwards towards the rear",
+            "a slightly rising window line towards the rear, giving a forward-leaning stance"
+        ],
+        "back": [
+            "L-shaped rear tail lights that wrap around side to the back, characteristic of BMW designs",
+            "twin exhaust pipes symmetrically placed on either side of the rear bumper",
+            "a distinct rear spoiler integrated into the roofline, enhancing the sporty aesthetic"
+        ]
+    },
+    "BMW X6 SUV 2012": {
+        "front": [
+            "dual kidney-shaped grille, a signature BMW design",
+            "large, angular headlights that stretch towards the grille",
+            "pronounced front bumper with integrated fog lights"
+        ],
+        "side": [
+            "sloping coupe-like roofline, unique for an SUV",
+            "distinctive crease line that runs from the front wheel arch to the rear lights",
+            "frameless windows"
+        ],
+        "back": [
+            "squared-off rear end with a slight slope to the tailgate",
+            "horizontal LED taillights that extend into the tailgate",
+            "dual exhaust outlets integrated into the lower bumper"
+        ]
+    },
+    "BMW M3 Coupe 2012": {
+        "front": [
+            "Wide kidney grilles with chrome outline typical of BMW",
+            "Aggressive front bumper with large air intakes",
+            "Four rounded headlights, with the inner two set closer to the grilles"
+        ],
+        "side": [
+            "Signature M gills on the front fender with integrated indicator",
+            "Sleek coupe silhouette with a long hood and short rear deck",
+            "Distinctive double five-spoke M alloy wheels"
+        ],
+        "back": [
+            "Quad exhaust pipes, two on each side, located at the lower bumper",
+            "Prominent rear spoiler integrated into the trunk lid",
+            "L-shaped taillights that extend into the car\u2019s sides"
+        ]
+    },
+    "BMW M5 Sedan 2010": {
+        "front": [
+            "Iconic BMW kidney-shaped grille",
+            "Aggressive front bumper with larger air intakes",
+            "Distinct quad headlights with halo running lights",
+            "M5 badge on the grille denoting the model"
+        ],
+        "side": [
+            "Sleek, aerodynamic body shape",
+            "Signature M side vents",
+            "19-inch light-alloy wheels with a unique spoke design",
+            "Subtle side skirts that enhance the sporty appearance"
+        ],
+        "back": [
+            "Quad exhaust pipes symmetrically arranged",
+            "Rear diffuser for improved aerodynamics",
+            "L-shaped LED taillights distinctive to BMW",
+            "M5 badge prominently displayed on the trunk"
+        ]
+    },
+    "BMW M6 Convertible 2010": {
+        "front": [
+            "iconic BMW kidney-shaped grille",
+            "rounded, aggressive dual headlights",
+            "large air intakes on the front bumper"
+        ],
+        "side": [
+            "long, sloping hood that emphasizes its sporty profile",
+            "distinctive side air vents just behind the front wheels",
+            "low roofline that flows smoothly into the rear"
+        ],
+        "back": [
+            "quad exhaust pipes positioned symmetrically on either side of the rear diffuser",
+            "LED taillights that stretch horizontally across the rear",
+            "integrated rear spoiler on the trunk lid"
+        ]
+    },
+    "BMW X3 SUV 2012": {
+        "front": [
+            "Dual kidney-shaped grille distinctive to BMW",
+            "Four circular headlights housed within two sleek units, alongside daytime running lights",
+            "Large front air intakes on the bumper for a sporty look"
+        ],
+        "side": [
+            "Signature BMW Hofmeister kink at the rear side window",
+            "Streamlined silhouette with a gently sloping roofline towards the rear",
+            "Raised ground clearance typical of an SUV, paired with prominent side skirts"
+        ],
+        "back": [
+            "L-shaped rear lights that extend into the tailgate",
+            "Prominent rear bumper with integrated exhaust pipes",
+            "Rear window wiper centrally placed on the tailgate"
+        ]
+    },
+    "BMW Z4 Convertible 2012": {
+        "front": [
+            "distinctive dual kidney-shaped grille",
+            "long hood with a slight bulge towards the front to accommodate the engine",
+            "angular bi-xenon headlights that stretch back into the fenders"
+        ],
+        "side": [
+            "low and sleek profile with a long wheelbase and short overhangs",
+            "aerodynamic side mirrors often in a contrasting color to the body",
+            "side air vents behind the front wheels, also known as Air Breathers"
+        ],
+        "back": [
+            "LED taillights that stretch horizontally across the rear",
+            "dual exhaust pipes symmetrically placed on either side of the rear bumper",
+            "prominent rear diffuser that enhances the sporty look"
+        ]
+    },
+    "Bentley Continental Supersports Conv. Convertible 2012": {
+        "front": [
+            "large, imposing matrix grille with vertical chrome slats",
+            "distinctive twin-round headlamps with inner bezel design",
+            "large lower air intakes on the bumper"
+        ],
+        "side": [
+            "prominent fender vents with a unique 'Supersports' badge",
+            "sleek convertible silhouette with a soft-top roof",
+            "large, distinctive alloy wheels with a muscular stance"
+        ],
+        "back": [
+            "wide, pronounced rear bumper with integrated exhaust outlets",
+            "oval-shaped, large twin exhaust pipes",
+            "wraparound tail lights with a distinctive light signature"
+        ]
+    },
+    "Bentley Arnage Sedan 2009": {
+        "front": [
+            "large, upright chrome grille",
+            "round, twin headlights on either side of the grille",
+            "prominent Bentley badge centered above the grille"
+        ],
+        "side": [
+            "long, elegant hood with distinct creases",
+            "chrome trim around windows and along the lower side body",
+            "large alloy wheels with distinctive Bentley design"
+        ],
+        "back": [
+            "twin oval exhaust pipes",
+            "large, vertical tail lights that are slightly curved inward",
+            "subtle boot lid spoiler with the integration of the Bentley badge"
+        ]
+    },
+    "Bentley Mulsanne Sedan 2011": {
+        "front": [
+            "large, upright stainless steel matrix grille",
+            "round LED headlights on either side of the grille, with smaller outboard light clusters",
+            "distinctive Bentley badge and hood ornament centered above the grille"
+        ],
+        "side": [
+            "long, sculpted hood and short front overhang",
+            "signature sharp line that runs from the front wheel arch to the rear of the car, defining its muscular shoulder line",
+            "large, distinctive alloy wheels with bespoke design options"
+        ],
+        "back": [
+            "prominent, elongated oval LED tail lights",
+            "dual oval-shaped exhaust tips integrated into the lower bumper",
+            "Large Bentley badge centered on the trunk lid"
+        ]
+    },
+    "Bentley Continental GT Coupe 2012": {
+        "front": [
+            "large, distinctive matrix grille that dominates the front end",
+            "quad circular LED headlights, with two on either side of the grille",
+            "low, wide air intake below the grille, flanked by smaller intakes"
+        ],
+        "side": [
+            "strong, flowing shoulder line extending from front fender to the rear",
+            "low roofline that tapers smoothly into a short, sloping rear deck",
+            "large, distinctive alloy wheels with the Bentley emblem"
+        ],
+        "back": [
+            "oval-shaped dual exhaust tips integrated into the lower bumper",
+            "large, horizontal LED tail lights that span the width of the rear",
+            "prominent Bentley badge and lettering centered on the boot lid"
+        ]
+    },
+    "Bentley Continental GT Coupe 2007": {
+        "front": [
+            "large matrix grille that dominates the front, flanked by two round headlights",
+            "Round, large headlights positioned closely to the grille",
+            "The lower front bumper features large air intakes",
+            "Distinctive hood design with a slight bulge"
+        ],
+        "side": [
+            "short front overhang with a long, sweeping rear overhang",
+            "Prominently flared wheel arches housing large wheels",
+            "Seamless window profile with a chrome trim outlining the windows",
+            "The side profile features a well-defined shoulder line that runs from the front fender to the rear"
+        ],
+        "back": [
+            "Elliptical taillights that follow the contours of the rear fenders",
+            "Dual oval exhaust tips integrated into the lower bumper",
+            "Rear bumper includes a subtle indentation for the license plate",
+            "The boot lid features a slight lip spoiler"
+        ]
+    },
+    "Bentley Continental Flying Spur Sedan 2007": {
+        "front": [
+            "large, imposing matte-finish grille with vertical slats",
+            "rounded dual headlights on each side, larger inner lights with smaller outer ones",
+            "Bentley 'B' emblem prominently displayed above the grille"
+        ],
+        "side": [
+            "long, flowing body lines with a slightly arched roofline",
+            "distinctive large, muscular wheel arches housing alloy wheels",
+            "chrome trim running the length of the lower windowsill, emphasizing luxury"
+        ],
+        "back": [
+            "twin oval exhaust tips subtly integrated into the lower bumper",
+            "large, horizontal tail lights that slightly wrap around the sides",
+            "prominent Bentley badge and model name centrally positioned on the trunk"
+        ]
+    },
+    "Bugatti Veyron 16.4 Convertible 2009": {
+        "front": [
+            "Horseshoe-shaped front grille characteristic of Bugatti",
+            "Two-tone color scheme, often with a vivid contrast",
+            "Low, wide stance with large air intakes on either side of the grille"
+        ],
+        "side": [
+            "Sculpted side profile with a pronounced curve from the front fender to the rear",
+            "Visible mid-engine layout through large side intakes just behind the doors",
+            "Unique alloy wheel design with a polished finish"
+        ],
+        "back": [
+            "Oval-shaped quad exhaust pipes centered below the rear bumper",
+            "Distinctive rear spoiler that can be raised or lowered",
+            "Narrow, elongated LED taillights that stretch across the rear"
+        ]
+    },
+    "Bugatti Veyron 16.4 Coupe 2009": {
+        "front": [
+            "Horse-shoe shaped front grille",
+            "Two-tone color scheme, dividing the car's body horizontally",
+            "Large air intakes beside the grille for engine cooling"
+        ],
+        "side": [
+            "Curved, sweeping lines from front to rear, highlighting aerodynamic design",
+            "Signature Bugatti C-line separating the two-tone color scheme",
+            "Low, ground-hugging profile with large alloy wheels"
+        ],
+        "back": [
+            "Central exhaust system with two prominent pipes",
+            "Distinctive rear spoiler that can be raised or lowered",
+            "Oval-shaped LED taillights that wrap around the sides of the rear"
+        ]
+    },
+    "Buick Regal GS 2012": {
+        "front": [
+            "black mesh front grille with a prominent Buick emblem",
+            "sporty front bumper with integrated air intakes",
+            "distinctive angular xenon headlamps with LED daytime running lights"
+        ],
+        "side": [
+            "sleek, aerodynamic body lines with a slight upward curve towards the rear",
+            "18-inch or optional 19- and 20-inch alloy wheels",
+            "chrome window trim that highlights the car's luxury status"
+        ],
+        "back": [
+            "dual stainless-steel exhaust tips integrated into the rear bumper",
+            "LED taillights with a unique wing-shaped design",
+            "rear spoiler for a sportier look"
+        ]
+    },
+    "Buick Rainier SUV 2007": {
+        "front": [
+            "Vertical chrome grille with the Buick emblem centered",
+            "Quad halogen headlamps with distinct rounded edges",
+            "Fog lights incorporated into the lower bumper area"
+        ],
+        "side": [
+            "Distinctive port holes above the fender on the front quarter panel",
+            "Roof rails spanning the length of the roof for cargo carrying capability",
+            "Smooth, yet pronounced wheel arches housing alloy wheels"
+        ],
+        "back": [
+            "Large rectangular tail lights that vertically flank the rear window",
+            "Rear wiper centrally located on the back window for visibility in inclement weather",
+            "Chrome trim strip above the license plate area, featuring the 'Rainier' nameplate"
+        ]
+    },
+    "Buick Verano Sedan 2012": {
+        "front": [
+            "chrome waterfall grille",
+            "blue-accented projector beam headlights",
+            "large, lower air intake with fog lights positioned on either side"
+        ],
+        "side": [
+            "distinctive, porthole vents on the front fenders",
+            "arched roofline",
+            "chrome trim around the windows"
+        ],
+        "back": [
+            "wraparound tail lights with LED elements",
+            "prominent Buick badge centered on the trunk",
+            "dual exhaust outlets with chrome tips"
+        ]
+    },
+    "Buick Enclave SUV 2012": {
+        "front": [
+            "Large, chrome waterfall grille that is characteristic of Buick",
+            "Rounded, expressive headlights that integrate into the grille edges",
+            "Buick emblem prominently displayed at the center of the grille"
+        ],
+        "side": [
+            "Sleek, curvaceous profile with a slightly upward-sloping beltline",
+            "Chrome accents around windows and along the side skirts",
+            "Large, pronounced wheel arches accommodating sizeable wheels"
+        ],
+        "back": [
+            "Distinctive wraparound taillights that extend into the rear quarter panels",
+            "Prominent Buick badge centered on the back",
+            "Power-operated tailgate with a large rear window offering ample visibility"
+        ]
+    },
+    "Cadillac CTS-V Sedan 2012": {
+        "front": [
+            "bold, shield-shaped grille with a large Cadillac emblem",
+            "aggressive angular headlights that extend back into the fenders",
+            "lower front fascia has large air intakes for engine cooling",
+            "distinct mesh pattern on the grille unique to the V-Series models"
+        ],
+        "side": [
+            "sharp, angular body lines with a distinctive wedge-shaped profile",
+            "signature vertical air vents on the front fenders",
+            "high-performance wheels with large brake calipers visible through the spokes",
+            "sleek, aerodynamic side mirrors designed for high speed"
+        ],
+        "back": [
+            "centered quad exhaust tips under the rear bumper",
+            "vertical, elongated LED taillights that follow the body's sharp lines",
+            "large rear spoiler integrated into the trunk lid for improved aerodynamics",
+            "V-Series badge on the right side of the trunk, signifying its high-performance status"
+        ]
+    },
+    "Cadillac SRX SUV 2012": {
+        "front": [
+            "prominent, oversized 'shield' grille with the Cadillac emblem",
+            "vertical LED headlights that stretch upwards along the front corners",
+            "angular bumper with large air intakes"
+        ],
+        "side": [
+            "sharp, angular body lines with a distinct, sloping roofline towards the rear",
+            "chrome trim outlining the windows and along the side skirts",
+            "rectangular, elongated windows giving a stretched appearance"
+        ],
+        "back": [
+            "vertical, elongated LED tail lights that extend from the bumper to the roof",
+            "power-operated liftgate with a large rear window",
+            "rectangular dual exhaust outlets integrated into the lower bumper"
+        ]
+    },
+    "Cadillac Escalade EXT Crew Cab 2007": {
+        "front": [
+            "large, chrome-covered grille with the iconic Cadillac emblem",
+            "distinctive stacked headlights",
+            "broad and muscular hood design"
+        ],
+        "side": [
+            "unique pickup truck profile with a luxury SUV front end",
+            "long wheelbase with large, chrome wheels",
+            "sharp body lines that run along the doors and fenders"
+        ],
+        "back": [
+            "truck bed with a tonneau cover that blends with the overall design",
+            "vertical taillights signature to Cadillac design",
+            "rear bumper with integrated steps for easy bed access"
+        ]
+    },
+    "Chevrolet Silverado 1500 Hybrid Crew Cab 2012": {
+        "front": [
+            "large, rectangular front grille with horizontal chrome bars",
+            "wide, rectangular headlights that flank the grille",
+            "prominent Chevrolet bowtie emblem in the center of the grille"
+        ],
+        "side": [
+            "four full-size doors indicating a crew cab configuration",
+            "distinct square wheel wells",
+            "Hybrid badges on the front doors"
+        ],
+        "back": [
+            "vertical taillights on either side of the tailgate",
+            "large rear bumper with integrated steps",
+            "Silverado and Hybrid badging on the tailgate"
+        ]
+    },
+    "Chevrolet Corvette Convertible 2012": {
+        "front": [
+            "sharp and wide headlights that stretch towards the sides",
+            "Large, centered Chevrolet emblem on the front grille",
+            "Distinctive, aggressive front bumper with large air intakes"
+        ],
+        "side": [
+            "Long, low hood with a short rear deck, characteristic of sports cars",
+            "Distinct side vents just behind the front wheels",
+            "Sleek, aerodynamic body lines with minimal ground clearance"
+        ],
+        "back": [
+            "Quad circular rear lights, a signature Corvette feature",
+            "Dual-exhaust system positioned centrally below the rear bumper",
+            "Rear spoiler integrated into the shape of the trunk, enhancing the sporty look"
+        ]
+    },
+    "Chevrolet Corvette ZR1 2012": {
+        "front": [
+            "sharp, aggressive front fascia with a distinctive, wide grille",
+            "protruding, sculpted hood with a transparent polycarbonate window revealing the supercharger beneath",
+            "large, angular headlights that blend into the car's aerodynamic lines"
+        ],
+        "side": [
+            "low, aerodynamic profile with a long hood and short rear deck",
+            "distinctive side vents behind the front wheels for improved brake cooling",
+            "large, high-performance wheels with low-profile tires"
+        ],
+        "back": [
+            "quad exhaust pipes centered at the bottom of the rear",
+            "high-mounted brake light integrated into the rear spoiler for a sporty look",
+            "LED taillights that are narrow and horizontally aligned with the car's aggressive styling"
+        ]
+    },
+    "Chevrolet Corvette Ron Fellows Edition Z06 2007": {
+        "front": [
+            "aggressive, sleek headlights that slant towards the center",
+            "wide, low front air intake grille shaped for aerodynamic efficiency",
+            "distinctive white racing stripe that begins on the hood and extends over the roof"
+        ],
+        "side": [
+            "unique red fender stripes on the front wheel arches",
+            "large, visible side air intakes just ahead of the rear wheel arches",
+            "signature 'Z06' badging on the front fender"
+        ],
+        "back": [
+            "quad exhaust pipes centered at the lower part of the rear",
+            "High-mounted brake light integrated into the rear spoiler",
+            "distinctive round taillights arranged in a horizontal layout"
+        ]
+    },
+    "Chevrolet Traverse SUV 2012": {
+        "front": [
+            "Large, dual-port grille with the Chevrolet bowtie emblem prominently displayed",
+            "Rectangular, horizontally-aligned headlights that taper slightly towards the grille",
+            "Lower grille flanked by round fog lights on models equipped with them"
+        ],
+        "side": [
+            "Boxy, yet streamlined silhouette typical of mid-size SUVs",
+            "Distinctive character line running along the side, slightly above the door handles",
+            "Large windows and high roofline for ample interior space"
+        ],
+        "back": [
+            "Large, vertical tail lights on either side of the rear window",
+            "Prominent rear hatch with a noticeable lip spoiler at the top",
+            "Rear window wiper centrally mounted on the rear hatch"
+        ]
+    },
+    "Chevrolet Camaro Convertible 2012": {
+        "front": [
+            "muscular and wide lower grille",
+            "rectangular headlights with rounded edges",
+            "hood features a slight, center bulge, indicative of its sporty performance"
+        ],
+        "side": [
+            "long, sculpted hood that slopes down towards the front",
+            "short rear deck, characteristic of classic convertible proportions",
+            "visible seam for the convertible roof meets the body just behind the side windows"
+        ],
+        "back": [
+            "distinctive, horizontal tail lights",
+            "dual exhaust pipes located towards the outer edges of the lower bumper",
+            "spoiler integrated into the rear deck, enhancing the sporty aesthetic"
+        ]
+    },
+    "Chevrolet HHR SS 2010": {
+        "front": [
+            "signature large, chrome-finished grille with Chevrolet badge in the center",
+            "round, protruding headlights flanking the grille",
+            "SS-specific aggressive front bumper with integrated fog lights and a large air intake"
+        ],
+        "side": [
+            "retro-styled, high beltline with large, flared fenders",
+            "distinctive, boxy shape with a slightly sloping roof towards the rear",
+            "side skirts and 18-inch, five-spoke alloy wheels unique to the SS model"
+        ],
+        "back": [
+            "vertically aligned taillights on either side of the rear window",
+            "a pronounced rear bumper with a centered, single exhaust outlet",
+            "rear spoiler mounted at the top of the rear hatch, adding a sporty look"
+        ]
+    },
+    "Chevrolet Impala Sedan 2007": {
+        "front": [
+            "large, horizontally split grille with Chevrolet emblem in the center",
+            "angular headlights that extend into the fenders",
+            "rounded hood with subtle contours for aerodynamics"
+        ],
+        "side": [
+            "distinctive long body shape characteristic of full-size sedans",
+            "slightly flared wheel arches",
+            "chrome trim running along the bottom of the windows"
+        ],
+        "back": [
+            "horizontal taillights that stretch across the trunk",
+            "prominent Chevrolet badge centered on the trunk",
+            "dual exhaust outlets subtly integrated into the lower bumper"
+        ]
+    },
+    "Chevrolet Tahoe Hybrid SUV 2012": {
+        "front": [
+            "large, dual-port grille with the Chevrolet bowtie emblem in the center",
+            "distinctly shaped headlights that taper off towards the edges",
+            "Hybrid badges on both sides of the grille"
+        ],
+        "side": [
+            "prominent Hybrid decals along the lower doors",
+            "running boards for easy entry and exit",
+            "large windows and doors indicating spacious interior"
+        ],
+        "back": [
+            "unique LED tail lights",
+            "large rear hatch with a window that offers an expansive view",
+            "Hybrid badging near the lower right-hand corner of the tailgate"
+        ]
+    },
+    "Chevrolet Sonic Sedan 2012": {
+        "front": [
+            "dual-port grille split by a body-colored bar with the Chevrolet bowtie emblem",
+            "exposed round headlights flanking the grille",
+            "lower front bumper with integrated fog lights",
+            "sharp lines running up from the front edge of the hood towards the windshield"
+        ],
+        "side": [
+            "distinct character line that slopes upward from the front wheel to the rear",
+            "short front and rear overhangs",
+            "body-colored door handles and side mirrors",
+            "15-inch or 17-inch alloy wheels"
+        ],
+        "back": [
+            "taillights mounted high on the rear, wrapping around into the car\u2019s sides",
+            "compact sedan trunk with a slight lip on the lid for aerodynamic styling",
+            "rear bumper with integrated reflectors",
+            "centered Chevrolet bowtie emblem between the taillights"
+        ]
+    },
+    "Chevrolet Express Cargo Van 2007": {
+        "front": [
+            "large, rectangular front grille with Chevrolet logo in the center",
+            "boxy headlights that are horizontally aligned with the grille",
+            "broad front bumper with integrated fog lights or air vents"
+        ],
+        "side": [
+            "tall and boxy profile with sliding or swing-out side cargo doors",
+            "minimal side detailing with a focus on functional design, often seen with no windows or few windows along the cargo area",
+            "running boards under the side doors for easier access",
+            " extended side mirrors for improved visibility around the vehicle"
+        ],
+        "back": [
+            "vertical, barn-style rear doors that split in the middle",
+            "simple, square-shaped tail lights positioned at the lower corners of the rear doors",
+            "rear windows may be present or absent, depending on the configuration, with the option for a high-mounted brake light above the rear doors"
+        ]
+    },
+    "Chevrolet Avalanche Crew Cab 2012": {
+        "front": [
+            "large, horizontal grille with the Chevrolet bowtie emblem in the center",
+            "distinctive, boxy headlights that flank the grille",
+            "bulky front bumper with integrated fog lights"
+        ],
+        "side": [
+            "unique midgate design that blends the SUV and pickup truck elements",
+            "large, pronounced wheel arches",
+            "running boards along the bottom edge of the vehicle for easier access"
+        ],
+        "back": [
+            "three-piece rigid tonneau cover over the cargo bed",
+            "rectangular tail lights that sit vertically on the edges of the rear",
+            "rear bumper with steps for easy bed access"
+        ]
+    },
+    "Chevrolet Cobalt SS 2010": {
+        "front": [
+            "Large, mesh front grille with a prominent Chevrolet logo",
+            "Sporty, angular halogen headlights",
+            "Distinctive lower bumper with integrated fog lights and a wide air intake for enhanced cooling"
+        ],
+        "side": [
+            "Sleek, two-door coupe body style",
+            "Sporty, side rocker panels that hint at the car's performance capabilities",
+            "18-inch, five-spoke, polished aluminum wheels"
+        ],
+        "back": [
+            "Prominent rear spoiler that signifies its SS (Super Sport) status",
+            "Clear lens LED taillights that are vertically elongated",
+            "Dual chrome-tipped exhausts that emphasize the car's performance tuning"
+        ]
+    },
+    "Chevrolet Malibu Hybrid Sedan 2010": {
+        "front": [
+            "dual-port grille with the Chevrolet bowtie emblem in the center",
+            "large, clear headlamps that slightly wrap around the edges",
+            "rounded lower bumper with integrated fog lamps"
+        ],
+        "side": [
+            "long, flowing body lines with a slightly arched roofline",
+            "prominent character line running from the headlights to the taillights",
+            "moderate-sized alloy wheels with simple spoke design"
+        ],
+        "back": [
+            "distinctive, wide taillights that extend into the trunk lid",
+            "Chrome trim above the license plate holder",
+            "Rear bumper with integrated reflectors and a small cutout for the exhaust"
+        ]
+    },
+    "Chevrolet TrailBlazer SS 2009": {
+        "front": [
+            "large, rectangular front grille with a prominent Chevrolet bowtie emblem",
+            "aggressive front bumper design with integrated fog lamps",
+            "distinctive SS badge on the grille, indicating the SS model"
+        ],
+        "side": [
+            "sporty side skirts that enhance the vehicle's aerodynamic profile",
+            "flared wheel arches accommodating larger, performance-oriented wheels",
+            "SS-specific badging on the front doors near the side mirrors"
+        ],
+        "back": [
+            "dual exhaust outlets integrated into the lower bumper for a sporty look",
+            "large, clear-lens taillights that extend into the rear hatch",
+            "SS badge prominently displayed on the rear hatch, highlighting the model's high-performance credentials"
+        ]
+    },
+    "Chevrolet Silverado 2500HD Regular Cab 2012": {
+        "front": [
+            "large, prominent chrome grille",
+            "rectangular headlights that integrate into the grille design",
+            "robust front bumper with integrated fog lights"
+        ],
+        "side": [
+            "long, flat cargo bed characteristic of a regular cab pickup",
+            "prominent wheel arches",
+            "chrome side mirrors and door handles"
+        ],
+        "back": [
+            "vertical taillights flanking the tailgate",
+            "heavy-duty rear bumper with integrated steps",
+            "Silverado and 2500HD badging on the tailgate"
+        ]
+    },
+    "Chevrolet Silverado 1500 Classic Extended Cab 2007": {
+        "front": [
+            "large, horizontally split grille with Chevrolet logo in the center",
+            "rectangular headlamps that flank the grille",
+            "pronounced front bumper with integrated fog lights"
+        ],
+        "side": [
+            "extended cab configuration with a third door on the passenger side",
+            "long bed design typical of American pickups",
+            "distinctive wheel arches",
+            "chrome side mirror caps and door handles",
+            "visible running boards beneath the side doors"
+        ],
+        "back": [
+            "large tailgate with Chevrolet badge",
+            "rectangular taillights at the corners",
+            "step built into the rear bumper for easy bed access"
+        ]
+    },
+    "Chevrolet Express Van 2007": {
+        "front": [
+            "Broad, flat front grille with Chevrolet's emblem in the center",
+            "Rectangular, elongated headlights",
+            "Minimalistic bumper with integrated signals"
+        ],
+        "side": [
+            "Large, slab-sided panels with minimal detailing",
+            "Conspicuous sliding or swing-out side doors",
+            "High roofline for expansive interior space"
+        ],
+        "back": [
+            "Vertical tail lights flanking the tailgate",
+            "Dual swing-out rear doors",
+            "Sparse design, with a small rear window on each door"
+        ]
+    },
+    "Chevrolet Monte Carlo Coupe 2007": {
+        "front": [
+            "dual-port grille with a Chevrolet bowtie emblem in the center",
+            "large, rounded headlights that flank the grille, tapering towards the back",
+            "body-colored bumper with integrated fog lights at the bottom"
+        ],
+        "side": [
+            "two-door coupe design with a distinct, sloped rear window",
+            "pronounced wheel arches with large, alloy wheels",
+            "sharp character line running from the front fender through the doors to the rear"
+        ],
+        "back": [
+            "large, horizontal tail lights that extend into the trunk",
+            "spoiler mounted on the trunk lid for the SS model",
+            "dual exhaust ports integrated into the lower bumper"
+        ]
+    },
+    "Chevrolet Malibu Sedan 2007": {
+        "front": [
+            "horizontal chrome bar grille with Chevrolet logo in the center",
+            "rounded square headlights",
+            "prominent bumper with integrated fog lights"
+        ],
+        "side": [
+            "smooth, flowing roofline with a slightly arched profile",
+            "distinctive character line that runs from the headlights to the taillights",
+            "body-colored door handles and side mirrors"
+        ],
+        "back": [
+            "large, rectangular taillights that extend into the trunk",
+            "prominent Chevrolet badge centered on the trunk",
+            "chrome strip running across the bottom of the trunk lid"
+        ]
+    },
+    "Chevrolet Silverado 1500 Extended Cab 2012": {
+        "front": [
+            "Large, rectangular front grille with prominent Chevrolet bowtie emblem",
+            "Rectangular headlights that flank the grille, with integrated turn signals",
+            "Bulky bumper with tow hooks and fog light provisions"
+        ],
+        "side": [
+            "Extended cab configuration with rear-hinged back doors",
+            "Pronounced wheel arches over large, sturdy wheels",
+            "Long bed design common to pickup trucks, with a distinctive body line running along the length of the vehicle"
+        ],
+        "back": [
+            "Vertical taillights located at the corners of the bed",
+            "Tailgate with Chevrolet branding stamped across",
+            "Rear bumper with integrated steps for easy bed access"
+        ]
+    },
+    "Chevrolet Silverado 1500 Regular Cab 2012": {
+        "front": [
+            "large, rectangular grille with horizontal chrome bars",
+            "oversized Chevrolet bowtie logo in the center of the grille",
+            "rounded rectangular headlights that are separated from the grille by a narrow body panel"
+        ],
+        "side": [
+            "visible wheel arches that bulge out slightly",
+            "long, straight body line from the front fender to the tail light",
+            "regular cab configuration with two doors and a long bed"
+        ],
+        "back": [
+            "vertical tail lights on either side of the rear gate",
+            "Silverado badge and Chevrolet logo prominently displayed on the tailgate",
+            "simple, straight rear bumper with integrated steps for easy bed access"
+        ]
+    },
+    "Chrysler Aspen SUV 2009": {
+        "front": [
+            "bold, chrome grille with the Chrysler badge prominently displayed",
+            "large, squared-off headlights that flank the grille",
+            "pronounced bumper with integrated fog lights"
+        ],
+        "side": [
+            "boxy, upright stance with a high roofline",
+            "chrome trim running along the bottom of the windows",
+            "large, flared wheel arches accommodating sizable wheels"
+        ],
+        "back": [
+            "vertical, rectangular tail lights on either side of the rear window",
+            "large rear window with a centrally mounted third brake light",
+            "substantial rear bumper with parking sensors and a visible exhaust tip"
+        ]
+    },
+    "Chrysler Sebring Convertible 2010": {
+        "front": [
+            "distinctive rounded front grille with Chrysler badge",
+            "elongated, narrow headlights that taper towards the grille",
+            "prominent lower fascia with fog lights set into the bumper"
+        ],
+        "side": [
+            "soft-top convertible roof when present or retracted roof line",
+            "character line running from the front fender, dipping slightly at the doors, then rising towards the rear",
+            "chrome accents around windows and on door handles for higher trims"
+        ],
+        "back": [
+            "horizontal tail lights that stretch across most of the rear",
+            "centered Chrysler badge on the trunk",
+            "rear bumper with integrated reflectors and exhaust outlets"
+        ]
+    },
+    "Chrysler Town and Country Minivan 2012": {
+        "front": [
+            "signature Chrysler grille with horizontal chrome slats",
+            "rectangular headlights that flank the grille",
+            "rounded front bumper with integrated fog lights"
+        ],
+        "side": [
+            "sliding side doors characteristic of a minivan",
+            "visible body line running from the front wheel arch through to the rear tail lights",
+            "alloy wheels with a distinctive multi-spoke design"
+        ],
+        "back": [
+            "large, horizontally oriented tail lights",
+            "rear window wiper centrally located on the back window",
+            "rear hatch with a chrome strip featuring the Chrysler logo"
+        ]
+    },
+    "Chrysler 300 SRT-8 2010": {
+        "front": [
+            "Aggressive front grille with a distinct Chrysler badge",
+            "High-performance styled front bumper with integrated fog lamps",
+            "Angular, rectangular headlights that contribute to the car\u2019s imposing presence"
+        ],
+        "side": [
+            "Low-profile tires paired with large, stylish alloy wheels",
+            "Muscular fender bulges that accentuate its performance capabilities",
+            "Characteristic body lines that give a sense of forward motion"
+        ],
+        "back": [
+            "Dual-exhaust tips integrated into a sporty rear bumper",
+            "Prominent rear spoiler that enhances the vehicle's sporty image",
+            "Large, distinctive taillights that span a significant portion of the rear"
+        ]
+    },
+    "Chrysler Crossfire Convertible 2008": {
+        "front": [
+            "distinctive boat-like front-end design with a long, low hood",
+            "bold Chrysler badge centered on a wide, slender grille",
+            "prominent, high-mounted headlamps that taper towards the edges",
+            "center crease on the hood that accentuates the vehicle's length",
+            "teardrop-shaped headlights that complement the overall curvature of the car"
+        ],
+        "side": [
+            "unique, dramatic character line that starts from the front wheel arch and sweeps upwards towards the rear",
+            "side air intakes just behind the front wheels",
+            "compact, soft-top convertible roof that sits flush when down, offering a smooth profile",
+            "broad, muscular rear fenders that project a powerful stance",
+            "retractable spoiler integrated into the rear boot lid"
+        ],
+        "back": [
+            "large, rounded tail lights that are vertically oriented",
+            "center-mounted dual exhaust tips that emerge below the license plate area",
+            "pronounced, sculpted rear bumper that enhances the car's sporty appeal",
+            "distinctive bulge on the trunk lid that flows down from the retractable spoiler",
+            "Chrysler badge prominently displayed in the center of the trunk"
+        ]
+    },
+    "Chrysler PT Cruiser Convertible 2008": {
+        "front": [
+            "Retro-styled front grille that resembles designs from the 1930s and 1940s",
+            "Rounded headlights that flank the grille",
+            "High hood line with a pronounced bulge towards the front"
+        ],
+        "side": [
+            "High beltline with chrome accents along the bottom of the windows",
+            "Distinctive, flared wheel arches",
+            "Fabric convertible top that folds down behind the rear seats"
+        ],
+        "back": [
+            "Vertical tail lights that extend from the middle of the trunk to the top of the rear fenders",
+            "Rear bumper with integrated chrome exhaust tips",
+            "Large rear hatch with a chrome handle for easy opening"
+        ]
+    },
+    "Daewoo Nubira Wagon 2002": {
+        "front": [
+            "rounded headlights that flank a simple, narrow grille",
+            "the Daewoo logo prominently displayed in the center of the grille",
+            "slightly raised hood with a gentle slope"
+        ],
+        "side": [
+            "straight roofline that extends towards a flat rear end, characteristic of the wagon body style",
+            "protective body-side moldings running along the doors",
+            "visible antenna mounted towards the rear"
+        ],
+        "back": [
+            "large rear window with a rear wiper mounted at the top",
+            "vertical tail lights that extend from the mid-section of the car to the roof",
+            "rear bumper with integrated reflectors"
+        ]
+    },
+    "Dodge Caliber Wagon 2012": {
+        "front": [
+            "large, crosshair chrome grille characteristic of Dodge vehicles",
+            "squared-off, large headlamp units that extend into the fenders",
+            "low-positioned fog lamps integrated into the bumper"
+        ],
+        "side": [
+            "chunky, muscular wheel arches",
+            "distinctive high beltline and sloping roofline towards the rear",
+            "black plastic body cladding along the lower edges and around the wheel arches"
+        ],
+        "back": [
+            "large, vertical tail lights that flank the rear window",
+            "prominent rear bumper with integrated reflectors",
+            "rear hatch design with a high opening threshold"
+        ]
+    },
+    "Dodge Caliber Wagon 2007": {
+        "front": [
+            "bold, chunky front grille with the recognizable Dodge emblem",
+            "rounded but aggressive headlight design",
+            "high stance and large fender flares",
+            "characteristic, robust bumper that enhances its muscular appearance"
+        ],
+        "side": [
+            "distinctive boxy shape with a high roofline",
+            "pronounced wheel arches accentuating its rugged look",
+            "black or body-colored side moldings running along the bottom of the doors",
+            "relatively straight beltline that slightly ascends towards the rear"
+        ],
+        "back": [
+            "large, square tail lights positioned at the corners",
+            "rear hatch with a relatively flat window",
+            "black, plastic lower bumper, often with integrated reflectors or lights"
+        ]
+    },
+    "Dodge Caravan Minivan 1997": {
+        "front": [
+            "rounded front end with a relatively flat, wide grille",
+            "large, rounded headlights that flank the grille",
+            "Dodge brand emblem centered on the grille"
+        ],
+        "side": [
+            "boxy, yet aerodynamic profile characteristic of minivans of the era",
+            "sliding passenger door for rear seat access",
+            "slightly raised roofline towards the rear for increased interior headroom"
+        ],
+        "back": [
+            "large, vertically-oriented tail lights on either side of the rear window",
+            "prominent rear window wiper",
+            "rear hatch door with a handle that spans almost the entire width of the door"
+        ]
+    },
+    "Dodge Ram Pickup 3500 Crew Cab 2010": {
+        "front": [
+            "large, chrome grille with the distinct RAM logo in the center",
+            "bulky front bumper with integrated fog lights",
+            "square-ish headlights that flank the grille"
+        ],
+        "side": [
+            "long, horizontal body line that underscores its length",
+            "large, extended side mirrors designed for enhanced rear visibility",
+            "visible step-up bars allowing easier access to the cabin"
+        ],
+        "back": [
+            "prominent \u2018RAM\u2019 lettering across the tailgate",
+            "dual rear wheels on either side indicating its heavy-duty status",
+            "large, vertical taillights on either side of the tailgate"
+        ]
+    },
+    "Dodge Ram Pickup 3500 Quad Cab 2009": {
+        "front": [
+            "large, chrome grille with prominent Dodge emblem",
+            "square-shaped, imposing headlights",
+            "raised hood with distinctive sculpting lines"
+        ],
+        "side": [
+            "extended quad cab with four doors",
+            "prominent, muscular wheel fenders",
+            "large, sturdy side mirrors often in black or chrome finish"
+        ],
+        "back": [
+            "dual rear wheels for added stability and payload capacity",
+            "large, vertical tail lights on either side of the tailgate",
+            "prominent 'RAM' or 'Dodge' badge across the tailgate"
+        ]
+    },
+    "Dodge Sprinter Cargo Van 2009": {
+        "front": [
+            "Tall, narrow grille with Dodge emblem prominently displayed",
+            "High, boxy hood that slopes slightly downward towards the front",
+            "Large, vertically-oriented headlights that flank the grille"
+        ],
+        "side": [
+            "Very high roofline, especially noticeable in the extended height models",
+            "Long, almost featureless side paneling with minimal design lines",
+            "Sliding side door providing access to the cargo area"
+        ],
+        "back": [
+            "Dual rear doors that open outward, often with a 270-degree hinge allowing them to fold flat against the van sides",
+            "Tall, vertical brake lights located at the top corners of the rear",
+            "Spartan rear design, emphasizing functionality over aesthetic details"
+        ]
+    },
+    "Dodge Journey SUV 2012": {
+        "front": [
+            "signature chrome-trimmed crosshair grille design",
+            "rectangular headlights that slightly slant upwards towards the sides",
+            "prominent lower front bumper with integrated fog lights"
+        ],
+        "side": [
+            "boxy, but streamlined profile with slightly rounded edges",
+            "distinctive wheel arches over the alloy wheels",
+            "black trim running along the bottom of the doors"
+        ],
+        "back": [
+            "large, vertical taillights that bracket the rear window",
+            "rear hatch with an integrated spoiler at the top",
+            "dual exhaust tips beneath the bumper"
+        ]
+    },
+    "Dodge Dakota Crew Cab 2010": {
+        "front": [
+            "rectangular grille with a horizontal chrome bar featuring the Dodge emblem",
+            "large, rounded headlights positioned on either side of the grille",
+            "wide, aggressive bumper with integrated fog lights"
+        ],
+        "side": [
+            "four full-size doors indicating the crew cab design",
+            "square-shaped fender flares",
+            "side step bars beneath the doors for easier access to the cabin"
+        ],
+        "back": [
+            "prominent Dodge lettering on the tailgate",
+            "vertical taillights that flank the tailgate",
+            "a bulky rear bumper with a step for ease of bed access"
+        ]
+    },
+    "Dodge Dakota Club Cab 2007": {
+        "front": [
+            "rectangular grille with horizontal chrome bars",
+            "rounded headlights on either side of the grille",
+            "bulky front bumper with integrated fog lights"
+        ],
+        "side": [
+            "extended cab configuration with rear-hinged back doors",
+            "pronounced wheel arches",
+            "side body line running from the front fender to the rear taillight"
+        ],
+        "back": [
+            "large tailgate with 'Dodge' lettering",
+            "rectangular taillights positioned at the corners",
+            "step bumper for easy bed access"
+        ]
+    },
+    "Dodge Magnum Wagon 2008": {
+        "front": [
+            "Distinctive crosshair grille design",
+            "Aggressive headlight design that tapers towards the grille",
+            "Wide, low front bumper with fog light cut-outs"
+        ],
+        "side": [
+            "Low roofline and high beltline, giving it a muscular profile",
+            "Large wheel arches fitting wide tires",
+            "Sleek, tapered windows contributing to a sporty look"
+        ],
+        "back": [
+            "Tall, vertical rear tail lights",
+            "Large rear hatch with a pronounced rear spoiler",
+            "Dual exhaust pipes, indicating performance orientation"
+        ]
+    },
+    "Dodge Challenger SRT8 2011": {
+        "front": [
+            "aggressive rectangular grille with a chrome outline, reminiscent of classic muscle cars",
+            "round, dual headlamps on either side of the grille",
+            "large, functional hood scoop for improved engine airflow"
+        ],
+        "side": [
+            "long, muscular hood with a pronounced character line running from front fender to rear taillights",
+            "distinctive, wide body stance with flared wheel arches",
+            "two-door coupe silhouette with a sloping rear roofline"
+        ],
+        "back": [
+            "large, rectangular LED taillights that span the width of the rear",
+            "rear spoiler integrated into the trunk lid",
+            "dual rear exhausts with chrome tips"
+        ]
+    },
+    "Dodge Durango SUV 2012": {
+        "front": [
+            "bold, crosshair grille design that is sizable and prominently placed",
+            "rectangular headlights that flank the grille",
+            "pronounce bumper with integrated fog lights positioned near the lower edges"
+        ],
+        "side": [
+            "muscular fender flares that add to its rugged appearance",
+            "distinct character line that runs from the headlights to the taillights, slightly arched over the wheel wells",
+            "roof rails that are functional and add to the SUV's utilitarian look"
+        ],
+        "back": [
+            "large, vertical taillights that are easily recognizable",
+            "rear window that is significantly raked, giving a more aerodynamic profile",
+            "dual exhaust tips that are prominently visible, adding to the vehicle's sporty stance"
+        ]
+    },
+    "Dodge Durango SUV 2007": {
+        "front": [
+            "bold, rectangular front grille with thick horizontal bars",
+            "large, round headlights flanking the grille",
+            "prominent Dodge logo in the center of the grille"
+        ],
+        "side": [
+            "boxy, muscular body shape",
+            "distinctive wheel arches that are slightly flared",
+            "roof rails running along the top for additional cargo capability"
+        ],
+        "back": [
+            "large, vertical tail lights on either side of the rear window",
+            "chunky rear bumper with integrated steps for easier access to the rear cargo area",
+            "Dodge badge positioned centrally just below the rear window"
+        ]
+    },
+    "Dodge Charger Sedan 2012": {
+        "front": [
+            "aggressive, squared front fascia with a large grille",
+            "distinctive headlamp design with LED daytime running lights",
+            "muscular hood with character lines"
+        ],
+        "side": [
+            "bold character line that runs from the headlights to the tail lights, creating a coke-bottle shape",
+            "large wheel arches accommodating muscular wheels",
+            "sharp, angled roofline sloping towards the rear"
+        ],
+        "back": [
+            "iconic full-width rear tail light panel with LED illumination",
+            "dual exhaust outlets integrated into the lower bumper",
+            "prominent Dodge badge centered on the trunk"
+        ]
+    },
+    "Dodge Charger SRT-8 2009": {
+        "front": [
+            "muscular hood scoop",
+            "bold, aggressive grille design",
+            "rounded rectangular headlights with a slight upward tilt"
+        ],
+        "side": [
+            "prominent body lines highlighting the muscular build",
+            "distinctively flared wheel arches",
+            "large, sporty alloy wheels"
+        ],
+        "back": [
+            "dual chrome-finished exhaust pipes",
+            "spoiler integrated into the rear trunk lid",
+            "iconic circular LED taillights"
+        ]
+    },
+    "Eagle Talon Hatchback 1998": {
+        "front": [
+            "pop-up headlights that offer a sleek, flush look when not in use",
+            "black, narrow front grille situated between the headlights",
+            "rounded front bumper with integrated fog lights towards the corners"
+        ],
+        "side": [
+            "distinctive curved window line that dips towards the rear",
+            "two-door hatchback silhouette with a noticeable slope in the roof towards the rear end",
+            "body-colored side mirrors and door handles"
+        ],
+        "back": [
+            "unique, angled rear hatch design with a large rear window",
+            "wraparound tail lights that extend into the rear quarter panels",
+            "rear bumper with a black lower section that may include a cutout for the exhaust"
+        ]
+    },
+    "FIAT 500 Abarth 2012": {
+        "front": [
+            "compact and rounded front fascia",
+            "distinguished Abarth badge positioned above the grille",
+            "aggressive front bumper with larger air intakes"
+        ],
+        "side": [
+            "side skirts that give a lower and sportier profile",
+            "distinctive Abarth scorpion badge on the rear quarter panel",
+            "larger, sporty alloy wheels with a unique design"
+        ],
+        "back": [
+            "dual chrome exhaust tips centered below the bumper",
+            "rear spoiler that adds a sporty aesthetic",
+            "Abarth branding on the rear hatch, indicating the model's performance orientation"
+        ]
+    },
+    "FIAT 500 Convertible 2012": {
+        "front": [
+            "rounded headlights that are prominent and set wide apart",
+            "chrome-trimmed grille that sits low between the headlights",
+            "FIAT badge positioned prominently in the center of the front grille"
+        ],
+        "side": [
+            "compact and curvy profile with a noticeably short wheelbase",
+            "cloth convertible top that folds back, distinguishably seen even when closed",
+            "character line that starts from the headlight and swoops upwards towards the rear"
+        ],
+        "back": [
+            "vertical taillights that are elongated and narrow, placed at the far edges",
+            "rear hatch handle that is chrome-plated and sits prominently at the center",
+            "visible portion of the convertible top folds neatly behind the rear seats, creating a unique rear profile"
+        ]
+    },
+    "Ferrari FF Coupe 2012": {
+        "front": [
+            "Low and wide stance with a sharply sloping hood",
+            "Large, aggressive front grille that dominates the lower half",
+            "Sleek, elongated headlights that stretch back into the fenders"
+        ],
+        "side": [
+            "Distinctive shooting brake body style, unique among Ferraris",
+            "Large, sculpted wheel arches housing sizable alloy wheels",
+            "Aerodynamic lines flowing from the front to the rear"
+        ],
+        "back": [
+            "Prominent, circular LED taillights on either side",
+            "Quad exhaust tips integrated into the rear diffuser",
+            "A compact, sloping rear window atop a muscular rear end"
+        ]
+    },
+    "Ferrari California Convertible 2012": {
+        "front": [
+            "low, wide front grille with a prominent Ferrari badge",
+            "sleek, horizontally elongated headlights that taper towards the sides",
+            "sculpted hood with distinctive creases"
+        ],
+        "side": [
+            "long, flowing lines with a low profile",
+            "vent just behind the front wheels with integrated Ferrari badge",
+            "retractable hardtop roof that seamlessly blends into the body"
+        ],
+        "back": [
+            "quad exhaust pipes, two on each side, positioned low",
+            "taillights are round and positioned near the edge of the rear",
+            "a relatively short rear deck with integrated rear spoiler"
+        ]
+    },
+    "Ferrari 458 Italia Convertible 2012": {
+        "front": [
+            "sharp, angled headlights that stretch back into the hood, resembling a teardrop shape",
+            "large, oval-shaped grille opening at the center, flanked by two smaller air intakes",
+            "distinctive Ferrari logo centrally located slightly above the grille on the hood"
+        ],
+        "side": [
+            "aerodynamic, sculpted side profile with large air intakes just ahead of the rear wheels",
+            "low, ground-hugging stance with sleek lines running from front to back",
+            "convertible roofline flows smoothly into the rear deck, maintaining the car\u2019s flowing silhouette"
+        ],
+        "back": [
+            "trio of circular LED tail lights on each side, a signature design cue",
+            "prominent rear diffuser, integrated with the car's underbody for improved aerodynamics",
+            "dual exhaust pipes centered within the rear diffuser, highlighting the car\u2019s performance focus"
+        ]
+    },
+    "Ferrari 458 Italia Coupe 2012": {
+        "front": [
+            "Low and wide stance with a sharp, aggressive front nose",
+            "Large, elongated headlights that stretch back into the fenders",
+            "Central front grille flanked by large air intakes"
+        ],
+        "side": [
+            "Sculpted air intakes behind the doors that feed air into the engine",
+            "Distinctive, sleek profile with a low roof line",
+            "Five-spoke alloy wheels with red brake calipers visible"
+        ],
+        "back": [
+            "Triple exhaust tips centered below the rear bumper",
+            "Tall, narrow LED taillights that are vertically oriented",
+            "Engine visible through a rear glass window"
+        ]
+    },
+    "Fisker Karma Sedan 2012": {
+        "front": [
+            "Low-slung, wide stance with a distinctive trapezoidal grille",
+            "Sharp and narrow LED headlights that curve upwards towards the fenders",
+            "Solar panel roof that starts from the top of the windshield"
+        ],
+        "side": [
+            "Dramatic, sculpted lines running along the doors",
+            "20-inch designer wheels that fill the wheel arches prominently",
+            "A low roofline that slopes seamlessly into the rear, giving it a coupe-like silhouette"
+        ],
+        "back": [
+            "High-mounted LED tail lights that stretch horizontally across the rear",
+            "Dual exhaust ports integrated into the lower rear bumper",
+            "Visible rear diffuser that enhances its sporty aesthetic"
+        ]
+    },
+    "Ford F-450 Super Duty Crew Cab 2012": {
+        "front": [
+            "massive chrome grille with a prominent 'Super Duty' badge",
+            "large, rectangular headlights flanking the grille",
+            "bulging hood with functional air vents"
+        ],
+        "side": [
+            "long wheelbase characteristic of the Crew Cab configuration",
+            "large extendable side mirrors with integrated turn signals",
+            "distinctive side step below the doors for easier access"
+        ],
+        "back": [
+            "large, vertical tailgate with 'FORD' written across it",
+            "tail lights that vertically flank the tailgate, designed to be visible even with wide loads",
+            "Heavy-duty towing hitch and plug for trailer lights and brakes integrated below the bumper"
+        ]
+    },
+    "Ford Mustang Convertible 2007": {
+        "front": [
+            "classic Mustang grille with the iconic galloping pony logo",
+            "large, round headlights integrated into the grille design",
+            "distinctive muscular hood with a subtle bulge in the center"
+        ],
+        "side": [
+            "long, sweeping hood leading into a compact passenger cabin",
+            "distinct side sculpting with a sharp, upward tilt towards the rear",
+            "fabric convertible top that folds down, showcasing a sleek profile when retracted"
+        ],
+        "back": [
+            "three-bar tail lights that are vertically stacked, reminiscent of classic Mustang designs",
+            "dual exhaust tips that protrude slightly from the bottom rear",
+            "prominent rear spoiler that adds to the sporty aesthetic"
+        ]
+    },
+    "Ford Freestar Minivan 2007": {
+        "front": [
+            "Rectangular grille with the Ford emblem in the center",
+            "Large, rounded headlights that flank the grille",
+            "Bulky bumper with integrated fog lights towards the edges"
+        ],
+        "side": [
+            "Sliding rear passenger doors for easy access",
+            "Elongated, boxy shape typical of a minivan design",
+            "Subtle character line running across the door handles"
+        ],
+        "back": [
+            "Large rear window for visibility",
+            "Vertical taillights that extend from the middle of the rear hatch to the roof",
+            "Rear hatch with an integrated handle for easy opening"
+        ]
+    },
+    "Ford Expedition EL SUV 2009": {
+        "front": [
+            "large, rectangular chrome grille with horizontal bars",
+            "wide, rectangular headlights that flank the grille",
+            "pronounced front bumper with integrated fog lights"
+        ],
+        "side": [
+            "long body length, characteristic of the EL (Extended Length) model",
+            "distinctive running boards for easier entry and exit",
+            "large windows with a noticeable downward slope towards the rear"
+        ],
+        "back": [
+            "sizeable, vertically-oriented tail lights",
+            "large rear window with a rear wiper",
+            "prominent rear hatch with a distinctive Ford badge at the center"
+        ]
+    },
+    "Ford Edge SUV 2012": {
+        "front": [
+            "large, three-bar chrome grille characteristic of Ford",
+            "sleek, angular headlights",
+            "a striking bulge on the hood that adds to its muscular look"
+        ],
+        "side": [
+            "characteristic sloping roofline that contributes to a sporty profile",
+            "prominent wheel arches that house large alloy wheels",
+            "chrome trim around windows and along the lower door panels"
+        ],
+        "back": [
+            "tall, vertical taillights that extend into the tailgate",
+            "a large rear window that provides ample visibility",
+            "dual exhaust outlets integrated into the lower bumper"
+        ]
+    },
+    "Ford Ranger SuperCab 2011": {
+        "front": [
+            "horizontal bar grille with a large Ford emblem in the center",
+            "rectangular headlights that flank the grille",
+            "rounded front bumper with integrated fog lights towards the edges"
+        ],
+        "side": [
+            "extended cab configuration with rear-hinged half doors",
+            "prominent wheel arches housing alloy wheels",
+            "Side step bars below the doors for easier access"
+        ],
+        "back": [
+            "vertical taillights on either side of the tailgate",
+            "large, flat tailgate with a handle that integrates into the Ford logo",
+            "Cargo bed designed for utility with tie-down hooks visible on the sides"
+        ]
+    },
+    "Ford GT Coupe 2006": {
+        "front": [
+            "two large air intake scoops located on either side of the front bumper",
+            "rounded headlights that stretch back into the bodywork",
+            "Ford's signature logo in the center of the front, above a small, aerodynamic nose"
+        ],
+        "side": [
+            "distinctive scoop just behind the doors for engine cooling",
+            "low, aerodynamic profile with a high waistline and mid-engine design",
+            "large, circular wheel arches housing oversized wheels"
+        ],
+        "back": [
+            "twin circular taillights on each side",
+            "rear diffuser and a small, active rear spoiler for improved aerodynamics",
+            "centered dual exhaust pipes beneath the rear bumper"
+        ]
+    },
+    "Ford F-150 Regular Cab 2012": {
+        "front": [
+            "Large, boxy grille with the Ford logo prominently displayed in the center",
+            "Rectangular headlights that flank the grille, with a distinctive sharp corner design",
+            "Bulging hood that enhances its muscular appearance"
+        ],
+        "side": [
+            "Regular Cab configuration leads to a two-door design with a long bed",
+            "Prominent wheel arches that accommodate large tires",
+            "Side step integrated into the body below the doors for easier access"
+        ],
+        "back": [
+            "Large, vertical taillights that are easily recognizable",
+            "Tailgate with a prominent Ford logo embossed in the center",
+            "Rear bumper designed with integrated steps for easier bed access"
+        ]
+    },
+    "Ford F-150 Regular Cab 2007": {
+        "front": [
+            "large rectangular grille with thick horizontal bars",
+            "prominent Ford emblem centered on the grille",
+            "broad, square-shaped headlights flanking the grille"
+        ],
+        "side": [
+            "two-door configuration with large windows",
+            "elongated, straight body lines running along the side, accentuating its length",
+            "large, pronounced wheel arches housing robust wheels"
+        ],
+        "back": [
+            "tall vertical taillights on either side of the tailgate",
+            "Ford logo stamped prominently on the tailgate",
+            "simple, functional rear bumper designed for durability"
+        ]
+    },
+    "Ford Focus Sedan 2007": {
+        "front": [
+            "compact, horizontal front grille with Ford's blue oval logo in the center",
+            "teardrop-shaped headlights that extend into the sides",
+            "trapezoidal lower air intake"
+        ],
+        "side": [
+            "distinctive character line runs from the front wheel arch to the rear taillights",
+            "slightly flared wheel arches",
+            "black trim on the bottom of the side windows"
+        ],
+        "back": [
+            "large, vertically arranged taillights on either side of the rear window",
+            "integrated boot spoiler on some models",
+            "rear bumper with a simple, understated design"
+        ]
+    },
+    "Ford E-Series Wagon Van 2012": {
+        "front": [
+            "boxy front design with a large, rectangular grille",
+            "Ford\u2019s blue oval logo prominently displayed in the center of the grille",
+            "large, square headlights flanking the grille"
+        ],
+        "side": [
+            "tall, blocky body shape designed for maximum interior space",
+            "multiple windows along the side, indicative of passenger versions",
+            "sliding side door for rear passenger access or a hinged door option"
+        ],
+        "back": [
+            "large, vertical rear doors that split in the middle for cargo access",
+            "rectangular taillights positioned at the corners of the back",
+            "spare tire mounted on the rear door in some models"
+        ]
+    },
+    "Ford Fiesta Sedan 2012": {
+        "front": [
+            "sleek, narrow grille with a large Ford emblem in the center",
+            "swept-back, angular headlamps",
+            "rounded front bumper with prominent fog light housings"
+        ],
+        "side": [
+            "distinctive sharp body line running from the headlights to the taillights",
+            "slightly elevated rear part, typical for a sedan body",
+            "compact profile with short overhangs"
+        ],
+        "back": [
+            "tall, vertical taillights that extend into the trunk lid",
+            "small, rounded rear window",
+            "prominent rear bumper with integrated reflectors"
+        ]
+    },
+    "GMC Terrain SUV 2012": {
+        "front": [
+            "bold chrome grille with GMC logo in the center",
+            "square-shaped headlights with C-shaped daytime running lights",
+            "boxy and rugged front bumper design with built-in fog lights"
+        ],
+        "side": [
+            "boxy silhouette with pronounced wheel arches",
+            "distinctive, large side mirrors with integrated turning signals",
+            "characteristic thick C-pillar that gives a sturdy appearance"
+        ],
+        "back": [
+            "rectangular tail lights that extend horizontally across the tailgate",
+            "prominent GMC badge centered on the tailgate",
+            "chunky rear bumper with integrated exhaust outlets"
+        ]
+    },
+    "GMC Savana Van 2012": {
+        "front": [
+            "Large, chrome-framed grille with the GMC logo prominently displayed at the center",
+            "Rectangular, horizontally oriented headlights that flank the grille",
+            "Broad bumper with integrated air vents and possibly fog lights depending on the trim level"
+        ],
+        "side": [
+            "Boxy, utilitarian body shape characteristic of full-size vans",
+            "Sliding passenger side door or alternatively, swing-out doors depending on the configuration",
+            "Minimalist design with few pronounced lines or curves, emphasizing functionality over aesthetics"
+        ],
+        "back": [
+            "Vertical tail lights positioned at the far edges of the rear",
+            "Dual swing-out rear doors that open wide for easy loading and unloading, some models may have a single, upward-opening door",
+            "Rear windows may be present or absent, depending on the variant (passenger, cargo, etc.)"
+        ]
+    },
+    "GMC Yukon Hybrid SUV 2012": {
+        "front": [
+            "Large, chrome-accented grille featuring the GMC logo",
+            "Rectangular headlights with a distinctive daytime running light design",
+            "Prominent, bulging hood with a slight power dome"
+        ],
+        "side": [
+            "Hybrid badges on the front doors, signaling its hybrid powertrain",
+            "Large, boxy shape with pronounced wheel arches",
+            "Running boards along the lower side, facilitating entry and exit"
+        ],
+        "back": [
+            "Large, vertical tail lights flanking the rear window",
+            "Distinctive 'Hybrid' badging on the rear liftgate",
+            "A sizeable rear bumper with integrated parking sensors"
+        ]
+    },
+    "GMC Acadia SUV 2012": {
+        "front": [
+            "large, bold chrome grille with the GMC logo at the center",
+            "rectangular headlights that flank the grille",
+            "fog lights integrated into the lower bumper"
+        ],
+        "side": [
+            "boxy, muscular body shape with pronounced wheel arches",
+            "prominent character line running from the headlights to the tail lights",
+            "roof rails on the top for additional cargo"
+        ],
+        "back": [
+            "distinct vertical tail lights",
+            "rear window wiper centrally placed at the top of the window",
+            "dual exhaust tips integrated into the lower bumper"
+        ]
+    },
+    "GMC Canyon Extended Cab 2012": {
+        "front": [
+            "rectangular chrome grille featuring the GMC logo in the center",
+            "rounded headlights that flank the grille",
+            "pronounced front bumper with integrated fog lights"
+        ],
+        "side": [
+            "extended cab design with smaller rear-hinged back doors",
+            "body lines running horizontally along the side panels",
+            "tall ground clearance with prominent wheel wells"
+        ],
+        "back": [
+            "vertical taillights located at the sides of the rear",
+            "large rear window with a third brake light centered above it",
+            "tailgate with GMC branding, capable of dropping down for loading"
+        ]
+    },
+    "Geo Metro Convertible 1993": {
+        "front": [
+            "rounded headlights that are large in comparison to the car's size",
+            "small grille located below the front bumper",
+            "Geo emblem centrally located above the grille"
+        ],
+        "side": [
+            "compact, two-door body style with a fabric convertible top",
+            "minimalist body side molding",
+            "distinctive small, 13-inch wheels"
+        ],
+        "back": [
+            "square tail lights that are relatively large for the vehicle's size",
+            "rear bumper with integrated license plate holder",
+            "high-mounted third brake light above the trunk lid"
+        ]
+    },
+    "HUMMER H3T Crew Cab 2010": {
+        "front": [
+            "distinctive, large, seven-slot chrome grille with the HUMMER logo written across",
+            "round headlamps set deeply into the square housings",
+            "pronounced front bumper with integrated fog lamps and a skid plate for off-road protection"
+        ],
+        "side": [
+            "boxy, rugged silhouette with pronounced wheel arches",
+            "short bed characteristic of the Crew Cab design",
+            "side steps for easier access to the cabin"
+        ],
+        "back": [
+            "full-size spare tire mounted on the tailgate",
+            "square-shaped tail lights distinctive to HUMMER's design language",
+            "rear bumper with integrated tow hooks and a step for easier access to the bed"
+        ]
+    },
+    "HUMMER H2 SUT Crew Cab 2009": {
+        "front": [
+            "Large, chromed seven-slot grille flanked by round headlights",
+            "Distinctive hood design with raised, squared-off edges",
+            "Prominent HUMMER logo on the grille"
+        ],
+        "side": [
+            "Boxy, rugged body shape with visible underbody protections",
+            "Large, flared wheel arches accommodating oversized tires",
+            "Signature side-mirrors mounted on large, vertical brackets"
+        ],
+        "back": [
+            "Short cargo bed distinct to the SUT (Sport Utility Truck) variant",
+            "Square-shaped, vertical taillights on either side",
+            "Full-size spare tire mounted on the rear tailgate"
+        ]
+    },
+    "Honda Odyssey Minivan 2012": {
+        "front": [
+            "chrome-trimmed horizontal grille",
+            "angular, wedge-shaped headlights that flank the grille",
+            "distinctive lower front bumper with integrated fog lights"
+        ],
+        "side": [
+            "slightly lower roofline towards the rear, creating a sporty profile for a minivan",
+            "visible character line that swoops upwards from the front wheel to the rear",
+            "large sliding doors with integrated windows"
+        ],
+        "back": [
+            "vertical taillights that extend upwards towards the roof",
+            "rear window wraps around to the sides, creating a more spacious look",
+            "prominent rear bumper with a visible exhaust outlet"
+        ]
+    },
+    "Honda Odyssey Minivan 2007": {
+        "front": [
+            "Two-bar horizontal grille with a large Honda emblem in the center",
+            "Large, rectangular headlights that blend into the sides of the front",
+            "Rounded front bumper with integrated fog lights at the lower edges"
+        ],
+        "side": [
+            "Sliding rear doors indicative of a minivan design",
+            "Distinctive window line with a dip towards the front of the rear windows",
+            "Long wheelbase and relatively tall roofline"
+        ],
+        "back": [
+            "Vertically oriented taillights that flank the rear window",
+            "Large rear hatch with a prominent window wiper at the top",
+            "A slight spoiler at the top of the rear hatch, integrating the third brake light"
+        ]
+    },
+    "Honda Accord Coupe 2012": {
+        "front": [
+            "sleek, horizontal front grille with a chrome strip",
+            "large, wrap-around headlights that taper towards the grille",
+            "distinctive badge centrally located on the grille"
+        ],
+        "side": [
+            "two-door body style with a long, sweeping roofline",
+            "pronounced wheel arches housing large alloy wheels",
+            "chrome window trim accentuating the coupe profile"
+        ],
+        "back": [
+            "horizontal taillights that extend into the trunk lid",
+            "dual exhaust tips integrated into the lower bumper",
+            "compact rear window with a subtle spoiler on the trunk lid"
+        ]
+    },
+    "Honda Accord Sedan 2012": {
+        "front": [
+            "chrome-accented front grille with a prominent Honda emblem",
+            "angular, slightly swept-back headlight design",
+            "wide lower air intake on the bumper"
+        ],
+        "side": [
+            "strong character line that runs from the headlights to the taillights",
+            "slightly flared wheel arches",
+            "chrome trim around windows and on door handles for certain trims"
+        ],
+        "back": [
+            "distinctive taillight clusters that extend into the trunk lid",
+            "chrome strip above the rear license plate area on some models",
+            "dual-exhaust outlets on V6 models"
+        ]
+    },
+    "Hyundai Veloster Hatchback 2012": {
+        "front": [
+            "unique, large hexagonal front grille",
+            "sleek, swept-back projector headlights",
+            "distinctive lower bumper with integrated fog lights",
+            "two-tone color scheme that often accents the front bumper's shape"
+        ],
+        "side": [
+            "asymmetrical door configuration with one larger door on the driver's side and two smaller doors on the passenger side",
+            "sharp, rising character line from the front wheel to the rear tail lights",
+            "distinctive alloy wheels with a sporty design",
+            "sloping roofline that merges seamlessly into the rear hatch"
+        ],
+        "back": [
+            "center-mounted triangular exhaust tip",
+            "large, distinctive glass hatch with integrated rear spoiler",
+            "split rear light design that wraps around the corners of the car",
+            "rear bumper with a sporty, diffuser-like design"
+        ]
+    },
+    "Hyundai Santa Fe SUV 2012": {
+        "front": [
+            "signature hexagonal grille with chrome accents",
+            "swooping, angular headlight design that blends into the grille edges",
+            "LED daytime running lights beneath the headlights"
+        ],
+        "side": [
+            "prominent wheel arches with plastic cladding",
+            "sleek body lines running from the headlights to the taillights",
+            "roof rails and a slight upward curve towards the rear of the side windows"
+        ],
+        "back": [
+            "distinctive, vertically stacked taillights",
+            "rear window wiper centered at the top of the back window",
+            "dual exhaust pipes, subtly integrated into the lower rear bumper"
+        ]
+    },
+    "Hyundai Tucson SUV 2012": {
+        "front": [
+            "Hexagonal front grille with horizontal bars",
+            "Swept-back headlight design",
+            "Fog lights set into the lower bumper, slightly towards the edges"
+        ],
+        "side": [
+            "Smooth, flowing lines with a slightly rising beltline towards the rear",
+            "Distinctive wheel arches that are pronounced and house large wheels",
+            "Roof rails that add to its SUV profile"
+        ],
+        "back": [
+            "Rear tail lights that wrap around the side to the back, extending horizontally across the rear",
+            "Distinctively shaped rear window that tapers downwards",
+            "Rear bumper with integrated reflectors and a central faux skid plate"
+        ]
+    },
+    "Hyundai Veracruz SUV 2012": {
+        "front": [
+            "large chrome grille with horizontal slats",
+            "sweeping headlights that extend towards the sides",
+            "rounded front bumper with integrated fog lights"
+        ],
+        "side": [
+            "smooth, flowing roofline with a slight downward slope towards the rear",
+            "clearly defined wheel arches with body-color trim",
+            "chrome trim around windows and along the lower side body"
+        ],
+        "back": [
+            "distinctive, vertically oriented tail lights",
+            "rear window that wraps around to the sides slightly",
+            "prominent rear bumper with integrated exhaust outlets"
+        ]
+    },
+    "Hyundai Sonata Hybrid Sedan 2012": {
+        "front": [
+            "unique, hexagonal front grille with distinct top chrome bar",
+            "sleek, narrow headlights that merge with the grille lines",
+            "blue Hyundai logo, indicating its hybrid status"
+        ],
+        "side": [
+            "aerodynamic profile with a distinctive, sloping roofline",
+            "side skirts with a slight protrusion to enhance aerodynamics",
+            "hybrid badges on the fenders, near the front doors"
+        ],
+        "back": [
+            "distinctive, clear-lens LED tail lights that stretch horizontally",
+            "aerodynamic rear bumper with integrated diffuser",
+            "trunk lid with an integrated spoiler, subtly hinting at its efficiency and performance"
+        ]
+    },
+    "Hyundai Elantra Sedan 2007": {
+        "front": [
+            "curved headlight design that extends into the fenders",
+            "prominent front grille with a horizontal layout",
+            "rounded front bumper with integrated fog lights"
+        ],
+        "side": [
+            "slightly arched roofline",
+            "clear side body line that runs from the headlights to the taillights",
+            "moderate-sized windows with a chrome trim along the bottom edge"
+        ],
+        "back": [
+            "tall, vertical taillights that extend into the trunk lid",
+            "compact rear bumper with reflectors integrated into the corners",
+            "trunk lid features a subtle lip spoiler shape"
+        ]
+    },
+    "Hyundai Accent Sedan 2012": {
+        "front": [
+            "signature Hyundai hexagonal front grille",
+            "swept-back, elongated headlight design",
+            "lower front bumper with integrated fog lights"
+        ],
+        "side": [
+            "fluid, dynamic body line that curves upward from the front wheel to the rear",
+            "compact sedan profile with a sloping roofline",
+            "visible character line starting from the headlights stretching to the tail lights"
+        ],
+        "back": [
+            "wrap-around rear light clusters",
+            "trunk lid with a slight lip at the rear for aerodynamic styling",
+            "centered Hyundai emblem with the 'Accent' badge on the right"
+        ]
+    },
+    "Hyundai Genesis Sedan 2012": {
+        "front": [
+            "Large, hexagonal front grille with a chrome surround",
+            "Sleek, horizontal headlights that flow into the grille",
+            "Distinctive hood lines that enhance the car\u2019s aerodynamic profile"
+        ],
+        "side": [
+            "Long, flowing silhouette typical of luxury sedans",
+            "Chrome trim around the windows and along the lower side body",
+            "Short front and rear overhangs for a balanced, elegant stance"
+        ],
+        "back": [
+            "Dual exhaust outlets integrated into the lower bumper",
+            "Wraparound LED taillights that extend into the trunk lid",
+            "Subtle decklid spoiler that adds to the sporty appearance"
+        ]
+    },
+    "Hyundai Sonata Sedan 2012": {
+        "front": [
+            "Large, hexagonal grille with horizontal bars",
+            "Swept-back, hawk-eye headlights",
+            "Sculpted hood with distinctive creases"
+        ],
+        "side": [
+            "Fluidic sculpture design with a prominent side character line that swoops upwards towards the rear",
+            "Chrome trim around windows and door handles for higher trims",
+            "Sloping roofline that merges seamlessly into the trunk"
+        ],
+        "back": [
+            "High-mounted, LED tail lights that extend into the trunk lid",
+            "Sculpted rear bumper with integrated dual exhaust outlets",
+            "Subtle rear lip spoiler on some models"
+        ]
+    },
+    "Hyundai Elantra Touring Hatchback 2012": {
+        "front": [
+            "large headlights that extend from the front of the car towards the windshield",
+            "signature Hyundai hexagonal front grille, with chrome accents",
+            "rounded front bumper with integrated fog lights on either side"
+        ],
+        "side": [
+            "long, smooth body lines with slightly flared wheel arches",
+            "distinctive roof rails running the length of the vehicle",
+            "visible lower side skirting that enhances its sporty look"
+        ],
+        "back": [
+            "vertical, elongated tail lights that hug the sides of the rear",
+            "rear window wiper centrally positioned on the hatch",
+            "prominent rear bumper with a black protective strip and integrated reflectors"
+        ]
+    },
+    "Hyundai Azera Sedan 2012": {
+        "front": [
+            "large, hexagonal grille with horizontal chrome bars",
+            "sleek, wraparound headlamps with distinctive LED daytime running lights",
+            "pronounced hood lines leading to the grille"
+        ],
+        "side": [
+            "sweeping, coupe-like roofline",
+            "chrome trim running along the bottom of the windows",
+            "distinctive, rising beltline starting from the front fender to the rear"
+        ],
+        "back": [
+            "large, horizontal taillights that extend into the trunk",
+            "dual exhaust outlets integrated into the lower bumper",
+            "trunk lid with a subtle integrated spoiler effect"
+        ]
+    },
+    "Infiniti G Coupe IPL 2012": {
+        "front": [
+            "Sculpted, aggressive front bumper with integrated fog lights",
+            "Signature Infiniti double-arch grille with chrome finish",
+            "Sleek, angular headlights that blend into the body lines"
+        ],
+        "side": [
+            "Aerodynamic silhouette with a sloped roofline towards the rear",
+            "Sporty, distinctive side sills that emphasize the car\u2019s performance aspect",
+            "Large, stylish alloy wheels that fill the wheel arches"
+        ],
+        "back": [
+            "Prominent rear spoiler that enhances the sporty aesthetic",
+            "Dual chrome-tipped exhaust pipes that signify performance",
+            "Distinctive, wrap-around LED taillights that highlight the car's width"
+        ]
+    },
+    "Infiniti QX56 SUV 2011": {
+        "front": [
+            "Large, chrome-finished grille with Infiniti logo",
+            "Swooping, angular headlights",
+            "Bulbous hood with a prominent center crease"
+        ],
+        "side": [
+            "Distinctive side vents near the front fender",
+            "Large, chrome door handles and window trim",
+            "Curved window line at the rear, giving a distinctive profile"
+        ],
+        "back": [
+            "Tall, vertical taillights that extend into the tailgate",
+            "Chrome strip above the license plate holder",
+            "Visible, large exhaust tips under the bumper"
+        ]
+    },
+    "Isuzu Ascender SUV 2008": {
+        "front": [
+            "Rectangular grille with a horizontal chrome bar featuring the Isuzu logo",
+            "Large, rectangular headlights that flank the grille",
+            "Bulbous front bumper with integrated fog lights"
+        ],
+        "side": [
+            "Tall, boxy profile characteristic of mid-size SUVs",
+            "Visible side step for easier entry",
+            "Roof rails running along the top, indicating off-road or utility capabilities"
+        ],
+        "back": [
+            "Vertical tail lights on either side of the rear window",
+            "Spare tire mounted under the rear cargo area, not externally visible",
+            "Prominent rear bumper with a black plastic lower section for durability"
+        ]
+    },
+    "Jaguar XK XKR 2012": {
+        "front": [
+            "oval-shaped, chrome-outlined grille that sits prominently at the center",
+            "sleek, narrow headlights that extend towards the sides",
+            "distinctive, large air intakes on the bumper for enhanced cooling"
+        ],
+        "side": [
+            "elegant, flowing roofline that gracefully descends into the rear",
+            "body-hugging door lines that emphasize its sporty silhouette",
+            "large, stylish alloy wheels designed to complement its dynamic appearance"
+        ],
+        "back": [
+            "twin oval exhaust pipes that hint at the car's powerful performance",
+            "slim, horizontal taillights that stretch across the rear, incorporating chic LED elements",
+            "sporty rear spoiler subtly integrated into the trunk lid, enhancing its aerodynamic profile"
+        ]
+    },
+    "Jeep Patriot SUV 2012": {
+        "front": [
+            "traditional seven-slot Jeep grille",
+            "round headlights flanking the grille",
+            "robust bumper with integrated fog lights"
+        ],
+        "side": [
+            "boxy silhouette typical of Jeep models",
+            "black body cladding along the lower edges and wheel arches",
+            "roof rails running along the top"
+        ],
+        "back": [
+            "square-shaped tail lights",
+            "rear window topped with a spoiler",
+            "rear bumper with a distinct off-road appearance"
+        ]
+    },
+    "Jeep Wrangler SUV 2012": {
+        "front": [
+            "Seven-slot grille distinctive to the Jeep brand",
+            "Round headlights flanking the grille",
+            "Raised hood with a slight bulge in the center"
+        ],
+        "side": [
+            "Rugged, boxy shape with flat sides",
+            "Removable doors and exposed hinges",
+            "Large wheel arches accommodating off-road tires"
+        ],
+        "back": [
+            "Full-size spare tire mounted on the rear door",
+            "Square tail lights",
+            "Rear door hinged to open sideways"
+        ]
+    },
+    "Jeep Liberty SUV 2012": {
+        "front": [
+            "signature seven-slot grille associated with the Jeep brand",
+            "rounded rectangular headlights",
+            "raised hood with a slight bulge towards the middle"
+        ],
+        "side": [
+            "boxy, upright stance characteristic of Jeep designs",
+            "pronounced wheel arches",
+            "black body molding running along the lower edge of the doors"
+        ],
+        "back": [
+            "square tail lights",
+            "rear spare tire mounted on the back door",
+            "rear window with a slight taper towards the top"
+        ]
+    },
+    "Jeep Grand Cherokee SUV 2012": {
+        "front": [
+            "Signature seven-slot grille framed by chrome",
+            "Rounded yet prominent headlights that blend into the grille design",
+            "Robust front bumper with integrated fog lights"
+        ],
+        "side": [
+            "Squared-off wheel arches housing large wheels",
+            "Strong character line running from the front fender to the taillights",
+            "Roof rails that underscore its utility and adventure-ready stance"
+        ],
+        "back": [
+            "Vertical, squared taillights",
+            "Large rear window for enhanced visibility",
+            "Prominent rear bumper with a matte finish and integrated exhaust outlets"
+        ]
+    },
+    "Jeep Compass SUV 2012": {
+        "front": [
+            "signature seven-slot Jeep grille with a chrome finish",
+            "round headlights on either side of the grille",
+            "robust front bumper with integrated fog lights",
+            "black body cladding running from the bottom of the bumper across the wheel wells and side sills, adding to its rugged look"
+        ],
+        "side": [
+            "prominent wheel arches housing large wheels",
+            "sharp character line running from the headlights to the rear tail lights",
+            "roof rails that add to the utility appearance",
+            "slight uptick in the window line towards the rear, creating a sportier profile"
+        ],
+        "back": [
+            "vertical tail lights flank the rear hatch",
+            "spare tire mounted on the rear in earlier models or a smooth rear hatch design in later models without an external spare",
+            "rear windshield wiper centrally located on the rear window",
+            "chrome badging on the rear liftgate, typically including the Jeep logo and model name"
+        ]
+    },
+    "Lamborghini Reventon Coupe 2008": {
+        "front": [
+            "sharp, angular front fascia reminiscent of a fighter jet",
+            "LED headlights that are thin and sharply angled",
+            "large air intakes on either side of the bumper",
+            "distinctive Lamborghini badge placed at the center of the front"
+        ],
+        "side": [
+            "aggressive wedge shape with sharply angled lines",
+            "large scissor doors that open upwards",
+            "distinctive air intakes ahead of the rear wheels",
+            "low ground clearance typical of high-performance sports cars"
+        ],
+        "back": [
+            "angular rear with prominent, hexagonal exhaust pipes centered below the bumper",
+            "thin, horizontal LED taillights that stretch across either side",
+            "transparent engine cover showcasing the V12 engine",
+            "rear diffuser designed for aerodynamic efficiency"
+        ]
+    },
+    "Lamborghini Aventador Coupe 2012": {
+        "front": [
+            "sharp, angular headlight design that mimics a Y shape",
+            "large, low air intakes on either side of the narrow, trapezoidal grille",
+            "prominently sloped hood with aerodynamic lines leading toward the Lamborghini badge"
+        ],
+        "side": [
+            "distinctive scissor doors that open upwards",
+            "deeply sculpted side air intakes just behind the doors",
+            "low, sweeping roofline that sharply declines towards the rear"
+        ],
+        "back": [
+            "Y-shaped LED taillights that echo the design of the headlights",
+            "prominent rear diffuser with integrated, center-mounted exhaust system",
+            "engine bay covered by a transparent panel, showcasing the V12 engine beneath"
+        ]
+    },
+    "Lamborghini Gallardo LP 570-4 Superleggera 2012": {
+        "front": [
+            "aggressive, angular front bumper with large air intakes",
+            "distinctive wedge-shaped profile with sharp, sleek headlights",
+            "Lamborghini badge prominently displayed on the nose"
+        ],
+        "side": [
+            "low, aerodynamic profile with distinctive sculpted side skirts",
+            "large, angular side air intakes ahead of the rear wheels",
+            "unique, lightweight alloy wheels with a distinctive design"
+        ],
+        "back": [
+            "prominent, large fixed rear wing for downforce",
+            "quad exhaust pipes centrally located beneath the rear bumper",
+            "narrow, elongated taillights that stretch towards the vehicle's sides"
+        ]
+    },
+    "Lamborghini Diablo Coupe 2001": {
+        "front": [
+            "sharp, wedge-shaped front end",
+            "pop-up headlights that give a smooth, uninterrupted look when closed",
+            "large air intakes below the headlights for engine cooling",
+            "iconic Lamborghini badge prominently positioned on the nose"
+        ],
+        "side": [
+            "scissor doors that open upwards",
+            "deeply sculpted side air intakes ahead of the rear wheels",
+            "low, ground-hugging profile",
+            "distinctive, angular body lines that run along the length of the car"
+        ],
+        "back": [
+            "large, fixed rear wing on some models for improved downforce",
+            "twin circular tail lights on either side",
+            "center-mounted dual exhaust pipes",
+            "rear bumper with integrated air vents for engine cooling"
+        ]
+    },
+    "Land Rover Range Rover SUV 2012": {
+        "front": [
+            "distinctive boxy silhouette with a gently sloping roof line",
+            "rounded rectangular grille bordered by a chrome frame",
+            "large, square headlamps positioned on either side of the grille",
+            "LED daytime running lights integrated within the headlamps, positioned to wrap around the outer edges"
+        ],
+        "side": [
+            "pronounced wheel arches enclosing large, alloy wheels",
+            "signature 'floating roof' design created by blacked-out pillars",
+            "sturdy, straight body lines emphasizing the vehicle's length"
+        ],
+        "back": [
+            "vertical, split tailgate design, with the top portion being glass and the bottom part being metal",
+            "rectangular LED tail lights placed high on the rear, framing the tailgate",
+            "distinctive 'Range Rover' lettering across the tailgate, sitting directly below the rear window"
+        ]
+    },
+    "Land Rover LR2 SUV 2012": {
+        "front": [
+            "Two-bar grille design with the Land Rover badge prominently displayed",
+            "Round headlights on either side of the grille, with integrated LED daytime running lights",
+            "Raised hood with a subtle bulge in the center, hinting at the vehicle's off-road capability"
+        ],
+        "side": [
+            "Tall, boxy profile typical of Land Rover's design heritage",
+            "Pronounced wheel arches housing large alloy wheels",
+            "Black trim running along the lower edge of the body, including around the wheel arches"
+        ],
+        "back": [
+            "Vertical tail lights that extend from the middle of the rear hatch to the top",
+            "Rear window wiper mounted centrally on the rear window",
+            "Large, rectangular rear hatch with a prominent Land Rover badge centered below the window"
+        ]
+    },
+    "Lincoln Town Car Sedan 2011": {
+        "front": [
+            "Chrome-accented grille with vertical slats and a prominent Lincoln emblem",
+            "Large, rectangular headlights that flank the grille",
+            "Smooth, rounded front bumper with integrated fog lights"
+        ],
+        "side": [
+            "Long, flat body lines characteristic of luxury sedans",
+            "Chrome trim running along the bottom of the windows",
+            "Large, upright windows and doors indicative of spacious interior"
+        ],
+        "back": [
+            "Signature vertical tail lights that extend onto the trunk",
+            "Chrome strip on the trunk with Lincoln nameplate",
+            "Square-shaped exhaust tips integrated into the bumper"
+        ]
+    },
+    "MINI Cooper Roadster Convertible 2012": {
+        "front": [
+            "rounded, large headlights that frame the distinctive grille",
+            "hexagonal grille with a chrome outline",
+            "hood scoop indicating the sportier models, positioned centrally on the hood"
+        ],
+        "side": [
+            "two-seat convertible with a soft-top roof, showcasing a sleek and compact side profile",
+            "distinctive beltline that rises towards the rear of the car",
+            "black or body-colored side mirrors, relatively large compared to the vehicle\u2019s overall size"
+        ],
+        "back": [
+            "centrally positioned dual exhaust pipes",
+            "sporty rear spoiler that may be manually or automatically extended",
+            "vertical taillights, smaller in size, positioned at the far edges of the rear"
+        ]
+    },
+    "Maybach Landaulet Convertible 2012": {
+        "front": [
+            "distinct large chrome grille with vertical bars",
+            "Maybach emblem positioned above the grille",
+            "Two large, circular headlights"
+        ],
+        "side": [
+            "Long wheelbase and considerable length",
+            "Soft-top convertible roof that retracts only over the rear seats",
+            "Chrome trim running along the bottom edge of the doors"
+        ],
+        "back": [
+            "Vertically oriented taillights",
+            "Chrome trim on the boot",
+            "Dual exhaust pipes integrated into the bumper"
+        ]
+    },
+    "Mazda Tribute SUV 2011": {
+        "front": [
+            "square-shaped, chrome-lined grille with the Mazda logo in the center",
+            "wide, rectangular headlights that flank the grille",
+            "pronounced bumper with integrated fog lights towards the lower sides"
+        ],
+        "side": [
+            "distinctive boxy shape typical of mid-size SUVs",
+            "raised roof rails running along the top, offering a practical, rugged look",
+            "black plastic cladding along the lower edges for a tough, off-road appearance"
+        ],
+        "back": [
+            "vertical, rectangular taillights that extend from the mid-section to the top of the rear",
+            "rear window wiper centrally mounted on the rear windshield",
+            "prominent bumper with a clear outline, complementing the rugged look of the vehicle"
+        ]
+    },
+    "McLaren MP4-12C Coupe 2012": {
+        "front": [
+            "large, pronounced air intakes on either side of the bumper",
+            "sleek, LED headlights that stretch back into the body",
+            "signature McLaren logo subtly incorporated at the top of the front hood"
+        ],
+        "side": [
+            "distinctive dihedral (butterfly) doors that open upwards",
+            "aerodynamic, sculpted side profile with prominent air scoops",
+            "low and wide stance, with large alloy wheels filling the wheel arches"
+        ],
+        "back": [
+            "rounded, compact rear end with integrated exhausts in the center",
+            "thin, horizontal LED taillights that span the width of the rear",
+            "visible engine bay window showcasing the engine"
+        ]
+    },
+    "Mercedes-Benz 300-Class Convertible 1993": {
+        "front": [
+            "large, chrome grille with Mercedes-Benz emblem prominently displayed",
+            "rounded, large headlights on either side of the grille",
+            "low, wide air intake below the grille"
+        ],
+        "side": [
+            "soft-top convertible roof, providing a sleek profile when down",
+            "long, distinct door handles that are flush with the body",
+            "chrome trim around the windows and along the bottom of the doors"
+        ],
+        "back": [
+            "slim, horizontal taillights that wrap slightly around the sides",
+            "Mercedes-Benz badge and model information centrally located on the trunk",
+            "rectangular exhaust tips at the bottom"
+        ]
+    },
+    "Mercedes-Benz C-Class Sedan 2012": {
+        "front": [
+            "three-pointed star Mercedes-Benz emblem mounted on the grille",
+            "bi-xenon headlamps with distinct, sharp design",
+            "large air intakes on the bumper"
+        ],
+        "side": [
+            "sleek, aerodynamic body lines",
+            "frameless doors",
+            "alloy wheels with Mercedes-Benz logo"
+        ],
+        "back": [
+            "distinctive, elongated tail lights",
+            "dual exhaust pipes",
+            "prominently placed Mercedes-Benz badge on the trunk"
+        ]
+    },
+    "Mercedes-Benz SL-Class Coupe 2009": {
+        "front": [
+            "Iconic Mercedes-Benz grille with a large central star",
+            "Sleek, swept-back headlamp design",
+            "Distinctive lower fascia with wide air intakes"
+        ],
+        "side": [
+            "Long hood and short rear deck profile, characteristic of grand tourers",
+            "Frameless door windows for a seamless look",
+            "Sculpted side sills that emphasize the car's sporty stance"
+        ],
+        "back": [
+            "Horizontal, split taillights that stretch into the trunk",
+            "Dual-exhaust system integrated into the bumper",
+            "Subtle rear spoiler integrated into the trunk lid"
+        ]
+    },
+    "Mercedes-Benz E-Class Sedan 2012": {
+        "front": [
+            "distinct quad headlamp design, with two sets of lights on each side, known for their angular appearance",
+            "large, prominent Mercedes-Benz star logo mounted in the center of the grille",
+            "wide and imposing grille, featuring a dual-louver design flanked by a large air intake below"
+        ],
+        "side": [
+            "long, flowing silhouette typical of a luxury sedan",
+            "prominent character line starting from the headlamps, sweeping through the door handles and fading towards the rear",
+            "relatively high window line and well-defined wheel arches housing large alloy wheels"
+        ],
+        "back": [
+            "horizontally positioned LED tail lights that extend into the trunk lid",
+            "dual exhaust outlets integrated into the lower bumper, subtly hinting at the car's performance capability",
+            "elegant chrome strip running across the trunk lid, connecting the tail lights and featuring the Mercedes-Benz emblem in the center"
+        ]
+    },
+    "Mercedes-Benz S-Class Sedan 2012": {
+        "front": [
+            "Wide, prominent grille with the Mercedes-Benz emblem",
+            "Dual, sweeping headlights that integrate LED daytime running lights",
+            "Large, lower air intakes on the bumper"
+        ],
+        "side": [
+            "Long, sleek silhouette with a gently sloping roofline characteristic of luxury sedans",
+            "Chrome trim around windows and along the side skirts",
+            "Distinctive, large alloy wheels"
+        ],
+        "back": [
+            "Horizontally oriented, two-piece LED taillights that extend into the trunk lid",
+            "Chrome strip connecting the tail lights",
+            "Prominent Mercedes-Benz star emblem centered on the trunk"
+        ]
+    },
+    "Mercedes-Benz Sprinter Van 2012": {
+        "front": [
+            "Large Mercedes-Benz logo in the center of the grille",
+            "Tall, narrow headlights flanking the grille",
+            "High hood line indicative of a large cargo area or passenger space behind"
+        ],
+        "side": [
+            "Long side profile, indicating a spacious cargo or passenger area",
+            "Slender windows running along the length of the van for passenger models, or solid paneling for cargo variants",
+            "High roof option available, providing greater interior height"
+        ],
+        "back": [
+            "Upright, boxy rear end designed for maximum cargo space",
+            "Large rear doors that swing open, sometimes nearly 270 degrees for easy loading",
+            "Vertical tail lights positioned on the edges of the rear doors"
+        ]
+    },
+    "Mitsubishi Lancer Sedan 2012": {
+        "front": [
+            "distinctive 'Jet Fighter' grille that spans the width of the front",
+            "sharp, angled headlights that stretch back into the body",
+            "prominent lower fog light housings on either side of the bumper"
+        ],
+        "side": [
+            "aggressive side profile with a sloping roofline towards the rear",
+            "noticeable wheel arches giving a sporty appearance",
+            "character line that starts from the front fender and flows through the door handles to the tail lights"
+        ],
+        "back": [
+            "high-mounted rear spoiler on some models",
+            "taillights that extend horizontally across the rear corners of the car",
+            "centered Mitsubishi logo above the license plate area"
+        ]
+    },
+    "Nissan Leaf Hatchback 2012": {
+        "front": [
+            "aerodynamic, bulbous shape with sloping hood",
+            "distinctive V-shaped grille area replaced with a smooth panel for the charging port",
+            "upswept, sharply designed headlights that extend towards the windshield"
+        ],
+        "side": [
+            "smooth, flowing lines with a high roofline",
+            "unique alloy wheel design with large gaps",
+            "character line that starts from the front fender and swoops upwards towards the rear"
+        ],
+        "back": [
+            "vertical, boomerang-shaped tail lights that extend onto the tailgate",
+            "rounded rear hatch with a small spoiler lip at the top",
+            "low rear bumper with reflectors integrated into the corners"
+        ]
+    },
+    "Nissan NV Passenger Van 2012": {
+        "front": [
+            "Tall, boxy hood with a large, chrome front grille",
+            "Upright headlights that flank the grille",
+            "Nissan emblem prominently displayed in the center of the grille"
+        ],
+        "side": [
+            "High roofline characteristic of passenger vans",
+            "Several rows of windows indicating passenger compartments",
+            "Sliding door on the passenger side for rear access"
+        ],
+        "back": [
+            "Vertical rear lights on either side of the door",
+            "Large rear door that opens upwards for cargo access",
+            "Rear window spans the width of the back door, allowing for visibility into the rear compartment"
+        ]
+    },
+    "Nissan Juke Hatchback 2012": {
+        "front": [
+            "high-mounted, boomerang-shaped headlights",
+            "unique V-shaped chrome grille",
+            "large round fog lights located on the lower bumper"
+        ],
+        "side": [
+            "sporty, aggressive stance with a high waistline",
+            "coupe-like falling roofline towards the rear",
+            "pronounced wheel arches that give it a muscular appearance"
+        ],
+        "back": [
+            "boomerang-shaped taillights that complement the headlights",
+            "a prominent rear hatch spoiler",
+            "distinctively shaped rear bumper that houses the fog lights and reflectors"
+        ]
+    },
+    "Nissan 240SX Coupe 1998": {
+        "front": [
+            "pop-up headlights that sit flush with the hood when closed",
+            "large, air-intake grille located below the bumper",
+            "distinct, slightly curved hood that slopes downward towards the front"
+        ],
+        "side": [
+            "low, sleek profile with a noticeably raked windshield",
+            "two-door coupe body style",
+            "distinctive body line that runs along the side, dipping slightly behind the front wheel before rising towards the rear"
+        ],
+        "back": [
+            "horizontal tail lights that extend towards the center from both edges",
+            "moderate-sized rear spoiler mounted on the trunk (optional on some models)",
+            "rounded rear bumper with a centrally located license plate indent"
+        ]
+    },
+    "Plymouth Neon Coupe 1999": {
+        "front": [
+            "distinctive round headlights",
+            "small, open grille positioned below the front bumper",
+            "Plymouth emblem located in the center above the grille"
+        ],
+        "side": [
+            "two-door coupe profile",
+            "prominent character line running along the side, from the front fender to the rear",
+            "simple and relatively flat door panels without aggressive styling cues"
+        ],
+        "back": [
+            "high-mounted rear spoiler on some models",
+            "vertical tail lights that extend from the rear bumper to the mid-section of the trunk",
+            "Plymouth name spelled out across the back center, above the license plate area"
+        ]
+    },
+    "Porsche Panamera Sedan 2012": {
+        "front": [
+            "large, elongated oval-shaped headlights",
+            "prominent Porsche crest on the hood above the grille",
+            "wide, low air intakes under the headlights"
+        ],
+        "side": [
+            "distinctive coupe-like roofline despite being a four-door sedan",
+            "large wheel arches housing sizeable alloy wheels",
+            "sharp, sloping rear end characteristic of sports cars"
+        ],
+        "back": [
+            "narrow, horizontal LED tail lights connected by a light strip",
+            "dual-exhaust ports integrated into the lower bumper on each side",
+            "black lower rear diffuser"
+        ]
+    },
+    "Ram C/V Cargo Van Minivan 2012": {
+        "front": [
+            "Black front grille with RAM lettering",
+            "Rectangular headlights",
+            "Bulbous hood with a pronounced center bulge"
+        ],
+        "side": [
+            "Sliding door with no rear side windows typical for cargo variants",
+            "Black door handles and side mirrors",
+            "Large slab-sided panels ideal for business logos or signage"
+        ],
+        "back": [
+            "Vertical tail lights flanking the rear doors",
+            "Dual rear doors that open outwards",
+            "Rear bumper with integrated step for easy access"
+        ]
+    },
+    "Rolls-Royce Phantom Drophead Coupe Convertible 2012": {
+        "front": [
+            "massive, iconic Rolls-Royce grille with vertical slats",
+            "large, rectangular LED headlights",
+            "Spirit of Ecstasy ornament atop the grille"
+        ],
+        "side": [
+            "suave, long body line with a slightly raked forward stance",
+            "distinctive suicide doors that open rearward",
+            "large alloy wheels with thin spokes"
+        ],
+        "back": [
+            "elegantly tapered rear design with a slightly protruding boot",
+            "rectangular LED tail lights",
+            "twin exhaust outlets subtly integrated into the lower bumper"
+        ]
+    },
+    "Rolls-Royce Ghost Sedan 2012": {
+        "front": [
+            "large, upright chrome grille",
+            "iconic Spirit of Ecstasy hood ornament",
+            "rectangular LED headlights that integrate seamlessly with the car's design",
+            "chrome bumper that underlines the grille and the headlights, adding to the car's luxurious appearance"
+        ],
+        "side": [
+            "distinctive long hood with a short front overhang",
+            "elegant, slightly sloping roofline that merges smoothly into the rear",
+            "large, chrome-finished door handles and window surrounds",
+            "signature rear-hinged rear doors, often referred to as 'suicide doors'"
+        ],
+        "back": [
+            "vertical, rectangular LED taillights",
+            "dual exhaust pipes integrated into the lower bumper",
+            "chrome accent strip that runs across the trunk, linking the taillights",
+            "prominent Rolls-Royce badge and model name on the trunk"
+        ]
+    },
+    "Rolls-Royce Phantom Sedan 2012": {
+        "front": [
+            "iconic large, upright chrome grille",
+            "Spirit of Ecstasy hood ornament",
+            "Rectangular, classic-design headlights"
+        ],
+        "side": [
+            "long, imposing body with a distinguished high beltline",
+            "Rear-hinged coach doors (suicide doors)",
+            "Distinctive large alloy wheels with notable RR center caps"
+        ],
+        "back": [
+            "twin, rectangular exhaust tips",
+            "Large vertical taillights that frame the trunk",
+            "Chrome accents around the boot and bumper"
+        ]
+    },
+    "Scion xD Hatchback 2012": {
+        "front": [
+            "rounded front with a narrow upper grille and a larger lower grille",
+            "distinctive, sharp-edged headlights that flank the grille",
+            "Scion logo centrally placed above the upper grille",
+            "chrome accents around the lower grille"
+        ],
+        "side": [
+            "boxy, compact profile with a high roofline",
+            "short overhangs and a slightly rising beltline",
+            "small, angled side windows with a noticeable upward kink towards the rear",
+            "black plastic trim around the wheel arches"
+        ],
+        "back": [
+            "tall, vertical tail lights positioned at the edges of the rear",
+            "rear hatch with a large glass window and centered Scion badge",
+            "bumper with integrated reflectors and a centrally located exhaust",
+            "compact rear window wiper positioned at the top of the window"
+        ]
+    },
+    "Spyker C8 Convertible 2009": {
+        "front": [
+            "distinct, wide oval grille with a mesh design",
+            "sleek, narrow headlights that stretch back into the fenders",
+            "prominent Spyker logo positioned above the grille"
+        ],
+        "side": [
+            "low, aerodynamic profile with a long hood and short rear deck",
+            "unique air intake vents behind the doors",
+            "scissor doors that open upwards"
+        ],
+        "back": [
+            "twin exhaust pipes centrally located below the rear bumper",
+            "narrow, horizontal LED taillights",
+            "transparent engine cover displaying the engine"
+        ]
+    },
+    "Spyker C8 Coupe 2009": {
+        "front": [
+            "oval-shaped grille with mesh design and the distinctive Spyker logo in the center",
+            "sleek, elongated headlights that stretch back along the sides of the hood",
+            "prominent, aerodynamic front bumper with integrated air intakes"
+        ],
+        "side": [
+            "airplane-inspired design with exposed rivets and aerodynamic curves",
+            "distinctive scissor doors that open upwards",
+            "large, turbine-style alloy wheels"
+        ],
+        "back": [
+            "transparent engine cover showcasing the engine beneath",
+            "twin circular taillights positioned on either side of the rear",
+            "center-mounted dual exhaust pipes beneath a rear diffuser"
+        ]
+    },
+    "Suzuki Aerio Sedan 2007": {
+        "front": [
+            "compact grille with horizontal slats",
+            "round fog lights positioned at the bottom corners of the front bumper",
+            "headlights with a somewhat swept-back design"
+        ],
+        "side": [
+            "noticeable character line running from the headlights to the tail lights",
+            "body-colored door handles and side mirrors",
+            "slightly flared wheel arches providing a sportier appearance"
+        ],
+        "back": [
+            "tall, vertical taillights that extend into the trunk lid",
+            "rear bumper with a black insert that houses the license plate",
+            "small rear spoiler integrated into the trunk lid"
+        ]
+    },
+    "Suzuki Kizashi Sedan 2012": {
+        "front": [
+            "Sporty mesh grille with a prominent Suzuki emblem in the center",
+            "Distinctive, sharp-edged headlights that flank the grille",
+            "Lower bumper features integrated fog lights with a unique shape"
+        ],
+        "side": [
+            "Aerodynamic profile with a high beltline and slightly sloped roof",
+            "Chrome door handles and window trim",
+            "Side view mirrors with integrated turn signals"
+        ],
+        "back": [
+            "LED taillights with a signature design",
+            "Rear bumper with integrated dual exhaust tips",
+            "Trunk lid features a subtle spoiler shape"
+        ]
+    },
+    "Suzuki SX4 Hatchback 2012": {
+        "front": [
+            "compact grille with horizontal bars and the Suzuki emblem in the center",
+            "large, rounded headlights that flank the grille",
+            "pronounced front bumper with integrated fog lights"
+        ],
+        "side": [
+            "distinctive black body cladding along the lower edges, including wheel arches",
+            "slightly rising beltline from the front to the rear",
+            "roof rails that underline its hatchback utility design"
+        ],
+        "back": [
+            "vertical taillights that extend from the middle of the hatch to the roof",
+            "rear hatch with a prominent rear window wiper",
+            "visible bumper with reflectors and possibly an integrated exhaust outlet"
+        ]
+    },
+    "Suzuki SX4 Sedan 2012": {
+        "front": [
+            "Rounded front grille with a prominent Suzuki emblem",
+            "Clear-lens halogen headlights that are relatively large compared to the car's size",
+            "Slightly protruding lower bumper with fog lights embedded on either side",
+            "Black mesh grille lower section"
+        ],
+        "side": [
+            "Compact sedan profile with a high roofline for extra interior headroom",
+            "Body-colored door handles and side mirrors",
+            "16-inch alloy wheels, with a simple yet elegant spoke design",
+            "Protective side moldings running along the doors"
+        ],
+        "back": [
+            "High-mounted stop lamp integrated into the rear windshield",
+            "Rectangular taillights that wrap slightly around the sides",
+            "Trunk release handle prominently placed above the license plate area",
+            "Single exhaust pipe visible below the right side of the rear bumper"
+        ]
+    },
+    "Tesla Model S Sedan 2012": {
+        "front": [
+            "frameless, narrow nose with a distinctive lack of a traditional grille",
+            "sleek, horizontal LED headlights that taper towards the center",
+            "Tesla logo prominently displayed in the center"
+        ],
+        "side": [
+            "aerodynamic profile with flush door handles that pop out when approached",
+            "sleek and low design with a gently sloping roofline towards the back",
+            "distinctive chrome trim around the windows and along the side skirts"
+        ],
+        "back": [
+            "full-width, horizontal LED taillight strip that spans the width of the rear",
+            "subtle rear spoiler integrated into the trunk lid",
+            "Tesla logo and model name clearly displayed above the license plate area"
+        ]
+    },
+    "Toyota Sequoia SUV 2012": {
+        "front": [
+            "Large, chrome-framed grille with horizontal bars and a prominent Toyota emblem in the center",
+            "Broad, rectangular headlights that integrate into the grille edges",
+            "High bumper and hood line giving a robust and elevated appearance"
+        ],
+        "side": [
+            "Long, boxy body with a high roofline and large windows, characteristic of full-size SUVs",
+            "Flat side panels with prominent wheel arches and side steps for easy entry",
+            "Distinctive, large side mirrors designed for enhanced visibility"
+        ],
+        "back": [
+            "Vertical tail lights that flank the rear window",
+            "Large rear hatch with a sizeable window, offering a clear view from the inside out",
+            "Subtle rear spoiler at the top of the hatch, integrating the third brake light"
+        ]
+    },
+    "Toyota Camry Sedan 2012": {
+        "front": [
+            "sleek, horizontal grille with the Toyota logo prominently displayed in the center",
+            "sharp, wraparound headlights that taper towards the grille",
+            "lower air intake is broad and trapezoidal in shape, flanked by fog lights on some models"
+        ],
+        "side": [
+            "character line running from the front fender through the door handles to the rear lights, giving it a dynamic profile",
+            "modestly sized alloy wheels, with designs varying across different trims",
+            "slightly tapered roofline towards the rear, but maintaining a spacious cabin area"
+        ],
+        "back": [
+            "distinctive, horizontal tail lights that extend into the trunk lid, creating a wide-looking rear",
+            "large rear bumper with integrated reflectors",
+            "chrome trim piece on the trunk lid, often bearing the 'Camry' logo"
+        ]
+    },
+    "Toyota Corolla Sedan 2012": {
+        "front": [
+            "narrow upper grille with a large, prominent lower grille",
+            "sharp, angular headlights that stretch back into the body",
+            "Toyota emblem positioned centrally on the upper grille"
+        ],
+        "side": [
+            "modestly flared wheel arches",
+            "distinct character line that runs from the headlight to the tail light",
+            "relatively high beltline with slightly tapered windows towards the rear"
+        ],
+        "back": [
+            "large, horizontal tail lights that slightly wrap around the sides",
+            "chrome bar above the license plate connecting the tail lights",
+            "compact trunk with a subtle lip at the edge of the trunk lid"
+        ]
+    },
+    "Toyota 4Runner SUV 2012": {
+        "front": [
+            "Large, trapezoidal grille framed by thick chrome accents",
+            "Projector-beam headlights with a distinct, angular shape",
+            "Bulky front bumper with a high ground clearance and integrated fog lights"
+        ],
+        "side": [
+            "Boxy, rugged design with pronounced wheel arches",
+            "Running boards below the doors for easier access",
+            "Roof rails and a rear spoiler, contributing to its off-road and utility appearance"
+        ],
+        "back": [
+            "Rectangular, vertically-oriented tail lights",
+            "Prominent rear bumper with a silver accent that matches the front design",
+            "Rear window on the tailgate that can be opened separately from the liftgate"
+        ]
+    },
+    "Volkswagen Golf Hatchback 2012": {
+        "front": [
+            "horizontal grille design with two distinct chrome bars",
+            "rounded headlights that blend into the grille edges",
+            "Volkswagen logo centrally situated within the grille"
+        ],
+        "side": [
+            "clean, straight body lines providing a compact, aerodynamic profile",
+            "slightly flared wheel arches housing alloy wheels",
+            "visible character line starting from the front fender and extending through the door handles to the rear"
+        ],
+        "back": [
+            "large rear window providing ample visibility",
+            "distinct, vertical tail lights positioned at the corners",
+            "rear hatch with a centrally placed Volkswagen logo, serving as the latch"
+        ]
+    },
+    "Volkswagen Golf Hatchback 1991": {
+        "front": [
+            "simple, rectangular headlight design",
+            "Horizontal grille with a prominent Volkswagen logo in the center",
+            "Small, slightly rounded bumper with integrated indicators"
+        ],
+        "side": [
+            "Boxy, utilitarian body shape",
+            "Slightly flared wheel arches over modestly sized wheels",
+            "Black or body-colored side mirrors, relatively small and square in design"
+        ],
+        "back": [
+            "Tall, vertical tail lights that flank the rear window",
+            "Square rear hatch door with a large rear window",
+            "Black bumper that wraps around the corners to meet the wheel arches"
+        ]
+    },
+    "Volkswagen Beetle Hatchback 2012": {
+        "front": [
+            "rounded headlamps that resemble the classic Beetle appearance",
+            "curved front hood that maintains the Beetle\u2019s iconic shape",
+            "Volkswagen badge prominently placed on the front trunk lid"
+        ],
+        "side": [
+            "distinctive bubble shape with a curved roofline",
+            "large doors and smooth, rounded side profile",
+            "minimal character lines with a more pronounced wheel arch"
+        ],
+        "back": [
+            "large, circular rear lights that echo the car\u2019s overall rounded motif",
+            "rounded rear hatch that includes a small, integrated spoiler",
+            "central Volkswagen badge that doubles as the trunk release"
+        ]
+    },
+    "Volvo C30 Hatchback 2012": {
+        "front": [
+            "unique, frameless Volvo grille with prominent Volvo emblem",
+            "distinctive, swept-back headlight design",
+            "broad, low-slung bumper with integrated fog lights"
+        ],
+        "side": [
+            "compact, two-door body style with a smoothly curved roof",
+            "pronounced wheel arches with large alloy wheels",
+            "deep side windows culminating in a sharply raked rear"
+        ],
+        "back": [
+            "large, all-glass hatch providing a nearly panoramic rear view",
+            "distinctive, high-mounted taillights that follow the curve of the rear window",
+            "compact rear bumper with integrated exhaust outlets"
+        ]
+    },
+    "Volvo 240 Sedan 1993": {
+        "front": [
+            "Rectangular, boxy headlights that are separate from the grille",
+            "A wide, flat front grille with vertical bars",
+            "The Volvo logo prominently displayed at the center of the grille"
+        ],
+        "side": [
+            "Distinctly boxy silhouette with straight lines",
+            "Large, flat door panels without significant curvature",
+            "Protective black or chrome trim running along the sides at the bottom of the doors"
+        ],
+        "back": [
+            "Squared-off rear end typical of the sedan body style",
+            "Large, vertical taillights on either side of the trunk",
+            "Volvo badge centrally located on the trunk lid"
+        ]
+    },
+    "Volvo XC90 SUV 2007": {
+        "front": [
+            "Rectangular grille with the Volvo emblem centrally located",
+            "Angular headlights that taper towards the center grille",
+            "Prominent front bumper with integrated fog lights"
+        ],
+        "side": [
+            "Tall, boxy profile typical of SUV designs",
+            "Distinctive waistline that rises slightly towards the rear",
+            "Large windows and pronounced wheel arches"
+        ],
+        "back": [
+            "Vertical taillights that extend from the bumper to the roof",
+            "Wide, horizontally split tailgate for easy loading",
+            "Rear window wiper positioned at the top of the rear window"
+        ]
+    },
+    "smart fortwo Convertible 2012": {
+        "front": [
+            "Compact, almost smiling front grille",
+            "Small, round headlights placed wide apart",
+            "Prominent smart badge centered above the grille"
+        ],
+        "side": [
+            "Very short wheelbase with almost no overhangs",
+            "Two-tone color scheme with tridion safety cell visibly contrasting the body panels",
+            "High, almost straight roofline when the convertible top is up"
+        ],
+        "back": [
+            "Tall, vertical tail lights positioned at the corners",
+            "Glass rear window with integrated defroster in the convertible top",
+            "Small, centered rear hatch with handle below the smart badge"
+        ]
+    }
+}

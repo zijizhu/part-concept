@@ -1,0 +1,44 @@
+{
+    "class": "Audi 100 Wagon 1994",
+    "concepts": {
+        "front": [
+            "prominent, vertically-oriented Audi grille",
+            "sleek, angular headlights",
+            "Audi logo centrally positioned on the grille",
+            "narrow headlights lightly wrap around the sides, with a distinct, slightly inward tilt at the top",
+            "small built-in fog lights positioned towards the outer edges"
+        ],
+        "side": [
+            "gently sloping roofline that extends into a distinctive wagon rear",
+            "sharp body line that runs from the front fender through to the rear lights",
+            "modestly sized alloy wheels, with wheel arches are subtly pronounced"
+        ],
+        "back": [
+            "large, vertical tail lights that frame the rear window",
+            "station wagon design",
+            "wide rear hatch, with a single rear wiper placed at the top of the window",
+            "simple and unobtrusive rear bumper",
+            "exhaust tucked away under the bumper"
+        ]
+    },
+    "template": {
+        "front": [
+            "<one distinct visual feature of front of the car>",
+            "<another distinct visual feature of front of the car>",
+            "<another distinct visual feature of front of the car>",
+            "<another distinct visual feature of front of the car>"
+        ],
+        "side": [
+            "<one distinct visual feature of side of the car>",
+            "<another distinct visual feature of side of the car>",
+            "<another distinct visual feature of side of the car>",
+            "<another distinct visual feature of side of the car>"
+        ],
+        "back": [
+            "<one distinct visual feature of back of the car>",
+            "<another distinct visual feature of back of the car>",
+            "<another distinct visual feature of back of the car>",
+            "<another distinct visual feature of back of the car>"
+        ]
+    }
+}
