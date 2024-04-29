@@ -7,6 +7,8 @@ import torch
 import spacy
 import logging
 import argparse
+import numpy as np
+import pickle as pkl
 from tqdm import tqdm
 from pathlib import Path
 from torchinfo import summary
@@ -246,6 +248,9 @@ if __name__ == '__main__':
     else:
         raise NotImplementedError
 
+    with open(os.path.join(log_dir, 'all_concepts.pkl'), 'wb') as fp:
+        pkl.dump(concept_sets, file=fp)
+
     model = CLIPSeg(
         part_texts=part_texts,
         concepts_dict=concept_sets,
@@ -281,7 +286,9 @@ if __name__ == '__main__':
         exit(0)
     
     logger.info('Search concepts based on prototypes...')
-    model.search_concepts()
+    selected_idxs, affinities = model.search_concepts()
+    np.savez(os.path.join(log_dir, 'concept_selection'),
+             selected_idxs=selected_idxs, affinities=affinities)
 
     logger.info('Start training stage 2...')
     optimizer = torch.optim.AdamW([{'params': model.clipseg_model.parameters()},
